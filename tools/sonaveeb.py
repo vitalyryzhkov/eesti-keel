@@ -202,18 +202,25 @@ def slug(word):
 
 
 def add(path):
-    """Файл со строками вида «sõna — перевод» (разделитель — тире, дефис или таб)."""
+    """Файл со строками «sõna — перевод» или «sõna — перевод — форма_из_учебника».
+
+    Третья колонка — страховка от моей ошибки в начальной форме: книга даёт
+    слово в личной форме (ärkan), начальную подбираю я, и если подобрал не ту,
+    книжная форма не найдётся среди форм словарной статьи — строка попадёт
+    в отчёт, а не молча в словарь.
+    """
     d = load_words()
     have = {w["nom"] for w in d["nouns"]} | {w["ma"] for w in d["verbs"]}
-    added, skipped, failed = [], [], []
+    added, skipped, failed, wrong_lemma = [], [], [], []
 
     for line in io.open(path, encoding="utf-8"):
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        parts = re.split(r"\s+[—–-]\s+|\t", line, maxsplit=1)
-        word = parts[0].strip()
-        ru = parts[1].strip() if len(parts) > 1 else ""
+        parts = [p.strip() for p in re.split(r"\s+[—–]\s+|\t", line)]
+        word = parts[0]
+        ru = parts[1] if len(parts) > 1 else ""
+        book = parts[2] if len(parts) > 2 else ""
         if word in have:
             skipped.append(word)
             continue
@@ -225,6 +232,15 @@ def add(path):
             continue
         classes = [c.lower() for c in (res.get("wordClasses") or []) if c]
         api = forms_of(res)
+
+        # начальную форму подобрал человек/модель — словарь её подтверждает
+        if book:
+            all_forms = set()
+            for v in api.values():
+                all_forms |= norm(v)
+            if norm(book) - all_forms:
+                wrong_lemma.append((word, book))
+                continue
 
         if "verb" in classes:
             entry = {"id": "v_" + slug(word), "ru": ru}
@@ -255,6 +271,10 @@ def add(path):
         print("уже были (%d): %s" % (len(skipped), ", ".join(skipped)))
     if failed:
         print("НЕ НАЙДЕНО, добавь руками (%d): %s" % (len(failed), ", ".join(failed)))
+    if wrong_lemma:
+        print("НАЧАЛЬНАЯ ФОРМА НЕ БЬЁТСЯ С УЧЕБНИКОМ (%d):" % len(wrong_lemma))
+        for word, book in wrong_lemma:
+            print("  предложено %s, но формы %s у него нет" % (word, book))
 
 
 def show(word):
