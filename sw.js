@@ -1,5 +1,5 @@
 // Офлайн-кэш. Меняешь файлы — подними CACHE, иначе старая версия останется на телефоне.
-const CACHE = 'eesti-a2-v1';
+const CACHE = 'eesti-a2-v3';
 const ASSETS = [
   './',
   'index.html',
@@ -30,8 +30,10 @@ self.addEventListener('fetch', (e) => {
   const isData = e.request.url.includes('/data/');
 
   if (isData) {
+    // no-store обязателен: иначе «сначала сеть» упирается в HTTP-кэш браузера
+    // и словарь на телефоне остаётся старым, хотя версию мы не меняли
     e.respondWith(
-      fetch(e.request)
+      fetch(e.request.url, { cache: 'no-store' })
         .then((r) => {
           const copy = r.clone();
           caches.open(CACHE).then((c) => c.put(e.request, copy));

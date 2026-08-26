@@ -4,7 +4,8 @@
     "note": "Формы сверены с EKI (api.sonapi.ee) — руками не правим, прогоняй tools/sonaveeb.py. Переводы наши. Через запятую — равноправные варианты, тренажёр примет любой.",
     "updated": "2026-08-26",
     "source": "формы — EKI через api.sonapi.ee; переводы вручную",
-    "verified": "2026-08-26: 524 формы, расхождений нет"
+    "verified": "2026-08-26: формы всех слов сверены с EKI, расхождений нет",
+    "content": "база A2 + главы 3–5 «Eesti keele sõnavihik A2» (Settle in Estonia)"
   },
   "nouns": [
     {
@@ -406,6 +407,726 @@
       "gen": "ilma",
       "part": "ilma",
       "plpart": "ilmu,ilmasid"
+    },
+    {
+      "id": "n_esimene",
+      "ru": "первый",
+      "nom": "esimene",
+      "gen": "esimese",
+      "part": "esimest",
+      "plpart": "esimesi"
+    },
+    {
+      "id": "n_teine",
+      "ru": "второй",
+      "nom": "teine",
+      "gen": "teise",
+      "part": "teist",
+      "plpart": "teisi"
+    },
+    {
+      "id": "n_kolmas",
+      "ru": "третий",
+      "nom": "kolmas",
+      "gen": "kolmanda",
+      "part": "kolmandat,kolmat",
+      "plpart": "kolmandaid"
+    },
+    {
+      "id": "n_neljas",
+      "ru": "четвёртый",
+      "nom": "neljas",
+      "gen": "neljanda",
+      "part": "neljandat,neljat",
+      "plpart": "neljandaid"
+    },
+    {
+      "id": "n_viies",
+      "ru": "пятый",
+      "nom": "viies",
+      "gen": "viienda",
+      "part": "viiendat",
+      "plpart": "viiendaid"
+    },
+    {
+      "id": "n_kuues",
+      "ru": "шестой",
+      "nom": "kuues",
+      "gen": "kuuenda",
+      "part": "kuuendat",
+      "plpart": "kuuendaid"
+    },
+    {
+      "id": "n_seitsmes",
+      "ru": "седьмой",
+      "nom": "seitsmes",
+      "gen": "seitsmenda",
+      "part": "seitsmendat",
+      "plpart": "seitsmendaid"
+    },
+    {
+      "id": "n_kaheksas",
+      "ru": "восьмой",
+      "nom": "kaheksas",
+      "gen": "kaheksanda",
+      "part": "kaheksandat",
+      "plpart": "kaheksandaid"
+    },
+    {
+      "id": "n_uheksas",
+      "ru": "девятый",
+      "nom": "üheksas",
+      "gen": "üheksanda",
+      "part": "üheksandat",
+      "plpart": "üheksandaid"
+    },
+    {
+      "id": "n_kumnes",
+      "ru": "десятый",
+      "nom": "kümnes",
+      "gen": "kümnenda",
+      "part": "kümnendat",
+      "plpart": "kümnendaid"
+    },
+    {
+      "id": "n_elutuba",
+      "ru": "гостиная",
+      "nom": "elutuba",
+      "gen": "elutoa",
+      "part": "elutuba",
+      "plpart": "elutube,elutubasid"
+    },
+    {
+      "id": "n_magamistuba",
+      "ru": "спальня",
+      "nom": "magamistuba",
+      "gen": "magamistoa",
+      "part": "magamistuba",
+      "plpart": "magamistube,magamistubasid"
+    },
+    {
+      "id": "n_lastetuba",
+      "ru": "детская",
+      "nom": "lastetuba",
+      "gen": "lastetoa",
+      "part": "lastetuba",
+      "plpart": "lastetube,lastetubasid"
+    },
+    {
+      "id": "n_tootuba",
+      "ru": "рабочая комната, мастерская",
+      "nom": "töötuba",
+      "gen": "töötoa",
+      "part": "töötuba",
+      "plpart": "töötube,töötubasid"
+    },
+    {
+      "id": "n_vannituba",
+      "ru": "ванная",
+      "nom": "vannituba",
+      "gen": "vannitoa",
+      "part": "vannituba",
+      "plpart": "vannitube,vannitubasid"
+    },
+    {
+      "id": "n_kook",
+      "ru": "кухня",
+      "nom": "köök",
+      "gen": "köögi",
+      "part": "kööki",
+      "plpart": "kööke,köökisid"
+    },
+    {
+      "id": "n_koridor",
+      "ru": "коридор",
+      "nom": "koridor",
+      "gen": "koridori",
+      "part": "koridori",
+      "plpart": "koridore"
+    },
+    {
+      "id": "n_esik",
+      "ru": "прихожая",
+      "nom": "esik",
+      "gen": "esiku",
+      "part": "esikut",
+      "plpart": "esikuid"
+    },
+    {
+      "id": "n_aed",
+      "ru": "сад",
+      "nom": "aed",
+      "gen": "aia",
+      "part": "aeda",
+      "plpart": "aedu,aedasid"
+    },
+    {
+      "id": "n_aken",
+      "ru": "окно",
+      "nom": "aken",
+      "gen": "akna",
+      "part": "akent",
+      "plpart": "aknaid"
+    },
+    {
+      "id": "n_garaaz",
+      "ru": "гараж",
+      "nom": "garaaž",
+      "gen": "garaaži",
+      "part": "garaaži",
+      "plpart": "garaaže,garaažisid"
+    },
+    {
+      "id": "n_jalgratas",
+      "ru": "велосипед",
+      "nom": "jalgratas",
+      "gen": "jalgratta",
+      "part": "jalgratast",
+      "plpart": "jalgrattaid"
+    },
+    {
+      "id": "n_katus",
+      "ru": "крыша",
+      "nom": "katus",
+      "gen": "katuse",
+      "part": "katust",
+      "plpart": "katuseid"
+    },
+    {
+      "id": "n_kelder",
+      "ru": "подвал",
+      "nom": "kelder",
+      "gen": "keldri",
+      "part": "keldrit",
+      "plpart": "keldreid"
+    },
+    {
+      "id": "n_lift",
+      "ru": "лифт",
+      "nom": "lift",
+      "gen": "lifti",
+      "part": "lifti",
+      "plpart": "lifte,liftisid"
+    },
+    {
+      "id": "n_rodu",
+      "ru": "балкон",
+      "nom": "rõdu",
+      "gen": "rõdu",
+      "part": "rõdu",
+      "plpart": "rõdusid"
+    },
+    {
+      "id": "n_saun",
+      "ru": "сауна",
+      "nom": "saun",
+      "gen": "sauna",
+      "part": "sauna",
+      "plpart": "saunu,saunasid"
+    },
+    {
+      "id": "n_terrass",
+      "ru": "терраса",
+      "nom": "terrass",
+      "gen": "terrassi",
+      "part": "terrassi",
+      "plpart": "terrasse,terrassisid"
+    },
+    {
+      "id": "n_trepp",
+      "ru": "лестница",
+      "nom": "trepp",
+      "gen": "trepi",
+      "part": "treppi",
+      "plpart": "treppe,treppisid"
+    },
+    {
+      "id": "n_surnuaed",
+      "ru": "кладбище",
+      "nom": "surnuaed",
+      "gen": "surnuaia",
+      "part": "surnuaeda",
+      "plpart": "surnuaedu,surnuaedasid"
+    },
+    {
+      "id": "n_spordivaljak",
+      "ru": "спортплощадка",
+      "nom": "spordiväljak",
+      "gen": "spordiväljaku",
+      "part": "spordiväljakut",
+      "plpart": "spordiväljakuid"
+    },
+    {
+      "id": "n_raudteejaam",
+      "ru": "железнодорожный вокзал",
+      "nom": "raudteejaam",
+      "gen": "raudteejaama",
+      "part": "raudteejaama",
+      "plpart": "raudteejaamu,raudteejaamasid"
+    },
+    {
+      "id": "n_manguvaljak",
+      "ru": "детская площадка",
+      "nom": "mänguväljak",
+      "gen": "mänguväljaku",
+      "part": "mänguväljakut",
+      "plpart": "mänguväljakuid"
+    },
+    {
+      "id": "n_lennujaam",
+      "ru": "аэропорт",
+      "nom": "lennujaam",
+      "gen": "lennujaama",
+      "part": "lennujaama",
+      "plpart": "lennujaamu,lennujaamasid"
+    },
+    {
+      "id": "n_kaubanduskeskus",
+      "ru": "торговый центр",
+      "nom": "kaubanduskeskus",
+      "gen": "kaubanduskeskuse",
+      "part": "kaubanduskeskust",
+      "plpart": "kaubanduskeskusi"
+    },
+    {
+      "id": "n_bussipeatus",
+      "ru": "автобусная остановка",
+      "nom": "bussipeatus",
+      "gen": "bussipeatuse",
+      "part": "bussipeatust",
+      "plpart": "bussipeatusi"
+    },
+    {
+      "id": "n_bussijaam",
+      "ru": "автовокзал",
+      "nom": "bussijaam",
+      "gen": "bussijaama",
+      "part": "bussijaama",
+      "plpart": "bussijaamu,bussijaamasid"
+    },
+    {
+      "id": "n_bensiinijaam",
+      "ru": "заправка",
+      "nom": "bensiinijaam",
+      "gen": "bensiinijaama",
+      "part": "bensiinijaama",
+      "plpart": "bensiinijaamu,bensiinijaamasid"
+    },
+    {
+      "id": "n_autopesula",
+      "ru": "автомойка",
+      "nom": "autopesula",
+      "gen": "autopesula",
+      "part": "autopesulat",
+      "plpart": "autopesulaid"
+    },
+    {
+      "id": "n_tuuleveski",
+      "ru": "ветряная мельница",
+      "nom": "tuuleveski",
+      "gen": "tuuleveski",
+      "part": "tuuleveskit",
+      "plpart": "tuuleveskeid"
+    },
+    {
+      "id": "n_tuletorn",
+      "ru": "маяк",
+      "nom": "tuletorn",
+      "gen": "tuletorni",
+      "part": "tuletorni",
+      "plpart": "tuletorne,tuletornisid"
+    },
+    {
+      "id": "n_sild",
+      "ru": "мост",
+      "nom": "sild",
+      "gen": "silla",
+      "part": "silda",
+      "plpart": "sildu,sildasid"
+    },
+    {
+      "id": "n_saar",
+      "ru": "остров",
+      "nom": "saar",
+      "gen": "saare",
+      "part": "saart",
+      "plpart": "saari"
+    },
+    {
+      "id": "n_pold",
+      "ru": "поле",
+      "nom": "põld",
+      "gen": "põllu",
+      "part": "põldu",
+      "plpart": "põlde,põldusid"
+    },
+    {
+      "id": "n_magi",
+      "ru": "гора",
+      "nom": "mägi",
+      "gen": "mäe",
+      "part": "mäge",
+      "plpart": "mägesid"
+    },
+    {
+      "id": "n_mets",
+      "ru": "лес",
+      "nom": "mets",
+      "gen": "metsa",
+      "part": "metsa",
+      "plpart": "metsi,metsasid"
+    },
+    {
+      "id": "n_matkarada",
+      "ru": "туристическая тропа",
+      "nom": "matkarada",
+      "gen": "matkaraja",
+      "part": "matkarada",
+      "plpart": "matkaradu,matkaradasid"
+    },
+    {
+      "id": "n_jarv",
+      "ru": "озеро",
+      "nom": "järv",
+      "gen": "järve",
+      "part": "järve",
+      "plpart": "järvi,järvesid"
+    },
+    {
+      "id": "n_vann",
+      "ru": "ванна",
+      "nom": "vann",
+      "gen": "vanni",
+      "part": "vanni",
+      "plpart": "vanne,vannisid"
+    },
+    {
+      "id": "n_vaip",
+      "ru": "ковёр",
+      "nom": "vaip",
+      "gen": "vaiba",
+      "part": "vaipa",
+      "plpart": "vaipu,vaipasid"
+    },
+    {
+      "id": "n_sampoon",
+      "ru": "шампунь",
+      "nom": "šampoon",
+      "gen": "šampooni",
+      "part": "šampooni",
+      "plpart": "šampoone,šampoonisid"
+    },
+    {
+      "id": "n_prugikast",
+      "ru": "мусорное ведро",
+      "nom": "prügikast",
+      "gen": "prügikasti",
+      "part": "prügikasti",
+      "plpart": "prügikaste,prügikastisid"
+    },
+    {
+      "id": "n_pesumasin",
+      "ru": "стиральная машина",
+      "nom": "pesumasin",
+      "gen": "pesumasina",
+      "part": "pesumasinat",
+      "plpart": "pesumasinaid"
+    },
+    {
+      "id": "n_peegel",
+      "ru": "зеркало",
+      "nom": "peegel",
+      "gen": "peegli",
+      "part": "peeglit",
+      "plpart": "peegleid"
+    },
+    {
+      "id": "n_kateratik",
+      "ru": "полотенце",
+      "nom": "käterätik",
+      "gen": "käterätiku",
+      "part": "käterätikut",
+      "plpart": "käterätikuid"
+    },
+    {
+      "id": "n_kraanikauss",
+      "ru": "раковина",
+      "nom": "kraanikauss",
+      "gen": "kraanikausi",
+      "part": "kraanikaussi",
+      "plpart": "kraanikausse,kraanikaussisid"
+    },
+    {
+      "id": "n_kraan",
+      "ru": "кран",
+      "nom": "kraan",
+      "gen": "kraani",
+      "part": "kraani",
+      "plpart": "kraane,kraanisid"
+    },
+    {
+      "id": "n_foon",
+      "ru": "фен",
+      "nom": "föön",
+      "gen": "fööni",
+      "part": "fööni",
+      "plpart": "fööne,föönisid"
+    },
+    {
+      "id": "n_duss",
+      "ru": "душ",
+      "nom": "dušš",
+      "gen": "duši",
+      "part": "dušši",
+      "plpart": "dušše,duššisid"
+    },
+    {
+      "id": "n_dusikabiin",
+      "ru": "душевая кабина",
+      "nom": "dušikabiin",
+      "gen": "dušikabiini",
+      "part": "dušikabiini",
+      "plpart": "dušikabiine,dušikabiinisid"
+    },
+    {
+      "id": "n_tugitool",
+      "ru": "кресло",
+      "nom": "tugitool",
+      "gen": "tugitooli",
+      "part": "tugitooli",
+      "plpart": "tugitoole,tugitoolisid"
+    },
+    {
+      "id": "n_televiisor",
+      "ru": "телевизор",
+      "nom": "televiisor",
+      "gen": "televiisori",
+      "part": "televiisorit",
+      "plpart": "televiisoreid"
+    },
+    {
+      "id": "n_riiul",
+      "ru": "полка",
+      "nom": "riiul",
+      "gen": "riiuli",
+      "part": "riiulit",
+      "plpart": "riiuleid"
+    },
+    {
+      "id": "n_lamp",
+      "ru": "лампа",
+      "nom": "lamp",
+      "gen": "lambi",
+      "part": "lampi",
+      "plpart": "lampe,lampisid"
+    },
+    {
+      "id": "n_klaver",
+      "ru": "пианино",
+      "nom": "klaver",
+      "gen": "klaveri",
+      "part": "klaverit",
+      "plpart": "klavereid"
+    },
+    {
+      "id": "n_kell",
+      "ru": "часы",
+      "nom": "kell",
+      "gen": "kella",
+      "part": "kella",
+      "plpart": "kelli,kellasid"
+    },
+    {
+      "id": "n_kardin",
+      "ru": "штора",
+      "nom": "kardin",
+      "gen": "kardina",
+      "part": "kardinat",
+      "plpart": "kardinaid"
+    },
+    {
+      "id": "n_diivanilaud",
+      "ru": "журнальный столик",
+      "nom": "diivanilaud",
+      "gen": "diivanilaua",
+      "part": "diivanilauda",
+      "plpart": "diivanilaudu,diivanilaudasid"
+    },
+    {
+      "id": "n_diivan",
+      "ru": "диван",
+      "nom": "diivan",
+      "gen": "diivani",
+      "part": "diivanit",
+      "plpart": "diivaneid"
+    },
+    {
+      "id": "n_arvuti",
+      "ru": "компьютер",
+      "nom": "arvuti",
+      "gen": "arvuti",
+      "part": "arvutit",
+      "plpart": "arvuteid"
+    },
+    {
+      "id": "n_akvaarium",
+      "ru": "аквариум",
+      "nom": "akvaarium",
+      "gen": "akvaariumi",
+      "part": "akvaariumi",
+      "plpart": "akvaariume"
+    },
+    {
+      "id": "n_kapp",
+      "ru": "шкаф",
+      "nom": "kapp",
+      "gen": "kapi",
+      "part": "kappi",
+      "plpart": "kappe,kappisid"
+    },
+    {
+      "id": "n_kirjutuslaud",
+      "ru": "письменный стол",
+      "nom": "kirjutuslaud",
+      "gen": "kirjutuslaua",
+      "part": "kirjutuslauda",
+      "plpart": "kirjutuslaudu,kirjutuslaudasid"
+    },
+    {
+      "id": "n_nagi",
+      "ru": "вешалка",
+      "nom": "nagi",
+      "gen": "nagi",
+      "part": "nagi",
+      "plpart": "nagisid"
+    },
+    {
+      "id": "n_padi",
+      "ru": "подушка",
+      "nom": "padi",
+      "gen": "padja",
+      "part": "patja",
+      "plpart": "patju,patjasid"
+    },
+    {
+      "id": "n_sahtel",
+      "ru": "выдвижной ящик",
+      "nom": "sahtel",
+      "gen": "sahtli",
+      "part": "sahtlit",
+      "plpart": "sahtleid"
+    },
+    {
+      "id": "n_tekk",
+      "ru": "одеяло",
+      "nom": "tekk",
+      "gen": "teki",
+      "part": "tekki",
+      "plpart": "tekke,tekkisid"
+    },
+    {
+      "id": "n_tool",
+      "ru": "стул",
+      "nom": "tool",
+      "gen": "tooli",
+      "part": "tooli",
+      "plpart": "toole,toolisid"
+    },
+    {
+      "id": "n_voodi",
+      "ru": "кровать",
+      "nom": "voodi",
+      "gen": "voodi",
+      "part": "voodit",
+      "plpart": "voodeid"
+    },
+    {
+      "id": "n_ohupuhasti",
+      "ru": "вытяжка",
+      "nom": "õhupuhasti",
+      "gen": "õhupuhasti",
+      "part": "õhupuhastit",
+      "plpart": "õhupuhasteid"
+    },
+    {
+      "id": "n_veekeetja",
+      "ru": "электрочайник",
+      "nom": "veekeetja",
+      "gen": "veekeetja",
+      "part": "veekeetjat",
+      "plpart": "veekeetjaid"
+    },
+    {
+      "id": "n_triikraud",
+      "ru": "утюг",
+      "nom": "triikraud",
+      "gen": "triikraua",
+      "part": "triikrauda",
+      "plpart": "triikraudu,triikraudasid"
+    },
+    {
+      "id": "n_tolmuimeja",
+      "ru": "пылесос",
+      "nom": "tolmuimeja",
+      "gen": "tolmuimeja",
+      "part": "tolmuimejat",
+      "plpart": "tolmuimejaid"
+    },
+    {
+      "id": "n_sugavkulmik",
+      "ru": "морозильник",
+      "nom": "sügavkülmik",
+      "gen": "sügavkülmiku",
+      "part": "sügavkülmikut",
+      "plpart": "sügavkülmikuid"
+    },
+    {
+      "id": "n_roster",
+      "ru": "тостер",
+      "nom": "röster",
+      "gen": "röstri",
+      "part": "röstrit",
+      "plpart": "röstreid"
+    },
+    {
+      "id": "n_pliit",
+      "ru": "плита",
+      "nom": "pliit",
+      "gen": "pliidi",
+      "part": "pliiti",
+      "plpart": "pliite,pliitisid"
+    },
+    {
+      "id": "n_noudepesumasin",
+      "ru": "посудомоечная машина",
+      "nom": "nõudepesumasin",
+      "gen": "nõudepesumasina",
+      "part": "nõudepesumasinat",
+      "plpart": "nõudepesumasinaid"
+    },
+    {
+      "id": "n_mikrolaineahi",
+      "ru": "микроволновка",
+      "nom": "mikrolaineahi",
+      "gen": "mikrolaineahju",
+      "part": "mikrolaineahju",
+      "plpart": "mikrolaineahje,mikrolaineahjusid"
+    },
+    {
+      "id": "n_kulmkapp",
+      "ru": "холодильник",
+      "nom": "külmkapp",
+      "gen": "külmkapi",
+      "part": "külmkappi",
+      "plpart": "külmkappe,külmkappisid"
+    },
+    {
+      "id": "n_ahi",
+      "ru": "печь, духовка",
+      "nom": "ahi",
+      "gen": "ahju",
+      "part": "ahju",
+      "plpart": "ahje,ahjusid"
     }
   ],
   "verbs": [
@@ -993,6 +1714,89 @@
       "past": "pakkus",
       "nud": "pakkunud",
       "rek": "mida*"
+    },
+    {
+      "id": "v_helistama",
+      "ru": "звонить",
+      "ma": "helistama",
+      "da": "helistada",
+      "b": "helistab",
+      "neg": "helista",
+      "past": "helistas",
+      "nud": "helistanud",
+      "rek": "kellele,kuhu"
+    },
+    {
+      "id": "v_kammima",
+      "ru": "причёсывать",
+      "ma": "kammima",
+      "da": "kammida",
+      "b": "kammib",
+      "neg": "kammi",
+      "past": "kammis",
+      "nud": "kamminud"
+    },
+    {
+      "id": "v_koristama",
+      "ru": "убираться",
+      "ma": "koristama",
+      "da": "koristada",
+      "b": "koristab",
+      "neg": "korista",
+      "past": "koristas",
+      "nud": "koristanud"
+    },
+    {
+      "id": "v_arkama",
+      "ru": "просыпаться",
+      "ma": "ärkama",
+      "da": "ärgata",
+      "b": "ärkab",
+      "neg": "ärka",
+      "past": "ärkas",
+      "nud": "ärganud",
+      "rek": "mille peale"
+    },
+    {
+      "id": "v_voimlema",
+      "ru": "делать зарядку",
+      "ma": "võimlema",
+      "da": "võimelda",
+      "b": "võimleb",
+      "neg": "võimle",
+      "past": "võimles",
+      "nud": "võimelnud"
+    },
+    {
+      "id": "v_suitsetama",
+      "ru": "курить",
+      "ma": "suitsetama",
+      "da": "suitsetada",
+      "b": "suitsetab",
+      "neg": "suitseta",
+      "past": "suitsetas",
+      "nud": "suitsetanud"
+    },
+    {
+      "id": "v_puhkama",
+      "ru": "отдыхать",
+      "ma": "puhkama",
+      "da": "puhata",
+      "b": "puhkab",
+      "neg": "puhka",
+      "past": "puhkas",
+      "nud": "puhanud",
+      "rek": "kellest/millest"
+    },
+    {
+      "id": "v_joonistama",
+      "ru": "рисовать",
+      "ma": "joonistama",
+      "da": "joonistada",
+      "b": "joonistab",
+      "neg": "joonista",
+      "past": "joonistas",
+      "nud": "joonistanud"
     }
   ]
 }

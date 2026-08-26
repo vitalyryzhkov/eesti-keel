@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v1';
+const VERSION = 'v3';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -82,13 +82,17 @@ function buildCards() {
     });
   }
   for (const v of DATA.verbs) {
+    const vFields = [
+      { key: 'da', label: 'da-infinitiiv', answer: v.da },
+      { key: 'b', label: '3. pööre (ta ...)', answer: v.b },
+    ];
+    // основа отрицания: ei + эта форма, одна на все лица
+    if (v.neg) vFields.push({ key: 'neg', label: 'eitus (ta ei ...)', answer: v.neg });
     out.push({
       id: v.id + ':forms', kind: 'forms', deck: 'forms',
-      tag: 'tegusõna · формы', prompt: v.ma, ru: v.ru,
-      fields: [
-        { key: 'da', label: 'da-infinitiiv', answer: v.da },
-        { key: 'b', label: '3. pööre (ta ...)', answer: v.b },
-      ],
+      tag: 'tegusõna · формы', prompt: v.ma,
+      ru: v.ru + (v.rek ? ' · ' + v.rek : ''),   // рекция из словаря: aitama keda, helistama kellele
+      fields: vFields,
     });
     out.push({
       id: v.id + ':prod', kind: 'prod', deck: 'vocab',

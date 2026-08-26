@@ -47,7 +47,9 @@ def sections(path):
             word = m.group(1).strip(" .,;")
             if not word or len(word) < 2:
                 continue
-            if re.search(r'[—_]{2,}', word):        # обрывки заданий с пропусками
+            if re.search(r'[—_]', word) or re.search(r'\d', word) or '?' in word:
+                continue                            # обрывки заданий и заголовков
+            if word == title:                       # заголовок урока, попавший в поток
                 continue
             if current is None:
                 continue

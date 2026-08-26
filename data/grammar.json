@@ -129,6 +129,55 @@
       ]
     },
     {
+      "title": "Где? -s против -l (гл. 4)",
+      "note": "Большинство мест — на -s (seesütlev, «внутри»). Но часть слов требует -l (alalütlev, «на поверхности»), и это надо запомнить списком.",
+      "rows": [
+        { "et": "majas · korteris · köögis · magamistoas · vannitoas", "ru": "в доме · в квартире · на кухне · в спальне · в ванной", "hint": "-s, обычный случай" },
+        { "et": "koridoris · keldris · garaažis · esikus · aias · saunas", "ru": "в коридоре · в подвале · в гараже · в прихожей · в саду · в сауне", "hint": "тоже -s" },
+        { "et": "rõdul · terrassil · korrusel", "ru": "на балконе · на террасе · на этаже", "hint": "-l — запомнить, логики нет" },
+        { "et": "Ma olen köögis, aga ta on rõdul.", "ru": "Я на кухне, а он на балконе.", "hint": "два падежа в одном предложении" }
+      ]
+    },
+    {
+      "title": "На каком этаже (гл. 3)",
+      "note": "Порядковое числительное встаёт в тот же падеж, что и korrusel: Mitmendal korrusel? — вопрос уже подсказывает форму ответа.",
+      "rows": [
+        { "et": "Mitmes korrus see on? — Kolmas.", "ru": "Который это этаж? — Третий.", "hint": "nimetav — называем номер" },
+        { "et": "Mitmendal korrusel sa elad? — Kolmandal.", "ru": "На каком этаже ты живёшь? — На третьем.", "hint": "alalütlev — где живём" },
+        { "et": "esimesel · teisel · kolmandal · neljandal · viiendal", "ru": "на первом · втором · третьем · четвёртом · пятом" },
+        { "et": "kuuendal · seitsmendal · kaheksandal · üheksandal · kümnendal", "ru": "на шестом · седьмом · восьмом · девятом · десятом" }
+      ]
+    },
+    {
+      "title": "Мой день (гл. 4)",
+      "note": "Готовые связки. Обрати внимание на падеж дополнения — почти везде osastav, потому что действие описывается как процесс.",
+      "rows": [
+        { "et": "Ma ärkan kell seitse.", "ru": "Я просыпаюсь в семь." },
+        { "et": "Ma panen riidesse.", "ru": "Я одеваюсь.", "hint": "устойчивое сочетание, дословно не разбирается" },
+        { "et": "Ma pesen hambaid.", "ru": "Я чищу зубы.", "hint": "hambaid — мн. osastav" },
+        { "et": "Ma pesen nõusid.", "ru": "Я мою посуду.", "hint": "nõusid — мн. osastav" },
+        { "et": "Ma teen süüa.", "ru": "Я готовлю.", "hint": "дословно «делаю есть» — süüa это da-инфинитив" },
+        { "et": "Ma söön võileiba.", "ru": "Я ем бутерброд.", "hint": "osastav — процесс, не «съел весь»" },
+        { "et": "Ma vaatan televiisorit / uudiseid / filme.", "ru": "Я смотрю телевизор / новости / фильмы.", "hint": "везде osastav" },
+        { "et": "Ma sõidan bussiga tööle.", "ru": "Я еду на автобусе на работу.", "hint": "bussiga — чем, tööle — куда" },
+        { "et": "Ma jalutan koeraga.", "ru": "Я гуляю с собакой.", "hint": "koeraga — kaasaütlev" },
+        { "et": "Ma helistan emale.", "ru": "Я звоню маме.", "hint": "helistama kellele — allatiiv" },
+        { "et": "Ma käin vannis.", "ru": "Я принимаю ванну." }
+      ]
+    },
+    {
+      "title": "Где в комнате (гл. 5)",
+      "note": "Часть — падежные формы, часть — послелоги после omastav (ukse juures = «двери у»).",
+      "rows": [
+        { "et": "seinal · põrandal · laes", "ru": "на стене · на полу · на потолке" },
+        { "et": "nurgas", "ru": "в углу" },
+        { "et": "ukse juures", "ru": "у двери", "hint": "uks → ukse (omastav) + juures" },
+        { "et": "akna all", "ru": "под окном", "hint": "aken → akna + all" },
+        { "et": "toa keskel", "ru": "посреди комнаты", "hint": "tuba → toa + keskel" },
+        { "et": "Diivan on akna all ja lamp on nurgas.", "ru": "Диван под окном, а лампа в углу." }
+      ]
+    },
+    {
       "title": "Ходовые фразы",
       "note": "Готовые блоки, которые не надо разбирать по грамматике.",
       "rows": [
