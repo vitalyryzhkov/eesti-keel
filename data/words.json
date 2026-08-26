@@ -1,115 +1,998 @@
 {
   "meta": {
     "level": "A2",
-    "note": "Формы даны по общему знанию. Спорные сверяй с Sõnaveeb (sonaveeb.ee) и ставь check: true.",
-    "updated": "2026-08-26"
+    "note": "Формы сверены с EKI (api.sonapi.ee) — руками не правим, прогоняй tools/sonaveeb.py. Переводы наши. Через запятую — равноправные варианты, тренажёр примет любой.",
+    "updated": "2026-08-26",
+    "source": "формы — EKI через api.sonapi.ee; переводы вручную",
+    "verified": "2026-08-26: 524 формы, расхождений нет"
   },
   "nouns": [
-    { "id": "n_raamat",   "ru": "книга",         "nom": "raamat",   "gen": "raamatu",  "part": "raamatut",  "plpart": "raamatuid" },
-    { "id": "n_tuba",     "ru": "комната",       "nom": "tuba",     "gen": "toa",      "part": "tuba",      "plpart": "tube" },
-    { "id": "n_maja",     "ru": "дом",           "nom": "maja",     "gen": "maja",     "part": "maja",      "plpart": "maju" },
-    { "id": "n_laud",     "ru": "стол",          "nom": "laud",     "gen": "laua",     "part": "lauda",     "plpart": "laudu" },
-    { "id": "n_jalg",     "ru": "нога",          "nom": "jalg",     "gen": "jala",     "part": "jalga",     "plpart": "jalgu" },
-    { "id": "n_kasi",     "ru": "рука",          "nom": "käsi",     "gen": "käe",      "part": "kätt",      "plpart": "käsi" },
-    { "id": "n_too",      "ru": "работа",        "nom": "töö",      "gen": "töö",      "part": "tööd",      "plpart": "töid" },
-    { "id": "n_sober",    "ru": "друг",          "nom": "sõber",    "gen": "sõbra",    "part": "sõpra",     "plpart": "sõpru" },
-    { "id": "n_inimene",  "ru": "человек",       "nom": "inimene",  "gen": "inimese",  "part": "inimest",   "plpart": "inimesi" },
-    { "id": "n_pood",     "ru": "магазин",       "nom": "pood",     "gen": "poe",      "part": "poodi",     "plpart": "poode" },
-    { "id": "n_auto",     "ru": "машина",        "nom": "auto",     "gen": "auto",     "part": "autot",     "plpart": "autosid" },
-    { "id": "n_koer",     "ru": "собака",        "nom": "koer",     "gen": "koera",    "part": "koera",     "plpart": "koeri" },
-    { "id": "n_kool",     "ru": "школа",         "nom": "kool",     "gen": "kooli",    "part": "kooli",     "plpart": "koole" },
-    { "id": "n_tanav",    "ru": "улица",         "nom": "tänav",    "gen": "tänava",   "part": "tänavat",   "plpart": "tänavaid" },
-    { "id": "n_aeg",      "ru": "время",         "nom": "aeg",      "gen": "aja",      "part": "aega",      "plpart": "aegu" },
-    { "id": "n_pere",     "ru": "семья",         "nom": "pere",     "gen": "pere",     "part": "peret",     "plpart": "peresid" },
-    { "id": "n_hind",     "ru": "цена",          "nom": "hind",     "gen": "hinna",    "part": "hinda",     "plpart": "hindu" },
-    { "id": "n_keel",     "ru": "язык (речь)",   "nom": "keel",     "gen": "keele",    "part": "keelt",     "plpart": "keeli" },
-    { "id": "n_paev",     "ru": "день",          "nom": "päev",     "gen": "päeva",    "part": "päeva",     "plpart": "päevi" },
-    { "id": "n_nadal",    "ru": "неделя",        "nom": "nädal",    "gen": "nädala",   "part": "nädalat",   "plpart": "nädalaid" },
-    { "id": "n_kuu",      "ru": "месяц; луна",   "nom": "kuu",      "gen": "kuu",      "part": "kuud",      "plpart": "kuid" },
-    { "id": "n_aasta",    "ru": "год",           "nom": "aasta",    "gen": "aasta",    "part": "aastat",    "plpart": "aastaid" },
-    { "id": "n_pilt",     "ru": "картина, фото", "nom": "pilt",     "gen": "pildi",    "part": "pilti",     "plpart": "pilte" },
-    { "id": "n_uks",      "ru": "дверь",         "nom": "uks",      "gen": "ukse",     "part": "ust",       "plpart": "uksi" },
-    { "id": "n_silm",     "ru": "глаз",          "nom": "silm",     "gen": "silma",    "part": "silma",     "plpart": "silmi" },
-    { "id": "n_laps",     "ru": "ребёнок",       "nom": "laps",     "gen": "lapse",    "part": "last",      "plpart": "lapsi" },
-    { "id": "n_naine",    "ru": "женщина, жена", "nom": "naine",    "gen": "naise",    "part": "naist",     "plpart": "naisi" },
-    { "id": "n_mees",     "ru": "мужчина, муж",  "nom": "mees",     "gen": "mehe",     "part": "meest",     "plpart": "mehi" },
-    { "id": "n_linn",     "ru": "город",         "nom": "linn",     "gen": "linna",    "part": "linna",     "plpart": "" },
-    { "id": "n_leib",     "ru": "хлеб (чёрный)", "nom": "leib",     "gen": "leiva",    "part": "leiba",     "plpart": "leibu" },
-    { "id": "n_oun",      "ru": "яблоко",        "nom": "õun",      "gen": "õuna",     "part": "õuna",      "plpart": "õunu" },
-    { "id": "n_tee",      "ru": "дорога; чай",   "nom": "tee",      "gen": "tee",      "part": "teed",      "plpart": "teid" },
-    { "id": "n_riik",     "ru": "государство",   "nom": "riik",     "gen": "riigi",    "part": "riiki",     "plpart": "riike" },
-    { "id": "n_arst",     "ru": "врач",          "nom": "arst",     "gen": "arsti",    "part": "arsti",     "plpart": "arste" },
-    { "id": "n_nimi",     "ru": "имя",           "nom": "nimi",     "gen": "nime",     "part": "nime",      "plpart": "nimesid" },
-    { "id": "n_lill",     "ru": "цветок",        "nom": "lill",     "gen": "lille",    "part": "lille",     "plpart": "lilli" },
-    { "id": "n_puu",      "ru": "дерево",        "nom": "puu",      "gen": "puu",      "part": "puud",      "plpart": "puid" },
-    { "id": "n_vend",     "ru": "брат",          "nom": "vend",     "gen": "venna",    "part": "venda",     "plpart": "vendi" },
-    { "id": "n_ode",      "ru": "сестра",        "nom": "õde",      "gen": "õe",       "part": "õde",       "plpart": "õdesid" },
-    { "id": "n_sona",     "ru": "слово",         "nom": "sõna",     "gen": "sõna",     "part": "sõna",      "plpart": "sõnu" },
-    { "id": "n_lugu",     "ru": "история",       "nom": "lugu",     "gen": "loo",      "part": "lugu",      "plpart": "lugusid" },
-    { "id": "n_jogi",     "ru": "река",          "nom": "jõgi",     "gen": "jõe",      "part": "jõge",      "plpart": "jõgesid" },
-    { "id": "n_meri",     "ru": "море",          "nom": "meri",     "gen": "mere",     "part": "merd",      "plpart": "meresid" },
-    { "id": "n_oo",       "ru": "ночь",          "nom": "öö",       "gen": "öö",       "part": "ööd",       "plpart": "öid" },
-    { "id": "n_hommik",   "ru": "утро",          "nom": "hommik",   "gen": "hommiku",  "part": "hommikut",  "plpart": "hommikuid" },
-    { "id": "n_ohtu",     "ru": "вечер",         "nom": "õhtu",     "gen": "õhtu",     "part": "õhtut",     "plpart": "õhtuid" },
-    { "id": "n_vesi",     "ru": "вода",          "nom": "vesi",     "gen": "vee",      "part": "vett",      "plpart": "" },
-    { "id": "n_sook",     "ru": "еда",           "nom": "söök",     "gen": "söögi",    "part": "sööki",     "plpart": "sööke" },
-    { "id": "n_raha",     "ru": "деньги",        "nom": "raha",     "gen": "raha",     "part": "raha",      "plpart": "" },
-    { "id": "n_ilm",      "ru": "погода",        "nom": "ilm",      "gen": "ilma",     "part": "ilma",      "plpart": "" }
+    {
+      "id": "n_raamat",
+      "ru": "книга",
+      "nom": "raamat",
+      "gen": "raamatu",
+      "part": "raamatut",
+      "plpart": "raamatuid"
+    },
+    {
+      "id": "n_tuba",
+      "ru": "комната",
+      "nom": "tuba",
+      "gen": "toa",
+      "part": "tuba",
+      "plpart": "tube,tubasid"
+    },
+    {
+      "id": "n_maja",
+      "ru": "дом",
+      "nom": "maja",
+      "gen": "maja",
+      "part": "maja",
+      "plpart": "maju,majasid"
+    },
+    {
+      "id": "n_laud",
+      "ru": "стол",
+      "nom": "laud",
+      "gen": "laua",
+      "part": "lauda",
+      "plpart": "laudu,laudasid"
+    },
+    {
+      "id": "n_jalg",
+      "ru": "нога",
+      "nom": "jalg",
+      "gen": "jala",
+      "part": "jalga",
+      "plpart": "jalgu,jalgasid"
+    },
+    {
+      "id": "n_kasi",
+      "ru": "рука",
+      "nom": "käsi",
+      "gen": "käe",
+      "part": "kätt",
+      "plpart": "käsi"
+    },
+    {
+      "id": "n_too",
+      "ru": "работа",
+      "nom": "töö",
+      "gen": "töö",
+      "part": "tööd",
+      "plpart": "töid,töösid"
+    },
+    {
+      "id": "n_sober",
+      "ru": "друг",
+      "nom": "sõber",
+      "gen": "sõbra",
+      "part": "sõpra",
+      "plpart": "sõpru,sõprasid"
+    },
+    {
+      "id": "n_inimene",
+      "ru": "человек",
+      "nom": "inimene",
+      "gen": "inimese",
+      "part": "inimest",
+      "plpart": "inimesi"
+    },
+    {
+      "id": "n_pood",
+      "ru": "магазин",
+      "nom": "pood",
+      "gen": "poe",
+      "part": "poodi",
+      "plpart": "poode,poodisid"
+    },
+    {
+      "id": "n_auto",
+      "ru": "машина",
+      "nom": "auto",
+      "gen": "auto",
+      "part": "autot",
+      "plpart": "autosid"
+    },
+    {
+      "id": "n_koer",
+      "ru": "собака",
+      "nom": "koer",
+      "gen": "koera",
+      "part": "koera",
+      "plpart": "koeri,koerasid"
+    },
+    {
+      "id": "n_kool",
+      "ru": "школа",
+      "nom": "kool",
+      "gen": "kooli",
+      "part": "kooli",
+      "plpart": "koole,koolisid"
+    },
+    {
+      "id": "n_tanav",
+      "ru": "улица",
+      "nom": "tänav",
+      "gen": "tänava",
+      "part": "tänavat",
+      "plpart": "tänavaid"
+    },
+    {
+      "id": "n_aeg",
+      "ru": "время",
+      "nom": "aeg",
+      "gen": "aja",
+      "part": "aega",
+      "plpart": "aegu,aegasid"
+    },
+    {
+      "id": "n_pere",
+      "ru": "семья",
+      "nom": "pere",
+      "gen": "pere",
+      "part": "peret",
+      "plpart": "peresid"
+    },
+    {
+      "id": "n_hind",
+      "ru": "цена",
+      "nom": "hind",
+      "gen": "hinna",
+      "part": "hinda",
+      "plpart": "hindu,hindasid"
+    },
+    {
+      "id": "n_keel",
+      "ru": "язык (речь)",
+      "nom": "keel",
+      "gen": "keele",
+      "part": "keelt",
+      "plpart": "keeli"
+    },
+    {
+      "id": "n_paev",
+      "ru": "день",
+      "nom": "päev",
+      "gen": "päeva",
+      "part": "päeva",
+      "plpart": "päevi,päevasid"
+    },
+    {
+      "id": "n_nadal",
+      "ru": "неделя",
+      "nom": "nädal",
+      "gen": "nädala",
+      "part": "nädalat",
+      "plpart": "nädalaid"
+    },
+    {
+      "id": "n_kuu",
+      "ru": "месяц; луна",
+      "nom": "kuu",
+      "gen": "kuu",
+      "part": "kuud",
+      "plpart": "kuid,kuusid"
+    },
+    {
+      "id": "n_aasta",
+      "ru": "год",
+      "nom": "aasta",
+      "gen": "aasta",
+      "part": "aastat",
+      "plpart": "aastaid"
+    },
+    {
+      "id": "n_pilt",
+      "ru": "картина, фото",
+      "nom": "pilt",
+      "gen": "pildi",
+      "part": "pilti",
+      "plpart": "pilte,piltisid"
+    },
+    {
+      "id": "n_uks",
+      "ru": "дверь",
+      "nom": "uks",
+      "gen": "ukse",
+      "part": "ust",
+      "plpart": "uksi"
+    },
+    {
+      "id": "n_silm",
+      "ru": "глаз",
+      "nom": "silm",
+      "gen": "silma",
+      "part": "silma",
+      "plpart": "silmi,silmasid"
+    },
+    {
+      "id": "n_laps",
+      "ru": "ребёнок",
+      "nom": "laps",
+      "gen": "lapse",
+      "part": "last",
+      "plpart": "lapsi"
+    },
+    {
+      "id": "n_naine",
+      "ru": "женщина, жена",
+      "nom": "naine",
+      "gen": "naise",
+      "part": "naist",
+      "plpart": "naisi"
+    },
+    {
+      "id": "n_mees",
+      "ru": "мужчина, муж",
+      "nom": "mees",
+      "gen": "mehe",
+      "part": "meest",
+      "plpart": "mehi"
+    },
+    {
+      "id": "n_linn",
+      "ru": "город",
+      "nom": "linn",
+      "gen": "linna",
+      "part": "linna",
+      "plpart": "linnu,linnasid"
+    },
+    {
+      "id": "n_leib",
+      "ru": "хлеб (чёрный)",
+      "nom": "leib",
+      "gen": "leiva",
+      "part": "leiba",
+      "plpart": "leibu,leibasid"
+    },
+    {
+      "id": "n_oun",
+      "ru": "яблоко",
+      "nom": "õun",
+      "gen": "õuna",
+      "part": "õuna",
+      "plpart": "õunu,õunasid"
+    },
+    {
+      "id": "n_tee",
+      "ru": "дорога; чай",
+      "nom": "tee",
+      "gen": "tee",
+      "part": "teed",
+      "plpart": "teid,teesid"
+    },
+    {
+      "id": "n_riik",
+      "ru": "государство",
+      "nom": "riik",
+      "gen": "riigi",
+      "part": "riiki",
+      "plpart": "riike,riikisid"
+    },
+    {
+      "id": "n_arst",
+      "ru": "врач",
+      "nom": "arst",
+      "gen": "arsti",
+      "part": "arsti",
+      "plpart": "arste,arstisid"
+    },
+    {
+      "id": "n_nimi",
+      "ru": "имя",
+      "nom": "nimi",
+      "gen": "nime",
+      "part": "nime",
+      "plpart": "nimesid"
+    },
+    {
+      "id": "n_lill",
+      "ru": "цветок",
+      "nom": "lill",
+      "gen": "lille",
+      "part": "lille",
+      "plpart": "lilli,lillesid"
+    },
+    {
+      "id": "n_puu",
+      "ru": "дерево",
+      "nom": "puu",
+      "gen": "puu",
+      "part": "puud",
+      "plpart": "puid,puusid"
+    },
+    {
+      "id": "n_vend",
+      "ru": "брат",
+      "nom": "vend",
+      "gen": "venna",
+      "part": "venda",
+      "plpart": "vendi,vendasid"
+    },
+    {
+      "id": "n_ode",
+      "ru": "сестра",
+      "nom": "õde",
+      "gen": "õe",
+      "part": "õde",
+      "plpart": "õdesid"
+    },
+    {
+      "id": "n_sona",
+      "ru": "слово",
+      "nom": "sõna",
+      "gen": "sõna",
+      "part": "sõna",
+      "plpart": "sõnu,sõnasid"
+    },
+    {
+      "id": "n_lugu",
+      "ru": "история",
+      "nom": "lugu",
+      "gen": "loo",
+      "part": "lugu",
+      "plpart": "lugusid"
+    },
+    {
+      "id": "n_jogi",
+      "ru": "река",
+      "nom": "jõgi",
+      "gen": "jõe",
+      "part": "jõge",
+      "plpart": "jõgesid"
+    },
+    {
+      "id": "n_meri",
+      "ru": "море",
+      "nom": "meri",
+      "gen": "mere",
+      "part": "merd",
+      "plpart": "meresid"
+    },
+    {
+      "id": "n_oo",
+      "ru": "ночь",
+      "nom": "öö",
+      "gen": "öö",
+      "part": "ööd",
+      "plpart": "öid,öösid"
+    },
+    {
+      "id": "n_hommik",
+      "ru": "утро",
+      "nom": "hommik",
+      "gen": "hommiku",
+      "part": "hommikut",
+      "plpart": "hommikuid"
+    },
+    {
+      "id": "n_ohtu",
+      "ru": "вечер",
+      "nom": "õhtu",
+      "gen": "õhtu",
+      "part": "õhtut",
+      "plpart": "õhtuid"
+    },
+    {
+      "id": "n_vesi",
+      "ru": "вода",
+      "nom": "vesi",
+      "gen": "vee",
+      "part": "vett",
+      "plpart": "vesi"
+    },
+    {
+      "id": "n_sook",
+      "ru": "еда",
+      "nom": "söök",
+      "gen": "söögi",
+      "part": "sööki",
+      "plpart": "sööke,söökisid"
+    },
+    {
+      "id": "n_raha",
+      "ru": "деньги",
+      "nom": "raha",
+      "gen": "raha",
+      "part": "raha",
+      "plpart": "rahasid"
+    },
+    {
+      "id": "n_ilm",
+      "ru": "погода",
+      "nom": "ilm",
+      "gen": "ilma",
+      "part": "ilma",
+      "plpart": "ilmu,ilmasid"
+    }
   ],
   "verbs": [
-    { "id": "v_olema",     "ru": "быть",              "ma": "olema",     "da": "olla",      "b": "on" },
-    { "id": "v_minema",    "ru": "идти, ехать",       "ma": "minema",    "da": "minna",     "b": "läheb" },
-    { "id": "v_tulema",    "ru": "приходить",         "ma": "tulema",    "da": "tulla",     "b": "tuleb" },
-    { "id": "v_tegema",    "ru": "делать",            "ma": "tegema",    "da": "teha",      "b": "teeb" },
-    { "id": "v_nagema",    "ru": "видеть",            "ma": "nägema",    "da": "näha",      "b": "näeb" },
-    { "id": "v_lugema",    "ru": "читать",            "ma": "lugema",    "da": "lugeda",    "b": "loeb" },
-    { "id": "v_kirjutama", "ru": "писать",            "ma": "kirjutama", "da": "kirjutada", "b": "kirjutab" },
-    { "id": "v_panema",    "ru": "класть, ставить",   "ma": "panema",    "da": "panna",     "b": "paneb" },
-    { "id": "v_sooma",     "ru": "есть (кушать)",     "ma": "sööma",     "da": "süüa",      "b": "sööb" },
-    { "id": "v_jooma",     "ru": "пить",              "ma": "jooma",     "da": "juua",      "b": "joob" },
-    { "id": "v_votma",     "ru": "брать",             "ma": "võtma",     "da": "võtta",     "b": "võtab" },
-    { "id": "v_andma",     "ru": "давать",            "ma": "andma",     "da": "anda",      "b": "annab" },
-    { "id": "v_tahtma",    "ru": "хотеть",            "ma": "tahtma",    "da": "tahta",     "b": "tahab" },
-    { "id": "v_saama",     "ru": "получать; мочь",    "ma": "saama",     "da": "saada",     "b": "saab" },
-    { "id": "v_jaama",     "ru": "оставаться",        "ma": "jääma",     "da": "jääda",     "b": "jääb" },
-    { "id": "v_kaima",     "ru": "ходить (бывать)",   "ma": "käima",     "da": "käia",      "b": "käib" },
-    { "id": "v_tootama",   "ru": "работать",          "ma": "töötama",   "da": "töötada",   "b": "töötab" },
-    { "id": "v_raakima",   "ru": "говорить",          "ma": "rääkima",   "da": "rääkida",   "b": "räägib" },
-    { "id": "v_utlema",    "ru": "сказать",           "ma": "ütlema",    "da": "öelda",     "b": "ütleb" },
-    { "id": "v_teadma",    "ru": "знать (факт)",      "ma": "teadma",    "da": "teada",     "b": "teab" },
-    { "id": "v_tundma",    "ru": "знать (кого-то)",   "ma": "tundma",    "da": "tunda",     "b": "tunneb" },
-    { "id": "v_pidama",    "ru": "быть должным",      "ma": "pidama",    "da": "pidada",    "b": "peab" },
-    { "id": "v_hakkama",   "ru": "начинать",          "ma": "hakkama",   "da": "hakata",    "b": "hakkab" },
-    { "id": "v_oskama",    "ru": "уметь",             "ma": "oskama",    "da": "osata",     "b": "oskab" },
-    { "id": "v_oppima",    "ru": "учиться",           "ma": "õppima",    "da": "õppida",    "b": "õpib" },
-    { "id": "v_ostma",     "ru": "покупать",          "ma": "ostma",     "da": "osta",      "b": "ostab" },
-    { "id": "v_muuma",     "ru": "продавать",         "ma": "müüma",     "da": "müüa",      "b": "müüb" },
-    { "id": "v_elama",     "ru": "жить",              "ma": "elama",     "da": "elada",     "b": "elab" },
-    { "id": "v_magama",    "ru": "спать",             "ma": "magama",    "da": "magada",    "b": "magab" },
-    { "id": "v_ootama",    "ru": "ждать",             "ma": "ootama",    "da": "oodata",    "b": "ootab" },
-    { "id": "v_vaatama",   "ru": "смотреть",          "ma": "vaatama",   "da": "vaadata",   "b": "vaatab" },
-    { "id": "v_kuulama",   "ru": "слушать",           "ma": "kuulama",   "da": "kuulata",   "b": "kuulab" },
-    { "id": "v_kuulma",    "ru": "слышать",           "ma": "kuulma",    "da": "kuulda",    "b": "kuuleb" },
-    { "id": "v_motlema",   "ru": "думать",            "ma": "mõtlema",   "da": "mõelda",    "b": "mõtleb" },
-    { "id": "v_soitma",    "ru": "ехать",             "ma": "sõitma",    "da": "sõita",     "b": "sõidab" },
-    { "id": "v_jooksma",   "ru": "бежать",            "ma": "jooksma",   "da": "joosta",    "b": "jookseb" },
-    { "id": "v_pesema",    "ru": "мыть",              "ma": "pesema",    "da": "pesta",     "b": "peseb" },
-    { "id": "v_kusima",    "ru": "спрашивать",        "ma": "küsima",    "da": "küsida",    "b": "küsib" },
-    { "id": "v_vastama",   "ru": "отвечать",          "ma": "vastama",   "da": "vastata",   "b": "vastab" },
-    { "id": "v_aitama",    "ru": "помогать",          "ma": "aitama",    "da": "aidata",    "b": "aitab" },
-    { "id": "v_armastama", "ru": "любить",            "ma": "armastama", "da": "armastada", "b": "armastab" },
-    { "id": "v_lubama",    "ru": "разрешать; обещать","ma": "lubama",    "da": "lubada",    "b": "lubab" },
-    { "id": "v_leidma",    "ru": "находить",          "ma": "leidma",    "da": "leida",     "b": "leiab" },
-    { "id": "v_alustama",  "ru": "начинать (что-то)", "ma": "alustama",  "da": "alustada",  "b": "alustab" },
-    { "id": "v_lopetama",  "ru": "заканчивать",       "ma": "lõpetama",  "da": "lõpetada",  "b": "lõpetab" },
-    { "id": "v_viima",     "ru": "относить, вести",   "ma": "viima",     "da": "viia",      "b": "viib" },
-    { "id": "v_tooma",     "ru": "приносить",         "ma": "tooma",     "da": "tuua",      "b": "toob" },
-    { "id": "v_laulma",    "ru": "петь",              "ma": "laulma",    "da": "laulda",    "b": "laulab" },
-    { "id": "v_mangima",   "ru": "играть",            "ma": "mängima",   "da": "mängida",   "b": "mängib" },
-    { "id": "v_avama",     "ru": "открывать",         "ma": "avama",     "da": "avada",     "b": "avab" },
-    { "id": "v_sulgema",   "ru": "закрывать",         "ma": "sulgema",   "da": "sulgeda",   "b": "suleb" },
-    { "id": "v_istuma",    "ru": "сидеть",            "ma": "istuma",    "da": "istuda",    "b": "istub" },
-    { "id": "v_seisma",    "ru": "стоять",            "ma": "seisma",    "da": "seista",    "b": "seisab" },
-    { "id": "v_pakkuma",   "ru": "предлагать",        "ma": "pakkuma",   "da": "pakkuda",   "b": "pakub" }
+    {
+      "id": "v_olema",
+      "ru": "быть",
+      "ma": "olema",
+      "da": "olla",
+      "b": "on",
+      "neg": "ole",
+      "past": "oli",
+      "nud": "olnud"
+    },
+    {
+      "id": "v_minema",
+      "ru": "идти, ехать",
+      "ma": "minema",
+      "da": "minna",
+      "b": "läheb",
+      "neg": "lähe",
+      "past": "läks",
+      "nud": "läinud",
+      "rek": "kuhu,millega,mida tegema"
+    },
+    {
+      "id": "v_tulema",
+      "ru": "приходить",
+      "ma": "tulema",
+      "da": "tulla",
+      "b": "tuleb",
+      "neg": "tule",
+      "past": "tuli",
+      "nud": "tulnud",
+      "rek": "kuhu,kust,millega,mida tegema,mida tegemast"
+    },
+    {
+      "id": "v_tegema",
+      "ru": "делать",
+      "ma": "tegema",
+      "da": "teha",
+      "b": "teeb",
+      "neg": "tee",
+      "past": "tegi",
+      "nud": "teinud"
+    },
+    {
+      "id": "v_nagema",
+      "ru": "видеть",
+      "ma": "nägema",
+      "da": "näha",
+      "b": "näeb",
+      "neg": "näe",
+      "past": "nägi",
+      "nud": "näinud",
+      "rek": "keda/mida*"
+    },
+    {
+      "id": "v_lugema",
+      "ru": "читать",
+      "ma": "lugema",
+      "da": "lugeda",
+      "b": "loeb",
+      "neg": "loe",
+      "past": "luges",
+      "nud": "lugenud",
+      "rek": "mida,kust,kellele"
+    },
+    {
+      "id": "v_kirjutama",
+      "ru": "писать",
+      "ma": "kirjutama",
+      "da": "kirjutada",
+      "b": "kirjutab",
+      "neg": "kirjuta",
+      "past": "kirjutas",
+      "nud": "kirjutanud"
+    },
+    {
+      "id": "v_panema",
+      "ru": "класть, ставить",
+      "ma": "panema",
+      "da": "panna",
+      "b": "paneb",
+      "neg": "pane",
+      "past": "pani",
+      "nud": "pannud",
+      "rek": "mida,kuhu"
+    },
+    {
+      "id": "v_sooma",
+      "ru": "есть (кушать)",
+      "ma": "sööma",
+      "da": "süüa",
+      "b": "sööb",
+      "neg": "söö",
+      "past": "sõi",
+      "nud": "söönud"
+    },
+    {
+      "id": "v_jooma",
+      "ru": "пить",
+      "ma": "jooma",
+      "da": "juua",
+      "b": "joob",
+      "neg": "joo",
+      "past": "jõi",
+      "nud": "joonud"
+    },
+    {
+      "id": "v_votma",
+      "ru": "брать",
+      "ma": "võtma",
+      "da": "võtta",
+      "b": "võtab",
+      "neg": "võta",
+      "past": "võttis",
+      "nud": "võtnud",
+      "rek": "keda/mida"
+    },
+    {
+      "id": "v_andma",
+      "ru": "давать",
+      "ma": "andma",
+      "da": "anda",
+      "b": "annab",
+      "neg": "anna",
+      "past": "andis",
+      "nud": "andnud",
+      "rek": "milleks / mida teha"
+    },
+    {
+      "id": "v_tahtma",
+      "ru": "хотеть",
+      "ma": "tahtma",
+      "da": "tahta",
+      "b": "tahab",
+      "neg": "taha",
+      "past": "tahtis",
+      "nud": "tahtnud",
+      "rek": "mida/keda*,mida teha,kuhu"
+    },
+    {
+      "id": "v_saama",
+      "ru": "получать; мочь",
+      "ma": "saama",
+      "da": "saada",
+      "b": "saab",
+      "neg": "saa",
+      "past": "sai",
+      "nud": "saanud",
+      "rek": "kellelt / kust"
+    },
+    {
+      "id": "v_jaama",
+      "ru": "оставаться",
+      "ma": "jääma",
+      "da": "jääda",
+      "b": "jääb",
+      "neg": "jää",
+      "past": "jäi",
+      "nud": "jäänud",
+      "rek": "kuhu,kelle juurde"
+    },
+    {
+      "id": "v_kaima",
+      "ru": "ходить (бывать)",
+      "ma": "käima",
+      "da": "käia",
+      "b": "käib",
+      "neg": "käi",
+      "past": "käis",
+      "nud": "käinud",
+      "rek": "kus,millega,kelle juures,mida tegemas"
+    },
+    {
+      "id": "v_tootama",
+      "ru": "работать",
+      "ma": "töötama",
+      "da": "töötada",
+      "b": "töötab",
+      "neg": "tööta",
+      "past": "töötas",
+      "nud": "töötanud",
+      "rek": "kus,kellena"
+    },
+    {
+      "id": "v_raakima",
+      "ru": "говорить",
+      "ma": "rääkima",
+      "da": "rääkida",
+      "b": "räägib",
+      "neg": "räägi",
+      "past": "rääkis",
+      "nud": "rääkinud",
+      "rek": "kellega,et"
+    },
+    {
+      "id": "v_utlema",
+      "ru": "сказать",
+      "ma": "ütlema",
+      "da": "ütelda",
+      "b": "ütleb",
+      "neg": "ütle",
+      "past": "ütles",
+      "nud": "ütelnud",
+      "rek": "kellele,kelle/mille kohta"
+    },
+    {
+      "id": "v_teadma",
+      "ru": "знать (факт)",
+      "ma": "teadma",
+      "da": "teada",
+      "b": "teab",
+      "neg": "tea",
+      "past": "teadis",
+      "nud": "teadnud",
+      "rek": "mida*,kellest/millest"
+    },
+    {
+      "id": "v_tundma",
+      "ru": "знать (кого-то)",
+      "ma": "tundma",
+      "da": "tunda",
+      "b": "tunneb",
+      "neg": "tunne",
+      "past": "tundis",
+      "nud": "tundnud",
+      "rek": "mida*"
+    },
+    {
+      "id": "v_pidama",
+      "ru": "быть должным",
+      "ma": "pidama",
+      "da": "pidada",
+      "b": "peab",
+      "neg": "pea",
+      "past": "pidas",
+      "nud": "pidanud",
+      "rek": "keda*"
+    },
+    {
+      "id": "v_hakkama",
+      "ru": "начинать",
+      "ma": "hakkama",
+      "da": "hakata",
+      "b": "hakkab",
+      "neg": "hakka",
+      "past": "hakkas",
+      "nud": "hakanud",
+      "rek": "mida tegema"
+    },
+    {
+      "id": "v_oskama",
+      "ru": "уметь",
+      "ma": "oskama",
+      "da": "osata",
+      "b": "oskab",
+      "neg": "oska",
+      "past": "oskas",
+      "nud": "osanud",
+      "rek": "mida*,mida teha"
+    },
+    {
+      "id": "v_oppima",
+      "ru": "учиться",
+      "ma": "õppima",
+      "da": "õppida",
+      "b": "õpib",
+      "neg": "õpi",
+      "past": "õppis",
+      "nud": "õppinud",
+      "rek": "mida*,mida tegema,kelleks"
+    },
+    {
+      "id": "v_ostma",
+      "ru": "покупать",
+      "ma": "ostma",
+      "da": "osta",
+      "b": "ostab",
+      "neg": "osta",
+      "past": "ostis",
+      "nud": "ostnud",
+      "rek": "mille/mida,kust,kellelt / kelle käest,mille eest / millega"
+    },
+    {
+      "id": "v_muuma",
+      "ru": "продавать",
+      "ma": "müüma",
+      "da": "müüa",
+      "b": "müüb",
+      "neg": "müü",
+      "past": "müüs",
+      "nud": "müünud",
+      "rek": "kellele,mille eest / millega"
+    },
+    {
+      "id": "v_elama",
+      "ru": "жить",
+      "ma": "elama",
+      "da": "elada",
+      "b": "elab",
+      "neg": "ela",
+      "past": "elas",
+      "nud": "elanud",
+      "rek": "millest"
+    },
+    {
+      "id": "v_magama",
+      "ru": "спать",
+      "ma": "magama",
+      "da": "magada",
+      "b": "magab",
+      "neg": "maga",
+      "past": "magas",
+      "nud": "maganud",
+      "rek": "kellega"
+    },
+    {
+      "id": "v_ootama",
+      "ru": "ждать",
+      "ma": "ootama",
+      "da": "oodata",
+      "b": "ootab",
+      "neg": "oota",
+      "past": "ootas",
+      "nud": "oodanud",
+      "rek": "keda/mida*"
+    },
+    {
+      "id": "v_vaatama",
+      "ru": "смотреть",
+      "ma": "vaatama",
+      "da": "vaadata",
+      "b": "vaatab",
+      "neg": "vaata",
+      "past": "vaatas",
+      "nud": "vaadanud",
+      "rek": "keda/mida*"
+    },
+    {
+      "id": "v_kuulama",
+      "ru": "слушать",
+      "ma": "kuulama",
+      "da": "kuulata",
+      "b": "kuulab",
+      "neg": "kuula",
+      "past": "kuulas",
+      "nud": "kuulanud",
+      "rek": "keda/mida*"
+    },
+    {
+      "id": "v_kuulma",
+      "ru": "слышать",
+      "ma": "kuulma",
+      "da": "kuulda",
+      "b": "kuuleb",
+      "neg": "kuule",
+      "past": "kuulis",
+      "nud": "kuulnud",
+      "rek": "keda/mida*"
+    },
+    {
+      "id": "v_motlema",
+      "ru": "думать",
+      "ma": "mõtlema",
+      "da": "mõtelda",
+      "b": "mõtleb",
+      "neg": "mõtle",
+      "past": "mõtles",
+      "nud": "mõtelnud",
+      "rek": "kellest/millest,kellele/millele,kelle/mille peale"
+    },
+    {
+      "id": "v_soitma",
+      "ru": "ехать",
+      "ma": "sõitma",
+      "da": "sõita",
+      "b": "sõidab",
+      "neg": "sõida",
+      "past": "sõitis",
+      "nud": "sõitnud",
+      "rek": "kuhu,millega"
+    },
+    {
+      "id": "v_jooksma",
+      "ru": "бежать",
+      "ma": "jooksma",
+      "da": "joosta",
+      "b": "jookseb",
+      "neg": "jookse",
+      "past": "jooksis",
+      "nud": "jooksnud"
+    },
+    {
+      "id": "v_pesema",
+      "ru": "мыть",
+      "ma": "pesema",
+      "da": "pesta",
+      "b": "peseb",
+      "neg": "pese",
+      "past": "pesi",
+      "nud": "pesnud"
+    },
+    {
+      "id": "v_kusima",
+      "ru": "спрашивать",
+      "ma": "küsima",
+      "da": "küsida",
+      "b": "küsib",
+      "neg": "küsi",
+      "past": "küsis",
+      "nud": "küsinud",
+      "rek": "kellelt,kelle käest,kelle/mille kohta,kust,kas"
+    },
+    {
+      "id": "v_vastama",
+      "ru": "отвечать",
+      "ma": "vastama",
+      "da": "vastata",
+      "b": "vastab",
+      "neg": "vasta",
+      "past": "vastas",
+      "nud": "vastanud",
+      "rek": "kellele/millele,millega"
+    },
+    {
+      "id": "v_aitama",
+      "ru": "помогать",
+      "ma": "aitama",
+      "da": "aidata",
+      "b": "aitab",
+      "neg": "aita",
+      "past": "aitas",
+      "nud": "aidanud",
+      "rek": "keda/mida*,kellel + mida teha"
+    },
+    {
+      "id": "v_armastama",
+      "ru": "любить",
+      "ma": "armastama",
+      "da": "armastada",
+      "b": "armastab",
+      "neg": "armasta",
+      "past": "armastas",
+      "nud": "armastanud",
+      "rek": "keda/mida*"
+    },
+    {
+      "id": "v_lubama",
+      "ru": "разрешать; обещать",
+      "ma": "lubama",
+      "da": "lubada",
+      "b": "lubab",
+      "neg": "luba",
+      "past": "lubas",
+      "nud": "lubanud",
+      "rek": "kellel + mida teha"
+    },
+    {
+      "id": "v_leidma",
+      "ru": "находить",
+      "ma": "leidma",
+      "da": "leida",
+      "b": "leiab",
+      "neg": "leia",
+      "past": "leidis",
+      "nud": "leidnud",
+      "rek": "kust"
+    },
+    {
+      "id": "v_alustama",
+      "ru": "начинать (что-то)",
+      "ma": "alustama",
+      "da": "alustada",
+      "b": "alustab",
+      "neg": "alusta",
+      "past": "alustas",
+      "nud": "alustanud",
+      "rek": "mida*,millega,millest"
+    },
+    {
+      "id": "v_lopetama",
+      "ru": "заканчивать",
+      "ma": "lõpetama",
+      "da": "lõpetada",
+      "b": "lõpetab",
+      "neg": "lõpeta",
+      "past": "lõpetas",
+      "nud": "lõpetanud",
+      "rek": "millega"
+    },
+    {
+      "id": "v_viima",
+      "ru": "относить, вести",
+      "ma": "viima",
+      "da": "viia",
+      "b": "viib",
+      "neg": "vii",
+      "past": "viis",
+      "nud": "viinud",
+      "rek": "keda/mida,kuhu,kust + kuhu"
+    },
+    {
+      "id": "v_tooma",
+      "ru": "приносить",
+      "ma": "tooma",
+      "da": "tuua",
+      "b": "toob",
+      "neg": "too",
+      "past": "tõi",
+      "nud": "toonud",
+      "rek": "keda/mida,kust,kust + kuhu,kuhu + millega"
+    },
+    {
+      "id": "v_laulma",
+      "ru": "петь",
+      "ma": "laulma",
+      "da": "laulda",
+      "b": "laulab",
+      "neg": "laula",
+      "past": "laulis",
+      "nud": "laulnud",
+      "rek": "millest,kellele"
+    },
+    {
+      "id": "v_mangima",
+      "ru": "играть",
+      "ma": "mängima",
+      "da": "mängida",
+      "b": "mängib",
+      "neg": "mängi",
+      "past": "mängis",
+      "nud": "mänginud",
+      "rek": "mida*,millega"
+    },
+    {
+      "id": "v_avama",
+      "ru": "открывать",
+      "ma": "avama",
+      "da": "avada",
+      "b": "avab",
+      "neg": "ava",
+      "past": "avas",
+      "nud": "avanud"
+    },
+    {
+      "id": "v_sulgema",
+      "ru": "закрывать",
+      "ma": "sulgema",
+      "da": "sulgeda",
+      "b": "suleb",
+      "neg": "sule",
+      "past": "sulges",
+      "nud": "sulgenud"
+    },
+    {
+      "id": "v_istuma",
+      "ru": "сидеть",
+      "ma": "istuma",
+      "da": "istuda",
+      "b": "istub",
+      "neg": "istu",
+      "past": "istus",
+      "nud": "istunud",
+      "rek": "kus,kuhu"
+    },
+    {
+      "id": "v_seisma",
+      "ru": "стоять",
+      "ma": "seisma",
+      "da": "seista",
+      "b": "seisab",
+      "neg": "seisa",
+      "past": "seisis",
+      "nud": "seisnud",
+      "rek": "kelle/mille eest"
+    },
+    {
+      "id": "v_pakkuma",
+      "ru": "предлагать",
+      "ma": "pakkuma",
+      "da": "pakkuda",
+      "b": "pakub",
+      "neg": "paku",
+      "past": "pakkus",
+      "nud": "pakkunud",
+      "rek": "mida*"
+    }
   ]
 }
