@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "note": "Шпаргалка A2. Дописывай секции по мере учёбы — файл читается приложением как есть.",
+    "updated": "2026-08-26"
+  },
+  "sections": [
+    {
+      "title": "Отрицание — настоящее",
+      "note": "ei + основа без -b (та же форма для всех лиц: ma ei loe, sa ei loe, nad ei loe).",
+      "rows": [
+        { "et": "Ma loen raamatut. → Ma ei loe raamatut.", "ru": "Я читаю книгу. → Я не читаю книгу." },
+        { "et": "Ta töötab. → Ta ei tööta.", "ru": "Он работает. → Он не работает." },
+        { "et": "Nad lähevad koju. → Nad ei lähe koju.", "ru": "Они идут домой. → Они не идут домой." },
+        { "et": "Ma olen kodus. → Ma ei ole (pole) kodus.", "ru": "Я дома. → Я не дома.", "hint": "pole = ei ole, разговорнее" },
+        { "et": "Ta teeb tööd. → Ta ei tee tööd.", "ru": "Он делает работу. → Он не делает работу." }
+      ]
+    },
+    {
+      "title": "Отрицание — прошедшее",
+      "note": "ei + форма на -nud. Тоже одна на все лица.",
+      "rows": [
+        { "et": "Ma lugesin. → Ma ei lugenud.", "ru": "Я читал. → Я не читал." },
+        { "et": "Me olime seal. → Me ei olnud (polnud) seal.", "ru": "Мы были там. → Мы не были там." },
+        { "et": "Ta läks poodi. → Ta ei läinud poodi.", "ru": "Он пошёл в магазин. → Он не пошёл в магазин." }
+      ]
+    },
+    {
+      "title": "Вопрос да/нет — kas",
+      "note": "Kas + обычный порядок слов. Ответ: Jah / Ei. В разговоре kas часто опускают, поднимая интонацию.",
+      "rows": [
+        { "et": "Kas sa räägid eesti keelt?", "ru": "Ты говоришь по-эстонски?" },
+        { "et": "Kas te olete eestlane?", "ru": "Вы эстонец?" },
+        { "et": "Kas sa ei tule homme?", "ru": "Ты завтра не придёшь?", "hint": "отрицательный вопрос: kas + ei" },
+        { "et": "Kas sa jood teed või kohvi?", "ru": "Ты пьёшь чай или кофе?", "hint": "kas … või … — выбор" },
+        { "et": "Kas ma tohin küsida?", "ru": "Можно спросить?" }
+      ]
+    },
+    {
+      "title": "Вопросительные слова",
+      "note": "Глагол сразу после вопросительного слова: Kus sa elad? (не «Kus sa elad?» с чем-то между).",
+      "rows": [
+        { "et": "Kes see on?", "ru": "Кто это?" },
+        { "et": "Mis see on? / Mida sa teed?", "ru": "Что это? / Что ты делаешь?", "hint": "mis — подлежащее, mida — дополнение" },
+        { "et": "Kus sa elad?", "ru": "Где ты живёшь?", "hint": "kus — где" },
+        { "et": "Kuhu sa lähed?", "ru": "Куда ты идёшь?", "hint": "kuhu — куда" },
+        { "et": "Kust sa tuled?", "ru": "Откуда ты идёшь?", "hint": "kust — откуда" },
+        { "et": "Millal sa tuled?", "ru": "Когда ты придёшь?" },
+        { "et": "Miks sa ei tule?", "ru": "Почему ты не придёшь?" },
+        { "et": "Kuidas sul läheb?", "ru": "Как дела?" },
+        { "et": "Kui palju see maksab?", "ru": "Сколько это стоит?" },
+        { "et": "Kelle raamat see on?", "ru": "Чья это книга?" },
+        { "et": "Missugune (milline) film see on?", "ru": "Какой это фильм?" }
+      ]
+    },
+    {
+      "title": "Порядок слов",
+      "note": "Глагол — на втором месте. Если предложение начинается не с подлежащего, подлежащее уходит за глагол.",
+      "rows": [
+        { "et": "Ma lähen täna poodi.", "ru": "Я иду сегодня в магазин.", "hint": "нейтрально" },
+        { "et": "Täna lähen ma poodi.", "ru": "Сегодня я иду в магазин.", "hint": "начали с täna → глагол вторым, ma после него" },
+        { "et": "Poodi lähen ma homme.", "ru": "В магазин я пойду завтра.", "hint": "то же с любым выносом вперёд" },
+        { "et": "Ma tean, et sa oled kodus.", "ru": "Я знаю, что ты дома.", "hint": "в придаточном порядок обычный — глагол НЕ в конец, как в немецком" },
+        { "et": "Ma ei tule, sest mul ei ole aega.", "ru": "Я не приду, потому что у меня нет времени." }
+      ]
+    },
+    {
+      "title": "Падеж объекта — главная развилка",
+      "note": "Частичное/процесс → osastav. Результат целиком → omastav. Отрицание → всегда osastav.",
+      "rows": [
+        { "et": "Ma loen raamatut.", "ru": "Я читаю книгу (процесс).", "hint": "osastav" },
+        { "et": "Ma loen raamatu läbi.", "ru": "Я прочитаю книгу (до конца).", "hint": "omastav — результат" },
+        { "et": "Ma ostan raamatu.", "ru": "Я куплю книгу.", "hint": "omastav — законченное действие" },
+        { "et": "Ma ei osta raamatut.", "ru": "Я не куплю книгу.", "hint": "отрицание → osastav всегда" },
+        { "et": "Osta raamat!", "ru": "Купи книгу!", "hint": "императив → nimetav" },
+        { "et": "Ma ostan kaks raamatut.", "ru": "Я куплю две книги.", "hint": "после числительного → osastav ед. ч." },
+        { "et": "Ma joon vett. / Ma joon vee ära.", "ru": "Я пью воду. / Я выпью воду (всю)." }
+      ]
+    },
+    {
+      "title": "Императив",
+      "note": "Ед. ч. = основа (та же, что после ei). Мн. ч./вежливо: -ge / -ke. Отрицание: ära / ärge.",
+      "rows": [
+        { "et": "Loe! / Lugege!", "ru": "Читай! / Читайте!" },
+        { "et": "Tule siia! / Tulge siia!", "ru": "Иди сюда! / Идите сюда!" },
+        { "et": "Mine ära! / Minge ära!", "ru": "Уходи! / Уходите!", "hint": "minema — исключение: mine, хотя ei lähe" },
+        { "et": "Tee seda! / Tehke seda!", "ru": "Делай это! / Делайте это!" },
+        { "et": "Ära räägi! / Ärge rääkige!", "ru": "Не говори! / Не говорите!" },
+        { "et": "Palun ole nii kena.", "ru": "Будь так добр." }
+      ]
+    },
+    {
+      "title": "Прошедшее время",
+      "note": "Простое прошедшее: -sin, -sid, -s, -sime, -site, -sid. Перфект: olen + -nud.",
+      "rows": [
+        { "et": "töötan → töötasin, töötasid, töötas", "ru": "работаю → работал(а), работал(и)", "hint": "правильный тип" },
+        { "et": "loen → lugesin, lugesid, luges", "ru": "читаю → читал", "hint": "основа меняется: loe- → luge-" },
+        { "et": "olen → olin; lähen → läksin; teen → tegin; söön → sõin", "ru": "неправильные, учить наизусть" },
+        { "et": "Ma olen seda filmi näinud.", "ru": "Я видел этот фильм (перфект).", "hint": "olen + -nud — «есть опыт»" },
+        { "et": "Ma ei ole seda näinud.", "ru": "Я этого не видел." }
+      ]
+    },
+    {
+      "title": "Рекция — какой падеж после глагола",
+      "note": "Учить сразу с глаголом, как в немецком предлоги.",
+      "rows": [
+        { "et": "Mulle meeldib see raamat.", "ru": "Мне нравится эта книга.", "hint": "meeldima kellele — allatiiv" },
+        { "et": "Ma aitan sind.", "ru": "Я тебе помогаю.", "hint": "aitama keda — osastav (не «кому»!)" },
+        { "et": "Ma ootan sind.", "ru": "Я жду тебя.", "hint": "ootama keda — osastav" },
+        { "et": "Ma räägin sinuga.", "ru": "Я говорю с тобой.", "hint": "rääkima kellega — kaasaütlev" },
+        { "et": "Ma räägin tööst.", "ru": "Я говорю о работе.", "hint": "rääkima millest — seestütlev" },
+        { "et": "Ma küsin õpetajalt.", "ru": "Я спрашиваю у учителя.", "hint": "küsima kellelt — alaltütlev" },
+        { "et": "Ma vastan sulle.", "ru": "Я тебе отвечаю.", "hint": "vastama kellele — allatiiv" },
+        { "et": "Ma helistan sulle.", "ru": "Я тебе позвоню.", "hint": "helistama kellele" },
+        { "et": "Ma lähen tööle / koju / poodi.", "ru": "Я иду на работу / домой / в магазин.", "hint": "куда — свой падеж у каждого слова" }
+      ]
+    },
+    {
+      "title": "Есть / нет — mul on",
+      "note": "«У меня есть» = mul on (adessiiv). Отрицание: mul ei ole + osastav.",
+      "rows": [
+        { "et": "Mul on aega.", "ru": "У меня есть время." },
+        { "et": "Mul ei ole aega. / Mul pole aega.", "ru": "У меня нет времени." },
+        { "et": "Kas sul on auto?", "ru": "У тебя есть машина?" },
+        { "et": "Tal on kaks last.", "ru": "У него двое детей." },
+        { "et": "Siin ei ole kedagi.", "ru": "Здесь никого нет.", "hint": "keegi → kedagi в отрицании" }
+      ]
+    },
+    {
+      "title": "Ходовые фразы",
+      "note": "Готовые блоки, которые не надо разбирать по грамматике.",
+      "rows": [
+        { "et": "Vabandust, ma ei saa aru.", "ru": "Извините, я не понимаю." },
+        { "et": "Kas te räägite aeglasemalt?", "ru": "Вы можете говорить медленнее?" },
+        { "et": "Mida see sõna tähendab?", "ru": "Что значит это слово?" },
+        { "et": "Kuidas seda eesti keeles öeldakse?", "ru": "Как это сказать по-эстонски?" },
+        { "et": "Ma õpin eesti keelt.", "ru": "Я учу эстонский." },
+        { "et": "Ma ei tea veel.", "ru": "Я пока не знаю." },
+        { "et": "Palun korrake.", "ru": "Повторите, пожалуйста." }
+      ]
+    }
+  ]
+}
