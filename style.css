@@ -227,3 +227,34 @@ dialog label input[type=text] {
 }
 dialog .row button:disabled { opacity: .45; cursor: default; }
 .add-result .sub.mt { color: var(--accent); }
+
+/* --- экзамен --- */
+.exam-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.exam-progress { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.exam-clock { font-size: 15px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.exam-clock.low { color: var(--bad); font-weight: 600; }
+.exam-q { font-size: 24px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.exam-ru { font-size: 15px; color: var(--muted); margin-top: -6px; }
+.exam-options { display: flex; flex-direction: column; gap: 8px; }
+.exam-options button {
+  text-align: left;
+  padding: 13px 14px;
+  font-size: 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+.exam-options button:hover { border-color: var(--accent); }
+.exam-score { font-size: 40px; font-weight: 700; }
+.exam-verdict { font-size: 16px; margin-top: -6px; }
+.exam-verdict.pass { color: var(--ok); }
+.exam-verdict.fail { color: var(--bad); }
+.exam-review { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 4px; }
+.exam-review .item { margin-bottom: 12px; font-size: 14px; }
+.exam-review .item .qq { font-size: 16px; color: var(--ink); }
+.exam-review .item .mine { color: var(--bad); }
+.exam-review .item .right { color: var(--ok); }
+.exam-review .item .why { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.exam-note { font-size: 13px; color: var(--muted); }

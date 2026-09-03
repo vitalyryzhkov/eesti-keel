@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "note": "Банк грамматических заданий. Каждое опирается на правило из grammar.json. Дистракторы подобраны так, чтобы верный ответ был ровно один.",
+    "updated": "2026-09-03"
+  },
+  "items": [
+    {
+      "q": "Ma ei osta ___.",
+      "ru": "Я не куплю книгу.",
+      "options": ["raamatut", "raamat", "raamatu", "raamatuid"],
+      "answer": 0,
+      "why": "Отрицание всегда требует osastav: ei osta raamatut."
+    },
+    {
+      "q": "Osta ___!",
+      "ru": "Купи книгу!",
+      "options": ["raamat", "raamatut", "raamatu", "raamatuid"],
+      "answer": 0,
+      "why": "После императива объект стоит в nimetav: Osta raamat!"
+    },
+    {
+      "q": "Ma ostan kaks ___.",
+      "ru": "Я куплю две книги.",
+      "options": ["raamatut", "raamatud", "raamatu", "raamatuid"],
+      "answer": 0,
+      "why": "После числительного больше единицы — osastav единственного числа."
+    },
+    {
+      "q": "Ta töötab. → Ta ei ___.",
+      "ru": "Он работает. → Он не работает.",
+      "options": ["tööta", "töötab", "töötanud", "töötama"],
+      "answer": 0,
+      "why": "Отрицание в настоящем: ei + основа без -b. Форма одна на все лица."
+    },
+    {
+      "q": "Ma lugesin. → Ma ei ___.",
+      "ru": "Я читал. → Я не читал.",
+      "options": ["lugenud", "lugenud olen", "lugesin", "loe"],
+      "answer": 0,
+      "why": "Отрицание в прошедшем: ei + форма на -nud."
+    },
+    {
+      "q": "___ sa elad?",
+      "ru": "Где ты живёшь?",
+      "options": ["Kus", "Kuhu", "Kust", "Millal"],
+      "answer": 0,
+      "why": "kus — где, kuhu — куда, kust — откуда."
+    },
+    {
+      "q": "___ sa lähed?",
+      "ru": "Куда ты идёшь?",
+      "options": ["Kuhu", "Kus", "Kust", "Kuidas"],
+      "answer": 0,
+      "why": "Направление «куда» — kuhu."
+    },
+    {
+      "q": "Kus ___ sinu ema?",
+      "ru": "Где живёт твоя мама?",
+      "options": ["elab", "elad", "elan", "elama"],
+      "answer": 0,
+      "why": "Подлежащее-существительное стоит после глагола, глагол — в 3 лице."
+    },
+    {
+      "q": "___ on aega.",
+      "ru": "У меня есть время.",
+      "options": ["Mul", "Ma", "Minu", "Mind"],
+      "answer": 0,
+      "why": "«У кого есть» — alalütlev: mul on."
+    },
+    {
+      "q": "Mul ei ole ___.",
+      "ru": "У меня нет времени.",
+      "options": ["aega", "aeg", "aja", "ajad"],
+      "answer": 0,
+      "why": "После отрицания «нет чего-то» — osastav: ei ole aega."
+    },
+    {
+      "q": "Ma olen ___.",
+      "ru": "Я на балконе.",
+      "options": ["rõdul", "rõdus", "rõdule", "rõdu"],
+      "answer": 0,
+      "why": "rõdu — одно из слов, требующих -l, а не -s."
+    },
+    {
+      "q": "Ma olen ___.",
+      "ru": "Я на кухне.",
+      "options": ["köögis", "köögil", "kööki", "köök"],
+      "answer": 0,
+      "why": "Большинство мест — на -s: köögis, majas, korteris."
+    },
+    {
+      "q": "Ma elan ___ korrusel.",
+      "ru": "Я живу на третьем этаже.",
+      "options": ["kolmandal", "kolmas", "kolme", "kolmandale"],
+      "answer": 0,
+      "why": "Порядковое согласуется с korrusel и тоже стоит на -l."
+    },
+    {
+      "q": "Minu sünnipäev on ___ mail.",
+      "ru": "Мой день рождения пятого мая.",
+      "options": ["viiendal", "viies", "viiendale", "viiendat"],
+      "answer": 0,
+      "why": "Дата: порядковое и месяц оба в alalütlev — viiendal mail."
+    },
+    {
+      "q": "Nad on ___.",
+      "ru": "Они дружелюбные.",
+      "options": ["sõbralikud", "sõbralik", "sõbraliku", "sõbralikke"],
+      "answer": 0,
+      "why": "Мн. ч. прилагательного строится от omastav + d: sõbraliku → sõbralikud."
+    },
+    {
+      "q": "Nad on ___.",
+      "ru": "Они умные.",
+      "options": ["targad", "tarkad", "tark", "targa"],
+      "answer": 0,
+      "why": "tark → targa → targad: работает чередование ступеней rk/rg."
+    },
+    {
+      "q": "Te ___ eestlased.",
+      "ru": "Вы эстонцы.",
+      "options": ["olete", "oleme", "on", "oled"],
+      "answer": 0,
+      "why": "olema: ma olen, sa oled, ta on, me oleme, te olete, nad on."
+    },
+    {
+      "q": "See on ___ raamat.",
+      "ru": "Это моя книга.",
+      "options": ["minu", "mind", "mulle", "minul"],
+      "answer": 0,
+      "why": "Принадлежность — omastav: minu / mu raamat."
+    },
+    {
+      "q": "Ma helistan ___.",
+      "ru": "Я звоню тебе.",
+      "options": ["sulle", "sind", "sinuga", "sinust"],
+      "answer": 0,
+      "why": "helistama kellele — allatiiv."
+    },
+    {
+      "q": "Ma aitan ___.",
+      "ru": "Я тебе помогаю.",
+      "options": ["sind", "sulle", "sinuga", "sinul"],
+      "answer": 0,
+      "why": "aitama keda — osastav, хотя по-русски «кому»."
+    },
+    {
+      "q": "Ma räägin ___.",
+      "ru": "Я говорю с тобой.",
+      "options": ["sinuga", "sulle", "sind", "sinust"],
+      "answer": 0,
+      "why": "rääkima kellega — kaasaütlev."
+    },
+    {
+      "q": "___ siia!",
+      "ru": "Идите сюда!",
+      "options": ["Tulge", "Tule", "Tulete", "Tulla"],
+      "answer": 0,
+      "why": "Императив множественного числа: -ge / -ke."
+    },
+    {
+      "q": "___ räägi!",
+      "ru": "Не говори!",
+      "options": ["Ära", "Ei", "Ärge", "Ei ole"],
+      "answer": 0,
+      "why": "Запрет в единственном числе — ära, во множественном — ärge."
+    },
+    {
+      "q": "Ma ___ seda filmi näinud.",
+      "ru": "Я видел этот фильм.",
+      "options": ["olen", "on", "oli", "ei ole"],
+      "answer": 0,
+      "why": "Перфект: olen + форма на -nud."
+    },
+    {
+      "q": "Eile ma ___ raamatut.",
+      "ru": "Вчера я читал книгу.",
+      "options": ["lugesin", "loen", "lugenud", "lugeda"],
+      "answer": 0,
+      "why": "Простое прошедшее, 1 лицо: -sin."
+    },
+    {
+      "q": "Ma sõidan ___ tööle.",
+      "ru": "Я еду на автобусе на работу.",
+      "options": ["bussiga", "bussis", "bussile", "bussi"],
+      "answer": 0,
+      "why": "Средство передвижения — kaasaütlev: bussiga, rongiga, autoga."
+    },
+    {
+      "q": "Ma lähen ___.",
+      "ru": "Я иду на работу.",
+      "options": ["tööle", "tööd", "tööst", "tööl"],
+      "answer": 0,
+      "why": "«Куда» для работы — tööle; «где» — tööl."
+    },
+    {
+      "q": "___ sa räägid eesti keelt?",
+      "ru": "Ты говоришь по-эстонски?",
+      "options": ["Kas", "Mis", "Kus", "Kuidas"],
+      "answer": 0,
+      "why": "Вопрос без вопросительного слова начинается с kas."
+    },
+    {
+      "q": "Ma loen ___.",
+      "ru": "Я читаю книгу (сейчас, в процессе).",
+      "options": ["raamatut", "raamat", "raamatud", "raamatuid"],
+      "answer": 0,
+      "why": "Процесс, а не результат → osastav."
+    },
+    {
+      "q": "Täna ___ ma poodi.",
+      "ru": "Сегодня я иду в магазин.",
+      "options": ["lähen", "minna", "minema", "läheb"],
+      "answer": 0,
+      "why": "Начали не с подлежащего — глагол встаёт вторым, ma после него."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v9';
+const VERSION = 'v10';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -486,10 +486,12 @@ document.getElementById('btn-reset').onclick = () => {
 async function boot() {
   state = loadState();
   el.version.textContent = VERSION;
-  const [w, g] = await Promise.all([
+  const [w, g, ex] = await Promise.all([
     fetch('data/words.json').then((r) => r.json()),
     fetch('data/grammar.json').then((r) => r.json()).catch(() => null),
+    fetch('data/exam.json').then((r) => r.json()).catch(() => null),
   ]);
+  EXAMBANK = ex;
   BASE = { nouns: w.nouns, verbs: w.verbs };
   GRAMMAR = g;
   mergeUserWords();          // слова, добавленные с телефона
@@ -800,3 +802,229 @@ if (addPad) {
   inp.setSelectionRange(s + 1, s + 1);
   });
 }
+
+/* ---------- экзамен: лексика и грамматика ---------- */
+
+const EXAM_COUNT = 20;         // столько же заданий, сколько баллов в части экзамена
+const EXAM_SECONDS = 15 * 60;
+const EXAM_PASS = 0.6;         // порог на настоящем экзамене — 60%
+
+let EXAMBANK = null;           // авторские задания из data/exam.json
+let exam = null;               // текущая попытка
+
+// Дистрактор должен быть похож на правду: берём реальные формы того же слова,
+// иначе задание решается угадыванием, не зная языка
+function distractors(correct, pool, need) {
+  const out = [];
+  const seen = new Set([norm(correct)]);
+  const bag = pool.filter(Boolean).slice();
+  shuffle(bag);
+  for (const v of bag) {
+    const k = norm(v);
+    if (k && !seen.has(k)) { seen.add(k); out.push(v); }
+    if (out.length === need) break;
+  }
+  return out;
+}
+
+function firstVariant(s) {
+  return String(s || '').split(',')[0].trim();
+}
+
+function pickRandom(arr) {
+  return arr.length ? arr[Math.floor(Math.random() * arr.length)] : null;
+}
+
+function generatedItems(n) {
+  const items = [];
+  const nouns = DATA.nouns.filter((w) => w.gen && w.part);
+  const verbs = DATA.verbs.filter((w) => w.neg && w.b);
+  const allNoms = DATA.nouns.map((w) => w.nom);
+
+  const makers = [
+    // какая это форма — ровно та путаница, которую проверяет экзамен
+    () => {
+      const w = pickRandom(nouns);
+      if (!w) return null;
+      const correct = firstVariant(w.part);
+      const wrong = distractors(correct, [w.nom, firstVariant(w.gen), firstVariant(w.plpart)], 3);
+      if (wrong.length < 3) return null;
+      return { q: w.nom + ' → osastav?', ru: w.ru, correct, options: [correct].concat(wrong),
+               why: 'osastav слова ' + w.nom + ' — ' + w.part + '.' };
+    },
+    () => {
+      const w = pickRandom(nouns);
+      if (!w) return null;
+      const correct = firstVariant(w.gen);
+      const wrong = distractors(correct, [w.nom, firstVariant(w.part), firstVariant(w.plpart)], 3);
+      if (wrong.length < 3) return null;
+      return { q: w.nom + ' → omastav?', ru: w.ru, correct, options: [correct].concat(wrong),
+               why: 'omastav слова ' + w.nom + ' — ' + w.gen + '.' };
+    },
+    // основа отрицания
+    () => {
+      const w = pickRandom(verbs);
+      if (!w) return null;
+      const correct = firstVariant(w.neg);
+      const wrong = distractors(correct, [w.b, w.ma, w.da, w.nud], 3);
+      if (wrong.length < 3) return null;
+      return { q: 'Ta ' + w.b + '. → Ta ei ___', ru: w.ru, correct, options: [correct].concat(wrong),
+               why: 'Отрицание: ei + основа без -b. ' + w.b + ' → ei ' + w.neg + '.' };
+    },
+    // перевод: слово целиком, без формы
+    () => {
+      const w = pickRandom(nouns);
+      if (!w) return null;
+      const wrong = distractors(w.nom, allNoms, 3);
+      if (wrong.length < 3) return null;
+      return { q: w.ru, ru: '', correct: w.nom, options: [w.nom].concat(wrong),
+               why: w.ru + ' — ' + w.nom + '.' };
+    },
+  ];
+
+  let guard = 0;
+  const seenQ = new Set();
+  while (items.length < n && guard++ < n * 40) {
+    const it = makers[Math.floor(Math.random() * makers.length)]();
+    if (!it || seenQ.has(it.q)) continue;
+    seenQ.add(it.q);
+    items.push(it);
+  }
+  return items;
+}
+
+function buildExam() {
+  const authored = (EXAMBANK && EXAMBANK.items ? EXAMBANK.items : []).map((it) => ({
+    q: it.q, ru: it.ru, correct: it.options[it.answer], options: it.options.slice(), why: it.why,
+  }));
+  shuffle(authored);
+
+  const wantAuthored = Math.min(12, authored.length);
+  const picked = authored.slice(0, wantAuthored)
+    .concat(generatedItems(EXAM_COUNT - wantAuthored));
+
+  shuffle(picked);
+  for (const it of picked) shuffle(it.options);   // верный ответ не должен всегда стоять первым
+  return picked.slice(0, EXAM_COUNT);
+}
+
+function fmtClock(sec) {
+  const m = Math.floor(Math.max(0, sec) / 60);
+  const s = Math.max(0, sec) % 60;
+  return m + ':' + String(s).padStart(2, '0');
+}
+
+function startExam() {
+  exam = { items: buildExam(), idx: 0, answers: [], left: EXAM_SECONDS, timer: null, done: false };
+  exam.timer = setInterval(() => {
+    if (!exam) return;
+    exam.left -= 1;
+    const clock = document.getElementById('exam-clock');
+    if (clock) {
+      clock.textContent = fmtClock(exam.left);
+      clock.classList.toggle('low', exam.left <= 60);
+    }
+    if (exam.left <= 0) finishExam();     // время вышло — засчитываем как есть
+  }, 1000);
+  renderExamQuestion();
+}
+
+function stopExam() {
+  if (exam && exam.timer) clearInterval(exam.timer);
+  exam = null;
+  el.modes.hidden = false;
+  render();
+  updateStats();
+}
+
+function renderExamIntro() {
+  el.pad.hidden = true;
+  el.modes.hidden = true;
+  el.card.innerHTML =
+    '<div class="tag">экзамен · лексика и грамматика</div>' +
+    '<div class="exam-q">' + EXAM_COUNT + ' заданий, ' + (EXAM_SECONDS / 60) + ' минут</div>' +
+    '<div class="exam-note">Счёт из ' + EXAM_COUNT + ' баллов, порог — 60% как на настоящем экзамене. ' +
+      'Подсказок нет, вернуться к заданию нельзя, разбор ошибок — в конце.</div>' +
+    '<div class="exam-note">Это <b>две части из четырёх</b>: лексика и грамматика, на которых держится чтение. ' +
+      'Аудирование и говорение сюда не входят — для них нужны материалы Harno.</div>' +
+    '<div class="actions">' +
+      '<button id="exam-back">Назад</button>' +
+      '<button class="primary" id="exam-start">Начать</button>' +
+    '</div>';
+  document.getElementById('exam-start').onclick = startExam;
+  document.getElementById('exam-back').onclick = stopExam;
+}
+
+function renderExamQuestion() {
+  const it = exam.items[exam.idx];
+  el.pad.hidden = true;
+  el.card.innerHTML =
+    '<div class="exam-head">' +
+      '<span class="exam-progress">задание ' + (exam.idx + 1) + ' из ' + exam.items.length + '</span>' +
+      '<span class="exam-clock" id="exam-clock">' + fmtClock(exam.left) + '</span>' +
+    '</div>' +
+    '<div class="exam-q" lang="et">' + esc(it.q) + '</div>' +
+    (it.ru ? '<div class="exam-ru">' + esc(it.ru) + '</div>' : '') +
+    '<div class="exam-options">' +
+      it.options.map((o, i) =>
+        '<button type="button" data-i="' + i + '" lang="et">' + esc(o) + '</button>').join('') +
+    '</div>';
+
+  el.card.querySelector('.exam-options').onclick = (e) => {
+    const btn = e.target.closest('button[data-i]');
+    if (!btn) return;
+    answerExam(it.options[+btn.dataset.i]);
+  };
+}
+
+function answerExam(chosen) {
+  const it = exam.items[exam.idx];
+  exam.answers.push({ it, chosen, ok: norm(chosen) === norm(it.correct) });
+  exam.idx += 1;
+  if (exam.idx >= exam.items.length) finishExam();
+  else renderExamQuestion();
+}
+
+function finishExam() {
+  if (!exam || exam.done) return;
+  exam.done = true;
+  clearInterval(exam.timer);
+
+  const score = exam.answers.filter((a) => a.ok).length;
+  const total = exam.items.length;
+  const passed = score / total >= EXAM_PASS;
+  const wrong = exam.answers.filter((a) => !a.ok);
+  const unanswered = total - exam.answers.length;
+
+  // результат кладём в прогресс — видно динамику между попытками
+  state.exam = state.exam || [];
+  state.exam.push({ d: today(), score, total });
+  if (state.exam.length > 50) state.exam = state.exam.slice(-50);
+  saveState();
+
+  el.card.innerHTML =
+    '<div class="tag">результат</div>' +
+    '<div class="exam-score">' + score + ' / ' + total + '</div>' +
+    '<div class="exam-verdict ' + (passed ? 'pass' : 'fail') + '">' +
+      (passed ? 'Порог 60% пройден.' : 'Порог 60% не пройден — нужно ' + Math.ceil(total * EXAM_PASS) + '.') +
+    '</div>' +
+    (unanswered ? '<div class="exam-note">Время вышло, без ответа осталось ' + unanswered + '.</div>' : '') +
+    (wrong.length
+      ? '<div class="exam-review">' + wrong.map((a) =>
+          '<div class="item">' +
+            '<div class="qq" lang="et">' + esc(a.it.q) + '</div>' +
+            '<div><span class="mine">' + esc(a.chosen) + '</span> → ' +
+              '<span class="right">' + esc(a.it.correct) + '</span></div>' +
+            (a.it.why ? '<div class="why">' + esc(a.it.why) + '</div>' : '') +
+          '</div>').join('') + '</div>'
+      : '<div class="exam-note">Без ошибок.</div>') +
+    '<div class="actions">' +
+      '<button id="exam-again">Ещё раз</button>' +
+      '<button class="primary" id="exam-exit">К карточкам</button>' +
+    '</div>';
+
+  document.getElementById('exam-again').onclick = () => { exam = null; renderExamIntro(); };
+  document.getElementById('exam-exit').onclick = stopExam;
+}
+
+on('btn-exam', () => { exam = null; renderExamIntro(); });

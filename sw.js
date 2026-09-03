@@ -1,5 +1,5 @@
 // Офлайн-кэш. Меняешь файлы — подними CACHE, иначе старая версия останется на телефоне.
-const CACHE = 'eesti-a2-v9';
+const CACHE = 'eesti-a2-v10';
 const ASSETS = [
   './',
   'index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   'manifest.webmanifest',
   'data/words.json',
   'data/grammar.json',
+  'data/exam.json',
   'icons/icon-180.png',
   'icons/icon-512.png',
 ];
