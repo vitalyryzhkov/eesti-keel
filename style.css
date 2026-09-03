@@ -339,3 +339,49 @@ body {
   min-height: 0;          /* без этого flex-элемент не даёт себя сжать и не скроллит */
   overflow-y: auto;
 }
+
+/* --- шпаргалка: разделы должны читаться как отдельные карточки --- */
+.cheat {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 0 14px 10px;
+  margin-bottom: 14px;
+  background: var(--bg);
+}
+.cheat h2 {
+  position: sticky;          /* видно, в каком разделе находишься при прокрутке */
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 -14px 10px;
+  padding: 12px 14px 8px;
+  font-size: 16px;
+  color: var(--accent);
+  background: var(--bg);
+  border-radius: 8px 8px 0 0;
+}
+.cheat h2 .num {
+  flex: 0 0 auto;
+  min-width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--panel);
+  font-size: 12px;
+  font-weight: 700;
+}
+.cheat .note {
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 0 0 12px;
+}
+.cheat .ex { margin: 0 0 12px; padding-left: 2px; }
+.cheat .ex:last-child { margin-bottom: 2px; }
+.cheat .ex .et { font-weight: 500; }

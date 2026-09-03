@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v14';
+const VERSION = 'v15';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -349,9 +349,9 @@ function renderDone() {
 function renderCheat() {
   el.pad.hidden = true;
   if (!GRAMMAR) { el.card.innerHTML = '<div class="done">Загружаю…</div>'; return; }
-  el.card.innerHTML = GRAMMAR.sections.map((s) =>
+  el.card.innerHTML = GRAMMAR.sections.map((s, i) =>
     '<section class="cheat">' +
-      '<h2>' + esc(s.title) + '</h2>' +
+      '<h2><span class="num">' + (i + 1) + '</span>' + esc(s.title) + '</h2>' +
       (s.note ? '<p class="note">' + esc(s.note) + '</p>' : '') +
       s.rows.map((r) =>
         '<div class="ex">' +
