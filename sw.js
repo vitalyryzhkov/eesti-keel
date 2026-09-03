@@ -1,5 +1,5 @@
 // Офлайн-кэш. Меняешь файлы — подними CACHE, иначе старая версия останется на телефоне.
-const CACHE = 'eesti-a2-v15';
+const CACHE = 'eesti-a2-v16';
 const ASSETS = [
   './',
   'index.html',
@@ -10,7 +10,9 @@ const ASSETS = [
   'data/grammar.json',
   'data/exam.json',
   'icons/icon-180.png',
+  'icons/icon-192.png',
   'icons/icon-512.png',
+  'icons/icon-512-maskable.png',
 ];
 
 self.addEventListener('install', (e) => {
