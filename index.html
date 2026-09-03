@@ -40,16 +40,16 @@
 
 <footer>
   <button id="btn-exam" type="button">Экзамен</button>
-  <button id="btn-add" type="button">+ слово</button>
+  <button id="btn-add" type="button">Перевод</button>
   <button id="btn-settings" type="button">Настройки</button>
   <span id="version" class="version"></span>
 </footer>
 
 <dialog id="adder">
-  <h2>Добавить слово</h2>
-  <label>Эстонское слово в начальной форме
-    <input id="add-word" type="text" lang="et" autocomplete="off"
-           autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+  <h2>Перевод и словарь</h2>
+  <label>Слово или предложение — на эстонском или по-русски
+    <textarea id="add-word" rows="2" lang="et" autocomplete="off"
+              autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>
   </label>
   <div id="add-pad" class="pad pad-inline">
     <button type="button" data-ch="õ">õ</button>
@@ -60,10 +60,10 @@
     <button type="button" data-ch="ž">ž</button>
   </div>
   <div class="row">
-    <button id="btn-lookup" type="button" class="primary">Найти в словаре</button>
+    <button id="btn-lookup" type="button" class="primary">Перевести</button>
   </div>
   <div id="add-result" class="add-result"></div>
-  <label id="add-ru-wrap" hidden>Перевод
+  <label id="add-ru-wrap" hidden>Перевод для карточки
     <input id="add-ru" type="text" autocomplete="off" enterkeyhint="done">
   </label>
   <div class="row">

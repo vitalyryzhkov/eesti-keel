@@ -258,3 +258,84 @@ dialog .row button:disabled { opacity: .45; cursor: default; }
 .exam-review .item .right { color: var(--ok); }
 .exam-review .item .why { color: var(--muted); font-size: 13px; margin-top: 2px; }
 .exam-note { font-size: 13px; color: var(--muted); }
+
+/* --- правки интерфейса --- */
+
+/* [hidden] обязан выигрывать у display из классов, иначе панель вкладок
+   не прячется в экзамене и «Формы» остаётся подсвеченной */
+[hidden] { display: none !important; }
+
+/* подвал должен выглядеть кликабельным: это кнопки, а не подпись */
+footer { gap: 8px; }
+footer button {
+  flex: 1;
+  padding: 10px 8px;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  text-decoration: none;
+}
+footer button:hover { border-color: var(--accent); color: var(--accent); }
+footer button:active { transform: translateY(1px); }
+#btn-exam { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.version { flex: 0 0 auto; padding-left: 4px; }
+
+/* активная вкладка — заметнее, но без пестроты */
+.modes button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  .modes button.active { color: #12140f; }
+}
+
+/* кнопка «наверх» в шпаргалке */
+.to-top {
+  position: sticky;
+  bottom: 0;
+  align-self: flex-end;
+  margin-top: 4px;
+  padding: 9px 14px;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .18);
+}
+.to-top:hover { border-color: var(--accent); color: var(--accent); }
+
+/* поле перевода: текст длиннее слова должен помещаться */
+dialog label textarea {
+  display: block;
+  margin-top: 4px;
+  width: 100%;
+  font: inherit;
+  font-size: 17px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+  resize: vertical;
+}
+dialog label textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.add-result .translation { font-size: 19px; color: var(--ink); overflow-wrap: anywhere; }
+.add-result .dir { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+
+/* Прокручиваться должно только содержимое: иначе уезжают вкладки и подвал,
+   и чтобы вернуться в меню, приходится мотать всю страницу вверх */
+html, body { height: 100%; }
+body {
+  height: 100dvh;
+  overflow: hidden;
+}
+.card {
+  min-height: 0;          /* без этого flex-элемент не даёт себя сжать и не скроллит */
+  overflow-y: auto;
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v10';
+const VERSION = 'v14';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -197,6 +197,7 @@ function esc(s) {
 
 function render() {
   if (mode === 'cheat') return renderCheat();
+  el.card.onscroll = null;
   el.pad.hidden = true;
 
   if (!current) {
@@ -358,8 +359,20 @@ function renderCheat() {
           (r.ru ? '<div class="ru">' + esc(r.ru) + '</div>' : '') +
           (r.hint ? '<div class="hint">' + esc(r.hint) + '</div>' : '') +
         '</div>').join('') +
-    '</section>').join('');
+    '</section>').join('') +
+    '<button type="button" class="to-top" id="to-top">↑ наверх</button>';
   el.card.scrollTop = 0;
+
+  const top = document.getElementById('to-top');
+  top.hidden = true;                                  // пока не прокрутили — не мешаем
+  const onScroll = () => { top.hidden = el.card.scrollTop < 300; };
+  el.card.onscroll = onScroll;
+  top.onclick = () => {
+    el.card.scrollTo({ top: 0, behavior: 'smooth' });
+    // часть движков молча игнорирует smooth — подстраховываемся мгновенным сбросом
+    setTimeout(() => { if (el.card.scrollTop > 0) el.card.scrollTop = 0; }, 350);
+    top.hidden = true;
+  };
 }
 
 /* ---------- ввод ---------- */
@@ -432,6 +445,7 @@ document.getElementById('btn-settings').onclick = () => {
   el.settings.showModal();
 };
 el.settings.addEventListener('close', () => {
+  if (exam) return;                     // идёт попытка — ничего не перерисовываем
   const v = parseInt(el.setNew.value, 10);
   if (!isNaN(v) && v >= 0) { state.settings.newPerDay = v; saveState(); }
   if (mode !== 'cheat') { buildQueue(); if (!current) render(); }
@@ -459,6 +473,7 @@ el.fileImport.onchange = () => {
       state = s;
       if (!state.settings) state.settings = { newPerDay: 12 };
       saveState();
+      if (exam) stopExam();             // импорт посреди попытки — попытка закрывается
       rebuild();
       render();
     } catch (e) {
@@ -477,6 +492,7 @@ document.getElementById('btn-reset').onclick = () => {
   if (!confirm(warn)) return;
   state = defaultState();
   saveState();
+  if (exam) stopExam();
   rebuild();
   render();
 };
@@ -624,19 +640,18 @@ function glosses(res, lang) {
 // Neurotõlge переводит предложения хорошо, а редкие отдельные слова путает
 // (sügavkülmik -> «каучуковая бревна»), поэтому результат идёт как ПОДСКАЗКА,
 // которую пользователь подтверждает, а не как готовый перевод
-async function suggestRu(word, sentence) {
-  const text = sentence || word;
+async function translate(text, src, tgt) {
   try {
     const r = await fetch(MT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, src: 'est', tgt: 'rus' }),
+      body: JSON.stringify({ text, src, tgt }),
     });
     if (!r.ok) return '';
     const d = await r.json();
     return (d && d.result) || '';
   } catch (e) {
-    return '';                     // офлайн или сервис лёг — просто нет подсказки
+    return '';                     // офлайн или сервис лёг — вызывающий объяснит пользователю
   }
 }
 
@@ -646,85 +661,97 @@ function alreadyHave(entry, isVerb) {
 }
 
 async function lookup() {
-  const word = document.getElementById('add-word').value.trim().toLowerCase();
+  const raw = document.getElementById('add-word').value.trim();
   const box = document.getElementById('add-result');
   const save = document.getElementById('btn-add-save');
   pending = null;
   save.disabled = true;
   document.getElementById('add-ru-wrap').hidden = true;
 
-  if (!word) return;
-  box.textContent = 'Спрашиваю словарь…';
+  if (!raw) return;
+  box.textContent = 'Перевожу…';
   box.className = 'add-result';
 
-  let data;
-  try {
-    const r = await fetch(API + encodeURIComponent(word), { cache: 'no-store' });
-    if (!r.ok) throw new Error('словарь ответил ' + r.status);
-    data = await r.json();
-  } catch (e) {
-    // офлайн — это норма для этого приложения, объясняем прямо
+  const cyrillic = /[а-яёА-ЯЁ]/.test(raw);
+  const oneWord = !cyrillic && /^[\wõäöüšžÕÄÖÜŠŽ-]+$/.test(raw);
+
+  // одно эстонское слово — сначала словарь: он даёт формы, а не только перевод
+  if (oneWord) {
+    const word = raw.toLowerCase();
+    let data = null;
+    try {
+      const r = await fetch(API + encodeURIComponent(word), { cache: 'no-store' });
+      if (r.ok) data = await r.json();
+    } catch (e) { /* сети нет — ниже отработает машинный перевод или сообщение */ }
+
+    if (data) {
+      const parsed = parseEntry(data, word);
+      if (!parsed.error) return showEntry(parsed, box, save);
+      if (parsed.error === 'nodecl') {
+        box.className = 'add-result';
+        box.innerHTML = '<div class="dir">словарь</div>' +
+          '<div class="translation">' + esc(parsed.ru || parsed.en || '—') + '</div>' +
+          '<div class="sub">Слово не склоняется и не спрягается (наречие, частица, союз), ' +
+          'карточку на формы из него не собрать.</div>';
+        return;
+      }
+    }
+  }
+
+  // всё остальное — предложения, фразы, русский текст — идёт в машинный перевод
+  const src = cyrillic ? 'rus' : 'est';
+  const tgt = cyrillic ? 'est' : 'rus';
+  const out = await translate(raw, src, tgt);
+  if (!out) {
     box.className = 'add-result bad';
     box.textContent = navigator.onLine
-      ? 'Словарь недоступен: ' + e.message
-      : 'Нет сети. Формы берутся из словаря EKI, офлайн слово добавить нельзя.';
+      ? 'Переводчик не ответил. Попробуй ещё раз.'
+      : 'Нет сети. Перевод и словарь работают только онлайн.';
     return;
   }
+  box.className = 'add-result ok';
+  box.innerHTML =
+    '<div class="dir">' + (cyrillic ? 'русский → эстонский' : 'эстонский → русский') + '</div>' +
+    '<div class="translation" lang="' + (cyrillic ? 'et' : 'ru') + '">' + esc(out) + '</div>' +
+    '<div class="sub mt">машинный перевод Neurotõlge — на редких словах ошибается</div>';
+}
 
-  const parsed = parseEntry(data, word);
-  if (parsed.error === 'absent') {
-    box.className = 'add-result bad';
-    box.textContent = 'В словаре нет такого слова. Проверь начальную форму: ' +
-      'существительные — nimetav (raamat), глаголы — ma-инфинитив (lugema).';
-    return;
-  }
-  if (parsed.error === 'nodecl') {
-    box.className = 'add-result bad';
-    box.textContent = 'Слово в словаре есть, но оно не склоняется и не спрягается ' +
-      '(наречие, частица, союз)' + (parsed.ru ? ' — это ' + parsed.ru : '') +
-      '. Карточку на формы из него не собрать; такие слова — в шпаргалку.';
-    return;
-  }
-  if (alreadyHave(parsed.entry, parsed.isVerb)) {
-    box.className = 'add-result';
-    box.textContent = 'Это слово уже в колоде.';
-    return;
-  }
-
+// показ словарной статьи: формы, перевод, пример, возможность завести карточку
+function showEntry(parsed, box, save) {
   pending = parsed;
   const e = parsed.entry;
   const line = parsed.isVerb
     ? [e.ma, e.da, e.b, e.neg && 'ei ' + e.neg].filter(Boolean).join(' · ')
     : [e.nom, e.gen, e.part, e.plpart].filter(Boolean).join(' · ');
+
   box.className = 'add-result ok';
-  box.innerHTML = '<div class="found" lang="et">' + esc(line) + '</div>' +
+  box.innerHTML = '<div class="dir">словарь EKI</div>' +
+    '<div class="found" lang="et">' + esc(line) + '</div>' +
+    (parsed.ru ? '<div class="translation">' + esc(parsed.ru) + '</div>' : '') +
     (e.rek ? '<div class="sub">рекция: ' + esc(e.rek) + '</div>' : '') +
     (e.ex ? '<div class="sub" lang="et">' + esc(e.ex) + '</div>' : '');
 
-  document.getElementById('add-ru-wrap').hidden = false;
-  const ruInput = document.getElementById('add-ru');
-  ruInput.focus();
-  save.disabled = false;
-
-  // Перевод берём из словаря EKI — он нормативный. Подставляем в поле,
-  // пользователь правит под себя (в словаре часто целый ряд синонимов)
-  if (parsed.ru) {
-    const hint = document.createElement('div');
-    hint.className = 'sub';
-    hint.textContent = 'словарь: ' + parsed.ru + (parsed.en ? '  ·  ' + parsed.en : '');
-    box.appendChild(hint);
-    ruInput.value = parsed.ru.split(',')[0].trim();
+  if (alreadyHave(e, parsed.isVerb)) {
+    box.innerHTML += '<div class="sub">Это слово уже в колоде.</div>';
+    pending = null;
     return;
   }
 
-  // русского в словаре нет — только тогда зовём машинный перевод, и честно
-  // помечаем его как машинный: на редких словах он врёт (sügavkülmik)
-  suggestRu(parsed.isVerb ? e.ma : e.nom, e.ex).then((ru) => {
-    if (!ru || pending !== parsed) return;      // пока ждали, пользователь ушёл дальше
-    const line = document.createElement('div');
-    line.className = 'sub mt';
-    line.textContent = 'машинный перевод: ' + ru + ' — проверь его';
-    box.appendChild(line);
+  document.getElementById('add-ru-wrap').hidden = false;
+  const ruInput = document.getElementById('add-ru');
+  save.disabled = false;
+
+  if (parsed.ru) {
+    ruInput.value = parsed.ru.split(',')[0].trim();
+    return;
+  }
+  // русского в словаре нет — подставим машинный и честно это пометим
+  translate(parsed.isVerb ? e.ma : e.nom, 'est', 'rus').then((ru) => {
+    if (!ru || pending !== parsed) return;
+    const line2 = document.createElement('div');
+    line2.className = 'sub mt';
+    line2.textContent = 'машинный перевод: ' + ru + ' — проверь его';
+    box.appendChild(line2);
     if (!ruInput.value) ruInput.value = ru;
   });
 }
@@ -782,7 +809,7 @@ const addWord = document.getElementById('add-word');
 const addPad = document.getElementById('add-pad');
 if (addWord) {
   addWord.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') { e.preventDefault(); lookup(); }
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); lookup(); }
   });
   addWord.addEventListener('focus', function () { lastInput = this; });
   document.getElementById('add-ru').addEventListener('keydown', (e) => {
@@ -811,6 +838,12 @@ const EXAM_PASS = 0.6;         // порог на настоящем экзам�
 
 let EXAMBANK = null;           // авторские задания из data/exam.json
 let exam = null;               // текущая попытка
+let examTimer = null;          // ровно один на модуль: иначе утёкшие интервалы
+                               // начинают крутить счётчик новой попытки вдвое быстрее
+
+function clearExamTimer() {
+  if (examTimer !== null) { clearInterval(examTimer); examTimer = null; }
+}
 
 // Дистрактор должен быть похож на правду: берём реальные формы того же слова,
 // иначе задание решается угадыванием, не зная языка
@@ -849,8 +882,9 @@ function generatedItems(n) {
       const correct = firstVariant(w.part);
       const wrong = distractors(correct, [w.nom, firstVariant(w.gen), firstVariant(w.plpart)], 3);
       if (wrong.length < 3) return null;
-      return { q: w.nom + ' → osastav?', ru: w.ru, correct, options: [correct].concat(wrong),
-               why: 'osastav слова ' + w.nom + ' — ' + w.part + '.' };
+      return { q: w.nom + ' → ainsuse osastav?', ru: w.ru, correct, options: [correct].concat(wrong),
+               why: 'Осторожно: ' + firstVariant(w.plpart) + ' — это osastav множественного числа. '
+                    + 'Единственного у ' + w.nom + ' — ' + w.part + '.' };
     },
     () => {
       const w = pickRandom(nouns);
@@ -858,8 +892,8 @@ function generatedItems(n) {
       const correct = firstVariant(w.gen);
       const wrong = distractors(correct, [w.nom, firstVariant(w.part), firstVariant(w.plpart)], 3);
       if (wrong.length < 3) return null;
-      return { q: w.nom + ' → omastav?', ru: w.ru, correct, options: [correct].concat(wrong),
-               why: 'omastav слова ' + w.nom + ' — ' + w.gen + '.' };
+      return { q: w.nom + ' → ainsuse omastav?', ru: w.ru, correct, options: [correct].concat(wrong),
+               why: 'omastav единственного числа у ' + w.nom + ' — ' + w.gen + '.' };
     },
     // основа отрицания
     () => {
@@ -915,10 +949,17 @@ function fmtClock(sec) {
 }
 
 function startExam() {
-  exam = { items: buildExam(), idx: 0, answers: [], left: EXAM_SECONDS, timer: null, done: false };
-  exam.timer = setInterval(() => {
-    if (!exam) return;
-    exam.left -= 1;
+  clearExamTimer();
+  // время считаем по дедлайну, а не тиками: браузер усыпляет интервалы в
+  // свёрнутой вкладке, и на телефоне экзамен вставал бы на паузу
+  exam = {
+    items: buildExam(), idx: 0, answers: [], done: false,
+    endsAt: Date.now() + EXAM_SECONDS * 1000,
+  };
+  exam.left = EXAM_SECONDS;
+  examTimer = setInterval(() => {
+    if (!exam) { clearExamTimer(); return; }
+    exam.left = Math.max(0, Math.round((exam.endsAt - Date.now()) / 1000));
     const clock = document.getElementById('exam-clock');
     if (clock) {
       clock.textContent = fmtClock(exam.left);
@@ -930,16 +971,29 @@ function startExam() {
 }
 
 function stopExam() {
-  if (exam && exam.timer) clearInterval(exam.timer);
+  clearExamTimer();
   exam = null;
-  el.modes.hidden = false;
+  showChrome(true);
+  // карточка, на которую уже ответили, не должна вернуться неотвеченной:
+  // иначе повторный ответ градуирует её второй раз и интервал уедет вперёд
+  current = null;
   render();
   updateStats();
 }
 
+// во время попытки прячем всю навигацию: иначе из настроек или «Перевода»
+// можно подменить экран, а попытка продолжит идти невидимо
+function showChrome(visible) {
+  el.modes.hidden = !visible;
+  for (const id of ['btn-exam', 'btn-add', 'btn-settings']) {
+    const b = document.getElementById(id);
+    if (b) b.hidden = !visible;
+  }
+}
+
 function renderExamIntro() {
   el.pad.hidden = true;
-  el.modes.hidden = true;
+  showChrome(false);
   el.card.innerHTML =
     '<div class="tag">экзамен · лексика и грамматика</div>' +
     '<div class="exam-q">' + EXAM_COUNT + ' заданий, ' + (EXAM_SECONDS / 60) + ' минут</div>' +
@@ -947,12 +1001,20 @@ function renderExamIntro() {
       'Подсказок нет, вернуться к заданию нельзя, разбор ошибок — в конце.</div>' +
     '<div class="exam-note">Это <b>две части из четырёх</b>: лексика и грамматика, на которых держится чтение. ' +
       'Аудирование и говорение сюда не входят — для них нужны материалы Harno.</div>' +
+    lastRuns() +
     '<div class="actions">' +
       '<button id="exam-back">Назад</button>' +
       '<button class="primary" id="exam-start">Начать</button>' +
     '</div>';
   document.getElementById('exam-start').onclick = startExam;
   document.getElementById('exam-back').onclick = stopExam;
+}
+
+function lastRuns() {
+  const runs = (state.exam || []).slice(-5).reverse();
+  if (!runs.length) return '';
+  return '<div class="exam-note">Прошлые попытки: ' +
+    runs.map((r) => r.score + '/' + r.total).join(' · ') + '</div>';
 }
 
 function renderExamQuestion() {
@@ -988,7 +1050,7 @@ function answerExam(chosen) {
 function finishExam() {
   if (!exam || exam.done) return;
   exam.done = true;
-  clearInterval(exam.timer);
+  clearExamTimer();
 
   const score = exam.answers.filter((a) => a.ok).length;
   const total = exam.items.length;
@@ -1000,7 +1062,7 @@ function finishExam() {
   state.exam = state.exam || [];
   state.exam.push({ d: today(), score, total });
   if (state.exam.length > 50) state.exam = state.exam.slice(-50);
-  saveState();
+  const saved = saveState();
 
   el.card.innerHTML =
     '<div class="tag">результат</div>' +
@@ -1009,6 +1071,7 @@ function finishExam() {
       (passed ? 'Порог 60% пройден.' : 'Порог 60% не пройден — нужно ' + Math.ceil(total * EXAM_PASS) + '.') +
     '</div>' +
     (unanswered ? '<div class="exam-note">Время вышло, без ответа осталось ' + unanswered + '.</div>' : '') +
+    (saved ? '' : '<div class="exam-note">Результат не сохранился — браузер не даёт запись.</div>') +
     (wrong.length
       ? '<div class="exam-review">' + wrong.map((a) =>
           '<div class="item">' +
@@ -1023,8 +1086,8 @@ function finishExam() {
       '<button class="primary" id="exam-exit">К карточкам</button>' +
     '</div>';
 
-  document.getElementById('exam-again').onclick = () => { exam = null; renderExamIntro(); };
+  document.getElementById('exam-again').onclick = () => { clearExamTimer(); exam = null; renderExamIntro(); };
   document.getElementById('exam-exit').onclick = stopExam;
 }
 
-on('btn-exam', () => { exam = null; renderExamIntro(); });
+on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
