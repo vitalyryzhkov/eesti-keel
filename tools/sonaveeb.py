@@ -362,6 +362,58 @@ def add(path):
             print("  предложено %s, но формы %s у него нет" % (word, book))
 
 
+def ru_glosses(result):
+    """Русские переводы из словарной статьи EKI (лежат в meanings, словарём по языкам)."""
+    out = []
+    for m in result.get("meanings") or []:
+        by_lang = m.get("translations")
+        if not isinstance(by_lang, dict):
+            continue
+        for item in by_lang.get("rus") or []:
+            for part in str(item.get("words") or "").split(","):
+                v = part.strip().lower()
+                if v and v not in out:
+                    out.append(v)
+    return out
+
+
+def ru_check():
+    """Сверяет НАШИ переводы со словарными. Формы давно берём из EKI, а переводы
+    писались вручную — это оставалось единственным непроверенным местом."""
+    d = load_words()
+    suspicious, no_data = [], []
+
+    for kind, key in (("noun", "nouns"), ("verb", "verbs")):
+        for w in d[key]:
+            head = w["nom"] if kind == "noun" else w["ma"]
+            data = fetch(w.get("src") or head)
+            if failed_request(data):
+                continue
+            res = pick(data, kind)
+            if not res:
+                continue
+            theirs = ru_glosses(res)
+            if not theirs:
+                no_data.append(head)
+                continue
+            mine = [x.strip().lower() for x in re.split(r"[,;]", w.get("ru", "")) if x.strip()]
+            # сравниваем по началу слова: «убираться» и «убирать» — это согласие,
+            # а вот полное расхождение основ стоит посмотреть глазами
+            hit = any(m[:4] and any(m[:4] == t[:4] for t in theirs) for m in mine)
+            if not hit:
+                suspicious.append((head, w.get("ru", ""), ", ".join(theirs[:5])))
+
+    print("сверено переводов: %d" % (len(d["nouns"]) + len(d["verbs"]) - len(no_data)))
+    if no_data:
+        print("\nрусского нет в словаре (%d): %s" % (len(no_data), ", ".join(no_data)))
+    if suspicious:
+        print("\nПОСМОТРЕТЬ ГЛАЗАМИ (%d) — наш перевод не пересёкся со словарным:" % len(suspicious))
+        for head, mine, theirs in suspicious:
+            print("  %-18s наш: %-28s словарь: %s" % (head, mine, theirs))
+    else:
+        print("\nрасхождений нет")
+
+
 def show(word):
     data = fetch(word)
     if "searchResult" not in data:
@@ -390,6 +442,8 @@ if __name__ == "__main__":
         fix()
     elif cmd == "add":
         add(args[0])
+    elif cmd == "ru":
+        ru_check()
     elif cmd == "show":
         for w in args:
             show(w)
