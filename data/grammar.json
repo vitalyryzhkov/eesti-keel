@@ -178,6 +178,80 @@
       ]
     },
     {
+      "title": "Множественное число прилагательных (гл. 6)",
+      "note": "Форма мн. ч. строится от omastav: берём вторую основную форму и добавляем -d. Отсюда все «неожиданные» чередования.",
+      "rows": [
+        { "et": "vaikne → vaikse → vaiksed", "ru": "тихий → тихие", "hint": "-ne даёт -sed" },
+        { "et": "sõbralik → sõbraliku → sõbralikud", "ru": "дружелюбный → дружелюбные", "hint": "-lik даёт -likud" },
+        { "et": "töökas → tööka → töökad", "ru": "работящий → работящие", "hint": "-kas даёт -kad" },
+        { "et": "tark → targa → targad", "ru": "умный → умные", "hint": "чередование ступеней: rk → rg" },
+        { "et": "laisk → laisa → laisad", "ru": "ленивый → ленивые", "hint": "sk → s" },
+        { "et": "kurb → kurva → kurvad", "ru": "грустный → грустные", "hint": "b → v" },
+        { "et": "julge → julge → julged", "ru": "смелый → смелые" },
+        { "et": "Nad on rõõmsad ja sõbralikud.", "ru": "Они радостные и дружелюбные.", "hint": "сказуемое тоже во мн. ч." }
+      ]
+    },
+    {
+      "title": "Olema по лицам (гл. 7)",
+      "note": "Единственный глагол, который надо знать наизусть целиком. Отрицание одно на все лица: ei ole (pole).",
+      "rows": [
+        { "et": "ma olen · sa oled · ta on", "ru": "я есть · ты есть · он есть" },
+        { "et": "me oleme · te olete · nad on", "ru": "мы · вы · они" },
+        { "et": "ma ei ole · sa ei ole · nad ei ole", "ru": "я не · ты не · они не", "hint": "форма одна на всех" },
+        { "et": "Kas sa oled eestlane? — Ei, ma ei ole.", "ru": "Ты эстонец? — Нет." }
+      ]
+    },
+    {
+      "title": "Местоимения: длинные и короткие (гл. 7)",
+      "note": "У каждого местоимения две формы. Длинная — под ударением, когда важно «именно я». Короткая — обычная, безударная.",
+      "rows": [
+        { "et": "mina / ma · sina / sa · tema / ta", "ru": "я · ты · он", "hint": "длинная / короткая" },
+        { "et": "meie / me · teie / te · nemad / nad", "ru": "мы · вы · они" },
+        { "et": "minu / mu raamat · sinu / su raamat", "ru": "моя / твоя книга", "hint": "чей — omastav" },
+        { "et": "tema / ta · meie / me · teie / te · nende", "ru": "его · наш · ваш · их" },
+        { "et": "minul / mul on aega", "ru": "у меня есть время", "hint": "«у кого» — alalütlev" },
+        { "et": "sul ei ole · tal ei ole · meil ei ole · teil ei ole · neil ei ole", "ru": "у тебя / у него / у нас / у вас / у них нет" },
+        { "et": "Mina lähen, aga ta jääb koju.", "ru": "Я-то пойду, а он останется дома.", "hint": "длинная форма — противопоставление" }
+      ]
+    },
+    {
+      "title": "Спряжение глагола (гл. 8)",
+      "note": "Окончания одни и те же для всех правильных глаголов. Основу берём из формы 3 лица без -b.",
+      "rows": [
+        { "et": "vaatan · vaatad · vaatab", "ru": "смотрю · смотришь · смотрит", "hint": "-n, -d, -b" },
+        { "et": "vaatame · vaatate · vaatavad", "ru": "смотрим · смотрите · смотрят", "hint": "-me, -te, -vad" },
+        { "et": "laulan · laulad · laulab · laulame · laulate · laulavad", "ru": "пою … поют" },
+        { "et": "ma ei vaata · me ei vaata · nad ei vaata", "ru": "не смотрю · не смотрим · не смотрят", "hint": "отрицание не спрягается" }
+      ]
+    },
+    {
+      "title": "Даты (гл. 8)",
+      "note": "«Какого числа» = порядковое + месяц, оба в alalütlev (-l). Вопрос: Mis kuupäev täna on? / Millal?",
+      "rows": [
+        { "et": "esimesel jaanuaril", "ru": "первого января" },
+        { "et": "kolmandal märtsil", "ru": "третьего марта" },
+        { "et": "kahekümne viiendal detsembril", "ru": "двадцать пятого декабря" },
+        { "et": "Minu sünnipäev on neljateistkümnendal mail.", "ru": "Мой день рождения четырнадцатого мая." },
+        { "et": "jaanuar · veebruar · märts · aprill · mai · juuni", "ru": "январь … июнь" },
+        { "et": "juuli · august · september · oktoober · november · detsember", "ru": "июль … декабрь" }
+      ]
+    },
+    {
+      "title": "Поздравления и пожелания (гл. 8)",
+      "note": "Готовые формулы. Почти все — в osastav, потому что это усечённое «желаю тебе (чего?)».",
+      "rows": [
+        { "et": "Palju õnne!", "ru": "Поздравляю! / Удачи!" },
+        { "et": "Palju õnne sünnipäevaks!", "ru": "С днём рождения!" },
+        { "et": "Head uut aastat!", "ru": "С Новым годом!", "hint": "head — osastav от hea" },
+        { "et": "Häid pühi!", "ru": "Хороших праздников!" },
+        { "et": "Head nädalavahetust!", "ru": "Хороших выходных!" },
+        { "et": "Head reisi!", "ru": "Счастливого пути!" },
+        { "et": "Saa ruttu terveks!", "ru": "Выздоравливай скорее!" },
+        { "et": "Jõudu tööle! — Tarvis!", "ru": "Бог в помощь! — Спасибо!", "hint": "устойчивый обмен репликами" },
+        { "et": "Head iseseisvuspäeva!", "ru": "С Днём независимости!" }
+      ]
+    },
+    {
       "title": "Ходовые фразы",
       "note": "Готовые блоки, которые не надо разбирать по грамматике.",
       "rows": [

@@ -198,3 +198,32 @@ dialog .row button.danger { color: var(--bad); }
 .cheat .ex .et { font-size: 17px; overflow-wrap: anywhere; }
 .cheat .ex .ru { font-size: 14px; color: var(--muted); }
 .cheat .ex .hint { font-size: 12px; color: var(--accent); margin-top: 2px; }
+
+.example {
+  font-size: 15px;
+  color: var(--muted);
+  border-left: 2px solid var(--line);
+  padding-left: 10px;
+  margin-top: -4px;
+}
+
+/* --- добавление слова --- */
+.pad-inline { margin: 0 0 12px; }
+.pad-inline button { padding: 8px 0; font-size: 17px; }
+.add-result { font-size: 14px; color: var(--muted); margin: 10px 0; min-height: 1.4em; }
+.add-result.ok .found { font-size: 19px; color: var(--ink); font-weight: 600; overflow-wrap: anywhere; }
+.add-result.ok .sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.add-result.bad { color: var(--bad); }
+dialog label input[type=text] {
+  display: block;
+  margin-top: 4px;
+  width: 100%;
+  font-size: 17px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+}
+dialog .row button:disabled { opacity: .45; cursor: default; }
+.add-result .sub.mt { color: var(--accent); }

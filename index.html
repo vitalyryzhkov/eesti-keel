@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0f172a">
+<meta name="theme-color" content="#12140f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Eesti">
@@ -39,9 +39,37 @@
 </div>
 
 <footer>
+  <button id="btn-add" type="button">+ слово</button>
   <button id="btn-settings" type="button">Настройки</button>
   <span id="version" class="version"></span>
 </footer>
+
+<dialog id="adder">
+  <h2>Добавить слово</h2>
+  <label>Эстонское слово в начальной форме
+    <input id="add-word" type="text" lang="et" autocomplete="off"
+           autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+  </label>
+  <div id="add-pad" class="pad pad-inline">
+    <button type="button" data-ch="õ">õ</button>
+    <button type="button" data-ch="ä">ä</button>
+    <button type="button" data-ch="ö">ö</button>
+    <button type="button" data-ch="ü">ü</button>
+    <button type="button" data-ch="š">š</button>
+    <button type="button" data-ch="ž">ž</button>
+  </div>
+  <div class="row">
+    <button id="btn-lookup" type="button" class="primary">Найти в словаре</button>
+  </div>
+  <div id="add-result" class="add-result"></div>
+  <label id="add-ru-wrap" hidden>Перевод
+    <input id="add-ru" type="text" autocomplete="off" enterkeyhint="done">
+  </label>
+  <div class="row">
+    <button id="btn-add-cancel" type="button">Закрыть</button>
+    <button id="btn-add-save" type="button" class="primary" disabled>Добавить в колоду</button>
+  </div>
+</dialog>
 
 <dialog id="settings">
   <form method="dialog">

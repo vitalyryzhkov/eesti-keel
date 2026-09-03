@@ -77,6 +77,12 @@ def fetch(word):
     return data
 
 
+def failed_request(data):
+    """Запрос не состоялся. Это НЕ «слова нет в словаре» — разница принципиальна:
+    из «нет в словаре» оператор может сделать вывод, из «сеть отвалилась» — нет."""
+    return bool(data) and "error" in data
+
+
 def pick(data, want_class):
     """Из омонимов выбираем нужную часть речи: noomen для существительных, verb для глаголов."""
     if not data or "searchResult" not in data:
@@ -107,6 +113,43 @@ def rection(result):
     return ""
 
 
+def example(result, head, limit=70):
+    """Короткий живой пример из словарной статьи — показываем после ответа.
+
+    Берём самый короткий, который влезает в карточку: длинные примеры EKI
+    бывают на две строки и на телефоне выглядят стеной.
+    """
+    best = None
+    for m in result.get("meanings") or []:
+        for ex in m.get("examples") or []:
+            ex = ex.strip()
+            if not ex or len(ex) > limit:
+                continue
+            # EKI держит в примерах и однословные композиты («Kodumaja.») —
+            # они ничему не учат, нужна фраза хотя бы из трёх слов
+            if len(ex.split()) < 3:
+                continue
+            if best is None or len(ex) < len(best):
+                best = ex
+    return best or ""
+
+
+def pos_of(result):
+    """Часть речи из словаря: прилагательное или существительное.
+
+    Карточка у них одна (обе группы склоняются одинаково), но подпись должна
+    быть честной — «omadussõna», а не «nimisõna».
+    """
+    for m in result.get("meanings") or []:
+        for p in m.get("partOfSpeech") or []:
+            code = (p.get("code") or "").lower()
+            if code.startswith("adj"):
+                return "adj"
+            if code in ("s", "n", "noun"):
+                return "n"
+    return "n"
+
+
 def norm(s):
     """Сравниваем без регистра и без учёта запятых-вариантов: 'a,b' == 'b,a'."""
     parts = [unicodedata.normalize("NFC", p.strip().lower()) for p in (s or "").split(",")]
@@ -125,14 +168,18 @@ def save_words(d):
 
 def check(only=None):
     d = load_words()
-    bad, missing, ok = [], [], 0
+    bad, missing, unreachable, ok = [], [], [], 0
 
     for kind, key, spec in (("noun", "nouns", NOUN_FORMS), ("verb", "verbs", VERB_FORMS)):
         for w in d[key]:
             head = w["nom"] if kind == "noun" else w["ma"]
             if only and head not in only:
                 continue
-            res = pick(fetch(head), kind)
+            data = fetch(w.get("src") or head)
+            if failed_request(data):
+                unreachable.append(head)
+                continue
+            res = pick(data, kind)
             if not res:
                 missing.append(head)
                 continue
@@ -151,6 +198,9 @@ def check(only=None):
                     ok += 1
 
     print("совпало форм: %d" % ok)
+    if unreachable:
+        print("\nСЛОВАРЬ НЕ ОТВЕТИЛ (%d) — это НЕ «слов нет», повтори прогон: %s"
+              % (len(unreachable), ", ".join(unreachable)))
     if missing:
         print("\nНЕ НАЙДЕНО в словаре (%d): %s" % (len(missing), ", ".join(missing)))
     if bad:
@@ -159,7 +209,7 @@ def check(only=None):
             print("  %-12s %-7s было: %-22s словарь: %s" % (head, field, mine, theirs))
     else:
         print("\nрасхождений нет")
-    return bad, missing
+    return bad, missing, unreachable
 
 
 def fix():
@@ -168,7 +218,7 @@ def fix():
     changed = 0
 
     for w in d["nouns"]:
-        res = pick(fetch(w["nom"]), "noun")
+        res = pick(fetch(w.get("src") or w["nom"]), "noun")
         if not res:
             continue
         api = forms_of(res)
@@ -176,9 +226,16 @@ def fix():
             if api.get(code) and norm(w.get(field, "")) != norm(api[code]):
                 w[field] = api[code]
                 changed += 1
+        ex = example(res, w["nom"])
+        if ex and w.get("ex") != ex:
+            w["ex"] = ex
+            changed += 1
+        if pos_of(res) == "adj" and w.get("pos") != "adj":
+            w["pos"] = "adj"
+            changed += 1
 
     for w in d["verbs"]:
-        res = pick(fetch(w["ma"]), "verb")
+        res = pick(fetch(w.get("src") or w["ma"]), "verb")
         if not res:
             continue
         api = forms_of(res)
@@ -189,6 +246,10 @@ def fix():
         r = rection(res)
         if r and w.get("rek") != r:
             w["rek"] = r
+            changed += 1
+        ex = example(res, w["ma"])
+        if ex and w.get("ex") != ex:
+            w["ex"] = ex
             changed += 1
 
     d["meta"]["source"] = "формы — EKI через api.sonapi.ee; переводы вручную"
@@ -211,7 +272,7 @@ def add(path):
     """
     d = load_words()
     have = {w["nom"] for w in d["nouns"]} | {w["ma"] for w in d["verbs"]}
-    added, skipped, failed, wrong_lemma = [], [], [], []
+    added, skipped, failed, wrong_lemma, unreachable = [], [], [], [], []
 
     for line in io.open(path, encoding="utf-8"):
         line = line.strip()
@@ -226,7 +287,10 @@ def add(path):
             continue
 
         data = fetch(word)
-        res = pick(data, "verb") or pick(data, "noun")
+        if failed_request(data):
+            unreachable.append(word)
+            continue
+        res = pick(data, "verb")
         if not res:
             failed.append(word)
             continue
@@ -249,6 +313,9 @@ def add(path):
             r = rection(res)
             if r:
                 entry["rek"] = r
+            ex = example(res, word)
+            if ex:
+                entry["ex"] = ex
             if not entry["ma"] or not entry["da"] or not entry["b"]:
                 failed.append(word)
                 continue
@@ -257,20 +324,38 @@ def add(path):
             entry = {"id": "n_" + slug(word), "ru": ru}
             for field, code in NOUN_FORMS:
                 entry[field] = api.get(code, "")
+            if pos_of(res) == "adj":
+                entry["pos"] = "adj"
+            ex = example(res, word)
+            if ex:
+                entry["ex"] = ex
             if not entry["nom"] or not entry["gen"] or not entry["part"]:
                 failed.append(word)
                 continue
             d["nouns"].append(entry)
+        head = entry.get("ma") or entry.get("nom")
+        if head and head != word:
+            # словарь свёл слово к другой заглавной форме (pulmad -> pulm):
+            # запоминаем запрос, иначе повторная сверка не найдёт статью
+            entry["src"] = word
+        have.add(head or word)     # иначе дубль внутри одного файла добавится дважды
         added.append(word + ("" if ru else "  ← БЕЗ ПЕРЕВОДА"))
 
-    save_words(d)
+    if added:
+        save_words(d)                  # нечего добавлять — не трогаем файл
     print("добавлено: %d" % len(added))
     for a in added:
         print("  +", a)
     if skipped:
         print("уже были (%d): %s" % (len(skipped), ", ".join(skipped)))
+    if unreachable:
+        print("СЛОВАРЬ НЕ ОТВЕТИЛ (%d) — повтори прогон, руками НЕ вписывай: %s"
+              % (len(unreachable), ", ".join(unreachable)))
     if failed:
-        print("НЕ НАЙДЕНО, добавь руками (%d): %s" % (len(failed), ", ".join(failed)))
+        # намеренно НЕ советуем «впиши руками»: формы берём только из словаря,
+        # иначе весь смысл инструмента теряется
+        print("НЕТ В СЛОВАРЕ (%d), проверь начальную форму: %s"
+              % (len(failed), ", ".join(failed)))
     if wrong_lemma:
         print("НАЧАЛЬНАЯ ФОРМА НЕ БЬЁТСЯ С УЧЕБНИКОМ (%d):" % len(wrong_lemma))
         for word, book in wrong_lemma:
