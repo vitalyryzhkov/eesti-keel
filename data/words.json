@@ -2,10 +2,10 @@
   "meta": {
     "level": "A2",
     "note": "Формы сверены с EKI (api.sonapi.ee) — руками не правим, прогоняй tools/sonaveeb.py. Переводы наши. Через запятую — равноправные варианты, тренажёр примет любой.",
-    "updated": "2026-08-26",
+    "updated": "2026-09-07",
     "source": "формы — EKI через api.sonapi.ee; переводы вручную",
-    "verified": "2026-08-26: формы всех слов сверены с EKI, расхождений нет",
-    "content": "база A2 + главы 3–5 «Eesti keele sõnavihik A2» (Settle in Estonia)"
+    "verified": "2026-09-07: 1456 форм сверено с EKI, расхождений нет",
+    "content": "база A2 + главы 3–11 «Eesti keele sõnavihik A2» (Settle in Estonia)"
   },
   "nouns": [
     {

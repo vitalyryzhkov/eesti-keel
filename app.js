@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v25';
+const VERSION = 'v27';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -12,7 +12,16 @@ const el = {
   settings: document.getElementById('settings'),
   setNew: document.getElementById('set-new'),
   fileImport: document.getElementById('file-import'),
+  actions: document.getElementById('actions'),
 };
+
+// Кнопки живут ОТДЕЛЬНО от карточки. Пока они были внутри неё и липли к низу,
+// при клавиатуре кнопка ложилась поверх поля ввода: тап по полю попадал в неё
+// и засчитывал карточку с пустым ответом.
+function setActions(html) {
+  el.actions.innerHTML = html || '';
+  el.actions.hidden = !html;
+}
 
 let BASE = null;      // words.json как он есть в репозитории
 let DATA = null;      // BASE + слова, добавленные пользователем
@@ -223,8 +232,8 @@ function renderForms(c) {
           '<label for="f' + i + '">' + esc(f.label) + '</label>' +
           input('f' + i) +
         '</div>').join('') +
-    '</div>' +
-    '<div class="actions"><button class="primary" id="check">Проверить</button></div>';
+    '</div>';
+  setActions('<button class="primary" id="check">Проверить</button>');
 
   el.pad.hidden = false;
   wireInputs();
@@ -267,8 +276,8 @@ function renderProd(c) {
     '<div class="prompt">' + esc(c.prompt) + '</div>' +
     '<div class="fields"><div class="field">' +
       '<label for="f0">по-эстонски</label>' + input('f0') +
-    '</div></div>' +
-    '<div class="actions"><button class="primary" id="check">Проверить</button></div>';
+    '</div></div>';
+  setActions('<button class="primary" id="check">Проверить</button>');
 
   el.pad.hidden = false;
   wireInputs();
@@ -292,16 +301,15 @@ function renderRecog(c) {
   el.card.innerHTML =
     '<div class="tag">' + esc(c.tag) + '</div>' +
     '<div class="prompt" lang="et">' + esc(c.prompt) + '</div>' +
-    '<div id="reveal"></div>' +
-    '<div class="actions"><button class="primary" id="show">Показать</button></div>';
+    '<div id="reveal"></div>';
+  setActions('<button class="primary" id="show">Показать</button>');
 
   document.getElementById('show').onclick = () => {
     document.getElementById('reveal').innerHTML =
       '<div class="answer">' + esc(c.answer) +
       (c.extra ? '<span class="sub" lang="et">' + esc(c.extra) + '</span>' : '') + '</div>';
     showExample();
-    el.card.querySelector('.actions').innerHTML =
-      '<button class="bad" id="no">Не знал</button><button class="ok" id="yes">Знал</button>';
+    setActions('<button class="bad" id="no">Не знал</button><button class="ok" id="yes">Знал</button>');
     document.getElementById('no').onclick = () => finish(false, true);
     document.getElementById('yes').onclick = () => finish(true, true);
   };
@@ -314,8 +322,7 @@ function showExample() {
   node.className = 'example';
   node.lang = 'et';
   node.textContent = c.ex;
-  const actions = el.card.querySelector('.actions');
-  el.card.insertBefore(node, actions);
+  el.card.appendChild(node);
 }
 
 function finish(ok, immediate) {
@@ -330,9 +337,8 @@ function finish(ok, immediate) {
 
   if (immediate) return next();
 
-  const actions = el.card.querySelector('.actions');
-  actions.innerHTML = '<button class="primary" id="next">' +
-    (ok ? 'Дальше' : 'Понял, дальше') + '</button>';
+  setActions('<button class="primary" id="next">' +
+    (ok ? 'Дальше' : 'Понял, дальше') + '</button>');
   const btn = document.getElementById('next');
   btn.onclick = next;
   btn.focus();
@@ -340,6 +346,7 @@ function finish(ok, immediate) {
 }
 
 function renderDone() {
+  setActions('');
   el.card.innerHTML =
     '<div class="done"><span class="big">✔</span>' +
     'На сегодня всё.<br>Возвращайся завтра — или подними лимит новых слов в настройках.</div>';
@@ -347,6 +354,7 @@ function renderDone() {
 }
 
 function renderCheat() {
+  setActions('');
   el.pad.hidden = true;
   if (!GRAMMAR) { el.card.innerHTML = '<div class="done">Загружаю…</div>'; return; }
   el.card.innerHTML = GRAMMAR.sections.map((s, i) =>
@@ -380,7 +388,12 @@ function renderCheat() {
 function wireInputs() {
   const inputs = [...el.card.querySelectorAll('input')];
   inputs.forEach((inp, i) => {
-    inp.addEventListener('focus', () => { lastInput = inp; });
+    inp.addEventListener('focus', () => {
+      lastInput = inp;
+      // карточка прокручивается внутри себя: без этого активное поле
+      // может остаться ниже её видимой границы
+      inp.scrollIntoView({ block: 'nearest' });
+    });
     inp.addEventListener('keydown', (e) => {
       if (e.key !== 'Enter') return;
       e.preventDefault();
@@ -1001,11 +1014,9 @@ function renderExamIntro() {
       'Подсказок нет, вернуться к заданию нельзя, разбор ошибок — в конце.</div>' +
     '<div class="exam-note">Это <b>две части из четырёх</b>: лексика и грамматика, на которых держится чтение. ' +
       'Аудирование и говорение сюда не входят — для них нужны материалы Harno.</div>' +
-    lastRuns() +
-    '<div class="actions">' +
-      '<button id="exam-back">Назад</button>' +
-      '<button class="primary" id="exam-start">Начать</button>' +
-    '</div>';
+    lastRuns();
+  setActions('<button id="exam-back">Назад</button>' +
+             '<button class="primary" id="exam-start">Начать</button>');
   document.getElementById('exam-start').onclick = startExam;
   document.getElementById('exam-back').onclick = stopExam;
 }
@@ -1032,6 +1043,7 @@ function renderExamQuestion() {
         '<button type="button" data-i="' + i + '" lang="et">' + esc(o) + '</button>').join('') +
     '</div>';
 
+  setActions('');
   el.card.querySelector('.exam-options').onclick = (e) => {
     const btn = e.target.closest('button[data-i]');
     if (!btn) return;
@@ -1080,11 +1092,9 @@ function finishExam() {
               '<span class="right">' + esc(a.it.correct) + '</span></div>' +
             (a.it.why ? '<div class="why">' + esc(a.it.why) + '</div>' : '') +
           '</div>').join('') + '</div>'
-      : '<div class="exam-note">Без ошибок.</div>') +
-    '<div class="actions">' +
-      '<button id="exam-again">Ещё раз</button>' +
-      '<button class="primary" id="exam-exit">К карточкам</button>' +
-    '</div>';
+      : '<div class="exam-note">Без ошибок.</div>');
+  setActions('<button id="exam-again">Ещё раз</button>' +
+             '<button class="primary" id="exam-exit">К карточкам</button>');
 
   document.getElementById('exam-again').onclick = () => { clearExamTimer(); exam = null; renderExamIntro(); };
   document.getElementById('exam-exit').onclick = stopExam;
@@ -1110,6 +1120,10 @@ on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
     // на iOS клавиатура не сжимает layout-вьюпорт, и медиазапрос там молчит
     document.documentElement.classList.toggle('short', h < 460);
     document.documentElement.classList.toggle('tiny', h < 260);
+    const focused = document.activeElement;
+    if (focused && focused.matches && focused.matches('input, textarea')) {
+      focused.scrollIntoView({ block: 'nearest' });
+    }
   };
   vv.addEventListener('resize', apply);
   vv.addEventListener('scroll', apply);

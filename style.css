@@ -399,20 +399,25 @@ body {
   height: clamp(200px, var(--app-vh, 100dvh), 100dvh);
 }
 
-/* Кнопка действия всегда на виду, даже если содержимое карточки прокручено.
-   Отрицательные отступы растягивают подложку на padding карточки — иначе
-   сквозь прозрачную полосу снизу просвечивает прокручиваемый текст */
-.actions {
-  position: sticky;
-  bottom: -20px;
-  margin: auto -18px -20px;
-  padding: 12px 18px 20px;
-  background: var(--panel);
+/* Кнопки живут отдельным блоком под карточкой: внутри неё липкая кнопка
+   ложилась поверх поля ввода при клавиатуре, и тап по полю попадал в неё */
+#actions.actions {
+  flex: 0 0 auto;
+  margin: 10px 0 0;
+  padding: 0;
+  background: transparent;
 }
 
 /* Диалог перевода: заголовок и нижние кнопки закреплены, прокручивается
    только середина. Липкая строка поверх содержимого накрывала «Перевести»
    на низких экранах — поэтому именно колонка, а не sticky */
+dialog[open] {
+  max-height: calc(clamp(200px, var(--app-vh, 100dvh), 100dvh) - 20px);
+  overflow-y: auto;
+  margin-block: 10px auto;
+}
+.short dialog[open] { margin-block: 6px auto; }
+
 #adder[open] {
   display: flex;
   flex-direction: column;
@@ -440,6 +445,15 @@ body {
 
 /* Очень низкий экран (клавиатура на маленьком телефоне): жертвуем украшениями,
    чтобы поле, «Перевести» и нижние кнопки все поместились без прокрутки */
+/* Клавиатура съедает половину экрана. Шапка, вкладки и подвал в этот момент
+   не нужны — без них помещаются слово, поля и кнопка */
+.short header, .short .modes, .short footer { display: none; }
+.short .card { padding: 12px 14px; gap: 10px; }
+.short .prompt { font-size: 26px; }
+.short .field input { font-size: 18px; padding: 8px 10px; }
+.short #actions.actions { margin-top: 8px; }
+.short .pad button { padding: 8px 0; font-size: 18px; }
+
 .short #adder[open] { padding: 12px; margin-block: 6px auto; }
 .short #adder h2 { display: none; }
 .short #adder label { margin-bottom: 8px; font-size: 13px; }
