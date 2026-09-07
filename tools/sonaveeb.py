@@ -198,7 +198,7 @@ def check(only=None):
             if failed_request(data):
                 unreachable.append(head)
                 continue
-            res = pick(data, kind)
+            res = pick_best(data, kind, w.get("ru", ""))
             if not res:
                 missing.append(head)
                 continue
@@ -281,6 +281,17 @@ def slug(word):
     return "".join(table.get(c, c) for c in word.lower() if c.isalnum() or c in table)
 
 
+def unique_id(base, taken):
+    """Слаг отбрасывает диакритику (ü→u), поэтому uks и üks дают одинаковый id.
+    Прогресс хранится по id, так что коллизия склеивает два разных слова."""
+    if base not in taken:
+        return base
+    n = 2
+    while base + str(n) in taken:
+        n += 1
+    return base + str(n)
+
+
 def add(path):
     """Файл со строками «sõna — перевод» или «sõna — перевод — форма_из_учебника».
 
@@ -291,6 +302,7 @@ def add(path):
     """
     d = load_words()
     have = {w["nom"] for w in d["nouns"]} | {w["ma"] for w in d["verbs"]}
+    taken = {w["id"] for w in d["nouns"]} | {w["id"] for w in d["verbs"]}
     added, skipped, failed, wrong_lemma, unreachable = [], [], [], [], []
 
     for line in io.open(path, encoding="utf-8"):
@@ -326,7 +338,7 @@ def add(path):
                 continue
 
         if "verb" in classes:
-            entry = {"id": "v_" + slug(word), "ru": ru}
+            entry = {"id": unique_id("v_" + slug(word), taken), "ru": ru}
             for field, code in VERB_FORMS:
                 entry[field] = api.get(code, "")
             r = rection(res)
@@ -340,7 +352,7 @@ def add(path):
                 continue
             d["verbs"].append(entry)
         else:
-            entry = {"id": "n_" + slug(word), "ru": ru}
+            entry = {"id": unique_id("n_" + slug(word), taken), "ru": ru}
             for field, code in NOUN_FORMS:
                 entry[field] = api.get(code, "")
             if pos_of(res) == "adj":
@@ -358,6 +370,7 @@ def add(path):
             # запоминаем запрос, иначе повторная сверка не найдёт статью
             entry["src"] = word
         have.add(head or word)     # иначе дубль внутри одного файла добавится дважды
+        taken.add(entry["id"])
         added.append(word + ("" if ru else "  ← БЕЗ ПЕРЕВОДА"))
 
     if added:

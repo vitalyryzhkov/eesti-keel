@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v23';
+const VERSION = 'v25';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -1104,7 +1104,12 @@ on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
     const h = Math.round(vv.height);
     // в момент запуска скрипта высота бывает нулевой — записав её,
     // мы схлопнули бы разметку в ноль
-    if (h > 0) document.documentElement.style.setProperty('--app-vh', h + 'px');
+    if (h <= 0) return;
+    document.documentElement.style.setProperty('--app-vh', h + 'px');
+    // компактный режим включаем по ВИДИМОЙ высоте, а не медиазапросом:
+    // на iOS клавиатура не сжимает layout-вьюпорт, и медиазапрос там молчит
+    document.documentElement.classList.toggle('short', h < 460);
+    document.documentElement.classList.toggle('tiny', h < 260);
   };
   vv.addEventListener('resize', apply);
   vv.addEventListener('scroll', apply);

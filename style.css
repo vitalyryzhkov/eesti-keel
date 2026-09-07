@@ -413,13 +413,15 @@ body {
 /* Диалог перевода: заголовок и нижние кнопки закреплены, прокручивается
    только середина. Липкая строка поверх содержимого накрывала «Перевести»
    на низких экранах — поэтому именно колонка, а не sticky */
-#adder {
+#adder[open] {
   display: flex;
   flex-direction: column;
   /* минус собственные отступы сверху и снизу, иначе диалог с margin
      вылезает за экран ровно на их величину */
   max-height: calc(clamp(200px, var(--app-vh, 100dvh), 100dvh) - 20px);
-  overflow: hidden;
+  /* auto, а не hidden: если содержимое всё равно не влезло, до нижних кнопок
+     можно дотянуться прокруткой, а не остаться без них */
+  overflow-y: auto;
   /* прижимаем к верху: UA центрирует диалог в layout-вьюпорте, а не в видимой
      части, и на iOS с клавиатурой он оказывался наполовину под ней */
   margin-block: 10px auto;
@@ -438,13 +440,21 @@ body {
 
 /* Очень низкий экран (клавиатура на маленьком телефоне): жертвуем украшениями,
    чтобы поле, «Перевести» и нижние кнопки все поместились без прокрутки */
-@media (max-height: 460px) {
-  #adder { padding: 12px; margin-block: 6px auto; }
-  #adder h2 { display: none; }
-  #adder label { margin-bottom: 8px; font-size: 13px; }
-  #adder textarea { height: 42px; }
-  #adder .pad-inline { margin-bottom: 8px; }
-  #adder .pad-inline button { padding: 6px 0; font-size: 16px; }
-  #adder .row button { padding: 9px; }
-  #adder .dlg-foot { margin-top: 8px; }
-}
+.short #adder[open] { padding: 12px; margin-block: 6px auto; }
+.short #adder h2 { display: none; }
+.short #adder label { margin-bottom: 8px; font-size: 13px; }
+.short #adder textarea { height: 42px; }
+.short #adder .pad-inline { margin-bottom: 8px; }
+.short #adder .pad-inline button { padding: 6px 0; font-size: 16px; }
+.short #adder .row button { padding: 9px; }
+.short #adder .dlg-foot { margin-top: 8px; }
+
+/* на низком экране липкая кнопка съедала почти всю карточку и обрезалась сверху */
+.short .actions { padding: 8px 18px 20px; }
+.short .card { padding: 12px 18px; }
+
+/* На совсем низком экране (альбом с клавиатурой) подпись поля съедает две
+   строки и выталкивает нижние кнопки за диалог — прячем её, поле и так понятно */
+.tiny #adder .lbl { display: none; }
+.tiny #adder .pad-inline { margin-bottom: 6px; }
+.tiny #adder textarea { height: 36px; }
