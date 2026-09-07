@@ -97,6 +97,25 @@ def pick(data, want_class):
     return results[0] if results else None
 
 
+def pick_best(data, want_class, ru_hint=""):
+    """Из омонимов выбираем тот, чьё значение совпадает с нашим переводом.
+
+    У kiilakas в EKI две статьи: «лысый» и «удар». Формы у них одинаковые, но
+    пример и часть речи — нет, и в карточку «лысый» уезжала фраза про затрещину.
+    Раз нужное значение мы знаем из перевода, пусть оно и разрешает омонимию.
+    """
+    if not data or "searchResult" not in data:
+        return None
+    results = data["searchResult"]
+    if len(results) > 1 and ru_hint:
+        mine = [x.strip().lower() for x in re.split(r"[,;]", ru_hint) if x.strip()]
+        for r in results:
+            theirs = ru_glosses(r)
+            if any(m[:4] and any(m[:4] == t[:4] for t in theirs) for m in mine):
+                return r
+    return pick(data, want_class)
+
+
 def forms_of(result):
     out = {}
     for f in result.get("wordForms") or []:
@@ -218,7 +237,7 @@ def fix():
     changed = 0
 
     for w in d["nouns"]:
-        res = pick(fetch(w.get("src") or w["nom"]), "noun")
+        res = pick_best(fetch(w.get("src") or w["nom"]), "noun", w.get("ru", ""))
         if not res:
             continue
         api = forms_of(res)
@@ -235,7 +254,7 @@ def fix():
             changed += 1
 
     for w in d["verbs"]:
-        res = pick(fetch(w.get("src") or w["ma"]), "verb")
+        res = pick_best(fetch(w.get("src") or w["ma"]), "verb", w.get("ru", ""))
         if not res:
             continue
         api = forms_of(res)
@@ -290,7 +309,7 @@ def add(path):
         if failed_request(data):
             unreachable.append(word)
             continue
-        res = pick(data, "verb")
+        res = pick_best(data, "verb", ru)
         if not res:
             failed.append(word)
             continue

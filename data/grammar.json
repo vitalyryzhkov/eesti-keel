@@ -252,6 +252,62 @@
       ]
     },
     {
+      "title": "Внешность (гл. 9)",
+      "note": "«У него …» — снова mul on, только с tal. Волосы и глаза всегда во множественном, прилагательное согласуется с ними.",
+      "rows": [
+        { "et": "Tal on pikad juuksed.", "ru": "У него длинные волосы.", "hint": "juuksed — всегда мн. ч." },
+        { "et": "Tal on lühikesed heledad juuksed.", "ru": "У него короткие светлые волосы.", "hint": "оба прилагательных во мн. ч." },
+        { "et": "Tal on sinised silmad.", "ru": "У него голубые глаза." },
+        { "et": "Tal on pruunid silmad.", "ru": "У него карие глаза." },
+        { "et": "Tal on lokkis juuksed.", "ru": "У него кудрявые волосы.", "hint": "lokkis не изменяется — форма одна на все случаи" },
+        { "et": "Ta on pikka kasvu.", "ru": "Он высокого роста.", "hint": "рост — через osastav: pikka / keskmist / lühikest kasvu" },
+        { "et": "Ta on keskmist kasvu.", "ru": "Он среднего роста." },
+        { "et": "Ta on kiilakas.", "ru": "Он лысый." },
+        { "et": "Tal on habe ja vuntsid.", "ru": "У него борода и усы." },
+        { "et": "Missugune ta välja näeb?", "ru": "Как он выглядит?", "hint": "välja nägema — выглядеть" }
+      ]
+    },
+    {
+      "title": "От… до… (гл. 10)",
+      "note": "Откуда — на -st (seestütlev), докуда — на -ni (rajav). Работает и с днями, и с числами, и с часами.",
+      "rows": [
+        { "et": "esmaspäevast reedeni", "ru": "с понедельника до пятницы" },
+        { "et": "laupäevast pühapäevani", "ru": "с субботы до воскресенья" },
+        { "et": "kella kümnest viieni", "ru": "с десяти до пяти", "hint": "kella — «часов», перед числом" },
+        { "et": "Pood on avatud üheksast kaheksani.", "ru": "Магазин открыт с девяти до восьми." },
+        { "et": "ühest kümneni", "ru": "с одного до десяти" },
+        { "et": "Ma töötan esmaspäevast reedeni.", "ru": "Я работаю с понедельника до пятницы." }
+      ]
+    },
+    {
+      "title": "Магазины и сложные слова (гл. 10)",
+      "note": "Названия магазинов складываются из двух слов: что продают + pood. Первая часть стоит в omastav или в основе, ударение на первой.",
+      "rows": [
+        { "et": "raamat + pood → raamatupood", "ru": "книга + магазин → книжный магазин", "hint": "raamatu- — это omastav" },
+        { "et": "lill → lillepood · king → kingapood · toit → toidupood", "ru": "цветочный · обувной · продуктовый" },
+        { "et": "mänguasi → mänguasjapood", "ru": "игрушка → магазин игрушек" },
+        { "et": "Ma lähen poodi.", "ru": "Я иду в магазин.", "hint": "куда — poodi" },
+        { "et": "Ma olen poes.", "ru": "Я в магазине.", "hint": "где — poes" },
+        { "et": "Pood on avatud. / Pood on suletud.", "ru": "Магазин открыт. / Магазин закрыт." }
+      ]
+    },
+    {
+      "title": "Погода (гл. 11)",
+      "note": "Главное: «идёт дождь/снег» — это sajab + osastav, без подлежащего. Многие явления описываются одним глаголом.",
+      "rows": [
+        { "et": "Sajab vihma.", "ru": "Идёт дождь.", "hint": "vihm → vihma, osastav" },
+        { "et": "Sajab lund.", "ru": "Идёт снег.", "hint": "lumi → lund" },
+        { "et": "Sajab rahet. / Sajab lörtsi.", "ru": "Идёт град. / Идёт мокрый снег." },
+        { "et": "Vihma ei saja.", "ru": "Дождя нет.", "hint": "отрицание — тот же osastav" },
+        { "et": "Müristab ja lööb välku.", "ru": "Гремит гром и сверкает молния.", "hint": "välk → välku" },
+        { "et": "Väljas tuiskab.", "ru": "На улице метёт." },
+        { "et": "Puhub tugev tuul.", "ru": "Дует сильный ветер." },
+        { "et": "Ilm on pilves. / Ilm on selge.", "ru": "Пасмурно. / Ясно." },
+        { "et": "Väljas on soe / külm / palav.", "ru": "На улице тепло / холодно / жарко." },
+        { "et": "Missugune ilm täna on?", "ru": "Какая сегодня погода?" }
+      ]
+    },
+    {
       "title": "Ходовые фразы",
       "note": "Готовые блоки, которые не надо разбирать по грамматике.",
       "rows": [

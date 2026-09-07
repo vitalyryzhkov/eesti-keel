@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v17';
+const VERSION = 'v20';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -1091,3 +1091,25 @@ function finishExam() {
 }
 
 on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
+
+/* ---------- высота под экранную клавиатуру ---------- */
+
+// Android сжимает разметку сам (interactive-widget=resizes-content в мета-теге),
+// а iOS клавиатурой только накрывает страницу: layout-вьюпорт остаётся прежним.
+// Реальную видимую высоту там знает только visualViewport — отдаём её в CSS.
+(function trackViewportHeight() {
+  const vv = window.visualViewport;
+  if (!vv) return;
+  const apply = () => {
+    const h = Math.round(vv.height);
+    // в момент запуска скрипта высота бывает нулевой — записав её,
+    // мы схлопнули бы разметку в ноль
+    if (h > 0) document.documentElement.style.setProperty('--app-vh', h + 'px');
+  };
+  vv.addEventListener('resize', apply);
+  vv.addEventListener('scroll', apply);
+  window.addEventListener('resize', apply);   // не во всех движках приходит событие vv
+  window.addEventListener('orientationchange', () => setTimeout(apply, 250));
+  window.addEventListener('load', apply);
+  apply();
+})();

@@ -1684,7 +1684,7 @@
       "gen": "jõulu",
       "part": "jõulu",
       "plpart": "jõule,jõulusid",
-      "ex": "Luuletaja Marie Underil algas kevad kohe pärast jõulu.",
+      "ex": "Enne jõule pole lund oodata.",
       "src": "jõulud"
     },
     {
@@ -1694,7 +1694,7 @@
       "gen": "pulma",
       "part": "pulma",
       "plpart": "pulmi,pulmasid",
-      "ex": "Käisin sõbra pulmas..",
+      "ex": "Pulmadega kannatab oodata.",
       "src": "pulmad"
     },
     {
@@ -1886,6 +1886,572 @@
       "part": "detsembrit",
       "plpart": "detsembreid",
       "ex": "Detsembris on jõulud."
+    },
+    {
+      "id": "n_habe",
+      "ru": "борода",
+      "nom": "habe",
+      "gen": "habeme",
+      "part": "habet",
+      "plpart": "habemeid",
+      "ex": "Vanaisal on hall habe."
+    },
+    {
+      "id": "n_vunts",
+      "ru": "ус",
+      "nom": "vunts",
+      "gen": "vuntsi",
+      "part": "vuntsi",
+      "plpart": "vuntse,vuntsisid",
+      "ex": "Mart on täitsa vunts!"
+    },
+    {
+      "id": "n_tukk",
+      "ru": "чёлка",
+      "nom": "tukk",
+      "gen": "tuka",
+      "part": "tukka",
+      "plpart": "tukki,tukkasid",
+      "ex": "Pöetud tukaga hobune."
+    },
+    {
+      "id": "n_pats",
+      "ru": "коса, косичка",
+      "nom": "pats",
+      "gen": "patsi",
+      "part": "patsi",
+      "plpart": "patse,patsisid"
+    },
+    {
+      "id": "n_hobusesaba",
+      "ru": "конский хвост",
+      "nom": "hobusesaba",
+      "gen": "hobusesaba",
+      "part": "hobusesaba",
+      "plpart": "hobusesabu,hobusesabasid"
+    },
+    {
+      "id": "n_kiilakas",
+      "ru": "лысый",
+      "nom": "kiilakas",
+      "gen": "kiilaka",
+      "part": "kiilakat",
+      "plpart": "kiilakaid",
+      "ex": "Ta leidis endale mingi kiilaka vanamehe.",
+      "pos": "adj"
+    },
+    {
+      "id": "n_sirge",
+      "ru": "прямой",
+      "nom": "sirge",
+      "gen": "sirge",
+      "part": "sirget",
+      "plpart": "sirgeid",
+      "pos": "adj",
+      "ex": "Sirge servaga laud."
+    },
+    {
+      "id": "n_pikk",
+      "ru": "длинный, высокий",
+      "nom": "pikk",
+      "gen": "pika",
+      "part": "pikka",
+      "plpart": "pikki,pikkasid",
+      "pos": "adj",
+      "ex": "Katrin on pikka kasvu."
+    },
+    {
+      "id": "n_luhike",
+      "ru": "короткий",
+      "nom": "lühike",
+      "gen": "lühikese",
+      "part": "lühikest",
+      "plpart": "lühikesi",
+      "pos": "adj",
+      "ex": "Poiss on lühikest kasvu."
+    },
+    {
+      "id": "n_poolpikk",
+      "ru": "средней длины",
+      "nom": "poolpikk",
+      "gen": "poolpika",
+      "part": "poolpikka",
+      "plpart": "poolpikki,poolpikkasid",
+      "pos": "adj",
+      "ex": "Ta kandis poolpikka kleiti."
+    },
+    {
+      "id": "n_hall",
+      "ru": "седой, серый",
+      "nom": "hall",
+      "gen": "halli",
+      "part": "halli",
+      "plpart": "halle,hallisid",
+      "pos": "adj",
+      "ex": "Moes on hall."
+    },
+    {
+      "id": "n_hele",
+      "ru": "светлый",
+      "nom": "hele",
+      "gen": "heleda",
+      "part": "heledat",
+      "plpart": "heledaid",
+      "pos": "adj",
+      "ex": "Avar ja hele kabinet."
+    },
+    {
+      "id": "n_must",
+      "ru": "чёрный",
+      "nom": "must",
+      "gen": "musta",
+      "part": "musta",
+      "plpart": "musti,mustasid",
+      "pos": "adj",
+      "ex": "Meeleolu on must."
+    },
+    {
+      "id": "n_punane",
+      "ru": "рыжий, красный",
+      "nom": "punane",
+      "gen": "punase",
+      "part": "punast",
+      "plpart": "punaseid",
+      "pos": "adj",
+      "ex": "Eesti punased polgud."
+    },
+    {
+      "id": "n_paks",
+      "ru": "полный, толстый",
+      "nom": "paks",
+      "gen": "paksu",
+      "part": "paksu",
+      "plpart": "pakse,paksusid",
+      "pos": "adj",
+      "ex": "Paks lumi on maas."
+    },
+    {
+      "id": "n_sale",
+      "ru": "стройный",
+      "nom": "sale",
+      "gen": "saleda",
+      "part": "saledat",
+      "plpart": "saledaid",
+      "pos": "adj",
+      "ex": "Naine on pikk ja sale."
+    },
+    {
+      "id": "n_pruun",
+      "ru": "карий, коричневый",
+      "nom": "pruun",
+      "gen": "pruuni",
+      "part": "pruuni",
+      "plpart": "pruune,pruunisid",
+      "pos": "adj",
+      "ex": "Karul on pruun karv."
+    },
+    {
+      "id": "n_roheline",
+      "ru": "зелёный",
+      "nom": "roheline",
+      "gen": "rohelise",
+      "part": "rohelist",
+      "plpart": "rohelisi",
+      "pos": "adj",
+      "ex": "Valgusfoori roheline tuli."
+    },
+    {
+      "id": "n_sinine",
+      "ru": "синий, голубой",
+      "nom": "sinine",
+      "gen": "sinise",
+      "part": "sinist",
+      "plpart": "siniseid",
+      "pos": "adj",
+      "ex": "Sa sinine saatan!"
+    },
+    {
+      "id": "n_kasv",
+      "ru": "рост",
+      "nom": "kasv",
+      "gen": "kasvu",
+      "part": "kasvu",
+      "plpart": "kasve,kasvusid",
+      "ex": "Silmaga nähtav kasv."
+    },
+    {
+      "id": "n_toidupood",
+      "ru": "продуктовый магазин",
+      "nom": "toidupood",
+      "gen": "toidupoe",
+      "part": "toidupoodi",
+      "plpart": "toidupoode,toidupoodisid",
+      "ex": "Kus asub lähim toidupood?"
+    },
+    {
+      "id": "n_raamatupood",
+      "ru": "книжный магазин",
+      "nom": "raamatupood",
+      "gen": "raamatupoe",
+      "part": "raamatupoodi",
+      "plpart": "raamatupoode,raamatupoodisid",
+      "ex": "Raamatupoodidesse jõudsid müügile uued õpikud."
+    },
+    {
+      "id": "n_lillepood",
+      "ru": "цветочный магазин",
+      "nom": "lillepood",
+      "gen": "lillepoe",
+      "part": "lillepoodi",
+      "plpart": "lillepoode,lillepoodisid"
+    },
+    {
+      "id": "n_kingapood",
+      "ru": "обувной магазин",
+      "nom": "kingapood",
+      "gen": "kingapoe",
+      "part": "kingapoodi",
+      "plpart": "kingapoode,kingapoodisid"
+    },
+    {
+      "id": "n_spordipood",
+      "ru": "спортивный магазин",
+      "nom": "spordipood",
+      "gen": "spordipoe",
+      "part": "spordipoodi",
+      "plpart": "spordipoode,spordipoodisid",
+      "ex": "Ostsin spordipoest hantlid."
+    },
+    {
+      "id": "n_mooblipood",
+      "ru": "мебельный магазин",
+      "nom": "mööblipood",
+      "gen": "mööblipoe",
+      "part": "mööblipoodi",
+      "plpart": "mööblipoode,mööblipoodisid"
+    },
+    {
+      "id": "n_prillipood",
+      "ru": "оптика",
+      "nom": "prillipood",
+      "gen": "prillipoe",
+      "part": "prillipoodi",
+      "plpart": "prillipoode,prillipoodisid"
+    },
+    {
+      "id": "n_lemmikloomapood",
+      "ru": "зоомагазин",
+      "nom": "lemmikloomapood",
+      "gen": "lemmikloomapoe",
+      "part": "lemmikloomapoodi",
+      "plpart": "lemmikloomapoode,lemmikloomapoodisid",
+      "ex": "Noor pere avas lemmikloomapoe."
+    },
+    {
+      "id": "n_ehituspood",
+      "ru": "строительный магазин",
+      "nom": "ehituspood",
+      "gen": "ehituspoe",
+      "part": "ehituspoodi",
+      "plpart": "ehituspoode,ehituspoodisid"
+    },
+    {
+      "id": "n_esmaspaev",
+      "ru": "понедельник",
+      "nom": "esmaspäev",
+      "gen": "esmaspäeva",
+      "part": "esmaspäeva",
+      "plpart": "esmaspäevi,esmaspäevasid",
+      "ex": "Käin tööl esmaspäevast reedeni."
+    },
+    {
+      "id": "n_teisipaev",
+      "ru": "вторник",
+      "nom": "teisipäev",
+      "gen": "teisipäeva",
+      "part": "teisipäeva",
+      "plpart": "teisipäevi,teisipäevasid",
+      "ex": "Koosolek toimub teisipäeval."
+    },
+    {
+      "id": "n_kolmapaev",
+      "ru": "среда",
+      "nom": "kolmapäev",
+      "gen": "kolmapäeva",
+      "part": "kolmapäeva",
+      "plpart": "kolmapäevi,kolmapäevasid",
+      "ex": "Kohtume kolmapäeval kell 12."
+    },
+    {
+      "id": "n_neljapaev",
+      "ru": "четверг",
+      "nom": "neljapäev",
+      "gen": "neljapäeva",
+      "part": "neljapäeva",
+      "plpart": "neljapäevi,neljapäevasid",
+      "ex": "Töö valmib neljapäevaks."
+    },
+    {
+      "id": "n_reede",
+      "ru": "пятница",
+      "nom": "reede",
+      "gen": "reede",
+      "part": "reedet",
+      "plpart": "reedeid",
+      "ex": "Kontsert toimub reedel."
+    },
+    {
+      "id": "n_laupaev",
+      "ru": "суббота",
+      "nom": "laupäev",
+      "gen": "laupäeva",
+      "part": "laupäeva",
+      "plpart": "laupäevi,laupäevasid",
+      "ex": "Sõidame laupäeval maale."
+    },
+    {
+      "id": "n_puhapaev",
+      "ru": "воскресенье",
+      "nom": "pühapäev",
+      "gen": "pühapäeva",
+      "part": "pühapäeva",
+      "plpart": "pühapäevi,pühapäevasid",
+      "ex": "Pühapäeval saab kauem magada."
+    },
+    {
+      "id": "n_uks",
+      "ru": "один",
+      "nom": "üks",
+      "gen": "ühe",
+      "part": "üht,ühte",
+      "plpart": "ühtesid",
+      "ex": "Tramm nr 1."
+    },
+    {
+      "id": "n_kaks",
+      "ru": "два",
+      "nom": "kaks",
+      "gen": "kahe",
+      "part": "kaht,kahte",
+      "plpart": "kahtesid",
+      "ex": "Tramm nr 2."
+    },
+    {
+      "id": "n_kolm",
+      "ru": "три",
+      "nom": "kolm",
+      "gen": "kolme",
+      "part": "kolme",
+      "plpart": "kolmi,kolmesid",
+      "ex": "Tramm nr 3."
+    },
+    {
+      "id": "n_neli",
+      "ru": "четыре",
+      "nom": "neli",
+      "gen": "nelja",
+      "part": "nelja",
+      "plpart": "nelju,neljasid",
+      "ex": "Buss nr 4."
+    },
+    {
+      "id": "n_viis",
+      "ru": "пять",
+      "nom": "viis",
+      "gen": "viie",
+      "part": "viit,viite",
+      "plpart": "viisi",
+      "ex": "Buss nr 5."
+    },
+    {
+      "id": "n_kuus",
+      "ru": "шесть",
+      "nom": "kuus",
+      "gen": "kuue",
+      "part": "kuut,kuute",
+      "plpart": "kuusi",
+      "ex": "Buss nr 6."
+    },
+    {
+      "id": "n_seitse",
+      "ru": "семь",
+      "nom": "seitse",
+      "gen": "seitsme",
+      "part": "seitset",
+      "plpart": "seitsmeid",
+      "ex": "Sahtel nr 7."
+    },
+    {
+      "id": "n_kaheksa",
+      "ru": "восемь",
+      "nom": "kaheksa",
+      "gen": "kaheksa",
+      "part": "kaheksat",
+      "plpart": "kaheksaid",
+      "ex": "Värav nr 8."
+    },
+    {
+      "id": "n_uheksa",
+      "ru": "девять",
+      "nom": "üheksa",
+      "gen": "üheksa",
+      "part": "üheksat",
+      "plpart": "üheksaid",
+      "ex": "Troll nr 9."
+    },
+    {
+      "id": "n_kumme",
+      "ru": "десять",
+      "nom": "kümme",
+      "gen": "kümne",
+      "part": "kümmet",
+      "plpart": "kümneid",
+      "ex": "Buss nr 10."
+    },
+    {
+      "id": "n_lumi",
+      "ru": "снег",
+      "nom": "lumi",
+      "gen": "lume",
+      "part": "lund",
+      "plpart": "lumesid",
+      "ex": "Öösel sadas lund."
+    },
+    {
+      "id": "n_vihm",
+      "ru": "дождь",
+      "nom": "vihm",
+      "gen": "vihma",
+      "part": "vihma",
+      "plpart": "vihmu,vihmasid",
+      "ex": "Vihm jäi järele."
+    },
+    {
+      "id": "n_rahe",
+      "ru": "град",
+      "nom": "rahe",
+      "gen": "rahe",
+      "part": "rahet",
+      "plpart": "rahesid",
+      "ex": "Sajab vihma ja rahet."
+    },
+    {
+      "id": "n_lorts",
+      "ru": "мокрый снег",
+      "nom": "lörts",
+      "gen": "lörtsi",
+      "part": "lörtsi",
+      "plpart": "lörtse,lörtsisid",
+      "ex": "Hommikul sadas lörtsi."
+    },
+    {
+      "id": "n_tuul",
+      "ru": "ветер",
+      "nom": "tuul",
+      "gen": "tuule",
+      "part": "tuult",
+      "plpart": "tuuli",
+      "ex": "Tuul pöördus läände."
+    },
+    {
+      "id": "n_torm",
+      "ru": "шторм, буря",
+      "nom": "torm",
+      "gen": "tormi",
+      "part": "tormi",
+      "plpart": "torme,tormisid",
+      "ex": "Küll on torm mees!"
+    },
+    {
+      "id": "n_udu",
+      "ru": "туман",
+      "nom": "udu",
+      "gen": "udu",
+      "part": "udu",
+      "plpart": "udusid",
+      "ex": "Eksisime tihedas udus ära."
+    },
+    {
+      "id": "n_aike",
+      "ru": "гроза",
+      "nom": "äike",
+      "gen": "äikese",
+      "part": "äikest",
+      "plpart": "äikesi",
+      "ex": "Ilmajaam ennustas äikest."
+    },
+    {
+      "id": "n_valk",
+      "ru": "молния",
+      "nom": "välk",
+      "gen": "välgu",
+      "part": "välku",
+      "plpart": "välke,välkusid",
+      "ex": "Välk lõi majja sisse."
+    },
+    {
+      "id": "n_vikerkaar",
+      "ru": "радуга",
+      "nom": "vikerkaar",
+      "gen": "vikerkaare",
+      "part": "vikerkaart",
+      "plpart": "vikerkaari",
+      "ex": "Taevas kaardus vikerkaar."
+    },
+    {
+      "id": "n_sula",
+      "ru": "оттепель",
+      "nom": "sula",
+      "gen": "sula",
+      "part": "sula",
+      "plpart": "sulasid",
+      "ex": "Hääle sula kõla."
+    },
+    {
+      "id": "n_selge",
+      "ru": "ясный",
+      "nom": "selge",
+      "gen": "selge",
+      "part": "selget",
+      "plpart": "selgeid",
+      "pos": "adj",
+      "ex": "Taevas on selge."
+    },
+    {
+      "id": "n_lokk",
+      "ru": "локон, завиток",
+      "nom": "lokk",
+      "gen": "loki",
+      "part": "lokki",
+      "plpart": "lokke,lokkisid",
+      "ex": "Loomuliku lokiga juuksed."
+    },
+    {
+      "id": "n_manguasi",
+      "ru": "игрушка",
+      "nom": "mänguasi",
+      "gen": "mänguasja",
+      "part": "mänguasja",
+      "plpart": "mänguasju,mänguasjasid",
+      "ex": "Liinal on palju mänguasju, aga eriti armastab ta nukke."
+    },
+    {
+      "id": "n_elektroonika",
+      "ru": "электроника",
+      "nom": "elektroonika",
+      "gen": "elektroonika",
+      "part": "elektroonikat",
+      "plpart": "elektroonikaid",
+      "ex": "Auto on varustatud keerulise elektroonikaga."
+    },
+    {
+      "id": "n_taaskasutus",
+      "ru": "повторное использование",
+      "nom": "taaskasutus",
+      "gen": "taaskasutuse",
+      "part": "taaskasutust",
+      "plpart": "taaskasutusi",
+      "ex": "Tähtis on, et vanapaber taaskasutusse jõuaks."
     }
   ],
   "verbs": [
@@ -2618,6 +3184,28 @@
       "past": "joonistas",
       "nud": "joonistanud",
       "ex": "Ta joonistas paberile hobuse."
+    },
+    {
+      "id": "v_tuiskama",
+      "ru": "мести (о метели)",
+      "ma": "tuiskama",
+      "da": "tuisata",
+      "b": "tuiskab",
+      "neg": "tuiska",
+      "past": "tuiskas",
+      "nud": "tuisanud",
+      "ex": "Hange tuisanud uks."
+    },
+    {
+      "id": "v_muristama",
+      "ru": "греметь (о громе)",
+      "ma": "müristama",
+      "da": "müristada",
+      "b": "müristab",
+      "neg": "mürista",
+      "past": "müristas",
+      "nud": "müristanud",
+      "ex": "Väljas müristas kõu."
     }
   ]
 }

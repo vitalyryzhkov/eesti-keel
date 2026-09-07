@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <!-- цвет строки состояния должен идти за темой: одна фиксированная величина
      давала тёмную полосу над светлым приложением -->
 <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
@@ -51,7 +51,7 @@
 <dialog id="adder">
   <h2>Перевод и словарь</h2>
   <label>Слово или предложение — на эстонском или по-русски
-    <textarea id="add-word" rows="2" lang="et" autocomplete="off"
+    <textarea id="add-word" rows="2" lang="et" autocomplete="off" enterkeyhint="search"
               autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>
   </label>
   <div id="add-pad" class="pad pad-inline">

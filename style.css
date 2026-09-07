@@ -385,3 +385,35 @@ body {
 .cheat .ex { margin: 0 0 12px; padding-left: 2px; }
 .cheat .ex:last-child { margin-bottom: 2px; }
 .cheat .ex .et { font-weight: 500; }
+
+/* --- экранная клавиатура --- */
+
+/* Android сжимает разметку сам (interactive-widget), iOS — нет: там высоту
+   даёт только visualViewport, поэтому берём её из JS. Без этого кнопка
+   «Перевести» и «Проверить» уезжают под клавиатуру */
+/* min(): если переменная почему-то устарела и стала больше экрана,
+   выигрывает 100dvh — иначе разметка вылезла бы за экран */
+body { height: min(100dvh, var(--app-vh, 100dvh)); }
+
+/* Кнопка действия всегда на виду, даже если содержимое карточки прокручено */
+.actions {
+  position: sticky;
+  bottom: 0;
+  background: var(--panel);
+  padding-top: 10px;
+  margin-bottom: -2px;
+}
+
+/* Диалог не должен вылезать за видимую часть, а его кнопки — прятаться */
+dialog {
+  max-height: calc(min(100dvh, var(--app-vh, 100dvh)) - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+dialog .row:last-of-type {
+  position: sticky;
+  bottom: -18px;                 /* компенсируем нижний padding диалога */
+  background: var(--panel);
+  padding-bottom: 18px;
+  margin-bottom: -18px;
+}
