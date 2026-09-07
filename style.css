@@ -449,9 +449,16 @@ dialog[open] {
    не нужны — без них помещаются слово, поля и кнопка */
 .short header, .short .modes, .short footer { display: none; }
 .short .card { padding: 12px 14px; gap: 10px; }
-.short .prompt { font-size: 26px; }
+.short .prompt {
+  font-size: 22px;
+  position: sticky;      /* карточка мала — слово должно оставаться перед глазами */
+  top: 0;
+  z-index: 1;
+  background: var(--panel);
+  padding-bottom: 2px;
+}
+.short .tag, .short .prompt-ru { display: none; }
 .short .field input { font-size: 18px; padding: 8px 10px; }
-.short #actions.actions { margin-top: 8px; }
 .short .pad button { padding: 8px 0; font-size: 18px; }
 
 .short #adder[open] { padding: 12px; margin-block: 6px auto; }
@@ -463,9 +470,7 @@ dialog[open] {
 .short #adder .row button { padding: 9px; }
 .short #adder .dlg-foot { margin-top: 8px; }
 
-/* на низком экране липкая кнопка съедала почти всю карточку и обрезалась сверху */
-.short .actions { padding: 8px 18px 20px; }
-.short .card { padding: 12px 18px; }
+.short #actions.actions { margin-top: 6px; }
 
 /* На совсем низком экране (альбом с клавиатурой) подпись поля съедает две
    строки и выталкивает нижние кнопки за диалог — прячем её, поле и так понятно */

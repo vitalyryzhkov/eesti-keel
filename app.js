@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v27';
+const VERSION = 'v29';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -1107,6 +1107,38 @@ on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
 // Android сжимает разметку сам (interactive-widget=resizes-content в мета-теге),
 // а iOS клавиатурой только накрывает страницу: layout-вьюпорт остаётся прежним.
 // Реальную видимую высоту там знает только visualViewport — отдаём её в CSS.
+let lastHeight = 0;
+let baseline = 0;      // обычная высота без клавиатуры, своя для каждой ориентации
+
+// Прятать шапку и вкладки можно ТОЛЬКО когда открыта клавиатура. Ни высота сама
+// по себе, ни фокус в поле признаком не годятся: айфон в альбоме — это 844x390,
+// и по одной высоте навигация исчезала просто от поворота телефона; а фокус
+// приложение ставит само при показе карточки, и клавиатуру это не открывает.
+// Настоящий признак — просадка высоты относительно обычной для этой ориентации.
+function keyboardOpen(h) {
+  const gap = window.innerHeight - h;   // iOS: клавиатура накрывает, layout не меняется
+  const shrank = baseline && h < baseline - 100;   // Android: сжимается сам layout
+  return gap > 100 || !!shrank;
+}
+
+function updateChrome() {
+  const h = lastHeight || window.innerHeight;
+  const kb = keyboardOpen(h);
+  if (!kb) baseline = Math.max(baseline, h);       // запоминаем «спокойную» высоту
+  const root = document.documentElement;
+  root.classList.toggle('short', kb && h < 460);
+  root.classList.toggle('tiny', kb && h < 300);
+  const el2 = document.activeElement;
+  if (kb && el2 && el2.matches && el2.matches('input, textarea')) {
+    el2.scrollIntoView({ block: 'nearest' });
+  }
+}
+
+// поворот меняет «обычную» высоту — старую забываем, иначе она соврёт
+window.addEventListener('orientationchange', () => { baseline = 0; setTimeout(updateChrome, 300); });
+document.addEventListener('focusin', updateChrome);
+document.addEventListener('focusout', () => setTimeout(updateChrome, 0));
+
 (function trackViewportHeight() {
   const vv = window.visualViewport;
   if (!vv) return;
@@ -1116,14 +1148,8 @@ on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
     // мы схлопнули бы разметку в ноль
     if (h <= 0) return;
     document.documentElement.style.setProperty('--app-vh', h + 'px');
-    // компактный режим включаем по ВИДИМОЙ высоте, а не медиазапросом:
-    // на iOS клавиатура не сжимает layout-вьюпорт, и медиазапрос там молчит
-    document.documentElement.classList.toggle('short', h < 460);
-    document.documentElement.classList.toggle('tiny', h < 260);
-    const focused = document.activeElement;
-    if (focused && focused.matches && focused.matches('input, textarea')) {
-      focused.scrollIntoView({ block: 'nearest' });
-    }
+    lastHeight = h;
+    updateChrome();
   };
   vv.addEventListener('resize', apply);
   vv.addEventListener('scroll', apply);
