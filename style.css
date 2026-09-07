@@ -340,6 +340,11 @@ body {
   overflow-y: auto;
 }
 
+/* Слово и подпись стоят в шапке карточки и не прокручиваются, поля — в теле.
+   Так слово видно всегда и при этом ничего не лежит поверх полей ввода */
+.card-head { flex: 0 0 auto; display: flex; flex-direction: column; gap: 6px; }
+.card-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+
 /* --- шпаргалка: разделы должны читаться как отдельные карточки --- */
 .cheat {
   border: 1px solid var(--line);
@@ -449,15 +454,9 @@ dialog[open] {
    не нужны — без них помещаются слово, поля и кнопка */
 .short header, .short .modes, .short footer { display: none; }
 .short .card { padding: 12px 14px; gap: 10px; }
-.short .prompt {
-  font-size: 22px;
-  position: sticky;      /* карточка мала — слово должно оставаться перед глазами */
-  top: 0;
-  z-index: 1;
-  background: var(--panel);
-  padding-bottom: 2px;
-}
+.short .prompt { font-size: 22px; }
 .short .tag, .short .prompt-ru { display: none; }
+.short .card-head { gap: 2px; }
 .short .field input { font-size: 18px; padding: 8px 10px; }
 .short .pad button { padding: 8px 0; font-size: 18px; }
 

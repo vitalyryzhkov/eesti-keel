@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v29';
+const VERSION = 'v31';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -81,7 +81,7 @@ function buildCards() {
     if (n.plpart) fields.push({ key: 'plpart', label: 'mitmuse osastav (мн. ч.)', answer: n.plpart });
     out.push({
       id: n.id + ':forms', kind: 'forms', deck: 'forms',
-      tag: (n.pos === 'adj' ? 'omadussõna' : 'nimisõna') + ' · формы',
+      tag: ({ adj: 'omadussõna', num: 'arvsõna' }[n.pos] || 'nimisõna') + ' · формы',
       prompt: n.nom, ru: n.ru, fields, ex: n.ex,
     });
     out.push({
@@ -223,16 +223,18 @@ function render() {
 
 function renderForms(c) {
   el.card.innerHTML =
-    '<div class="tag">' + esc(c.tag) + '</div>' +
-    '<div class="prompt" lang="et">' + esc(c.prompt) + '</div>' +
-    '<div class="prompt-ru">' + esc(c.ru || '') + '</div>' +
-    '<div class="fields">' +
+    '<div class="card-head">' +
+      '<div class="tag">' + esc(c.tag) + '</div>' +
+      '<div class="prompt" lang="et">' + esc(c.prompt) + '</div>' +
+      '<div class="prompt-ru">' + esc(c.ru || '') + '</div>' +
+    '</div>' +
+    '<div class="card-scroll"><div class="fields">' +
       c.fields.map((f, i) =>
         '<div class="field" data-i="' + i + '">' +
           '<label for="f' + i + '">' + esc(f.label) + '</label>' +
           input('f' + i) +
         '</div>').join('') +
-    '</div>';
+    '</div></div>';
   setActions('<button class="primary" id="check">Проверить</button>');
 
   el.pad.hidden = false;
@@ -272,11 +274,13 @@ function checkForms() {
 
 function renderProd(c) {
   el.card.innerHTML =
-    '<div class="tag">' + esc(c.tag) + '</div>' +
-    '<div class="prompt">' + esc(c.prompt) + '</div>' +
-    '<div class="fields"><div class="field">' +
+    '<div class="card-head">' +
+      '<div class="tag">' + esc(c.tag) + '</div>' +
+      '<div class="prompt">' + esc(c.prompt) + '</div>' +
+    '</div>' +
+    '<div class="card-scroll"><div class="fields"><div class="field">' +
       '<label for="f0">по-эстонски</label>' + input('f0') +
-    '</div></div>';
+    '</div></div></div>';
   setActions('<button class="primary" id="check">Проверить</button>');
 
   el.pad.hidden = false;
@@ -299,9 +303,11 @@ function renderProd(c) {
 
 function renderRecog(c) {
   el.card.innerHTML =
-    '<div class="tag">' + esc(c.tag) + '</div>' +
-    '<div class="prompt" lang="et">' + esc(c.prompt) + '</div>' +
-    '<div id="reveal"></div>';
+    '<div class="card-head">' +
+      '<div class="tag">' + esc(c.tag) + '</div>' +
+      '<div class="prompt" lang="et">' + esc(c.prompt) + '</div>' +
+    '</div>' +
+    '<div class="card-scroll"><div id="reveal"></div></div>';
   setActions('<button class="primary" id="show">Показать</button>');
 
   document.getElementById('show').onclick = () => {
@@ -322,7 +328,7 @@ function showExample() {
   node.className = 'example';
   node.lang = 'et';
   node.textContent = c.ex;
-  el.card.appendChild(node);
+  (el.card.querySelector('.card-scroll') || el.card).appendChild(node);
 }
 
 function finish(ok, immediate) {
@@ -1108,25 +1114,48 @@ on('btn-exam', () => { clearExamTimer(); exam = null; renderExamIntro(); });
 // а iOS клавиатурой только накрывает страницу: layout-вьюпорт остаётся прежним.
 // Реальную видимую высоту там знает только visualViewport — отдаём её в CSS.
 let lastHeight = 0;
-let baseline = 0;      // обычная высота без клавиатуры, своя для каждой ориентации
+// обычная высота без клавиатуры — СВОЯ для каждой ориентации. Один общий baseline
+// портился при повороте с уже открытой клавиатурой: в него попадала высота с ней
+// храним и ширину: поворот меняет их местами, поэтому обычную высоту в новой
+// ориентации можно оценить как ширину в старой — это надёжнее, чем screen.*
+const baselines = { portrait: null, landscape: null };
+
+function orientationKey() {
+  return window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+}
 
 // Прятать шапку и вкладки можно ТОЛЬКО когда открыта клавиатура. Ни высота сама
 // по себе, ни фокус в поле признаком не годятся: айфон в альбоме — это 844x390,
 // и по одной высоте навигация исчезала просто от поворота телефона; а фокус
 // приложение ставит само при показе карточки, и клавиатуру это не открывает.
 // Настоящий признак — просадка высоты относительно обычной для этой ориентации.
+function expectedHeight() {
+  const key = orientationKey();
+  const own = baselines[key];
+  if (own) return own.h;
+  // Эту ориентацию без клавиатуры ещё не видели — например, повернули телефон,
+  // не закрыв её. Берём ширину из другой ориентации: при повороте она станет высотой
+  const other = baselines[key === 'landscape' ? 'portrait' : 'landscape'];
+  return other ? other.w : 0;
+}
+
 function keyboardOpen(h) {
-  const gap = window.innerHeight - h;   // iOS: клавиатура накрывает, layout не меняется
-  const shrank = baseline && h < baseline - 100;   // Android: сжимается сам layout
-  return gap > 100 || !!shrank;
+  if (window.innerHeight - h > 100) return true;    // iOS: клавиатура накрывает layout
+  const expected = expectedHeight();                // Android: сжимается сам layout
+  return expected > 0 && h < expected - 100;
 }
 
 function updateChrome() {
   const h = lastHeight || window.innerHeight;
   const kb = keyboardOpen(h);
-  if (!kb) baseline = Math.max(baseline, h);       // запоминаем «спокойную» высоту
+  const key = orientationKey();
+  if (!kb && (!baselines[key] || h >= baselines[key].h)) {
+    baselines[key] = { w: window.innerWidth, h };          // «спокойные» размеры
+  }
   const root = document.documentElement;
-  root.classList.toggle('short', kb && h < 460);
+  // если клавиатура открыта — обвязка не нужна в любом случае: человек печатает.
+  // Порог по высоте оставлял полосу 460-560 (портрет iPhone с клавиатурой) без сжатия
+  root.classList.toggle('short', kb);
   root.classList.toggle('tiny', kb && h < 300);
   const el2 = document.activeElement;
   if (kb && el2 && el2.matches && el2.matches('input, textarea')) {
@@ -1135,7 +1164,7 @@ function updateChrome() {
 }
 
 // поворот меняет «обычную» высоту — старую забываем, иначе она соврёт
-window.addEventListener('orientationchange', () => { baseline = 0; setTimeout(updateChrome, 300); });
+window.addEventListener('orientationchange', () => setTimeout(updateChrome, 300));
 document.addEventListener('focusin', updateChrome);
 document.addEventListener('focusout', () => setTimeout(updateChrome, 0));
 

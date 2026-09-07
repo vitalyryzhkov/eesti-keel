@@ -475,7 +475,8 @@
       "gen": "teise",
       "part": "teist",
       "plpart": "teisi",
-      "ex": "Teise sordi jahu."
+      "ex": "Teise sordi jahu.",
+      "pos": "num"
     },
     {
       "id": "n_kolmas",
@@ -484,7 +485,8 @@
       "gen": "kolmanda",
       "part": "kolmandat,kolmat",
       "plpart": "kolmandaid",
-      "ex": "Kolmanda sordi jahu."
+      "ex": "Kolmanda sordi jahu.",
+      "pos": "num"
     },
     {
       "id": "n_neljas",
@@ -493,7 +495,8 @@
       "gen": "neljanda",
       "part": "neljandat,neljat",
       "plpart": "neljandaid",
-      "ex": "Elan neljandal korrusel."
+      "ex": "Elan neljandal korrusel.",
+      "pos": "num"
     },
     {
       "id": "n_viies",
@@ -502,7 +505,8 @@
       "gen": "viienda",
       "part": "viiendat",
       "plpart": "viiendaid",
-      "ex": "Õpin viiendas klassis."
+      "ex": "Õpin viiendas klassis.",
+      "pos": "num"
     },
     {
       "id": "n_kuues",
@@ -511,7 +515,8 @@
       "gen": "kuuenda",
       "part": "kuuendat",
       "plpart": "kuuendaid",
-      "ex": "Juuni on aasta kuues kuu."
+      "ex": "Juuni on aasta kuues kuu.",
+      "pos": "num"
     },
     {
       "id": "n_seitsmes",
@@ -520,7 +525,8 @@
       "gen": "seitsmenda",
       "part": "seitsmendat",
       "plpart": "seitsmendaid",
-      "ex": "Seitsmenda klassi lapsed."
+      "ex": "Seitsmenda klassi lapsed.",
+      "pos": "num"
     },
     {
       "id": "n_kaheksas",
@@ -529,7 +535,8 @@
       "gen": "kaheksanda",
       "part": "kaheksandat",
       "plpart": "kaheksandaid",
-      "ex": "Kaheksandat kuud lapseootel naine."
+      "ex": "Kaheksandat kuud lapseootel naine.",
+      "pos": "num"
     },
     {
       "id": "n_uheksas",
@@ -538,7 +545,8 @@
       "gen": "üheksanda",
       "part": "üheksandat",
       "plpart": "üheksandaid",
-      "ex": "Üheksanda klassi poisid."
+      "ex": "Üheksanda klassi poisid.",
+      "pos": "num"
     },
     {
       "id": "n_kumnes",
@@ -547,7 +555,8 @@
       "gen": "kümnenda",
       "part": "kümnendat",
       "plpart": "kümnendaid",
-      "ex": "Jaak käib kümnendas klassis."
+      "ex": "Jaak käib kümnendas klassis.",
+      "pos": "num"
     },
     {
       "id": "n_elutuba",
@@ -1714,7 +1723,8 @@
       "gen": "üheteistkümnenda",
       "part": "üheteistkümnendat",
       "plpart": "üheteistkümnendaid",
-      "ex": "Ma käin üheteistkümnendas klassis."
+      "ex": "Ma käin üheteistkümnendas klassis.",
+      "pos": "num"
     },
     {
       "id": "n_kaheteistkumnes",
@@ -1723,7 +1733,8 @@
       "gen": "kaheteistkümnenda",
       "part": "kaheteistkümnendat",
       "plpart": "kaheteistkümnendaid",
-      "ex": "Meie suusataja jäi kaheteistkümnendaks."
+      "ex": "Meie suusataja jäi kaheteistkümnendaks.",
+      "pos": "num"
     },
     {
       "id": "n_kolmeteistkumnes",
@@ -1732,7 +1743,8 @@
       "gen": "kolmeteistkümnenda",
       "part": "kolmeteistkümnendat",
       "plpart": "kolmeteistkümnendaid",
-      "ex": "Täna on kolmeteistkümnes november."
+      "ex": "Täna on kolmeteistkümnes november.",
+      "pos": "num"
     },
     {
       "id": "n_neljateistkumnes",
@@ -1741,7 +1753,8 @@
       "gen": "neljateistkümnenda",
       "part": "neljateistkümnendat",
       "plpart": "neljateistkümnendaid",
-      "ex": "Üritus leiab aset neljateistkümnendat korda."
+      "ex": "Üritus leiab aset neljateistkümnendat korda.",
+      "pos": "num"
     },
     {
       "id": "n_kuueteistkumnes",
@@ -1750,7 +1763,8 @@
       "gen": "kuueteistkümnenda",
       "part": "kuueteistkümnendat",
       "plpart": "kuueteistkümnendaid",
-      "ex": "Meie suusataja jäi kuueteistkümnendaks."
+      "ex": "Meie suusataja jäi kuueteistkümnendaks.",
+      "pos": "num"
     },
     {
       "id": "n_kaheksateistkumnes",
@@ -1759,7 +1773,8 @@
       "gen": "kaheksateistkümnenda",
       "part": "kaheksateistkümnendat",
       "plpart": "kaheksateistkümnendaid",
-      "ex": "Minu sünnipäev on kaheksateistkümnendal aprillil."
+      "ex": "Minu sünnipäev on kaheksateistkümnendal aprillil.",
+      "pos": "num"
     },
     {
       "id": "n_kahekumnes",
@@ -1768,7 +1783,8 @@
       "gen": "kahekümnenda",
       "part": "kahekümnendat",
       "plpart": "kahekümnendaid",
-      "ex": "Meie sportlane jäi kahekümnendaks."
+      "ex": "Meie sportlane jäi kahekümnendaks.",
+      "pos": "num"
     },
     {
       "id": "n_kolmekumnes",
@@ -1777,7 +1793,8 @@
       "gen": "kolmekümnenda",
       "part": "kolmekümnendat",
       "plpart": "kolmekümnendaid",
-      "ex": "Üritus toimub kolmekümnendat korda."
+      "ex": "Üritus toimub kolmekümnendat korda.",
+      "pos": "num"
     },
     {
       "id": "n_jaanuar",
@@ -2225,7 +2242,8 @@
       "gen": "ühe",
       "part": "üht,ühte",
       "plpart": "ühtesid",
-      "ex": "Tramm nr 1."
+      "ex": "Tramm nr 1.",
+      "pos": "num"
     },
     {
       "id": "n_kaks",
@@ -2234,7 +2252,8 @@
       "gen": "kahe",
       "part": "kaht,kahte",
       "plpart": "kahtesid",
-      "ex": "Tramm nr 2."
+      "ex": "Tramm nr 2.",
+      "pos": "num"
     },
     {
       "id": "n_kolm",
@@ -2243,7 +2262,8 @@
       "gen": "kolme",
       "part": "kolme",
       "plpart": "kolmi,kolmesid",
-      "ex": "Tramm nr 3."
+      "ex": "Tramm nr 3.",
+      "pos": "num"
     },
     {
       "id": "n_neli",
@@ -2252,7 +2272,8 @@
       "gen": "nelja",
       "part": "nelja",
       "plpart": "nelju,neljasid",
-      "ex": "Buss nr 4."
+      "ex": "Buss nr 4.",
+      "pos": "num"
     },
     {
       "id": "n_viis",
@@ -2261,7 +2282,8 @@
       "gen": "viie",
       "part": "viit,viite",
       "plpart": "viisi",
-      "ex": "Buss nr 5."
+      "ex": "Buss nr 5.",
+      "pos": "num"
     },
     {
       "id": "n_kuus",
@@ -2270,7 +2292,8 @@
       "gen": "kuue",
       "part": "kuut,kuute",
       "plpart": "kuusi",
-      "ex": "Buss nr 6."
+      "ex": "Buss nr 6.",
+      "pos": "num"
     },
     {
       "id": "n_seitse",
@@ -2279,7 +2302,8 @@
       "gen": "seitsme",
       "part": "seitset",
       "plpart": "seitsmeid",
-      "ex": "Sahtel nr 7."
+      "ex": "Sahtel nr 7.",
+      "pos": "num"
     },
     {
       "id": "n_kaheksa",
@@ -2288,7 +2312,8 @@
       "gen": "kaheksa",
       "part": "kaheksat",
       "plpart": "kaheksaid",
-      "ex": "Värav nr 8."
+      "ex": "Värav nr 8.",
+      "pos": "num"
     },
     {
       "id": "n_uheksa",
@@ -2297,7 +2322,8 @@
       "gen": "üheksa",
       "part": "üheksat",
       "plpart": "üheksaid",
-      "ex": "Troll nr 9."
+      "ex": "Troll nr 9.",
+      "pos": "num"
     },
     {
       "id": "n_kumme",
@@ -2306,7 +2332,8 @@
       "gen": "kümne",
       "part": "kümmet",
       "plpart": "kümneid",
-      "ex": "Buss nr 10."
+      "ex": "Buss nr 10.",
+      "pos": "num"
     },
     {
       "id": "n_lumi",

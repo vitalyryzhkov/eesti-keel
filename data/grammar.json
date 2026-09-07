@@ -1,323 +1,902 @@
 {
   "meta": {
     "note": "Шпаргалка A2. Дописывай секции по мере учёбы — файл читается приложением как есть.",
-    "updated": "2026-08-26"
+    "updated": "2026-09-07"
   },
   "sections": [
     {
       "title": "Отрицание — настоящее",
       "note": "ei + основа без -b (та же форма для всех лиц: ma ei loe, sa ei loe, nad ei loe).",
       "rows": [
-        { "et": "Ma loen raamatut. → Ma ei loe raamatut.", "ru": "Я читаю книгу. → Я не читаю книгу." },
-        { "et": "Ta töötab. → Ta ei tööta.", "ru": "Он работает. → Он не работает." },
-        { "et": "Nad lähevad koju. → Nad ei lähe koju.", "ru": "Они идут домой. → Они не идут домой." },
-        { "et": "Ma olen kodus. → Ma ei ole (pole) kodus.", "ru": "Я дома. → Я не дома.", "hint": "pole = ei ole, разговорнее" },
-        { "et": "Ta teeb tööd. → Ta ei tee tööd.", "ru": "Он делает работу. → Он не делает работу." }
+        {
+          "et": "Ma loen raamatut. → Ma ei loe raamatut.",
+          "ru": "Я читаю книгу. → Я не читаю книгу."
+        },
+        {
+          "et": "Ta töötab. → Ta ei tööta.",
+          "ru": "Он работает. → Он не работает."
+        },
+        {
+          "et": "Nad lähevad koju. → Nad ei lähe koju.",
+          "ru": "Они идут домой. → Они не идут домой."
+        },
+        {
+          "et": "Ma olen kodus. → Ma ei ole (pole) kodus.",
+          "ru": "Я дома. → Я не дома.",
+          "hint": "pole = ei ole, разговорнее"
+        },
+        {
+          "et": "Ta teeb tööd. → Ta ei tee tööd.",
+          "ru": "Он делает работу. → Он не делает работу."
+        }
       ]
     },
     {
       "title": "Отрицание — прошедшее",
       "note": "ei + форма на -nud. Тоже одна на все лица.",
       "rows": [
-        { "et": "Ma lugesin. → Ma ei lugenud.", "ru": "Я читал. → Я не читал." },
-        { "et": "Me olime seal. → Me ei olnud (polnud) seal.", "ru": "Мы были там. → Мы не были там." },
-        { "et": "Ta läks poodi. → Ta ei läinud poodi.", "ru": "Он пошёл в магазин. → Он не пошёл в магазин." }
+        {
+          "et": "Ma lugesin. → Ma ei lugenud.",
+          "ru": "Я читал. → Я не читал."
+        },
+        {
+          "et": "Me olime seal. → Me ei olnud (polnud) seal.",
+          "ru": "Мы были там. → Мы не были там."
+        },
+        {
+          "et": "Ta läks poodi. → Ta ei läinud poodi.",
+          "ru": "Он пошёл в магазин. → Он не пошёл в магазин."
+        }
       ]
     },
     {
       "title": "Вопрос да/нет — kas",
       "note": "Kas + обычный порядок слов. Ответ: Jah / Ei. В разговоре kas часто опускают, поднимая интонацию.",
       "rows": [
-        { "et": "Kas sa räägid eesti keelt?", "ru": "Ты говоришь по-эстонски?" },
-        { "et": "Kas te olete eestlane?", "ru": "Вы эстонец?" },
-        { "et": "Kas sa ei tule homme?", "ru": "Ты завтра не придёшь?", "hint": "отрицательный вопрос: kas + ei" },
-        { "et": "Kas sa jood teed või kohvi?", "ru": "Ты пьёшь чай или кофе?", "hint": "kas … või … — выбор" },
-        { "et": "Kas ma tohin küsida?", "ru": "Можно спросить?" }
+        {
+          "et": "Kas sa räägid eesti keelt?",
+          "ru": "Ты говоришь по-эстонски?"
+        },
+        {
+          "et": "Kas te olete eestlane?",
+          "ru": "Вы эстонец?"
+        },
+        {
+          "et": "Kas sa ei tule homme?",
+          "ru": "Ты завтра не придёшь?",
+          "hint": "отрицательный вопрос: kas + ei"
+        },
+        {
+          "et": "Kas sa jood teed või kohvi?",
+          "ru": "Ты пьёшь чай или кофе?",
+          "hint": "kas … või … — выбор"
+        },
+        {
+          "et": "Kas ma tohin küsida?",
+          "ru": "Можно спросить?"
+        }
       ]
     },
     {
       "title": "Вопросительные слова",
       "note": "Вопросительное слово — первое. Дальше: местоимение-подлежащее (ma, sa, ta, te, nad) стоит ПЕРЕД глаголом, а подлежащее-существительное — ПОСЛЕ него.",
       "rows": [
-        { "et": "Kes see on?", "ru": "Кто это?" },
-        { "et": "Mis see on? / Mida sa teed?", "ru": "Что это? / Что ты делаешь?", "hint": "mis — подлежащее, mida — дополнение" },
-        { "et": "Kus sa elad?", "ru": "Где ты живёшь?", "hint": "kus — где; местоимение sa стоит перед глаголом" },
-        { "et": "Kus elab sinu ema?", "ru": "Где живёт твоя мама?", "hint": "подлежащее-существительное — после глагола" },
-        { "et": "Kuhu sa lähed?", "ru": "Куда ты идёшь?", "hint": "kuhu — куда" },
-        { "et": "Kust sa tuled?", "ru": "Откуда ты идёшь?", "hint": "kust — откуда" },
-        { "et": "Millal sa tuled?", "ru": "Когда ты придёшь?" },
-        { "et": "Millal algab film?", "ru": "Когда начинается фильм?", "hint": "film — существительное, поэтому после algab" },
-        { "et": "Miks sa ei tule?", "ru": "Почему ты не придёшь?" },
-        { "et": "Mida teeb sinu vend?", "ru": "Что делает твой брат?" },
-        { "et": "Kuidas sul läheb?", "ru": "Как дела?" },
-        { "et": "Kui palju see maksab?", "ru": "Сколько это стоит?" },
-        { "et": "Kelle raamat see on?", "ru": "Чья это книга?" },
-        { "et": "Missugune (milline) film see on?", "ru": "Какой это фильм?" }
+        {
+          "et": "Kes see on?",
+          "ru": "Кто это?"
+        },
+        {
+          "et": "Mis see on? / Mida sa teed?",
+          "ru": "Что это? / Что ты делаешь?",
+          "hint": "mis — подлежащее, mida — дополнение"
+        },
+        {
+          "et": "Kus sa elad?",
+          "ru": "Где ты живёшь?",
+          "hint": "kus — где; местоимение sa стоит перед глаголом"
+        },
+        {
+          "et": "Kus elab sinu ema?",
+          "ru": "Где живёт твоя мама?",
+          "hint": "подлежащее-существительное — после глагола"
+        },
+        {
+          "et": "Kuhu sa lähed?",
+          "ru": "Куда ты идёшь?",
+          "hint": "kuhu — куда"
+        },
+        {
+          "et": "Kust sa tuled?",
+          "ru": "Откуда ты идёшь?",
+          "hint": "kust — откуда"
+        },
+        {
+          "et": "Millal sa tuled?",
+          "ru": "Когда ты придёшь?"
+        },
+        {
+          "et": "Millal algab film?",
+          "ru": "Когда начинается фильм?",
+          "hint": "film — существительное, поэтому после algab"
+        },
+        {
+          "et": "Miks sa ei tule?",
+          "ru": "Почему ты не придёшь?"
+        },
+        {
+          "et": "Mida teeb sinu vend?",
+          "ru": "Что делает твой брат?"
+        },
+        {
+          "et": "Kuidas sul läheb?",
+          "ru": "Как дела?"
+        },
+        {
+          "et": "Kui palju see maksab?",
+          "ru": "Сколько это стоит?"
+        },
+        {
+          "et": "Kelle raamat see on?",
+          "ru": "Чья это книга?"
+        },
+        {
+          "et": "Missugune (milline) film see on?",
+          "ru": "Какой это фильм?"
+        }
       ]
     },
     {
       "title": "Порядок слов",
       "note": "Глагол стремится на второе место. Начали не с подлежащего — существительное-подлежащее уходит за глагол; лёгкое местоимение может остаться и перед ним.",
       "rows": [
-        { "et": "Ma lähen täna poodi.", "ru": "Я иду сегодня в магазин.", "hint": "нейтрально" },
-        { "et": "Täna lähen ma poodi.", "ru": "Сегодня я иду в магазин.", "hint": "начали с täna → глагол вторым, ma после него" },
-        { "et": "Poodi lähen ma homme.", "ru": "В магазин я пойду завтра.", "hint": "то же с любым выносом вперёд" },
-        { "et": "Ma tean, et sa oled kodus.", "ru": "Я знаю, что ты дома.", "hint": "в придаточном порядок обычный — глагол НЕ в конец, как в немецком" },
-        { "et": "Ma ei tule, sest mul ei ole aega.", "ru": "Я не приду, потому что у меня нет времени." }
+        {
+          "et": "Ma lähen täna poodi.",
+          "ru": "Я иду сегодня в магазин.",
+          "hint": "нейтрально"
+        },
+        {
+          "et": "Täna lähen ma poodi.",
+          "ru": "Сегодня я иду в магазин.",
+          "hint": "начали с täna → глагол вторым, ma после него"
+        },
+        {
+          "et": "Poodi lähen ma homme.",
+          "ru": "В магазин я пойду завтра.",
+          "hint": "то же с любым выносом вперёд"
+        },
+        {
+          "et": "Ma tean, et sa oled kodus.",
+          "ru": "Я знаю, что ты дома.",
+          "hint": "в придаточном порядок обычный — глагол НЕ в конец, как в немецком"
+        },
+        {
+          "et": "Ma ei tule, sest mul ei ole aega.",
+          "ru": "Я не приду, потому что у меня нет времени."
+        }
       ]
     },
     {
       "title": "Падеж объекта — главная развилка",
       "note": "Частичное/процесс → osastav. Результат целиком → omastav. Отрицание → всегда osastav.",
       "rows": [
-        { "et": "Ma loen raamatut.", "ru": "Я читаю книгу (процесс).", "hint": "osastav" },
-        { "et": "Ma loen raamatu läbi.", "ru": "Я прочитаю книгу (до конца).", "hint": "omastav — результат" },
-        { "et": "Ma ostan raamatu.", "ru": "Я куплю книгу.", "hint": "omastav — законченное действие" },
-        { "et": "Ma ei osta raamatut.", "ru": "Я не куплю книгу.", "hint": "отрицание → osastav всегда" },
-        { "et": "Osta raamat!", "ru": "Купи книгу!", "hint": "императив → nimetav" },
-        { "et": "Ma ostan kaks raamatut.", "ru": "Я куплю две книги.", "hint": "после числительного → osastav ед. ч." },
-        { "et": "Ma joon vett. / Ma joon vee ära.", "ru": "Я пью воду. / Я выпью воду (всю)." }
+        {
+          "et": "Ma loen raamatut.",
+          "ru": "Я читаю книгу (процесс).",
+          "hint": "osastav"
+        },
+        {
+          "et": "Ma loen raamatu läbi.",
+          "ru": "Я прочитаю книгу (до конца).",
+          "hint": "omastav — результат"
+        },
+        {
+          "et": "Ma ostan raamatu.",
+          "ru": "Я куплю книгу.",
+          "hint": "omastav — законченное действие"
+        },
+        {
+          "et": "Ma ei osta raamatut.",
+          "ru": "Я не куплю книгу.",
+          "hint": "отрицание → osastav всегда"
+        },
+        {
+          "et": "Osta raamat!",
+          "ru": "Купи книгу!",
+          "hint": "императив → nimetav"
+        },
+        {
+          "et": "Ma ostan kaks raamatut.",
+          "ru": "Я куплю две книги.",
+          "hint": "после числительного → osastav ед. ч."
+        },
+        {
+          "et": "Ma joon vett. / Ma joon vee ära.",
+          "ru": "Я пью воду. / Я выпью воду (всю)."
+        }
       ]
     },
     {
       "title": "Императив",
       "note": "Ед. ч. = основа (та же, что после ei). Мн. ч./вежливо: -ge / -ke. Отрицание: ära / ärge.",
       "rows": [
-        { "et": "Loe! / Lugege!", "ru": "Читай! / Читайте!" },
-        { "et": "Tule siia! / Tulge siia!", "ru": "Иди сюда! / Идите сюда!" },
-        { "et": "Mine ära! / Minge ära!", "ru": "Уходи! / Уходите!", "hint": "minema — исключение: mine, хотя ei lähe" },
-        { "et": "Tee seda! / Tehke seda!", "ru": "Делай это! / Делайте это!" },
-        { "et": "Ära räägi! / Ärge rääkige!", "ru": "Не говори! / Не говорите!" },
-        { "et": "Palun ole nii kena.", "ru": "Будь так добр." }
+        {
+          "et": "Loe! / Lugege!",
+          "ru": "Читай! / Читайте!"
+        },
+        {
+          "et": "Tule siia! / Tulge siia!",
+          "ru": "Иди сюда! / Идите сюда!"
+        },
+        {
+          "et": "Mine ära! / Minge ära!",
+          "ru": "Уходи! / Уходите!",
+          "hint": "minema — исключение: mine, хотя ei lähe"
+        },
+        {
+          "et": "Tee seda! / Tehke seda!",
+          "ru": "Делай это! / Делайте это!"
+        },
+        {
+          "et": "Ära räägi! / Ärge rääkige!",
+          "ru": "Не говори! / Не говорите!"
+        },
+        {
+          "et": "Palun ole nii kena.",
+          "ru": "Будь так добр."
+        }
       ]
     },
     {
       "title": "Прошедшее время",
       "note": "Простое прошедшее: -sin, -sid, -s, -sime, -site, -sid. Перфект: olen + -nud.",
       "rows": [
-        { "et": "töötan → töötasin, töötasid, töötas", "ru": "работаю → работал(а), работал(и)", "hint": "правильный тип" },
-        { "et": "loen → lugesin, lugesid, luges", "ru": "читаю → читал", "hint": "основа меняется: loe- → luge-" },
-        { "et": "olen → olin; lähen → läksin; teen → tegin; söön → sõin", "ru": "неправильные, учить наизусть" },
-        { "et": "Ma olen seda filmi näinud.", "ru": "Я видел этот фильм (перфект).", "hint": "olen + -nud — «есть опыт»" },
-        { "et": "Ma ei ole seda näinud.", "ru": "Я этого не видел." }
+        {
+          "et": "töötan → töötasin, töötasid, töötas",
+          "ru": "работаю → работал(а), работал(и)",
+          "hint": "правильный тип"
+        },
+        {
+          "et": "loen → lugesin, lugesid, luges",
+          "ru": "читаю → читал",
+          "hint": "основа меняется: loe- → luge-"
+        },
+        {
+          "et": "olen → olin; lähen → läksin; teen → tegin; söön → sõin",
+          "ru": "неправильные, учить наизусть"
+        },
+        {
+          "et": "Ma olen seda filmi näinud.",
+          "ru": "Я видел этот фильм (перфект).",
+          "hint": "olen + -nud — «есть опыт»"
+        },
+        {
+          "et": "Ma ei ole seda näinud.",
+          "ru": "Я этого не видел."
+        }
       ]
     },
     {
       "title": "Рекция — какой падеж после глагола",
       "note": "Учить сразу с глаголом, как в немецком предлоги.",
       "rows": [
-        { "et": "Mulle meeldib see raamat.", "ru": "Мне нравится эта книга.", "hint": "meeldima kellele — allatiiv" },
-        { "et": "Ma aitan sind.", "ru": "Я тебе помогаю.", "hint": "aitama keda — osastav (не «кому»!)" },
-        { "et": "Ma ootan sind.", "ru": "Я жду тебя.", "hint": "ootama keda — osastav" },
-        { "et": "Ma räägin sinuga.", "ru": "Я говорю с тобой.", "hint": "rääkima kellega — kaasaütlev" },
-        { "et": "Ma räägin tööst.", "ru": "Я говорю о работе.", "hint": "rääkima millest — seestütlev" },
-        { "et": "Ma küsin õpetajalt.", "ru": "Я спрашиваю у учителя.", "hint": "küsima kellelt — alaltütlev" },
-        { "et": "Ma vastan sulle.", "ru": "Я тебе отвечаю.", "hint": "vastama kellele — allatiiv" },
-        { "et": "Ma helistan sulle.", "ru": "Я тебе позвоню.", "hint": "helistama kellele" },
-        { "et": "Ma lähen tööle / koju / poodi.", "ru": "Я иду на работу / домой / в магазин.", "hint": "куда — свой падеж у каждого слова" }
+        {
+          "et": "Mulle meeldib see raamat.",
+          "ru": "Мне нравится эта книга.",
+          "hint": "meeldima kellele — allatiiv"
+        },
+        {
+          "et": "Ma aitan sind.",
+          "ru": "Я тебе помогаю.",
+          "hint": "aitama keda — osastav (не «кому»!)"
+        },
+        {
+          "et": "Ma ootan sind.",
+          "ru": "Я жду тебя.",
+          "hint": "ootama keda — osastav"
+        },
+        {
+          "et": "Ma räägin sinuga.",
+          "ru": "Я говорю с тобой.",
+          "hint": "rääkima kellega — kaasaütlev"
+        },
+        {
+          "et": "Ma räägin tööst.",
+          "ru": "Я говорю о работе.",
+          "hint": "rääkima millest — seestütlev"
+        },
+        {
+          "et": "Ma küsin õpetajalt.",
+          "ru": "Я спрашиваю у учителя.",
+          "hint": "küsima kellelt — alaltütlev"
+        },
+        {
+          "et": "Ma vastan sulle.",
+          "ru": "Я тебе отвечаю.",
+          "hint": "vastama kellele — allatiiv"
+        },
+        {
+          "et": "Ma helistan sulle.",
+          "ru": "Я тебе позвоню.",
+          "hint": "helistama kellele"
+        },
+        {
+          "et": "Ma lähen tööle / koju / poodi.",
+          "ru": "Я иду на работу / домой / в магазин.",
+          "hint": "куда — свой падеж у каждого слова"
+        }
       ]
     },
     {
       "title": "Есть / нет — mul on",
       "note": "«У меня есть» = mul on (adessiiv). Отрицание: mul ei ole + osastav.",
       "rows": [
-        { "et": "Mul on aega.", "ru": "У меня есть время." },
-        { "et": "Mul ei ole aega. / Mul pole aega.", "ru": "У меня нет времени." },
-        { "et": "Kas sul on auto?", "ru": "У тебя есть машина?" },
-        { "et": "Tal on kaks last.", "ru": "У него двое детей." },
-        { "et": "Siin ei ole kedagi.", "ru": "Здесь никого нет.", "hint": "keegi → kedagi в отрицании" }
+        {
+          "et": "Mul on aega.",
+          "ru": "У меня есть время."
+        },
+        {
+          "et": "Mul ei ole aega. / Mul pole aega.",
+          "ru": "У меня нет времени."
+        },
+        {
+          "et": "Kas sul on auto?",
+          "ru": "У тебя есть машина?"
+        },
+        {
+          "et": "Tal on kaks last.",
+          "ru": "У него двое детей."
+        },
+        {
+          "et": "Siin ei ole kedagi.",
+          "ru": "Здесь никого нет.",
+          "hint": "keegi → kedagi в отрицании"
+        }
       ]
     },
     {
       "title": "Где? -s против -l (гл. 4)",
       "note": "Большинство мест — на -s (seesütlev, «внутри»). Но часть слов требует -l (alalütlev, «на поверхности»), и это надо запомнить списком.",
       "rows": [
-        { "et": "majas · korteris · köögis · magamistoas · vannitoas", "ru": "в доме · в квартире · на кухне · в спальне · в ванной", "hint": "-s, обычный случай" },
-        { "et": "koridoris · keldris · garaažis · esikus · aias · saunas", "ru": "в коридоре · в подвале · в гараже · в прихожей · в саду · в сауне", "hint": "тоже -s" },
-        { "et": "rõdul · terrassil · korrusel", "ru": "на балконе · на террасе · на этаже", "hint": "-l — запомнить, логики нет" },
-        { "et": "Ma olen köögis, aga ta on rõdul.", "ru": "Я на кухне, а он на балконе.", "hint": "два падежа в одном предложении" }
+        {
+          "et": "majas · korteris · köögis · magamistoas · vannitoas",
+          "ru": "в доме · в квартире · на кухне · в спальне · в ванной",
+          "hint": "-s, обычный случай"
+        },
+        {
+          "et": "koridoris · keldris · garaažis · esikus · aias · saunas",
+          "ru": "в коридоре · в подвале · в гараже · в прихожей · в саду · в сауне",
+          "hint": "тоже -s"
+        },
+        {
+          "et": "rõdul · terrassil · korrusel",
+          "ru": "на балконе · на террасе · на этаже",
+          "hint": "-l — запомнить, логики нет"
+        },
+        {
+          "et": "Ma olen köögis, aga ta on rõdul.",
+          "ru": "Я на кухне, а он на балконе.",
+          "hint": "два падежа в одном предложении"
+        }
       ]
     },
     {
       "title": "На каком этаже (гл. 3)",
       "note": "Порядковое числительное встаёт в тот же падеж, что и korrusel: Mitmendal korrusel? — вопрос уже подсказывает форму ответа.",
       "rows": [
-        { "et": "Mitmes korrus see on? — Kolmas.", "ru": "Который это этаж? — Третий.", "hint": "nimetav — называем номер" },
-        { "et": "Mitmendal korrusel sa elad? — Kolmandal.", "ru": "На каком этаже ты живёшь? — На третьем.", "hint": "alalütlev — где живём" },
-        { "et": "esimesel · teisel · kolmandal · neljandal · viiendal", "ru": "на первом · втором · третьем · четвёртом · пятом" },
-        { "et": "kuuendal · seitsmendal · kaheksandal · üheksandal · kümnendal", "ru": "на шестом · седьмом · восьмом · девятом · десятом" }
+        {
+          "et": "Mitmes korrus see on? — Kolmas.",
+          "ru": "Который это этаж? — Третий.",
+          "hint": "nimetav — называем номер"
+        },
+        {
+          "et": "Mitmendal korrusel sa elad? — Kolmandal.",
+          "ru": "На каком этаже ты живёшь? — На третьем.",
+          "hint": "alalütlev — где живём"
+        },
+        {
+          "et": "esimesel · teisel · kolmandal · neljandal · viiendal",
+          "ru": "на первом · втором · третьем · четвёртом · пятом"
+        },
+        {
+          "et": "kuuendal · seitsmendal · kaheksandal · üheksandal · kümnendal",
+          "ru": "на шестом · седьмом · восьмом · девятом · десятом"
+        }
       ]
     },
     {
       "title": "Мой день (гл. 4)",
       "note": "Готовые связки. Обрати внимание на падеж дополнения — почти везде osastav, потому что действие описывается как процесс.",
       "rows": [
-        { "et": "Ma ärkan kell seitse.", "ru": "Я просыпаюсь в семь." },
-        { "et": "Ma panen riidesse.", "ru": "Я одеваюсь.", "hint": "устойчивое сочетание, дословно не разбирается" },
-        { "et": "Ma pesen hambaid.", "ru": "Я чищу зубы.", "hint": "hambaid — мн. osastav" },
-        { "et": "Ma pesen nõusid.", "ru": "Я мою посуду.", "hint": "nõusid — мн. osastav" },
-        { "et": "Ma teen süüa.", "ru": "Я готовлю.", "hint": "дословно «делаю есть» — süüa это da-инфинитив" },
-        { "et": "Ma söön võileiba.", "ru": "Я ем бутерброд.", "hint": "osastav — процесс, не «съел весь»" },
-        { "et": "Ma vaatan televiisorit / uudiseid / filme.", "ru": "Я смотрю телевизор / новости / фильмы.", "hint": "везде osastav" },
-        { "et": "Ma sõidan bussiga tööle.", "ru": "Я еду на автобусе на работу.", "hint": "bussiga — чем, tööle — куда" },
-        { "et": "Ma jalutan koeraga.", "ru": "Я гуляю с собакой.", "hint": "koeraga — kaasaütlev" },
-        { "et": "Ma helistan emale.", "ru": "Я звоню маме.", "hint": "helistama kellele — allatiiv" },
-        { "et": "Ma käin vannis.", "ru": "Я принимаю ванну." }
+        {
+          "et": "Ma ärkan kell seitse.",
+          "ru": "Я просыпаюсь в семь."
+        },
+        {
+          "et": "Ma panen riidesse.",
+          "ru": "Я одеваюсь.",
+          "hint": "устойчивое сочетание, дословно не разбирается"
+        },
+        {
+          "et": "Ma pesen hambaid.",
+          "ru": "Я чищу зубы.",
+          "hint": "hambaid — мн. osastav"
+        },
+        {
+          "et": "Ma pesen nõusid.",
+          "ru": "Я мою посуду.",
+          "hint": "nõusid — мн. osastav"
+        },
+        {
+          "et": "Ma teen süüa.",
+          "ru": "Я готовлю.",
+          "hint": "дословно «делаю есть» — süüa это da-инфинитив"
+        },
+        {
+          "et": "Ma söön võileiba.",
+          "ru": "Я ем бутерброд.",
+          "hint": "osastav — процесс, не «съел весь»"
+        },
+        {
+          "et": "Ma vaatan televiisorit / uudiseid / filme.",
+          "ru": "Я смотрю телевизор / новости / фильмы.",
+          "hint": "везде osastav"
+        },
+        {
+          "et": "Ma sõidan bussiga tööle.",
+          "ru": "Я еду на автобусе на работу.",
+          "hint": "bussiga — чем, tööle — куда"
+        },
+        {
+          "et": "Ma jalutan koeraga.",
+          "ru": "Я гуляю с собакой.",
+          "hint": "koeraga — kaasaütlev"
+        },
+        {
+          "et": "Ma helistan emale.",
+          "ru": "Я звоню маме.",
+          "hint": "helistama kellele — allatiiv"
+        },
+        {
+          "et": "Ma käin vannis.",
+          "ru": "Я принимаю ванну."
+        }
       ]
     },
     {
       "title": "Где в комнате (гл. 5)",
       "note": "Часть — падежные формы, часть — послелоги после omastav (ukse juures = «двери у»).",
       "rows": [
-        { "et": "seinal · põrandal · laes", "ru": "на стене · на полу · на потолке" },
-        { "et": "nurgas", "ru": "в углу" },
-        { "et": "ukse juures", "ru": "у двери", "hint": "uks → ukse (omastav) + juures" },
-        { "et": "akna all", "ru": "под окном", "hint": "aken → akna + all" },
-        { "et": "toa keskel", "ru": "посреди комнаты", "hint": "tuba → toa + keskel" },
-        { "et": "Diivan on akna all ja lamp on nurgas.", "ru": "Диван под окном, а лампа в углу." }
+        {
+          "et": "seinal · põrandal · laes",
+          "ru": "на стене · на полу · на потолке"
+        },
+        {
+          "et": "nurgas",
+          "ru": "в углу"
+        },
+        {
+          "et": "ukse juures",
+          "ru": "у двери",
+          "hint": "uks → ukse (omastav) + juures"
+        },
+        {
+          "et": "akna all",
+          "ru": "под окном",
+          "hint": "aken → akna + all"
+        },
+        {
+          "et": "toa keskel",
+          "ru": "посреди комнаты",
+          "hint": "tuba → toa + keskel"
+        },
+        {
+          "et": "Diivan on akna all ja lamp on nurgas.",
+          "ru": "Диван под окном, а лампа в углу."
+        }
       ]
     },
     {
       "title": "Множественное число прилагательных (гл. 6)",
       "note": "Форма мн. ч. строится от omastav: берём вторую основную форму и добавляем -d. Отсюда все «неожиданные» чередования.",
       "rows": [
-        { "et": "vaikne → vaikse → vaiksed", "ru": "тихий → тихие", "hint": "-ne даёт -sed" },
-        { "et": "sõbralik → sõbraliku → sõbralikud", "ru": "дружелюбный → дружелюбные", "hint": "-lik даёт -likud" },
-        { "et": "töökas → tööka → töökad", "ru": "работящий → работящие", "hint": "-kas даёт -kad" },
-        { "et": "tark → targa → targad", "ru": "умный → умные", "hint": "чередование ступеней: rk → rg" },
-        { "et": "laisk → laisa → laisad", "ru": "ленивый → ленивые", "hint": "sk → s" },
-        { "et": "kurb → kurva → kurvad", "ru": "грустный → грустные", "hint": "b → v" },
-        { "et": "julge → julge → julged", "ru": "смелый → смелые" },
-        { "et": "Nad on rõõmsad ja sõbralikud.", "ru": "Они радостные и дружелюбные.", "hint": "сказуемое тоже во мн. ч." }
+        {
+          "et": "vaikne → vaikse → vaiksed",
+          "ru": "тихий → тихие",
+          "hint": "-ne даёт -sed"
+        },
+        {
+          "et": "sõbralik → sõbraliku → sõbralikud",
+          "ru": "дружелюбный → дружелюбные",
+          "hint": "-lik даёт -likud"
+        },
+        {
+          "et": "töökas → tööka → töökad",
+          "ru": "работящий → работящие",
+          "hint": "-kas даёт -kad"
+        },
+        {
+          "et": "tark → targa → targad",
+          "ru": "умный → умные",
+          "hint": "чередование ступеней: rk → rg"
+        },
+        {
+          "et": "laisk → laisa → laisad",
+          "ru": "ленивый → ленивые",
+          "hint": "sk → s"
+        },
+        {
+          "et": "kurb → kurva → kurvad",
+          "ru": "грустный → грустные",
+          "hint": "b → v"
+        },
+        {
+          "et": "julge → julge → julged",
+          "ru": "смелый → смелые"
+        },
+        {
+          "et": "Nad on rõõmsad ja sõbralikud.",
+          "ru": "Они радостные и дружелюбные.",
+          "hint": "сказуемое тоже во мн. ч."
+        }
       ]
     },
     {
       "title": "Olema по лицам (гл. 7)",
       "note": "Единственный глагол, который надо знать наизусть целиком. Отрицание одно на все лица: ei ole (pole).",
       "rows": [
-        { "et": "ma olen · sa oled · ta on", "ru": "я есть · ты есть · он есть" },
-        { "et": "me oleme · te olete · nad on", "ru": "мы · вы · они" },
-        { "et": "ma ei ole · sa ei ole · nad ei ole", "ru": "я не · ты не · они не", "hint": "форма одна на всех" },
-        { "et": "Kas sa oled eestlane? — Ei, ma ei ole.", "ru": "Ты эстонец? — Нет." }
+        {
+          "et": "ma olen · sa oled · ta on",
+          "ru": "я есть · ты есть · он есть"
+        },
+        {
+          "et": "me oleme · te olete · nad on",
+          "ru": "мы · вы · они"
+        },
+        {
+          "et": "ma ei ole · sa ei ole · nad ei ole",
+          "ru": "я не · ты не · они не",
+          "hint": "форма одна на всех"
+        },
+        {
+          "et": "Kas sa oled eestlane? — Ei, ma ei ole.",
+          "ru": "Ты эстонец? — Нет."
+        }
       ]
     },
     {
       "title": "Местоимения: длинные и короткие (гл. 7)",
       "note": "У каждого местоимения две формы. Длинная — под ударением, когда важно «именно я». Короткая — обычная, безударная.",
       "rows": [
-        { "et": "mina / ma · sina / sa · tema / ta", "ru": "я · ты · он", "hint": "длинная / короткая" },
-        { "et": "meie / me · teie / te · nemad / nad", "ru": "мы · вы · они" },
-        { "et": "minu / mu raamat · sinu / su raamat", "ru": "моя / твоя книга", "hint": "чей — omastav" },
-        { "et": "tema / ta · meie / me · teie / te · nende", "ru": "его · наш · ваш · их" },
-        { "et": "minul / mul on aega", "ru": "у меня есть время", "hint": "«у кого» — alalütlev" },
-        { "et": "sul ei ole · tal ei ole · meil ei ole · teil ei ole · neil ei ole", "ru": "у тебя / у него / у нас / у вас / у них нет" },
-        { "et": "Mina lähen, aga ta jääb koju.", "ru": "Я-то пойду, а он останется дома.", "hint": "длинная форма — противопоставление" }
+        {
+          "et": "mina / ma · sina / sa · tema / ta",
+          "ru": "я · ты · он",
+          "hint": "длинная / короткая"
+        },
+        {
+          "et": "meie / me · teie / te · nemad / nad",
+          "ru": "мы · вы · они"
+        },
+        {
+          "et": "minu / mu raamat · sinu / su raamat",
+          "ru": "моя / твоя книга",
+          "hint": "чей — omastav"
+        },
+        {
+          "et": "tema / ta · meie / me · teie / te · nende",
+          "ru": "его · наш · ваш · их"
+        },
+        {
+          "et": "minul / mul on aega",
+          "ru": "у меня есть время",
+          "hint": "«у кого» — alalütlev"
+        },
+        {
+          "et": "sul ei ole · tal ei ole · meil ei ole · teil ei ole · neil ei ole",
+          "ru": "у тебя / у него / у нас / у вас / у них нет"
+        },
+        {
+          "et": "Mina lähen, aga ta jääb koju.",
+          "ru": "Я-то пойду, а он останется дома.",
+          "hint": "длинная форма — противопоставление"
+        }
       ]
     },
     {
       "title": "Спряжение глагола (гл. 8)",
       "note": "Окончания одни и те же для всех правильных глаголов. Основу берём из формы 3 лица без -b.",
       "rows": [
-        { "et": "vaatan · vaatad · vaatab", "ru": "смотрю · смотришь · смотрит", "hint": "-n, -d, -b" },
-        { "et": "vaatame · vaatate · vaatavad", "ru": "смотрим · смотрите · смотрят", "hint": "-me, -te, -vad" },
-        { "et": "laulan · laulad · laulab · laulame · laulate · laulavad", "ru": "пою … поют" },
-        { "et": "ma ei vaata · me ei vaata · nad ei vaata", "ru": "не смотрю · не смотрим · не смотрят", "hint": "отрицание не спрягается" }
+        {
+          "et": "vaatan · vaatad · vaatab",
+          "ru": "смотрю · смотришь · смотрит",
+          "hint": "-n, -d, -b"
+        },
+        {
+          "et": "vaatame · vaatate · vaatavad",
+          "ru": "смотрим · смотрите · смотрят",
+          "hint": "-me, -te, -vad"
+        },
+        {
+          "et": "laulan · laulad · laulab · laulame · laulate · laulavad",
+          "ru": "пою … поют"
+        },
+        {
+          "et": "ma ei vaata · me ei vaata · nad ei vaata",
+          "ru": "не смотрю · не смотрим · не смотрят",
+          "hint": "отрицание не спрягается"
+        }
       ]
     },
     {
       "title": "Даты (гл. 8)",
       "note": "«Какого числа» = порядковое + месяц, оба в alalütlev (-l). Вопрос: Mis kuupäev täna on? / Millal?",
       "rows": [
-        { "et": "esimesel jaanuaril", "ru": "первого января" },
-        { "et": "kolmandal märtsil", "ru": "третьего марта" },
-        { "et": "kahekümne viiendal detsembril", "ru": "двадцать пятого декабря" },
-        { "et": "Minu sünnipäev on neljateistkümnendal mail.", "ru": "Мой день рождения четырнадцатого мая." },
-        { "et": "jaanuar · veebruar · märts · aprill · mai · juuni", "ru": "январь … июнь" },
-        { "et": "juuli · august · september · oktoober · november · detsember", "ru": "июль … декабрь" }
+        {
+          "et": "esimesel jaanuaril",
+          "ru": "первого января"
+        },
+        {
+          "et": "kolmandal märtsil",
+          "ru": "третьего марта"
+        },
+        {
+          "et": "kahekümne viiendal detsembril",
+          "ru": "двадцать пятого декабря"
+        },
+        {
+          "et": "Minu sünnipäev on neljateistkümnendal mail.",
+          "ru": "Мой день рождения четырнадцатого мая."
+        },
+        {
+          "et": "jaanuar · veebruar · märts · aprill · mai · juuni",
+          "ru": "январь … июнь"
+        },
+        {
+          "et": "juuli · august · september · oktoober · november · detsember",
+          "ru": "июль … декабрь"
+        }
       ]
     },
     {
       "title": "Поздравления и пожелания (гл. 8)",
       "note": "Готовые формулы. Почти все — в osastav, потому что это усечённое «желаю тебе (чего?)».",
       "rows": [
-        { "et": "Palju õnne!", "ru": "Поздравляю! / Удачи!" },
-        { "et": "Palju õnne sünnipäevaks!", "ru": "С днём рождения!" },
-        { "et": "Head uut aastat!", "ru": "С Новым годом!", "hint": "head — osastav от hea" },
-        { "et": "Häid pühi!", "ru": "Хороших праздников!" },
-        { "et": "Head nädalavahetust!", "ru": "Хороших выходных!" },
-        { "et": "Head reisi!", "ru": "Счастливого пути!" },
-        { "et": "Saa ruttu terveks!", "ru": "Выздоравливай скорее!" },
-        { "et": "Jõudu tööle! — Tarvis!", "ru": "Бог в помощь! — Спасибо!", "hint": "устойчивый обмен репликами" },
-        { "et": "Head iseseisvuspäeva!", "ru": "С Днём независимости!" }
+        {
+          "et": "Palju õnne!",
+          "ru": "Поздравляю! / Удачи!"
+        },
+        {
+          "et": "Palju õnne sünnipäevaks!",
+          "ru": "С днём рождения!"
+        },
+        {
+          "et": "Head uut aastat!",
+          "ru": "С Новым годом!",
+          "hint": "head — osastav от hea"
+        },
+        {
+          "et": "Häid pühi!",
+          "ru": "Хороших праздников!"
+        },
+        {
+          "et": "Head nädalavahetust!",
+          "ru": "Хороших выходных!"
+        },
+        {
+          "et": "Head reisi!",
+          "ru": "Счастливого пути!"
+        },
+        {
+          "et": "Saa ruttu terveks!",
+          "ru": "Выздоравливай скорее!"
+        },
+        {
+          "et": "Jõudu tööle! — Tarvis!",
+          "ru": "Бог в помощь! — Спасибо!",
+          "hint": "устойчивый обмен репликами"
+        },
+        {
+          "et": "Head iseseisvuspäeva!",
+          "ru": "С Днём независимости!"
+        }
       ]
     },
     {
       "title": "Внешность (гл. 9)",
       "note": "«У него …» — снова mul on, только с tal. Волосы и глаза всегда во множественном, прилагательное согласуется с ними.",
       "rows": [
-        { "et": "Tal on pikad juuksed.", "ru": "У него длинные волосы.", "hint": "juuksed — всегда мн. ч." },
-        { "et": "Tal on lühikesed heledad juuksed.", "ru": "У него короткие светлые волосы.", "hint": "оба прилагательных во мн. ч." },
-        { "et": "Tal on sinised silmad.", "ru": "У него голубые глаза." },
-        { "et": "Tal on pruunid silmad.", "ru": "У него карие глаза." },
-        { "et": "Tal on lokkis juuksed.", "ru": "У него кудрявые волосы.", "hint": "lokkis не изменяется — форма одна на все случаи" },
-        { "et": "Ta on pikka kasvu.", "ru": "Он высокого роста.", "hint": "рост — через osastav: pikka / keskmist / lühikest kasvu" },
-        { "et": "Ta on keskmist kasvu.", "ru": "Он среднего роста." },
-        { "et": "Ta on kiilakas.", "ru": "Он лысый." },
-        { "et": "Tal on habe ja vuntsid.", "ru": "У него борода и усы." },
-        { "et": "Missugune ta välja näeb?", "ru": "Как он выглядит?", "hint": "välja nägema — выглядеть" }
+        {
+          "et": "Tal on pikad juuksed.",
+          "ru": "У него длинные волосы.",
+          "hint": "juuksed — всегда мн. ч."
+        },
+        {
+          "et": "Tal on lühikesed heledad juuksed.",
+          "ru": "У него короткие светлые волосы.",
+          "hint": "оба прилагательных во мн. ч."
+        },
+        {
+          "et": "Tal on sinised silmad.",
+          "ru": "У него голубые глаза."
+        },
+        {
+          "et": "Tal on pruunid silmad.",
+          "ru": "У него карие глаза."
+        },
+        {
+          "et": "Tal on lokkis juuksed.",
+          "ru": "У него кудрявые волосы.",
+          "hint": "lokkis не изменяется — форма одна на все случаи"
+        },
+        {
+          "et": "Ta on pikka kasvu.",
+          "ru": "Он высокого роста.",
+          "hint": "рост — через osastav: pikka / keskmist / lühikest kasvu"
+        },
+        {
+          "et": "Ta on keskmist kasvu.",
+          "ru": "Он среднего роста."
+        },
+        {
+          "et": "Ta on kiilakas.",
+          "ru": "Он лысый."
+        },
+        {
+          "et": "Tal on habe ja vuntsid.",
+          "ru": "У него борода и усы."
+        },
+        {
+          "et": "Missugune ta välja näeb?",
+          "ru": "Как он выглядит?",
+          "hint": "välja nägema — выглядеть"
+        }
       ]
     },
     {
       "title": "От… до… (гл. 10)",
       "note": "Откуда — на -st (seestütlev), докуда — на -ni (rajav). Работает и с днями, и с числами, и с часами.",
       "rows": [
-        { "et": "esmaspäevast reedeni", "ru": "с понедельника до пятницы" },
-        { "et": "laupäevast pühapäevani", "ru": "с субботы до воскресенья" },
-        { "et": "kella kümnest viieni", "ru": "с десяти до пяти", "hint": "kella — «часов», перед числом" },
-        { "et": "Pood on avatud üheksast kaheksani.", "ru": "Магазин открыт с девяти до восьми." },
-        { "et": "ühest kümneni", "ru": "с одного до десяти" },
-        { "et": "Ma töötan esmaspäevast reedeni.", "ru": "Я работаю с понедельника до пятницы." }
+        {
+          "et": "esmaspäevast reedeni",
+          "ru": "с понедельника до пятницы"
+        },
+        {
+          "et": "laupäevast pühapäevani",
+          "ru": "с субботы до воскресенья"
+        },
+        {
+          "et": "kella kümnest viieni",
+          "ru": "с десяти до пяти",
+          "hint": "kella — «часов», перед числом"
+        },
+        {
+          "et": "Pood on avatud üheksast kaheksani.",
+          "ru": "Магазин открыт с девяти до восьми."
+        },
+        {
+          "et": "ühest kümneni",
+          "ru": "с одного до десяти"
+        },
+        {
+          "et": "Ma töötan esmaspäevast reedeni.",
+          "ru": "Я работаю с понедельника до пятницы."
+        }
       ]
     },
     {
       "title": "Магазины и сложные слова (гл. 10)",
       "note": "Названия магазинов складываются из двух слов: что продают + pood. Первая часть стоит в omastav или в основе, ударение на первой.",
       "rows": [
-        { "et": "raamat + pood → raamatupood", "ru": "книга + магазин → книжный магазин", "hint": "raamatu- — это omastav" },
-        { "et": "lill → lillepood · king → kingapood · toit → toidupood", "ru": "цветочный · обувной · продуктовый" },
-        { "et": "mänguasi → mänguasjapood", "ru": "игрушка → магазин игрушек" },
-        { "et": "Ma lähen poodi.", "ru": "Я иду в магазин.", "hint": "куда — poodi" },
-        { "et": "Ma olen poes.", "ru": "Я в магазине.", "hint": "где — poes" },
-        { "et": "Pood on avatud. / Pood on suletud.", "ru": "Магазин открыт. / Магазин закрыт." }
+        {
+          "et": "raamat + pood → raamatupood",
+          "ru": "книга + магазин → книжный магазин",
+          "hint": "raamatu- — это omastav"
+        },
+        {
+          "et": "lill → lillepood · king → kingapood · toit → toidupood",
+          "ru": "цветочный · обувной · продуктовый"
+        },
+        {
+          "et": "mänguasi → mänguasjapood",
+          "ru": "игрушка → магазин игрушек"
+        },
+        {
+          "et": "Ma lähen poodi.",
+          "ru": "Я иду в магазин.",
+          "hint": "куда — poodi"
+        },
+        {
+          "et": "Ma olen poes.",
+          "ru": "Я в магазине.",
+          "hint": "где — poes"
+        },
+        {
+          "et": "Pood on avatud. / Pood on suletud.",
+          "ru": "Магазин открыт. / Магазин закрыт."
+        }
       ]
     },
     {
       "title": "Погода (гл. 11)",
       "note": "Главное: «идёт дождь/снег» — это sajab + osastav, без подлежащего. Многие явления описываются одним глаголом.",
       "rows": [
-        { "et": "Sajab vihma.", "ru": "Идёт дождь.", "hint": "vihm → vihma, osastav" },
-        { "et": "Sajab lund.", "ru": "Идёт снег.", "hint": "lumi → lund" },
-        { "et": "Sajab rahet. / Sajab lörtsi.", "ru": "Идёт град. / Идёт мокрый снег." },
-        { "et": "Vihma ei saja.", "ru": "Дождя нет.", "hint": "отрицание — тот же osastav" },
-        { "et": "Müristab ja lööb välku.", "ru": "Гремит гром и сверкает молния.", "hint": "välk → välku" },
-        { "et": "Väljas tuiskab.", "ru": "На улице метёт." },
-        { "et": "Puhub tugev tuul.", "ru": "Дует сильный ветер." },
-        { "et": "Ilm on pilves. / Ilm on selge.", "ru": "Пасмурно. / Ясно." },
-        { "et": "Väljas on soe / külm / palav.", "ru": "На улице тепло / холодно / жарко." },
-        { "et": "Missugune ilm täna on?", "ru": "Какая сегодня погода?" }
+        {
+          "et": "Sajab vihma.",
+          "ru": "Идёт дождь.",
+          "hint": "vihm → vihma, osastav"
+        },
+        {
+          "et": "Sajab lund.",
+          "ru": "Идёт снег.",
+          "hint": "lumi → lund"
+        },
+        {
+          "et": "Sajab rahet. / Sajab lörtsi.",
+          "ru": "Идёт град. / Идёт мокрый снег."
+        },
+        {
+          "et": "Vihma ei saja.",
+          "ru": "Дождя нет.",
+          "hint": "отрицание — тот же osastav"
+        },
+        {
+          "et": "Müristab ja lööb välku.",
+          "ru": "Гремит гром и сверкает молния.",
+          "hint": "välk → välku"
+        },
+        {
+          "et": "Väljas tuiskab.",
+          "ru": "На улице метёт."
+        },
+        {
+          "et": "Puhub tugev tuul.",
+          "ru": "Дует сильный ветер."
+        },
+        {
+          "et": "Ilm on pilves. / Ilm on selge.",
+          "ru": "Пасмурно. / Ясно."
+        },
+        {
+          "et": "Väljas on soe / külm / palav.",
+          "ru": "На улице тепло / холодно / жарко."
+        },
+        {
+          "et": "Missugune ilm täna on?",
+          "ru": "Какая сегодня погода?"
+        }
       ]
     },
     {
       "title": "Ходовые фразы",
       "note": "Готовые блоки, которые не надо разбирать по грамматике.",
       "rows": [
-        { "et": "Vabandust, ma ei saa aru.", "ru": "Извините, я не понимаю." },
-        { "et": "Kas te räägite aeglasemalt?", "ru": "Вы можете говорить медленнее?" },
-        { "et": "Mida see sõna tähendab?", "ru": "Что значит это слово?" },
-        { "et": "Kuidas seda eesti keeles öeldakse?", "ru": "Как это сказать по-эстонски?" },
-        { "et": "Ma õpin eesti keelt.", "ru": "Я учу эстонский." },
-        { "et": "Ma ei tea veel.", "ru": "Я пока не знаю." },
-        { "et": "Palun korrake.", "ru": "Повторите, пожалуйста." }
+        {
+          "et": "Vabandust, ma ei saa aru.",
+          "ru": "Извините, я не понимаю."
+        },
+        {
+          "et": "Kas te räägite aeglasemalt?",
+          "ru": "Вы можете говорить медленнее?"
+        },
+        {
+          "et": "Mida see sõna tähendab?",
+          "ru": "Что значит это слово?"
+        },
+        {
+          "et": "Kuidas seda eesti keeles öeldakse?",
+          "ru": "Как это сказать по-эстонски?"
+        },
+        {
+          "et": "Ma õpin eesti keelt.",
+          "ru": "Я учу эстонский."
+        },
+        {
+          "et": "Ma ei tea veel.",
+          "ru": "Я пока не знаю."
+        },
+        {
+          "et": "Palun korrake.",
+          "ru": "Повторите, пожалуйста."
+        }
       ]
     }
   ]

@@ -164,6 +164,8 @@ def pos_of(result):
             code = (p.get("code") or "").lower()
             if code.startswith("adj"):
                 return "adj"
+            if code.startswith("num"):
+                return "num"
             if code in ("s", "n", "noun"):
                 return "n"
     return "n"
@@ -249,8 +251,9 @@ def fix():
         if ex and w.get("ex") != ex:
             w["ex"] = ex
             changed += 1
-        if pos_of(res) == "adj" and w.get("pos") != "adj":
-            w["pos"] = "adj"
+        pos = pos_of(res)
+        if pos != "n" and w.get("pos") != pos:
+            w["pos"] = pos
             changed += 1
 
     for w in d["verbs"]:
@@ -355,8 +358,9 @@ def add(path):
             entry = {"id": unique_id("n_" + slug(word), taken), "ru": ru}
             for field, code in NOUN_FORMS:
                 entry[field] = api.get(code, "")
-            if pos_of(res) == "adj":
-                entry["pos"] = "adj"
+            pos = pos_of(res)
+            if pos != "n":
+                entry["pos"] = pos
             ex = example(res, word)
             if ex:
                 entry["ex"] = ex
