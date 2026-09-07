@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v20';
+const VERSION = 'v23';
 const STORE = 'eesti-a2-state';
 
 const el = {

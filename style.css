@@ -389,31 +389,62 @@ body {
 /* --- экранная клавиатура --- */
 
 /* Android сжимает разметку сам (interactive-widget), iOS — нет: там высоту
-   даёт только visualViewport, поэтому берём её из JS. Без этого кнопка
-   «Перевести» и «Проверить» уезжают под клавиатуру */
-/* min(): если переменная почему-то устарела и стала больше экрана,
-   выигрывает 100dvh — иначе разметка вылезла бы за экран */
-body { height: min(100dvh, var(--app-vh, 100dvh)); }
+   даёт только visualViewport, поэтому берём её из JS.
+   min-height обязателен нулевой: использованная высота = max(min-height, height),
+   и оставшийся от старого правила min-height: 100dvh просто съедал всю правку.
+   clamp страхует с обеих сторон: ниже 200px не схлопнемся даже от мусорного
+   значения, выше экрана не вылезем даже от устаревшего */
+body {
+  min-height: 0;
+  height: clamp(200px, var(--app-vh, 100dvh), 100dvh);
+}
 
-/* Кнопка действия всегда на виду, даже если содержимое карточки прокручено */
+/* Кнопка действия всегда на виду, даже если содержимое карточки прокручено.
+   Отрицательные отступы растягивают подложку на padding карточки — иначе
+   сквозь прозрачную полосу снизу просвечивает прокручиваемый текст */
 .actions {
   position: sticky;
-  bottom: 0;
+  bottom: -20px;
+  margin: auto -18px -20px;
+  padding: 12px 18px 20px;
   background: var(--panel);
-  padding-top: 10px;
-  margin-bottom: -2px;
 }
 
-/* Диалог не должен вылезать за видимую часть, а его кнопки — прятаться */
-dialog {
-  max-height: calc(min(100dvh, var(--app-vh, 100dvh)) - 24px);
+/* Диалог перевода: заголовок и нижние кнопки закреплены, прокручивается
+   только середина. Липкая строка поверх содержимого накрывала «Перевести»
+   на низких экранах — поэтому именно колонка, а не sticky */
+#adder {
+  display: flex;
+  flex-direction: column;
+  /* минус собственные отступы сверху и снизу, иначе диалог с margin
+     вылезает за экран ровно на их величину */
+  max-height: calc(clamp(200px, var(--app-vh, 100dvh), 100dvh) - 20px);
+  overflow: hidden;
+  /* прижимаем к верху: UA центрирует диалог в layout-вьюпорте, а не в видимой
+     части, и на iOS с клавиатурой он оказывался наполовину под ней */
+  margin-block: 10px auto;
+}
+#adder .dlg-body {
   overflow-y: auto;
   overscroll-behavior: contain;
+  min-height: 0;             /* без него flex-элемент не сжимается и не скроллит */
+  margin: 0 -4px;
+  padding: 0 4px;
 }
-dialog .row:last-of-type {
-  position: sticky;
-  bottom: -18px;                 /* компенсируем нижний padding диалога */
-  background: var(--panel);
-  padding-bottom: 18px;
-  margin-bottom: -18px;
+#adder .dlg-foot {
+  flex: 0 0 auto;
+  margin-top: 10px;
+}
+
+/* Очень низкий экран (клавиатура на маленьком телефоне): жертвуем украшениями,
+   чтобы поле, «Перевести» и нижние кнопки все поместились без прокрутки */
+@media (max-height: 460px) {
+  #adder { padding: 12px; margin-block: 6px auto; }
+  #adder h2 { display: none; }
+  #adder label { margin-bottom: 8px; font-size: 13px; }
+  #adder textarea { height: 42px; }
+  #adder .pad-inline { margin-bottom: 8px; }
+  #adder .pad-inline button { padding: 6px 0; font-size: 16px; }
+  #adder .row button { padding: 9px; }
+  #adder .dlg-foot { margin-top: 8px; }
 }
