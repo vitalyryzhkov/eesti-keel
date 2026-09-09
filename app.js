@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v31';
+const VERSION = 'v32';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -1133,15 +1133,23 @@ function expectedHeight() {
   const key = orientationKey();
   const own = baselines[key];
   if (own) return own.h;
+
   // Эту ориентацию без клавиатуры ещё не видели — например, повернули телефон,
-  // не закрыв её. Берём ширину из другой ориентации: при повороте она станет высотой
+  // не закрыв её. Тогда высоту можно взять из ширины другой ориентации: при
+  // повороте они меняются местами. Но это верно ТОЛЬКО если окно занимает весь
+  // экран. В окне браузера на компьютере ширина и высота не связаны поворотом,
+  // и такая оценка однажды спрятала навигацию вообще без клавиатуры.
+  // Признак настоящего поворота: нынешняя ширина совпадает с прежней высотой.
   const other = baselines[key === 'landscape' ? 'portrait' : 'landscape'];
-  return other ? other.w : 0;
+  if (other && Math.abs(window.innerWidth - other.h) < 50) return other.w;
+  return 0;
 }
 
 function keyboardOpen(h) {
   if (window.innerHeight - h > 100) return true;    // iOS: клавиатура накрывает layout
   const expected = expectedHeight();                // Android: сжимается сам layout
+  // Не знаем нормы — считаем, что клавиатуры нет. Ошибиться в эту сторону
+  // безобидно (тесновато), в обратную — значит спрятать навигацию на ровном месте
   return expected > 0 && h < expected - 100;
 }
 
