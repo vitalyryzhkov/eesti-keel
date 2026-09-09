@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v32';
+const VERSION = 'v34';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -396,9 +396,9 @@ function wireInputs() {
   inputs.forEach((inp, i) => {
     inp.addEventListener('focus', () => {
       lastInput = inp;
-      // карточка прокручивается внутри себя: без этого активное поле
-      // может остаться ниже её видимой границы
-      inp.scrollIntoView({ block: 'nearest' });
+      // карточка прокручивается внутри себя: если поле осталось за её краем,
+      // подтянем — но только если это правда нужно, иначе экран прыгает
+      ensureVisible(inp);
     });
     inp.addEventListener('keydown', (e) => {
       if (e.key !== 'Enter') return;
@@ -1165,15 +1165,33 @@ function updateChrome() {
   // Порог по высоте оставлял полосу 460-560 (портрет iPhone с клавиатурой) без сжатия
   root.classList.toggle('short', kb);
   root.classList.toggle('tiny', kb && h < 300);
-  const el2 = document.activeElement;
-  if (kb && el2 && el2.matches && el2.matches('input, textarea')) {
-    el2.scrollIntoView({ block: 'nearest' });
-  }
+}
+
+// Подтягиваем поле, ТОЛЬКО если оно действительно вышло за края своей области.
+// Безусловный scrollIntoView на каждое событие заставлял экран прыгать
+function ensureVisible(node) {
+  const box = node.closest('.card-scroll') || node.closest('dialog');
+  if (!box) return;
+  const b = node.getBoundingClientRect();
+  const c = box.getBoundingClientRect();
+  if (b.top < c.top + 2 || b.bottom > c.bottom - 2) node.scrollIntoView({ block: 'nearest' });
+}
+
+function focusIntoView() {
+  const node = document.activeElement;
+  if (node && node.matches && node.matches('input, textarea')) ensureVisible(node);
 }
 
 // поворот меняет «обычную» высоту — старую забываем, иначе она соврёт
 window.addEventListener('orientationchange', () => setTimeout(updateChrome, 300));
-document.addEventListener('focusin', updateChrome);
+document.addEventListener('focusin', () => { updateChrome(); focusIntoView(); });
+
+// Нашей разметке прокрутка документа не нужна: высота задана, содержимое
+// скроллится внутри своих областей. Но iOS при фокусе уводит страницу вверх
+// сам — и экран «запрыгивает» выше, чем нужно. Возвращаем на место.
+window.addEventListener('scroll', () => {
+  if (window.scrollY !== 0) window.scrollTo(0, 0);
+}, { passive: true });
 document.addEventListener('focusout', () => setTimeout(updateChrome, 0));
 
 (function trackViewportHeight() {
@@ -1184,9 +1202,13 @@ document.addEventListener('focusout', () => setTimeout(updateChrome, 0));
     // в момент запуска скрипта высота бывает нулевой — записав её,
     // мы схлопнули бы разметку в ноль
     if (h <= 0) return;
+    const changed = h !== lastHeight;
     document.documentElement.style.setProperty('--app-vh', h + 'px');
     lastHeight = h;
     updateChrome();
+    // только когда высота реально изменилась: на прокрутку самой видимой области
+    // подтягивать поле нельзя, иначе спорим с пальцем пользователя
+    if (changed) focusIntoView();
   };
   vv.addEventListener('resize', apply);
   vv.addEventListener('scroll', apply);
