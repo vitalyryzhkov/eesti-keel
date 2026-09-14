@@ -867,95 +867,276 @@
     },
     {
       "title": "Хитрости: как устроены формы",
-      "note": "Всё ниже сверено со словарём EKI. Три основные формы — ключ к слову: nimetav → omastav → osastav.",
+      "note": "Формы в примерах сверены со словарём EKI. Правила — упрощение: у каждого есть исключения, поэтому форму нового слова всё равно проверяй.",
       "rows": [
-        { "et": "tuba → toa → toas, toast, toale, toaga", "ru": "комната → в комнате, из комнаты, к комнате, с комнатой", "hint": "почти все падежи ед. ч. строятся от omastav" },
-        { "et": "tuba → tuba · laud → lauda · sõber → sõpra", "ru": "а вот osastav из omastav не выводится", "hint": "его учим отдельно — ради этого и карточки" },
-        { "et": "tuppa · poodi · kinno · koju", "ru": "в комнату · в магазин · в кино · домой", "hint": "короткое «куда» тоже не из omastav — запоминать" },
-        { "et": "ema · isa · kala · maja · sõna → osastav такой же", "ru": "два слога, первый короткий", "hint": "без -t: näen ema, ostan kala" },
-        { "et": "auto → autot · aasta → aastat · pere → peret", "ru": "остальные на гласную берут -t" },
-        { "et": "küsimus → küsimuse → küsimust · vastus → vastuse → vastust", "ru": "существительные на -us", "hint": "но прилагательное ilus → ilusa → ilusat — другая модель" },
-        { "et": "õpetaja → õpetaja → õpetajat · müüja → müüjat", "ru": "деятели на -ja" },
-        { "et": "pank → panga · kapp → kapi · tuba → toa · laud → laua", "ru": "чередование: k→g, pp→p, а b/d могут пропасть", "hint": "сильная ступень в nimetav, слабая в omastav" },
-        { "et": "raamatupood → raamatupoe → raamatupoodi", "ru": "сложное слово склоняется по последней части", "hint": "raamatu- не меняется" }
+        {
+          "et": "tuba → toa → toas, toast, toale, toaga",
+          "ru": "комната → в комнате, из комнаты, к комнате, с комнатой",
+          "hint": "почти все падежи ед. ч. строятся от omastav"
+        },
+        {
+          "et": "tuba → tuba · laud → lauda · sõber → sõpra",
+          "ru": "а вот osastav из omastav не выводится",
+          "hint": "его учим отдельно — ради этого и карточки"
+        },
+        {
+          "et": "tuppa · poodi · kinno · koju",
+          "ru": "в комнату · в магазин · в кино · домой",
+          "hint": "короткое «куда» тоже не из omastav — запоминать"
+        },
+        {
+          "et": "ema · isa · kala · maja · kodu · lugu → osastav такой же",
+          "ru": "два слога, первый короткий, конец на -a / -u / -o",
+          "hint": "без окончания: näen ema, ostan kala"
+        },
+        {
+          "et": "pere → peret · mure → muret · kõne → kõnet",
+          "ru": "двусложные на -e берут -t",
+          "hint": "но у части слов растёт основа: hele → heleda → heledat"
+        },
+        {
+          "et": "auto → autot · aasta → aastat",
+          "ru": "первый слог долгий — тоже -t"
+        },
+        {
+          "et": "maa → maad · puu → puud · töö → tööd · tee → teed",
+          "ru": "односложные на долгую гласную берут -d"
+        },
+        {
+          "et": "asi → asja · vesi → vett · meri → merd · kivi → kivi",
+          "ru": "двусложные на -i: общего правила нет",
+          "hint": "osastav таких слов учить поштучно"
+        },
+        {
+          "et": "küsimus → küsimuse → küsimust · vastus → vastuse → vastust",
+          "ru": "многосложные существительные на -us",
+          "hint": "не подходят односложные (juus → juukse → juust) и прилагательные (ilus → ilusa → ilusat)"
+        },
+        {
+          "et": "õpetaja → õpetaja → õpetajat · müüja → müüjat",
+          "ru": "деятели на -ja"
+        },
+        {
+          "et": "pank → panga · kapp → kapi · tuba → toa · laud → laua",
+          "ru": "часто в omastav ступень слабеет: k→g, pp→p, b и d могут пропасть"
+        },
+        {
+          "et": "hammas → hamba · puhas → puhta · ratas → ratta",
+          "ru": "а у слов на -as наоборот: в omastav усиливается",
+          "hint": "поэтому ступень — не закон, а подсказка"
+        },
+        {
+          "et": "raamatupood → raamatupoe → raamatupoodi",
+          "ru": "сложное слово склоняется по последней части",
+          "hint": "raamatu- не меняется"
+        }
       ]
     },
     {
       "title": "Чего в эстонском нет",
       "note": "Три вещи, которые сильно облегчают жизнь после русского.",
       "rows": [
-        { "et": "Ta on arst.", "ru": "Он врач. / Она врач.", "hint": "рода нет: ta — и он, и она" },
-        { "et": "Raamat on laual.", "ru": "Книга на столе.", "hint": "артиклей нет" },
-        { "et": "Homme ma lähen tööle.", "ru": "Завтра я пойду на работу.", "hint": "отдельного будущего нет — настоящее + «когда»" },
-        { "et": "Ma lähen sööma.", "ru": "Я иду есть.", "hint": "цель после minema — ma-инфинитив" }
+        {
+          "et": "Ta on arst.",
+          "ru": "Он врач. / Она врач.",
+          "hint": "рода нет: ta — и он, и она"
+        },
+        {
+          "et": "Raamat on laual.",
+          "ru": "Книга на столе.",
+          "hint": "артиклей нет"
+        },
+        {
+          "et": "Homme ma lähen tööle.",
+          "ru": "Завтра я пойду на работу.",
+          "hint": "отдельного будущего нет — настоящее + «когда»"
+        }
       ]
     },
     {
       "title": "Где? Куда? — два ряда (гл. 12)",
       "note": "Одни места идут через -s / -sse (внутри), другие — через -l / -le (на, у). Пары запоминать вместе.",
       "rows": [
-        { "et": "kinos → kinno · poes → poodi", "ru": "в кино → в кино · в магазине → в магазин", "hint": "короткое «куда»" },
-        { "et": "ülikoolis → ülikooli · restoranis → restorani · trennis → trenni", "ru": "в университете · в ресторане · на тренировке" },
-        { "et": "tööl → tööle · turul → turule", "ru": "на работе → на работу · на рынке → на рынок", "hint": "ряд на -l / -le" },
-        { "et": "koosolekul → koosolekule · kursusel → kursusele · lõunal → lõunale", "ru": "на собрании · на курсах · на обеде" },
-        { "et": "Ma olen sõbral külas. → Ma lähen sõbrale külla.", "ru": "Я в гостях у друга. → Я иду в гости к другу." }
+        {
+          "et": "kinos → kinno · poes → poodi",
+          "ru": "в кино → в кино · в магазине → в магазин",
+          "hint": "короткое «куда»"
+        },
+        {
+          "et": "ülikoolis → ülikooli · restoranis → restorani · trennis → trenni",
+          "ru": "в университете · в ресторане · на тренировке"
+        },
+        {
+          "et": "tööl → tööle · turul → turule",
+          "ru": "на работе → на работу · на рынке → на рынок",
+          "hint": "ряд на -l / -le"
+        },
+        {
+          "et": "koosolekul → koosolekule · kursusel → kursusele · lõunal → lõunale",
+          "ru": "на собрании · на курсах · на обеде"
+        },
+        {
+          "et": "Ma olen sõbral külas. → Ma lähen sõbrale külla.",
+          "ru": "Я в гостях у друга. → Я иду в гости к другу."
+        }
       ]
     },
     {
       "title": "По понедельникам: -ti (гл. 12)",
       "note": "Регулярность — одно неизменяемое слово на -ti, предлог не нужен.",
       "rows": [
-        { "et": "esmaspäeviti · teisipäeviti · kolmapäeviti · neljapäeviti", "ru": "по понедельникам · вторникам · средам · четвергам" },
-        { "et": "reedeti · laupäeviti · pühapäeviti", "ru": "по пятницам · субботам · воскресеньям" },
-        { "et": "Esmaspäeviti ma käin trennis.", "ru": "По понедельникам я хожу на тренировку." }
+        {
+          "et": "esmaspäeviti · teisipäeviti · kolmapäeviti · neljapäeviti",
+          "ru": "по понедельникам · вторникам · средам · четвергам"
+        },
+        {
+          "et": "reedeti · laupäeviti · pühapäeviti",
+          "ru": "по пятницам · субботам · воскресеньям"
+        },
+        {
+          "et": "Esmaspäeviti ma käin trennis.",
+          "ru": "По понедельникам я хожу на тренировку."
+        }
       ]
     },
     {
       "title": "Кому? (гл. 13)",
       "note": "«Кому» — окончание -le. У местоимений короткие формы, в речи именно они.",
       "rows": [
-        { "et": "mulle · sulle · talle", "ru": "мне · тебе · ему/ей", "hint": "полные: minule, sinule, temale" },
-        { "et": "meile · teile · neile", "ru": "нам · вам · им" },
-        { "et": "Annale · Jürile · Albertile", "ru": "Анне · Юри · Альберту", "hint": "к имени просто -le" },
-        { "et": "Helista mulle!", "ru": "Позвони мне!" }
+        {
+          "et": "mulle · sulle · talle",
+          "ru": "мне · тебе · ему/ей",
+          "hint": "полные: minule, sinule, temale"
+        },
+        {
+          "et": "meile · teile · neile",
+          "ru": "нам · вам · им"
+        },
+        {
+          "et": "Annale · Jürile · Albertile",
+          "ru": "Анне · Юри · Альберту",
+          "hint": "на гласную — просто -le; на согласную — через основу omastav: Albert → Alberti → Albertile"
+        },
+        {
+          "et": "Helista mulle!",
+          "ru": "Позвони мне!"
+        }
       ]
     },
     {
-      "title": "Надо: pean и vaja (гл. 14)",
-      "note": "«Я должен» — pean + ma-инфинитив. «Мне нужно» — mul on vaja + da-инфинитив.",
+      "title": "Какой инфинитив: pean, vaja, lähen (гл. 14)",
+      "note": "После pean и minema — ma-инфинитив, после vaja — da-инфинитив.",
       "rows": [
-        { "et": "Ma pean tuba koristama.", "ru": "Я должен убрать комнату." },
-        { "et": "Ma pean poes käima.", "ru": "Мне надо сходить в магазин." },
-        { "et": "Ma pean nõusid pesema.", "ru": "Я должен помыть посуду.", "hint": "nõusid — мн. osastav" },
-        { "et": "Mul on vaja minna.", "ru": "Мне нужно идти.", "hint": "после vaja — da-инфинитив" },
-        { "et": "Ma ostan mett ja jäätist.", "ru": "Я покупаю мёд и мороженое.", "hint": "неопределённое количество — osastav" }
+        {
+          "et": "Ma pean tuba koristama.",
+          "ru": "Мне надо убирать комнату."
+        },
+        {
+          "et": "Ma lähen sööma.",
+          "ru": "Я иду есть.",
+          "hint": "цель после minema — ma-инфинитив"
+        },
+        {
+          "et": "Ma pean poes käima.",
+          "ru": "Мне надо сходить в магазин."
+        },
+        {
+          "et": "Ma pean nõusid pesema.",
+          "ru": "Мне надо мыть посуду.",
+          "hint": "nõusid — мн. osastav"
+        },
+        {
+          "et": "Mul on vaja minna.",
+          "ru": "Мне нужно идти.",
+          "hint": "после vaja — da-инфинитив"
+        },
+        {
+          "et": "Ma ostan mett ja jäätist.",
+          "ru": "Я покупаю мёд и мороженое.",
+          "hint": "неопределённое количество — osastav"
+        }
       ]
     },
     {
       "title": "Числительные: как собрать любое число",
-      "note": "Всё строится из нескольких кирпичей. Сверено со словарём EKI и учебником.",
+      "note": "Всё строится из нескольких кирпичей. Формы сверены со словарём EKI, примеры — из учебника.",
       "rows": [
-        { "et": "üksteist · kaksteist · kolmteist … üheksateist", "ru": "11 · 12 · 13 … 19", "hint": "число + -teist" },
-        { "et": "kakskümmend · kolmkümmend … üheksakümmend", "ru": "20 · 30 … 90", "hint": "число + -kümmend" },
-        { "et": "kakskümmend üks · kolmkümmend viis", "ru": "21 · 35", "hint": "десятки и единицы — отдельными словами" },
-        { "et": "sada · tuhat · miljon", "ru": "сто · тысяча · миллион" },
-        { "et": "1988 — tuhat üheksasada kaheksakümmend kaheksa", "ru": "год читается как обычное число", "hint": "üheksasada = девятьсот" },
-        { "et": "Pilet maksab kakskümmend üks eurot.", "ru": "Билет стоит двадцать один евро.", "hint": "после числа больше одного — osastav ед. ч." },
-        { "et": "Mis aastal sa sündisid? — Ma sündisin aastal … .", "ru": "В каком году ты родился? — Я родился в … году." },
-        { "et": "Mitu korrust majas on? — Majas on kaks korrust.", "ru": "Сколько этажей в доме? — Два этажа.", "hint": "mitu? — сколько? (штук)" }
+        {
+          "et": "üksteist · kaksteist · kolmteist … üheksateist",
+          "ru": "11 · 12 · 13 … 19",
+          "hint": "число + -teist"
+        },
+        {
+          "et": "kakskümmend · kolmkümmend … üheksakümmend",
+          "ru": "20 · 30 … 90",
+          "hint": "число + -kümmend"
+        },
+        {
+          "et": "kakskümmend üks · kolmkümmend viis",
+          "ru": "21 · 35",
+          "hint": "десятки и единицы — отдельными словами"
+        },
+        {
+          "et": "sada · tuhat · miljon",
+          "ru": "сто · тысяча · миллион"
+        },
+        {
+          "et": "1988 — tuhat üheksasada kaheksakümmend kaheksa",
+          "ru": "год читается как обычное число",
+          "hint": "üheksasada = девятьсот"
+        },
+        {
+          "et": "Pilet maksab kakskümmend üks eurot.",
+          "ru": "Билет стоит двадцать один евро.",
+          "hint": "после числа в именительном — osastav ед. ч."
+        },
+        {
+          "et": "Mis aastal sa sündisid? — Ma sündisin aastal … .",
+          "ru": "В каком году ты родился? — Я родился в … году."
+        },
+        {
+          "et": "Mitu korrust majas on? — Majas on kaks korrust.",
+          "ru": "Сколько этажей в доме? — Два этажа.",
+          "hint": "mitu? — сколько? (штук)"
+        }
       ]
     },
     {
       "title": "Мой дом («Minu unistuste maja»)",
       "note": "Опорные конструкции из урока о доме мечты — хватит, чтобы описать своё жильё.",
       "rows": [
-        { "et": "Ma elan peaaegu maal.", "ru": "Я живу почти в деревне.", "hint": "maa → maal, «где» на -l" },
-        { "et": "Mul on suur kodu. = Minu kodu on suur.", "ru": "У меня большой дом. = Мой дом большой." },
-        { "et": "Esimesel korrusel on köök, teisel korrusel on magamistuba.", "ru": "На первом этаже кухня, на втором — спальня." },
-        { "et": "Maja taga on aed.", "ru": "За домом сад.", "hint": "omastav + taga: maja taga" },
-        { "et": "Maja lähedal on park ja järv.", "ru": "Рядом с домом парк и озеро.", "hint": "omastav + lähedal" },
-        { "et": "Mis värvi su maja on? — Maja on valge, katus on pruun.", "ru": "Какого цвета твой дом? — Дом белый, крыша коричневая." },
-        { "et": "Maja on sada nelikümmend ruutmeetrit.", "ru": "Дом — сто сорок квадратных метров.", "hint": "после числа — osastav: ruutmeetrit" }
+        {
+          "et": "Ma elan peaaegu maal.",
+          "ru": "Я живу почти в деревне.",
+          "hint": "maa → maal, «где» на -l"
+        },
+        {
+          "et": "Mul on suur kodu. = Minu kodu on suur.",
+          "ru": "У меня большой дом. = Мой дом большой."
+        },
+        {
+          "et": "Esimesel korrusel on köök, teisel korrusel on magamistuba.",
+          "ru": "На первом этаже кухня, на втором — спальня."
+        },
+        {
+          "et": "Maja taga on aed.",
+          "ru": "За домом сад.",
+          "hint": "omastav + taga: maja taga"
+        },
+        {
+          "et": "Maja lähedal on park ja järv.",
+          "ru": "Рядом с домом парк и озеро.",
+          "hint": "omastav + lähedal"
+        },
+        {
+          "et": "Mis värvi su maja on? — Maja on valge, katus on pruun.",
+          "ru": "Какого цвета твой дом? — Дом белый, крыша коричневая."
+        },
+        {
+          "et": "Maja on sada nelikümmend ruutmeetrit.",
+          "ru": "Дом — сто сорок квадратных метров.",
+          "hint": "после числа в именительном — osastav ед. ч."
+        }
       ]
     },
     {

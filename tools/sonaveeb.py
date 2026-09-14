@@ -132,14 +132,40 @@ def rection(result):
     return ""
 
 
-def example(result, head, limit=70):
+def example(result, head, limit=70, ru_hint=""):
     """Короткий живой пример из словарной статьи — показываем после ответа.
 
-    Берём самый короткий, который влезает в карточку: длинные примеры EKI
-    бывают на две строки и на телефоне выглядят стеной.
+    Пример берём ТОЛЬКО из того значения, которое совпадает с нашим переводом.
+    Раньше брался самый короткий из любого значения, и в карточку «tõusma —
+    вставать» уехала фраза про эрекцию, «film — фильм» — про фотоплёнку,
+    «valge — белый» — про дневной свет. Если значение не опознано, берём
+    первое значение статьи: оно основное.
     """
-    best = None
-    for m in result.get("meanings") or []:
+    meanings = result.get("meanings") or []
+    if not meanings:
+        return ""
+
+    chosen = []
+    if ru_hint:
+        mine = [x.strip().lower() for x in re.split(r"[,;()]", ru_hint) if x.strip()]
+        for m in meanings:
+            by_lang = m.get("translations")
+            theirs = []
+            if isinstance(by_lang, dict):
+                for item in by_lang.get("rus") or []:
+                    theirs += [p.strip().lower() for p in str(item.get("words") or "").split(",")]
+            if any(a[:4] and any(a[:4] == t[:4] for t in theirs if t) for a in mine):
+                chosen.append(m)
+    if not chosen:
+        chosen = meanings[:1]
+
+    # Значения в статье EKI идут от основного к частным. Короткий пример из
+    # любого совпавшего значения — плохой выбор: у tõusma перевод «подниматься»
+    # совпал и с переносным значением, и самым коротким оказалось «Tal ei tõuse.».
+    # Поэтому берём первое совпавшее значение, где вообще есть годный пример,
+    # и уже внутри него — самый короткий.
+    for m in chosen:
+        best = None
         for ex in m.get("examples") or []:
             ex = ex.strip()
             if not ex or len(ex) > limit:
@@ -150,7 +176,9 @@ def example(result, head, limit=70):
                 continue
             if best is None or len(ex) < len(best):
                 best = ex
-    return best or ""
+        if best:
+            return best
+    return ""
 
 
 def pos_of(result):
@@ -247,9 +275,13 @@ def fix():
             if api.get(code) and norm(w.get(field, "")) != norm(api[code]):
                 w[field] = api[code]
                 changed += 1
-        ex = example(res, w["nom"])
-        if ex and w.get("ex") != ex:
-            w["ex"] = ex
+        ex = example(res, w["nom"], ru_hint=w.get("ru", ""))
+        # при пересчёте убираем и пример из чужого значения, а не только добавляем новый
+        if w.get("ex", "") != ex:
+            if ex:
+                w["ex"] = ex
+            else:
+                w.pop("ex", None)
             changed += 1
         pos = pos_of(res)
         if pos != "n" and w.get("pos") != pos:
@@ -269,9 +301,13 @@ def fix():
         if r and w.get("rek") != r:
             w["rek"] = r
             changed += 1
-        ex = example(res, w["ma"])
-        if ex and w.get("ex") != ex:
-            w["ex"] = ex
+        ex = example(res, w["ma"], ru_hint=w.get("ru", ""))
+        # при пересчёте убираем и пример из чужого значения, а не только добавляем новый
+        if w.get("ex", "") != ex:
+            if ex:
+                w["ex"] = ex
+            else:
+                w.pop("ex", None)
             changed += 1
 
     d["meta"]["source"] = "формы — EKI через api.sonapi.ee; переводы вручную"
@@ -347,7 +383,7 @@ def add(path):
             r = rection(res)
             if r:
                 entry["rek"] = r
-            ex = example(res, word)
+            ex = example(res, word, ru_hint=ru)
             if ex:
                 entry["ex"] = ex
             if not entry["ma"] or not entry["da"] or not entry["b"]:
@@ -361,7 +397,7 @@ def add(path):
             pos = pos_of(res)
             if pos != "n":
                 entry["pos"] = pos
-            ex = example(res, word)
+            ex = example(res, word, ru_hint=ru)
             if ex:
                 entry["ex"] = ex
             if not entry["nom"] or not entry["gen"] or not entry["part"]:

@@ -2,10 +2,10 @@
   "meta": {
     "level": "A2",
     "note": "Формы сверены с EKI (api.sonapi.ee) — руками не правим, прогоняй tools/sonaveeb.py. Переводы наши. Через запятую — равноправные варианты, тренажёр примет любой.",
-    "updated": "2026-09-07",
+    "updated": "2026-09-14",
     "source": "формы — EKI через api.sonapi.ee; переводы вручную",
-    "verified": "2026-09-07: 1456 форм сверено с EKI, расхождений нет",
-    "content": "база A2 + главы 3–11 «Eesti keele sõnavihik A2» (Settle in Estonia)"
+    "verified": "2026-09-14: 1736 форм сверено с EKI, расхождений нет",
+    "content": "база A2 + главы 3–14 «Eesti keele sõnavihik A2» + текст «Minu unistuste maja»"
   },
   "nouns": [
     {
@@ -42,7 +42,7 @@
       "gen": "laua",
       "part": "lauda",
       "plpart": "laudu,laudasid",
-      "ex": "Lauas on kaks honööri."
+      "ex": "Ostsime kööki ümmarguse laua."
     },
     {
       "id": "n_jalg",
@@ -51,7 +51,7 @@
       "gen": "jala",
       "part": "jalga",
       "plpart": "jalgu,jalgasid",
-      "ex": "Toolil on neli jalga."
+      "ex": "Lehma tagumised jalad."
     },
     {
       "id": "n_kasi",
@@ -60,7 +60,7 @@
       "gen": "käe",
       "part": "kätt",
       "plpart": "käsi",
-      "ex": "Kindad on käes."
+      "ex": "Tal oli pudel käes."
     },
     {
       "id": "n_too",
@@ -69,7 +69,7 @@
       "gen": "töö",
       "part": "tööd",
       "plpart": "töid,töösid",
-      "ex": "Poiss otsib tööd."
+      "ex": "Tööd tehti kõvasti."
     },
     {
       "id": "n_sober",
@@ -123,7 +123,7 @@
       "gen": "kooli",
       "part": "kooli",
       "plpart": "koole,koolisid",
-      "ex": "Vana kooli maalijad."
+      "ex": "Linnas avati uus kool."
     },
     {
       "id": "n_tanav",
@@ -168,7 +168,7 @@
       "gen": "keele",
       "part": "keelt",
       "plpart": "keeli",
-      "ex": "Võtmel murdus keel."
+      "ex": "Kas sa oskad eesti keelt?"
     },
     {
       "id": "n_paev",
@@ -186,7 +186,7 @@
       "gen": "nädala",
       "part": "nädalat",
       "plpart": "nädalaid",
-      "ex": "Taani filmide nädal."
+      "ex": "Ma käin kaks korda nädalas trennis."
     },
     {
       "id": "n_kuu",
@@ -204,7 +204,7 @@
       "gen": "aasta",
       "part": "aastat",
       "plpart": "aastaid",
-      "ex": "Üksik aastates tamm."
+      "ex": "Olen sündinud 1991. aastal."
     },
     {
       "id": "n_pilt",
@@ -231,7 +231,7 @@
       "gen": "silma",
       "part": "silma",
       "plpart": "silmi,silmasid",
-      "ex": "Suure silmaga nõel."
+      "ex": "Tal tulid pisarad silma."
     },
     {
       "id": "n_laps",
@@ -240,7 +240,7 @@
       "gen": "lapse",
       "part": "last",
       "plpart": "lapsi",
-      "ex": "Oma aja lapsed."
+      "ex": "Klassis on 25 last."
     },
     {
       "id": "n_naine",
@@ -249,7 +249,7 @@
       "gen": "naise",
       "part": "naist",
       "plpart": "naisi",
-      "ex": "Tal on väga hea naine."
+      "ex": "Ukse taga seisis võõras naine."
     },
     {
       "id": "n_mees",
@@ -258,7 +258,7 @@
       "gen": "mehe",
       "part": "meest",
       "plpart": "mehi",
-      "ex": "Mis ala mees sa oled?"
+      "ex": "Mehed ja naised on juhina erinevad."
     },
     {
       "id": "n_linn",
@@ -267,7 +267,7 @@
       "gen": "linna",
       "part": "linna",
       "plpart": "linnu,linnasid",
-      "ex": "Kogu linn oli leinarongis."
+      "ex": "Tallinn on Eesti suurim linn."
     },
     {
       "id": "n_leib",
@@ -276,7 +276,7 @@
       "gen": "leiva",
       "part": "leiba",
       "plpart": "leibu,leibasid",
-      "ex": "Leib sai salve."
+      "ex": "Ostsin poest leiba ja saia."
     },
     {
       "id": "n_oun",
@@ -303,7 +303,7 @@
       "gen": "riigi",
       "part": "riiki",
       "plpart": "riike,riikisid",
-      "ex": "See on riigi maa."
+      "ex": "Eesti on väike riik."
     },
     {
       "id": "n_arst",
@@ -339,7 +339,7 @@
       "gen": "puu",
       "part": "puud",
       "plpart": "puid,puusid",
-      "ex": "Puud laoti riita."
+      "ex": "Ahvid elavad puu otsas."
     },
     {
       "id": "n_vend",
@@ -348,7 +348,7 @@
       "gen": "venna",
       "part": "venda",
       "plpart": "vendi,vendasid",
-      "ex": "Armas vend Kristuses."
+      "ex": "Mihkel ja Jaan on vennad."
     },
     {
       "id": "n_ode",
@@ -366,7 +366,7 @@
       "gen": "sõna",
       "part": "sõna",
       "plpart": "sõnu,sõnasid",
-      "ex": "Kõva sõnaga mees."
+      "ex": "Mis see sõna tähendab?"
     },
     {
       "id": "n_lugu",
@@ -375,7 +375,7 @@
       "gen": "loo",
       "part": "lugu",
       "plpart": "lugusid",
-      "ex": "Ah nii on lood!"
+      "ex": "Pane see lugu kirja."
     },
     {
       "id": "n_jogi",
@@ -447,7 +447,7 @@
       "gen": "raha",
       "part": "raha",
       "plpart": "rahasid",
-      "ex": "Laenasin sõbralt raha."
+      "ex": "Laena mulle veidi raha."
     },
     {
       "id": "n_ilm",
@@ -465,7 +465,7 @@
       "gen": "esimese",
       "part": "esimest",
       "plpart": "esimesi",
-      "ex": "Esimese klassi vagun.",
+      "ex": "Poiss käib esimeses klassis.",
       "pos": "adj"
     },
     {
@@ -475,7 +475,7 @@
       "gen": "teise",
       "part": "teist",
       "plpart": "teisi",
-      "ex": "Teise sordi jahu.",
+      "ex": "Elan teisel korrusel.",
       "pos": "num"
     },
     {
@@ -485,7 +485,7 @@
       "gen": "kolmanda",
       "part": "kolmandat,kolmat",
       "plpart": "kolmandaid",
-      "ex": "Kolmanda sordi jahu.",
+      "ex": "Kolmanda klassi poiss.",
       "pos": "num"
     },
     {
@@ -637,7 +637,7 @@
       "gen": "aia",
       "part": "aeda",
       "plpart": "aedu,aedasid",
-      "ex": "Poiss ronis üle aia."
+      "ex": "Aias kasvasid õunapuud."
     },
     {
       "id": "n_aken",
@@ -646,7 +646,7 @@
       "gen": "akna",
       "part": "akent",
       "plpart": "aknaid",
-      "ex": "Brauseri akna ülaääres on menüüriba."
+      "ex": "Papagoi pääses lahtise akna kaudu välja."
     },
     {
       "id": "n_garaaz",
@@ -673,7 +673,7 @@
       "gen": "katuse",
       "part": "katust",
       "plpart": "katuseid",
-      "ex": "Välja mu katuse alt!"
+      "ex": "Torm viis majalt katuse."
     },
     {
       "id": "n_kelder",
@@ -700,7 +700,7 @@
       "gen": "rõdu",
       "part": "rõdu",
       "plpart": "rõdusid",
-      "ex": "Piletid olid rõdule."
+      "ex": "Kasvatan rõdul lilli."
     },
     {
       "id": "n_saun",
@@ -868,7 +868,7 @@
       "gen": "mäe",
       "part": "mäge",
       "plpart": "mägesid",
-      "ex": "Tänav läheb mäkke."
+      "ex": "Otepää ümbruse mäed."
     },
     {
       "id": "n_mets",
@@ -904,7 +904,7 @@
       "gen": "vanni",
       "part": "vanni",
       "plpart": "vanne,vannisid",
-      "ex": "Tegin lapsele vanni."
+      "ex": "Mulle meeldib vannis käia."
     },
     {
       "id": "n_vaip",
@@ -913,7 +913,7 @@
       "gen": "vaiba",
       "part": "vaipa",
       "plpart": "vaipu,vaipasid",
-      "ex": "Muru roheline vaip."
+      "ex": "Paks vaip summutas sammud."
     },
     {
       "id": "n_sampoon",
@@ -949,7 +949,7 @@
       "gen": "peegli",
       "part": "peeglit",
       "plpart": "peegleid",
-      "ex": "Foto kui ajastu peegel."
+      "ex": "Suur peegel avardab vannituba."
     },
     {
       "id": "n_kateratik",
@@ -994,7 +994,7 @@
       "gen": "duši",
       "part": "dušši",
       "plpart": "dušše,duššisid",
-      "ex": "Käin iga päev duši all."
+      "ex": "Ma käin igal hommikul duši all."
     },
     {
       "id": "n_dusikabiin",
@@ -1056,7 +1056,7 @@
       "gen": "kella",
       "part": "kella",
       "plpart": "kelli,kellasid",
-      "ex": "Mis kell on?"
+      "ex": "Kell käib täpselt."
     },
     {
       "id": "n_kardin",
@@ -1172,7 +1172,7 @@
       "gen": "voodi",
       "part": "voodit",
       "plpart": "voodeid",
-      "ex": "Tast pole voodis asjagi!"
+      "ex": "Magamistoas on pehme ja lai voodi."
     },
     {
       "id": "n_ohupuhasti",
@@ -1271,7 +1271,7 @@
       "gen": "ahju",
       "part": "ahju",
       "plpart": "ahje,ahjusid",
-      "ex": "Liha on ahjus."
+      "ex": "Tegin tule ahju."
     },
     {
       "id": "n_vaikne",
@@ -1280,7 +1280,7 @@
       "gen": "vaikse",
       "part": "vaikset",
       "plpart": "vaikseid",
-      "ex": "Meri on vaikne.",
+      "ex": "Kostis vaikne krabin.",
       "pos": "adj"
     },
     {
@@ -1310,7 +1310,7 @@
       "gen": "tugeva",
       "part": "tugevat",
       "plpart": "tugevaid",
-      "ex": "Tugev p, t.",
+      "ex": "Kehalt tugev mees.",
       "pos": "adj"
     },
     {
@@ -1320,7 +1320,7 @@
       "gen": "targa",
       "part": "tarka",
       "plpart": "tarku,tarkasid",
-      "ex": "Kolm hommikumaa tarka.",
+      "ex": "Ta on klassi kõige targem õpilane.",
       "pos": "adj"
     },
     {
@@ -1350,7 +1350,7 @@
       "gen": "laisa",
       "part": "laiska",
       "plpart": "laisku,laiskasid",
-      "ex": "Mul on laisk süda.",
+      "ex": "Kuumus teeb laisaks.",
       "pos": "adj"
     },
     {
@@ -1450,7 +1450,7 @@
       "gen": "sportliku",
       "part": "sportlikku",
       "plpart": "sportlikke,sportlikkusid",
-      "ex": "Sale ja sportlik naine.",
+      "ex": "Ta harrastab sportlikku eluviisi.",
       "pos": "adj"
     },
     {
@@ -1576,7 +1576,7 @@
       "gen": "poja",
       "part": "poega",
       "plpart": "poegi,poegasid",
-      "ex": "Kassil on pojad."
+      "ex": "Neil on kaks poega ja tütar."
     },
     {
       "id": "n_tutar",
@@ -1612,7 +1612,7 @@
       "gen": "sugulase",
       "part": "sugulast",
       "plpart": "sugulasi",
-      "ex": "Hingelt on nad sugulased."
+      "ex": "Vanemad surnud, sugulasi pole."
     },
     {
       "id": "n_ai",
@@ -1920,7 +1920,7 @@
       "gen": "vuntsi",
       "part": "vuntsi",
       "plpart": "vuntse,vuntsisid",
-      "ex": "Mart on täitsa vunts!"
+      "ex": "Vuntsi mul veel ei kasva."
     },
     {
       "id": "n_tukk",
@@ -1929,7 +1929,7 @@
       "gen": "tuka",
       "part": "tukka",
       "plpart": "tukki,tukkasid",
-      "ex": "Pöetud tukaga hobune."
+      "ex": "Tüdrukul oli tukk silmile kukkunud."
     },
     {
       "id": "n_pats",
@@ -2005,7 +2005,7 @@
       "part": "halli",
       "plpart": "halle,hallisid",
       "pos": "adj",
-      "ex": "Moes on hall."
+      "ex": "Taevas on hall ja vihma sajab."
     },
     {
       "id": "n_hele",
@@ -2015,7 +2015,7 @@
       "part": "heledat",
       "plpart": "heledaid",
       "pos": "adj",
-      "ex": "Avar ja hele kabinet."
+      "ex": "Hele täht põhjataevas."
     },
     {
       "id": "n_must",
@@ -2025,7 +2025,7 @@
       "part": "musta",
       "plpart": "musti,mustasid",
       "pos": "adj",
-      "ex": "Meeleolu on must."
+      "ex": "Must kass jooksis üle tee."
     },
     {
       "id": "n_punane",
@@ -2035,7 +2035,7 @@
       "part": "punast",
       "plpart": "punaseid",
       "pos": "adj",
-      "ex": "Eesti punased polgud."
+      "ex": "Tal on punased juuksed."
     },
     {
       "id": "n_paks",
@@ -2085,7 +2085,7 @@
       "part": "sinist",
       "plpart": "siniseid",
       "pos": "adj",
-      "ex": "Sa sinine saatan!"
+      "ex": "Meri oli täna sinine."
     },
     {
       "id": "n_kasv",
@@ -2242,7 +2242,7 @@
       "gen": "ühe",
       "part": "üht,ühte",
       "plpart": "ühtesid",
-      "ex": "Tramm nr 1.",
+      "ex": "Kell on üks öösel.",
       "pos": "num"
     },
     {
@@ -2252,7 +2252,7 @@
       "gen": "kahe",
       "part": "kaht,kahte",
       "plpart": "kahtesid",
-      "ex": "Tramm nr 2.",
+      "ex": "Kaks pluss kaks.",
       "pos": "num"
     },
     {
@@ -2262,7 +2262,7 @@
       "gen": "kolme",
       "part": "kolme",
       "plpart": "kolmi,kolmesid",
-      "ex": "Tramm nr 3.",
+      "ex": "Kell saab kolm.",
       "pos": "num"
     },
     {
@@ -2272,7 +2272,7 @@
       "gen": "nelja",
       "part": "nelja",
       "plpart": "nelju,neljasid",
-      "ex": "Buss nr 4.",
+      "ex": "Neli pluss neli.",
       "pos": "num"
     },
     {
@@ -2282,7 +2282,7 @@
       "gen": "viie",
       "part": "viit,viite",
       "plpart": "viisi",
-      "ex": "Buss nr 5.",
+      "ex": "Kaks korda viis.",
       "pos": "num"
     },
     {
@@ -2292,7 +2292,7 @@
       "gen": "kuue",
       "part": "kuut,kuute",
       "plpart": "kuusi",
-      "ex": "Buss nr 6.",
+      "ex": "Kell on kuus.",
       "pos": "num"
     },
     {
@@ -2302,7 +2302,7 @@
       "gen": "seitsme",
       "part": "seitset",
       "plpart": "seitsmeid",
-      "ex": "Sahtel nr 7.",
+      "ex": "Ärkasin kell seitse.",
       "pos": "num"
     },
     {
@@ -2312,7 +2312,7 @@
       "gen": "kaheksa",
       "part": "kaheksat",
       "plpart": "kaheksaid",
-      "ex": "Värav nr 8.",
+      "ex": "Kell on kaheksa.",
       "pos": "num"
     },
     {
@@ -2322,7 +2322,7 @@
       "gen": "üheksa",
       "part": "üheksat",
       "plpart": "üheksaid",
-      "ex": "Troll nr 9.",
+      "ex": "Kell sai üheksa.",
       "pos": "num"
     },
     {
@@ -2332,7 +2332,7 @@
       "gen": "kümne",
       "part": "kümmet",
       "plpart": "kümneid",
-      "ex": "Buss nr 10.",
+      "ex": "Kümme pluss üks.",
       "pos": "num"
     },
     {
@@ -2387,7 +2387,7 @@
       "gen": "tormi",
       "part": "tormi",
       "plpart": "torme,tormisid",
-      "ex": "Küll on torm mees!"
+      "ex": "Torm murdis puu maha."
     },
     {
       "id": "n_udu",
@@ -2432,7 +2432,7 @@
       "gen": "sula",
       "part": "sula",
       "plpart": "sulasid",
-      "ex": "Hääle sula kõla."
+      "ex": "Ilm läheb sulale."
     },
     {
       "id": "n_selge",
@@ -2442,7 +2442,7 @@
       "part": "selget",
       "plpart": "selgeid",
       "pos": "adj",
-      "ex": "Taevas on selge."
+      "ex": "Ilus selge käekiri."
     },
     {
       "id": "n_lokk",
@@ -2451,7 +2451,7 @@
       "gen": "loki",
       "part": "lokki",
       "plpart": "lokke,lokkisid",
-      "ex": "Loomuliku lokiga juuksed."
+      "ex": "Tüdruk jooksis lokkide lehvides kodu poole."
     },
     {
       "id": "n_manguasi",
@@ -2469,7 +2469,7 @@
       "gen": "elektroonika",
       "part": "elektroonikat",
       "plpart": "elektroonikaid",
-      "ex": "Auto on varustatud keerulise elektroonikaga."
+      "ex": "Jaan on lõpetanud tehnikaülikooli elektroonika eriala."
     },
     {
       "id": "n_taaskasutus",
@@ -2532,7 +2532,7 @@
       "gen": "filmi",
       "part": "filmi",
       "plpart": "filme,filmisid",
-      "ex": "Film sai täis."
+      "ex": "Fellini filmide nädal."
     },
     {
       "id": "n_nou",
@@ -2550,7 +2550,7 @@
       "gen": "hamba",
       "part": "hammast",
       "plpart": "hambaid",
-      "ex": "Sae hammas on murdunud."
+      "ex": "Tüdrukul on valged hambad."
     },
     {
       "id": "n_arvutimang",
@@ -2603,7 +2603,7 @@
       "gen": "lõuna",
       "part": "lõunat",
       "plpart": "lõunaid",
-      "ex": "Ta magas lõunani."
+      "ex": "Maja aknad on lõuna poole."
     },
     {
       "id": "n_koosolek",
@@ -2630,7 +2630,7 @@
       "gen": "kursuse",
       "part": "kursust",
       "plpart": "kursusi",
-      "ex": "Õpin viimasel kursusel."
+      "ex": "Kursused kestavad neli kuud."
     },
     {
       "id": "n_olu",
@@ -2756,7 +2756,7 @@
       "gen": "asja",
       "part": "asja",
       "plpart": "asju,asjasid",
-      "ex": "Milles asi on?"
+      "ex": "Tal on taskud asju täis."
     },
     {
       "id": "n_maa",
@@ -2765,7 +2765,7 @@
       "gen": "maa",
       "part": "maad",
       "plpart": "maid,maasid",
-      "ex": "Maa on märg."
+      "ex": "Eks rahvast ole ju maa peal igasugust."
     },
     {
       "id": "n_aadress",
@@ -2873,7 +2873,7 @@
       "part": "õnnelikku",
       "plpart": "õnnelikke,õnnelikkusid",
       "pos": "adj",
-      "ex": "Õnnelik võitja on .."
+      "ex": "Film oli õnneliku lõpuga."
     },
     {
       "id": "n_suur",
@@ -2893,7 +2893,7 @@
       "part": "väikest",
       "plpart": "väikesi",
       "pos": "adj",
-      "ex": "See on väike mure."
+      "ex": "Väikest kasvu naine."
     },
     {
       "id": "n_uus",
@@ -2903,7 +2903,7 @@
       "part": "uut",
       "plpart": "uusi",
       "pos": "adj",
-      "ex": "Head uut aastat!"
+      "ex": "Uue filmi esilinastus."
     },
     {
       "id": "n_vana",
@@ -2913,7 +2913,7 @@
       "part": "vana",
       "plpart": "vanu,vanasid",
       "pos": "adj",
-      "ex": "Sa vana siga!"
+      "ex": "Vanu inimesi tuleb aidata."
     },
     {
       "id": "n_puhas",
@@ -2943,7 +2943,7 @@
       "part": "mugavat",
       "plpart": "mugavaid",
       "pos": "adj",
-      "ex": "Nii mugav on öelda, et .."
+      "ex": "Need kingad on väga mugavad."
     },
     {
       "id": "n_ilus",
@@ -2963,7 +2963,7 @@
       "part": "valget",
       "plpart": "valgeid",
       "pos": "adj",
-      "ex": "Suur valge väljas."
+      "ex": "Pruut kandis valget kleiti."
     },
     {
       "id": "n_kakskummend",
@@ -3023,7 +3023,7 @@
       "part": "seitsetkümmend,seitsetkümmet",
       "plpart": "seitsmekümneid",
       "pos": "num",
-      "ex": "Albumis on seitsekümmend fotot."
+      "ex": "Vanaisa saab varsti seitsekümmend."
     },
     {
       "id": "n_kaheksakummend",
@@ -3033,7 +3033,7 @@
       "part": "kaheksatkümmend,kaheksatkümmet",
       "plpart": "kaheksakümneid",
       "pos": "num",
-      "ex": "Kaheksakümmend aastat tagasi."
+      "ex": "Ta on üle kaheksakümne aasta vana."
     },
     {
       "id": "n_uheksakummend",
@@ -3043,7 +3043,7 @@
       "part": "üheksatkümmend,üheksatkümmet",
       "plpart": "üheksakümneid",
       "pos": "num",
-      "ex": "Ta on juba üle üheksakümne."
+      "ex": "Ajakirja esimene number ilmus üheksakümmend aastat tagasi."
     },
     {
       "id": "n_sada",
@@ -3063,7 +3063,7 @@
       "part": "tuhandet,tuhat",
       "plpart": "tuhandeid",
       "pos": "num",
-      "ex": "Oh sa tuline tuhat!"
+      "ex": "Kaks tuhat kolmsada."
     },
     {
       "id": "n_miljon",
@@ -3073,7 +3073,7 @@
       "part": "miljonit",
       "plpart": "miljoneid",
       "pos": "num",
-      "ex": "Sõjas hukkusid miljonid."
+      "ex": "Hoone remont läheb maksma miljoneid eurosid."
     }
   ],
   "verbs": [
@@ -3086,7 +3086,7 @@
       "neg": "ole",
       "past": "oli",
       "nud": "olnud",
-      "ex": "Mul on külm."
+      "ex": "Olla või mitte olla?"
     },
     {
       "id": "v_minema",
@@ -3121,7 +3121,7 @@
       "neg": "tee",
       "past": "tegi",
       "nud": "teinud",
-      "ex": "Tee, et kaod!"
+      "ex": "Raamatust tehti film."
     },
     {
       "id": "v_nagema",
@@ -3133,7 +3133,7 @@
       "past": "nägi",
       "nud": "näinud",
       "rek": "keda/mida*",
-      "ex": "Näed nüüd, mis juhtus!"
+      "ex": "Nägin sind eile teatris."
     },
     {
       "id": "v_lugema",
@@ -3145,7 +3145,7 @@
       "past": "luges",
       "nud": "lugenud",
       "rek": "mida,kust,kellele",
-      "ex": "Hüpe ei lugenud."
+      "ex": "Loen ühte põnevat raamatut."
     },
     {
       "id": "v_kirjutama",
@@ -3156,7 +3156,7 @@
       "neg": "kirjuta",
       "past": "kirjutas",
       "nud": "kirjutanud",
-      "ex": "Kirjuta, millal tuled."
+      "ex": "Kirjuta tööle oma nimi peale."
     },
     {
       "id": "v_panema",
@@ -3168,7 +3168,7 @@
       "past": "pani",
       "nud": "pannud",
       "rek": "mida,kuhu",
-      "ex": "Sibul paneb nutma."
+      "ex": "Pane raamat lauale."
     },
     {
       "id": "v_sooma",
@@ -3238,7 +3238,7 @@
       "past": "sai",
       "nud": "saanud",
       "rek": "kellelt / kust",
-      "ex": "Ave sai emaks."
+      "ex": "Ta sai loa lahkuda."
     },
     {
       "id": "v_jaama",
@@ -3262,7 +3262,7 @@
       "past": "käis",
       "nud": "käinud",
       "rek": "kus,millega,kelle juures,mida tegemas",
-      "ex": "Käi kus kurat!"
+      "ex": "Armastan jala käia."
     },
     {
       "id": "v_tootama",
@@ -3274,7 +3274,7 @@
       "past": "töötas",
       "nud": "töötanud",
       "rek": "kus,kellena",
-      "ex": "Telefon ei tööta."
+      "ex": "Ma töötan õpetajana."
     },
     {
       "id": "v_raakima",
@@ -3286,7 +3286,7 @@
       "past": "rääkis",
       "nud": "rääkinud",
       "rek": "kellega,et",
-      "ex": "Rahvas räägib, et .."
+      "ex": "Ma pean sinuga rääkima."
     },
     {
       "id": "v_utlema",
@@ -3298,7 +3298,7 @@
       "past": "ütles",
       "nud": "ütelnud",
       "rek": "kellele,kelle/mille kohta",
-      "ex": "Ära sa ütle!"
+      "ex": "Ütle oma nimi!"
     },
     {
       "id": "v_teadma",
@@ -3334,7 +3334,7 @@
       "past": "pidas",
       "nud": "pidanud",
       "rek": "keda*",
-      "ex": "Ärme pea viha!"
+      "ex": "Augustis pidas kuiva vaid viis ööpäeva."
     },
     {
       "id": "v_hakkama",
@@ -3346,7 +3346,7 @@
       "past": "hakkas",
       "nud": "hakanud",
       "rek": "mida tegema",
-      "ex": "Mul hakkas hirm."
+      "ex": "Hakkame siis tööle."
     },
     {
       "id": "v_oskama",
@@ -3406,7 +3406,7 @@
       "past": "elas",
       "nud": "elanud",
       "rek": "millest",
-      "ex": "Kuidas sa elad?"
+      "ex": "Kotkas elab väga vanaks."
     },
     {
       "id": "v_magama",
@@ -3466,7 +3466,7 @@
       "past": "kuulis",
       "nud": "kuulnud",
       "rek": "keda/mida*",
-      "ex": "Kas sa uudist kuulsid?"
+      "ex": "Kuulsime kellegi naeru."
     },
     {
       "id": "v_motlema",
@@ -3490,7 +3490,7 @@
       "past": "sõitis",
       "nud": "sõitnud",
       "rek": "kuhu,millega",
-      "ex": "Auto sõitis minema."
+      "ex": "Rong sõitis väga aeglaselt."
     },
     {
       "id": "v_jooksma",
@@ -3501,7 +3501,7 @@
       "neg": "jookse",
       "past": "jooksis",
       "nud": "jooksnud",
-      "ex": "Vesi jooksis vanni."
+      "ex": "Jooksime bussi peale."
     },
     {
       "id": "v_pesema",
@@ -3536,7 +3536,7 @@
       "past": "vastas",
       "nud": "vastanud",
       "rek": "kellele/millele,millega",
-      "ex": "Töö vastas nõuetele."
+      "ex": "Palun vasta mulle ausalt!"
     },
     {
       "id": "v_aitama",
@@ -3560,7 +3560,7 @@
       "past": "armastas",
       "nud": "armastanud",
       "rek": "keda/mida*",
-      "ex": "Ta armastab laulda."
+      "ex": "Henrik armastab Liinat."
     },
     {
       "id": "v_lubama",
@@ -3572,7 +3572,7 @@
       "past": "lubas",
       "nud": "lubanud",
       "rek": "kellel + mida teha",
-      "ex": "Luba ma aitan sind!"
+      "ex": "Ema lubas lapsed õue."
     },
     {
       "id": "v_leidma",
@@ -3584,7 +3584,7 @@
       "past": "leidis",
       "nud": "leidnud",
       "rek": "kust",
-      "ex": "Arktikas leiti naftat."
+      "ex": "Ma ei leia oma rahakotti."
     },
     {
       "id": "v_alustama",
@@ -3620,7 +3620,7 @@
       "past": "viis",
       "nud": "viinud",
       "rek": "keda/mida,kuhu,kust + kuhu",
-      "ex": "Rada viis mäe tippu."
+      "ex": "Tuul viis mütsi peast."
     },
     {
       "id": "v_tooma",
@@ -3632,7 +3632,7 @@
       "past": "tõi",
       "nud": "toonud",
       "rek": "keda/mida,kust,kust + kuhu,kuhu + millega",
-      "ex": "Too mõni näide."
+      "ex": "Palun too poest leiba."
     },
     {
       "id": "v_laulma",
@@ -3644,7 +3644,7 @@
       "past": "laulis",
       "nud": "laulnud",
       "rek": "millest,kellele",
-      "ex": "Kusagil laulis kukk."
+      "ex": "Läki karaoket laulma."
     },
     {
       "id": "v_mangima",
@@ -3656,7 +3656,7 @@
       "past": "mängis",
       "nud": "mänginud",
       "rek": "mida*,millega",
-      "ex": "Ära mängi kahvliga!"
+      "ex": "Mis mängu te mängite?"
     },
     {
       "id": "v_avama",
@@ -3678,7 +3678,7 @@
       "neg": "sule",
       "past": "sulges",
       "nud": "sulgenud",
-      "ex": "Hirm sulges suu."
+      "ex": "Sulgesin vaikselt ukse."
     },
     {
       "id": "v_istuma",
@@ -3702,7 +3702,7 @@
       "past": "seisis",
       "nud": "seisnud",
       "rek": "kelle/mille eest",
-      "ex": "Aken seisis pärani."
+      "ex": "Hobune jäi oja ette seisma."
     },
     {
       "id": "v_pakkuma",
@@ -3714,7 +3714,7 @@
       "past": "pakkus",
       "nud": "pakkunud",
       "rek": "mida*",
-      "ex": "Kes pakub rohkem?"
+      "ex": "Pakkusin end appi."
     },
     {
       "id": "v_helistama",
@@ -3726,7 +3726,7 @@
       "past": "helistas",
       "nud": "helistanud",
       "rek": "kellele,kuhu",
-      "ex": "Helistasin mitu korda uksekella."
+      "ex": "Nii hilja ei sobi enam helistada."
     },
     {
       "id": "v_kammima",
@@ -3816,7 +3816,7 @@
       "neg": "tuiska",
       "past": "tuiskas",
       "nud": "tuisanud",
-      "ex": "Hange tuisanud uks."
+      "ex": "Akna taga tuiskab lund."
     },
     {
       "id": "v_muristama",
@@ -3838,7 +3838,7 @@
       "neg": "tõuse",
       "past": "tõusis",
       "nud": "tõusnud",
-      "ex": "Tal ei tõuse."
+      "ex": "Tee tõuseb mäkke."
     },
     {
       "id": "v_parandama",
