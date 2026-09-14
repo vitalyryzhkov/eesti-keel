@@ -207,7 +207,7 @@
         {
           "et": "Ma ostan kaks raamatut.",
           "ru": "Я куплю две книги.",
-          "hint": "после числа от двух — osastav ед. ч.; после üks — именительный: üks inimene"
+          "hint": "число в именительном: после üks — именительный (üks inimene), от двух — osastav ед. ч."
         },
         {
           "et": "Ma joon vett. / Ma joon vee ära.",
@@ -876,13 +876,13 @@
         },
         {
           "et": "tuba → tuba · laud → lauda · sõber → sõpra",
-          "ru": "а вот osastav из omastav не выводится",
+          "ru": "а вот osastav по omastav надёжно не угадать",
           "hint": "его учим отдельно — ради этого и карточки"
         },
         {
           "et": "tuppa · poodi · kinno · koju",
           "ru": "в комнату · в магазин · в кино · домой",
-          "hint": "короткое «куда» тоже не из omastav — запоминать"
+          "hint": "короткое «куда» бывает совсем не похоже на omastav — такие запоминать"
         },
         {
           "et": "ema → ema · auto → autot · maa → maad · asi → asja · õlu → õlut · süda → südant",
@@ -1006,7 +1006,7 @@
         {
           "et": "Annale · Jürile · Albertile",
           "ru": "Анне · Юри · Альберту",
-          "hint": "на гласную — просто -le; на согласную — через основу omastav: Albert → Alberti → Albertile"
+          "hint": "у имён на гласную — просто -le (Anna → Annale); на согласную — через основу omastav (Albert → Albertile)"
         },
         {
           "et": "Helista mulle!",
@@ -1079,7 +1079,12 @@
         {
           "et": "Pilet maksab kakskümmend üks eurot.",
           "ru": "Билет стоит двадцать один евро.",
-          "hint": "после числа от двух — osastav ед. ч.; после üks — именительный: üks inimene"
+          "hint": "составное число, даже на üks, — osastav ед. ч."
+        },
+        {
+          "et": "Ta on üle kaheksakümne aasta vana.",
+          "ru": "Ему больше восьмидесяти лет.",
+          "hint": "число не в именительном — слово в том же падеже, что и число"
         },
         {
           "et": "Mis aastal sa sündisid? — Ma sündisin aastal … .",
@@ -1126,7 +1131,7 @@
         {
           "et": "Maja on sada nelikümmend ruutmeetrit.",
           "ru": "Дом — сто сорок квадратных метров.",
-          "hint": "после числа от двух — osastav ед. ч.; после üks — именительный: üks inimene"
+          "hint": "число в именительном — osastav ед. ч."
         }
       ]
     },

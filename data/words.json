@@ -3109,8 +3109,8 @@
       "neg": "tule",
       "past": "tuli",
       "nud": "tulnud",
-      "rek": "kuhu,kust,millega,mida tegema,mida tegemast",
-      "ex": "Ta tuli töölt."
+      "ex": "Ta tuli töölt.",
+      "rek": "kuhu,kust,millega,mida tegema,mida tegemast"
     },
     {
       "id": "v_tegema",
@@ -3213,7 +3213,6 @@
       "neg": "anna",
       "past": "andis",
       "nud": "andnud",
-      "rek": "milleks / mida teha",
       "ex": "Anna mulle käsi."
     },
     {
@@ -3261,7 +3260,6 @@
       "neg": "käi",
       "past": "käis",
       "nud": "käinud",
-      "rek": "kus,millega,kelle juures,mida tegemas",
       "ex": "Armastan jala käia."
     },
     {
@@ -3321,8 +3319,9 @@
       "neg": "tunne",
       "past": "tundis",
       "nud": "tundnud",
-      "rek": "mida*",
-      "ex": "Tundis end süüdlasena."
+      "rek": "keda*",
+      "ex": "Tunnen teda lapsepõlvest saadik.",
+      "eki_sense": 6
     },
     {
       "id": "v_pidama",
@@ -3405,7 +3404,6 @@
       "neg": "ela",
       "past": "elas",
       "nud": "elanud",
-      "rek": "millest",
       "ex": "Kotkas elab väga vanaks."
     },
     {
@@ -3417,7 +3415,6 @@
       "neg": "maga",
       "past": "magas",
       "nud": "maganud",
-      "rek": "kellega",
       "ex": "Maga ennast kaineks!"
     },
     {
@@ -3477,8 +3474,8 @@
       "neg": "mõtle",
       "past": "mõtles",
       "nud": "mõtelnud",
-      "rek": "kellest/millest,kellele/millele,kelle/mille peale",
-      "ex": "Millest sa mõtled?"
+      "ex": "Millest sa mõtled?",
+      "rek": "kellest/millest,kellele/millele,kelle/mille peale"
     },
     {
       "id": "v_soitma",
@@ -3607,7 +3604,6 @@
       "neg": "lõpeta",
       "past": "lõpetas",
       "nud": "lõpetanud",
-      "rek": "millega",
       "ex": "Pean töö homseks lõpetama."
     },
     {
@@ -3701,7 +3697,6 @@
       "neg": "seisa",
       "past": "seisis",
       "nud": "seisnud",
-      "rek": "kelle/mille eest",
       "ex": "Hobune jäi oja ette seisma."
     },
     {

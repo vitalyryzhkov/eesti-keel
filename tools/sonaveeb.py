@@ -140,14 +140,55 @@ def forms_of(result):
     return out
 
 
-def rection(result):
-    for m in result.get("meanings") or []:
-        if m.get("rection"):
-            return m["rection"]
-    return ""
+def ranked_meanings(result, ru_hint="", sense=None):
+    """Значения статьи, совпавшие с нашим переводом, в порядке самой статьи.
+
+    Порядок значений в EKI — от основного к частным, и это самый надёжный
+    сигнал. Пробовали ранжировать по позиции совпадения в списке переводов:
+    tundma это чинило, зато hammas получил «зуб пилы», torm — «аплодисменты
+    перешли в бурю», habe — обращение «эй, борода». Слова, где по русским
+    переводам значения не различить (tundma: «знать» первым в трёх значениях),
+    закрываются явным номером значения eki_sense, а не эвристикой.
+    """
+    meanings = result.get("meanings") or []
+    # Явный номер значения из статьи EKI (поле eki_sense) важнее эвристики:
+    # у tundma «знать» стоит первым переводом сразу в трёх значениях, и по
+    # русским переводам «знать кого-то» от «знать предмет» не отличить
+    if isinstance(sense, int) and 0 <= sense < len(meanings):
+        return [meanings[sense]]
+    mine = meaning_keys(ru_hint)
+    if not mine:
+        return []
+    scored = []
+    for i, m in enumerate(result.get("meanings") or []):
+        by_lang = m.get("translations")
+        if not isinstance(by_lang, dict):
+            continue
+        glosses = []
+        for item in by_lang.get("rus") or []:
+            glosses += [g for g in str(item.get("words") or "").split(",") if g.strip()]
+        for pos, gl in enumerate(glosses):
+            if mine & meaning_keys(gl):
+                scored.append((pos, i, m))
+                break
+    scored.sort(key=lambda t: t[1])            # только порядок статьи, без позиции
+    return [m for _, _, m in scored]
 
 
-def example(result, head, limit=70, ru_hint=""):
+def rection(result, ru_hint="", sense=None):
+    """Рекция ТОГО значения, что в переводе, — без заимствования из соседних.
+
+    Раньше бралась первая рекция в статье, и у «magama — спать» оказалось
+    «kellega» из совсем другого значения. Нет рекции у нужного значения —
+    значит, пусто. Перевод не опознан — берём главное (первое) значение.
+    """
+    ranked = ranked_meanings(result, ru_hint, sense)
+    meanings = result.get("meanings") or []
+    target = ranked[0] if ranked else (meanings[0] if meanings else None)
+    return (target or {}).get("rection") or ""
+
+
+def example(result, head, limit=70, ru_hint="", sense=None):
     """Короткий живой пример из словарной статьи — показываем после ответа.
 
     Пример берём ТОЛЬКО из того значения, которое совпадает с нашим переводом.
@@ -160,24 +201,12 @@ def example(result, head, limit=70, ru_hint=""):
     if not meanings:
         return ""
 
-    chosen = []
-    if ru_hint:
-        mine = meaning_keys(ru_hint)
-        for m in meanings:
-            by_lang = m.get("translations")
-            theirs = []
-            if isinstance(by_lang, dict):
-                theirs = [str(item.get("words") or "") for item in by_lang.get("rus") or []]
-            if mine & meaning_keys(", ".join(theirs)):
-                chosen.append(m)
-    if not chosen:
-        chosen = meanings[:1]
+    # тот же ранжированный список, что и для рекции; перевод не опознан — главное значение
+    chosen = ranked_meanings(result, ru_hint, sense) or meanings[:1]
 
-    # Значения в статье EKI идут от основного к частным. Короткий пример из
-    # любого совпавшего значения — плохой выбор: у tõusma перевод «подниматься»
-    # совпал и с переносным значением, и самым коротким оказалось «Tal ei tõuse.».
-    # Поэтому берём первое совпавшее значение, где вообще есть годный пример,
-    # и уже внутри него — самый короткий.
+    # Идём по значениям от лучшего совпадения к худшему и берём первое, где есть
+    # годный пример, — внутри него самый короткий. Короткий пример из любого
+    # значения подряд уже давал «Tal ei tõuse.» в карточке «вставать».
     for m in chosen:
         best = None
         for ex in m.get("examples") or []:
@@ -289,7 +318,7 @@ def fix():
             if api.get(code) and norm(w.get(field, "")) != norm(api[code]):
                 w[field] = api[code]
                 changed += 1
-        ex = example(res, w["nom"], ru_hint=w.get("ru", ""))
+        ex = example(res, w["nom"], ru_hint=w.get("ru", ""), sense=w.get("eki_sense"))
         # при пересчёте убираем и пример из чужого значения, а не только добавляем новый
         if w.get("ex", "") != ex:
             if ex:
@@ -311,14 +340,14 @@ def fix():
             if api.get(code) and norm(w.get(field, "")) != norm(api[code]):
                 w[field] = api[code]
                 changed += 1
-        r = rection(res)
+        r = rection(res, w.get("ru", ""), w.get("eki_sense"))
         if w.get("rek", "") != r:                 # в том числе убираем чужую
             if r:
                 w["rek"] = r
             else:
                 w.pop("rek", None)
             changed += 1
-        ex = example(res, w["ma"], ru_hint=w.get("ru", ""))
+        ex = example(res, w["ma"], ru_hint=w.get("ru", ""), sense=w.get("eki_sense"))
         # при пересчёте убираем и пример из чужого значения, а не только добавляем новый
         if w.get("ex", "") != ex:
             if ex:
@@ -397,7 +426,7 @@ def add(path):
             entry = {"id": unique_id("v_" + slug(word), taken), "ru": ru}
             for field, code in VERB_FORMS:
                 entry[field] = api.get(code, "")
-            r = rection(res)
+            r = rection(res, ru)
             if r:
                 entry["rek"] = r
             ex = example(res, word, ru_hint=ru)
