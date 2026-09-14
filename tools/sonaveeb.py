@@ -235,6 +235,24 @@ def example(result, head, limit=70, ru_hint="", sense=None):
     return ""
 
 
+def eki_type(result):
+    """Номер типа словоизменения EKI (2, 22e, 27…) — первый, что стоит у форм статьи.
+
+    Нужен приложению для подсказки «так же»: соседями считаются слова с тем же
+    номером И той же схемой форм. Один номер без схемы не годится — внутри
+    типа 22e kool → kooli, а pood → poe.
+    """
+    # у abivalmis первой идёт неизменяемая форма ID с типом 41, а склоняется
+    # слово по (02e) — берём тип у самой заглавной формы, иначе у первой
+    # непустой формы с типом
+    forms = [f for f in result.get("wordForms") or []
+             if f.get("inflectionType") and (f.get("value") or "").strip() not in ("", "-")]
+    for f in forms:
+        if f.get("code") in ("SgN", "Sup"):
+            return str(f["inflectionType"])
+    return str(forms[0]["inflectionType"]) if forms else ""
+
+
 def pos_of(result):
     """Часть речи из словаря: прилагательное или существительное.
 
@@ -341,6 +359,10 @@ def fix():
         if pos != "n" and w.get("pos") != pos:
             w["pos"] = pos
             changed += 1
+        t = eki_type(res)
+        if t and w.get("eki_type") != t:
+            w["eki_type"] = t
+            changed += 1
 
     for w in d["verbs"]:
         res = pick_best(fetch(w.get("src") or w["ma"]), "verb", w.get("ru", ""))
@@ -365,6 +387,10 @@ def fix():
                 w["ex"] = ex
             else:
                 w.pop("ex", None)
+            changed += 1
+        t = eki_type(res)
+        if t and w.get("eki_type") != t:
+            w["eki_type"] = t
             changed += 1
 
     d["meta"]["source"] = "формы — EKI через api.sonapi.ee; переводы вручную"
@@ -437,6 +463,8 @@ def add(path):
             entry = {"id": unique_id("v_" + slug(word), taken), "ru": ru}
             for field, code in VERB_FORMS:
                 entry[field] = api.get(code, "")
+            if eki_type(res):
+                entry["eki_type"] = eki_type(res)
             r = rection(res, ru)
             if r:
                 entry["rek"] = r
@@ -451,6 +479,8 @@ def add(path):
             entry = {"id": unique_id("n_" + slug(word), taken), "ru": ru}
             for field, code in NOUN_FORMS:
                 entry[field] = api.get(code, "")
+            if eki_type(res):
+                entry["eki_type"] = eki_type(res)
             pos = pos_of(res)
             if pos != "n":
                 entry["pos"] = pos

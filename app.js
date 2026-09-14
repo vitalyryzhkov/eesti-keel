@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v35';
+const VERSION = 'v36';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -71,8 +71,49 @@ function saveState() {
 
 /* ---------- построение карточек ---------- */
 
+// Схема изменения слова: общее начало всех форм отбрасываем, буквы хвоста
+// заглавной формы заменяем метками A, B, C…, последнюю букву второй формы
+// (гласную основы, её в заглавной нет) — «*». Пустая форма — «-».
+// raamat → raamatu, raamatut и tänav → tänava, tänavat дают одну схему,
+// kool → kooli и pood → poe — разные.
+function kinPattern(forms) {
+  const fs = forms.map((f) => String(f || '').split(',')[0].trim());
+  const full = fs.filter(Boolean);
+  let p = 0;
+  while (full.length && full.every((f) => f.length > p) && new Set(full.map((f) => f[p])).size === 1) p++;
+  const tails = fs.map((f) => (f ? [...f.slice(p)] : null));
+  const sym = new Map();
+  for (const ch of tails[0] || []) if (!sym.has(ch)) sym.set(ch, String.fromCharCode(65 + sym.size));
+  const t1 = tails[1];
+  if (t1 && t1.length && !sym.has(t1[t1.length - 1])) sym.set(t1[t1.length - 1], '*');
+  return tails.map((t) => (t ? t.map((ch) => sym.get(ch) || ch).join('') : '-')).join('|');
+}
+
+// id слова → его группа: слова колоды с тем же типом EKI и той же схемой форм.
+// Слова без eki_type (добавленные до v36) ни в какую группу не попадают
+function kinGroups() {
+  const groups = new Map();
+  const put = (kind, w, forms) => {
+    if (!w.eki_type) return;
+    // номер типа — строго как у EKI: «02» и «2» не склеиваем. На показанных
+    // формах они совпадают, но в полной парадигме бывают различия (у röster,
+    // 02e, лишние варианты мн. ч., которых нет у kelder, 2e), а что значит ноль,
+    // мы не знаем
+    const key = kind + ':' + w.eki_type + ':' + kinPattern(forms);
+    if (!groups.has(key)) groups.set(key, []);
+    const first = (f) => String(f || '').split(',')[0].trim();
+    groups.get(key).push({ id: w.id, head: forms[0], a: first(forms[1]), b: first(forms[2]) });
+  };
+  for (const n of DATA.nouns) put('n', n, [n.nom, n.gen, n.part, n.plpart]);
+  for (const v of DATA.verbs) put('v', v, [v.ma, v.da, v.b, v.neg]);
+  const byId = new Map();
+  for (const list of groups.values()) for (const w of list) byId.set(w.id, list);
+  return byId;
+}
+
 function buildCards() {
   const out = [];
+  const kin = kinGroups();
   for (const n of DATA.nouns) {
     const fields = [
       { key: 'gen', label: 'omastav (кого/чего)', answer: n.gen },
@@ -82,7 +123,7 @@ function buildCards() {
     out.push({
       id: n.id + ':forms', kind: 'forms', deck: 'forms',
       tag: ({ adj: 'omadussõna', num: 'arvsõna' }[n.pos] || 'nimisõna') + ' · формы',
-      prompt: n.nom, ru: n.ru, fields, ex: n.ex,
+      prompt: n.nom, ru: n.ru, fields, ex: n.ex, wid: n.id, kin: kin.get(n.id),
     });
     out.push({
       id: n.id + ':prod', kind: 'prod', deck: 'vocab',
@@ -106,7 +147,7 @@ function buildCards() {
       id: v.id + ':forms', kind: 'forms', deck: 'forms',
       tag: 'tegusõna · формы', prompt: v.ma,
       ru: v.ru + (v.rek ? ' · ' + v.rek : ''),   // рекция из словаря: aitama keda, helistama kellele
-      fields: vFields, ex: v.ex,
+      fields: vFields, ex: v.ex, wid: v.id, kin: kin.get(v.id),
     });
     out.push({
       id: v.id + ':prod', kind: 'prod', deck: 'vocab',
@@ -331,9 +372,63 @@ function showExample() {
   (el.card.querySelector('.card-scroll') || el.card).appendChild(node);
 }
 
+// «Так же»: до трёх слов колоды, которые меняются по той же схеме. Номер типа
+// не показываем — внутри одного номера слова меняются по-разному, а готовые
+// формы соседа и есть образец. Сначала уже знакомые слова; три показанных
+// по возможности кончаются по-разному, чтобы образцы не повторяли друг друга
+function showKin() {
+  const c = current;
+  if (c.kind !== 'forms' || !c.kin || el.card.querySelector('.kin')) return;
+  const isVerb = c.fields.some((f) => f.key === 'da');
+  // Родство слов по написанию не угадать: общий кусок бывает корнем (lennujaam,
+  // bussijaam), а бывает суффиксом (roheline, tavaline). Поэтому не ищем корни,
+  // а следим, чтобы три показанных слова не кончались одинаково — иначе строка
+  // «raudteejaam · lennujaam · bussijaam» даёт один образец вместо трёх.
+  // Сравниваем последние 4 буквы (у глаголов — без -ma).
+  const stem = (h) => (isVerb ? h.replace(/ma$/, '') : h);
+  const end = (h) => stem(h).slice(-4);
+  // короткое слово целиком внутри длинного — тоже одно окончание: ema и vanaema.
+  // Сравниваем основы с основами: иначе у глаголов koristama не «кончается» на ista
+  const sameEnd = (x, y) => stem(x).endsWith(end(y)) || stem(y).endsWith(end(x));
+  // знакомое — слово, по которому есть прогресс в любой из трёх карточек
+  const known = (w) => ['forms', 'prod', 'recog'].some((k) => sched(w.id + ':' + k));
+  const pool = c.kin.filter((w) => w.id !== c.wid);
+  const others = [];
+  // сложное слово на уже показанное (vanaema при ema, ebaviisakas при viisakas)
+  const compound = (x, y) => x !== y && (x.endsWith(y) || y.endsWith(x));
+  // уровни: 2 — окончания разные; 1 — окончание общее, но не сложное слово
+  // на показанное (kiilakas при viisakas: общий только суффикс); 0 — что осталось
+  const take = (list, level) => {
+    for (const w of list) {
+      if (others.length >= 3 || others.includes(w)) continue;
+      if (level >= 2 && others.some((o) => sameEnd(o.head, w.head))) continue;
+      if (level >= 1 && others.some((o) => compound(o.head, w.head))) continue;
+      others.push(w);
+    }
+  };
+  const fam = pool.filter(known);
+  const fresh = pool.filter((w) => !known(w));
+  // знакомые вперёд; незнакомое слово вытесняет знакомое только ради разных окончаний
+  for (const level of [2, 1, 0]) {
+    take(fam, level);
+    take(fresh, level);
+  }
+  // в строке знакомые тоже впереди, даже если добраны последними
+  others.sort((x, y) => Number(known(y)) - Number(known(x)));
+  if (!others.length) return;
+  const node = document.createElement('div');
+  node.className = 'kin';
+  node.innerHTML = '<span class="kin-lbl">так же</span> <span lang="et">' +
+    // пара «слово → формы» не должна рваться между строками на узком экране
+    others.map((w) => '<span class="kin-w">' + esc(w.head + ' → ' + w.a + ', ' + w.b) + '</span>').join(' · ') +
+    '</span>';
+  (el.card.querySelector('.card-scroll') || el.card).appendChild(node);
+}
+
 function finish(ok, immediate) {
   const c = current;
   showExample();
+  showKin();
   const wasNew = !sched(c.id);
   grade(c.id, ok);
   if (wasNew) { state.newCount = (state.newCount || 0) + 1; saveState(); }
@@ -704,6 +799,12 @@ function parseEntry(data, word, ru) {
   const map = isVerb ? VERB_MAP : NOUN_MAP;
   const entry = { id: 'u_' + word.replace(/[^\wõäöüšž]/gi, ''), ru: '' };
   for (const [field, code] of map) entry[field] = api[code] || '';
+  // тип словоизменения — для подсказки «так же», как eki_type в words.json
+  // тип — у заглавной формы (SgN / Sup), как eki_type() в tools/sonaveeb.py
+  const typedForms = (res.wordForms || []).filter((f) => f && f.inflectionType &&
+    !['', '-'].includes(String(f.value || '').trim()));
+  const typed = typedForms.find((f) => f.code === 'SgN' || f.code === 'Sup') || typedForms[0];
+  if (typed) entry.eki_type = String(typed.inflectionType);
   if (ex) entry.ex = ex;
   if (isVerb && rek) entry.rek = rek;
   if (!isVerb && pos !== 'n') entry.pos = pos;

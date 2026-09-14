@@ -15,7 +15,8 @@
       "gen": "raamatu",
       "part": "raamatut",
       "plpart": "raamatuid",
-      "ex": "Väga igav raamat."
+      "ex": "Väga igav raamat.",
+      "eki_type": "2"
     },
     {
       "id": "n_tuba",
@@ -24,7 +25,8 @@
       "gen": "toa",
       "part": "tuba",
       "plpart": "tube,tubasid",
-      "ex": "Koristasin toa ära."
+      "ex": "Koristasin toa ära.",
+      "eki_type": "18e"
     },
     {
       "id": "n_maja",
@@ -33,7 +35,8 @@
       "gen": "maja",
       "part": "maja",
       "plpart": "maju,majasid",
-      "ex": "Elame ühes majas."
+      "ex": "Elame ühes majas.",
+      "eki_type": "17u"
     },
     {
       "id": "n_laud",
@@ -42,7 +45,8 @@
       "gen": "laua",
       "part": "lauda",
       "plpart": "laudu,laudasid",
-      "ex": "Ostsime kööki ümmarguse laua."
+      "ex": "Ostsime kööki ümmarguse laua.",
+      "eki_type": "22u"
     },
     {
       "id": "n_jalg",
@@ -51,7 +55,8 @@
       "gen": "jala",
       "part": "jalga",
       "plpart": "jalgu,jalgasid",
-      "ex": "Lehma tagumised jalad."
+      "ex": "Lehma tagumised jalad.",
+      "eki_type": "22u"
     },
     {
       "id": "n_kasi",
@@ -60,7 +65,8 @@
       "gen": "käe",
       "part": "kätt",
       "plpart": "käsi",
-      "ex": "Tal oli pudel käes."
+      "ex": "Tal oli pudel käes.",
+      "eki_type": "15"
     },
     {
       "id": "n_too",
@@ -69,7 +75,8 @@
       "gen": "töö",
       "part": "tööd",
       "plpart": "töid,töösid",
-      "ex": "Tööd tehti kõvasti."
+      "ex": "Tööd tehti kõvasti.",
+      "eki_type": "26i"
     },
     {
       "id": "n_sober",
@@ -78,7 +85,8 @@
       "gen": "sõbra",
       "part": "sõpra",
       "plpart": "sõpru,sõprasid",
-      "ex": "Argo on mu parim sõber."
+      "ex": "Argo on mu parim sõber.",
+      "eki_type": "24u"
     },
     {
       "id": "n_inimene",
@@ -87,7 +95,8 @@
       "gen": "inimese",
       "part": "inimest",
       "plpart": "inimesi",
-      "ex": "Tiina on hea inimene."
+      "ex": "Tiina on hea inimene.",
+      "eki_type": "12"
     },
     {
       "id": "n_pood",
@@ -96,7 +105,8 @@
       "gen": "poe",
       "part": "poodi",
       "plpart": "poode,poodisid",
-      "ex": "Astusin poest läbi."
+      "ex": "Astusin poest läbi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_auto",
@@ -105,7 +115,8 @@
       "gen": "auto",
       "part": "autot",
       "plpart": "autosid",
-      "ex": "Jalakäija jäi auto alla."
+      "ex": "Jalakäija jäi auto alla.",
+      "eki_type": "16"
     },
     {
       "id": "n_koer",
@@ -114,7 +125,8 @@
       "gen": "koera",
       "part": "koera",
       "plpart": "koeri,koerasid",
-      "ex": "Truu nagu koer."
+      "ex": "Truu nagu koer.",
+      "eki_type": "23i"
     },
     {
       "id": "n_kool",
@@ -123,7 +135,8 @@
       "gen": "kooli",
       "part": "kooli",
       "plpart": "koole,koolisid",
-      "ex": "Linnas avati uus kool."
+      "ex": "Linnas avati uus kool.",
+      "eki_type": "22e"
     },
     {
       "id": "n_tanav",
@@ -132,7 +145,8 @@
       "gen": "tänava",
       "part": "tänavat",
       "plpart": "tänavaid",
-      "ex": "Elan Palli tänaval."
+      "ex": "Elan Palli tänaval.",
+      "eki_type": "2"
     },
     {
       "id": "n_aeg",
@@ -141,7 +155,8 @@
       "gen": "aja",
       "part": "aega",
       "plpart": "aegu,aegasid",
-      "ex": "Aeg ei peatu."
+      "ex": "Aeg ei peatu.",
+      "eki_type": "22u"
     },
     {
       "id": "n_pere",
@@ -150,7 +165,8 @@
       "gen": "pere",
       "part": "peret",
       "plpart": "peresid",
-      "ex": "Terve pere jäi haigeks."
+      "ex": "Terve pere jäi haigeks.",
+      "eki_type": "16"
     },
     {
       "id": "n_hind",
@@ -159,7 +175,8 @@
       "gen": "hinna",
       "part": "hinda",
       "plpart": "hindu,hindasid",
-      "ex": "Kolm ühe hinnaga."
+      "ex": "Kolm ühe hinnaga.",
+      "eki_type": "22u"
     },
     {
       "id": "n_keel",
@@ -168,7 +185,8 @@
       "gen": "keele",
       "part": "keelt",
       "plpart": "keeli",
-      "ex": "Kas sa oskad eesti keelt?"
+      "ex": "Kas sa oskad eesti keelt?",
+      "eki_type": "13"
     },
     {
       "id": "n_paev",
@@ -177,7 +195,8 @@
       "gen": "päeva",
       "part": "päeva",
       "plpart": "päevi,päevasid",
-      "ex": "Aastas on 365 päeva."
+      "ex": "Aastas on 365 päeva.",
+      "eki_type": "22i"
     },
     {
       "id": "n_nadal",
@@ -186,7 +205,8 @@
       "gen": "nädala",
       "part": "nädalat",
       "plpart": "nädalaid",
-      "ex": "Ma käin kaks korda nädalas trennis."
+      "ex": "Ma käin kaks korda nädalas trennis.",
+      "eki_type": "2"
     },
     {
       "id": "n_kuu",
@@ -195,7 +215,8 @@
       "gen": "kuu",
       "part": "kuud",
       "plpart": "kuid,kuusid",
-      "ex": "Kuu kadus pilve taha."
+      "ex": "Kuu kadus pilve taha.",
+      "eki_type": "26i"
     },
     {
       "id": "n_aasta",
@@ -204,7 +225,8 @@
       "gen": "aasta",
       "part": "aastat",
       "plpart": "aastaid",
-      "ex": "Olen sündinud 1991. aastal."
+      "ex": "Olen sündinud 1991. aastal.",
+      "eki_type": "1"
     },
     {
       "id": "n_pilt",
@@ -213,7 +235,8 @@
       "gen": "pildi",
       "part": "pilti",
       "plpart": "pilte,piltisid",
-      "ex": "Laste joonistatud pildid."
+      "ex": "Laste joonistatud pildid.",
+      "eki_type": "22e"
     },
     {
       "id": "n_uks",
@@ -222,7 +245,8 @@
       "gen": "ukse",
       "part": "ust",
       "plpart": "uksi",
-      "ex": "Uks on lukus."
+      "ex": "Uks on lukus.",
+      "eki_type": "14"
     },
     {
       "id": "n_silm",
@@ -231,7 +255,8 @@
       "gen": "silma",
       "part": "silma",
       "plpart": "silmi,silmasid",
-      "ex": "Tal tulid pisarad silma."
+      "ex": "Tal tulid pisarad silma.",
+      "eki_type": "22i"
     },
     {
       "id": "n_laps",
@@ -240,7 +265,8 @@
       "gen": "lapse",
       "part": "last",
       "plpart": "lapsi",
-      "ex": "Klassis on 25 last."
+      "ex": "Klassis on 25 last.",
+      "eki_type": "14"
     },
     {
       "id": "n_naine",
@@ -249,7 +275,8 @@
       "gen": "naise",
       "part": "naist",
       "plpart": "naisi",
-      "ex": "Ukse taga seisis võõras naine."
+      "ex": "Ukse taga seisis võõras naine.",
+      "eki_type": "12"
     },
     {
       "id": "n_mees",
@@ -258,7 +285,8 @@
       "gen": "mehe",
       "part": "meest",
       "plpart": "mehi",
-      "ex": "Mehed ja naised on juhina erinevad."
+      "ex": "Mehed ja naised on juhina erinevad.",
+      "eki_type": "13"
     },
     {
       "id": "n_linn",
@@ -267,7 +295,8 @@
       "gen": "linna",
       "part": "linna",
       "plpart": "linnu,linnasid",
-      "ex": "Tallinn on Eesti suurim linn."
+      "ex": "Tallinn on Eesti suurim linn.",
+      "eki_type": "22u"
     },
     {
       "id": "n_leib",
@@ -276,7 +305,8 @@
       "gen": "leiva",
       "part": "leiba",
       "plpart": "leibu,leibasid",
-      "ex": "Ostsin poest leiba ja saia."
+      "ex": "Ostsin poest leiba ja saia.",
+      "eki_type": "22u"
     },
     {
       "id": "n_oun",
@@ -285,7 +315,8 @@
       "gen": "õuna",
       "part": "õuna",
       "plpart": "õunu,õunasid",
-      "ex": "Tüdruk sööb õuna."
+      "ex": "Tüdruk sööb õuna.",
+      "eki_type": "23u"
     },
     {
       "id": "n_tee",
@@ -294,7 +325,8 @@
       "gen": "tee",
       "part": "teed",
       "plpart": "teid,teesid",
-      "ex": "Teed on libedad."
+      "ex": "Teed on libedad.",
+      "eki_type": "26i"
     },
     {
       "id": "n_riik",
@@ -303,7 +335,8 @@
       "gen": "riigi",
       "part": "riiki",
       "plpart": "riike,riikisid",
-      "ex": "Eesti on väike riik."
+      "ex": "Eesti on väike riik.",
+      "eki_type": "22e"
     },
     {
       "id": "n_arst",
@@ -312,7 +345,8 @@
       "gen": "arsti",
       "part": "arsti",
       "plpart": "arste,arstisid",
-      "ex": "Läksin arsti juurde."
+      "ex": "Läksin arsti juurde.",
+      "eki_type": "22e"
     },
     {
       "id": "n_nimi",
@@ -321,7 +355,8 @@
       "gen": "nime",
       "part": "nime",
       "plpart": "nimesid",
-      "ex": "Mis su nimi on?"
+      "ex": "Mis su nimi on?",
+      "eki_type": "20"
     },
     {
       "id": "n_lill",
@@ -330,7 +365,8 @@
       "gen": "lille",
       "part": "lille",
       "plpart": "lilli,lillesid",
-      "ex": "Pane lilled vaasi!"
+      "ex": "Pane lilled vaasi!",
+      "eki_type": "22i"
     },
     {
       "id": "n_puu",
@@ -339,7 +375,8 @@
       "gen": "puu",
       "part": "puud",
       "plpart": "puid,puusid",
-      "ex": "Ahvid elavad puu otsas."
+      "ex": "Ahvid elavad puu otsas.",
+      "eki_type": "26i"
     },
     {
       "id": "n_vend",
@@ -348,7 +385,8 @@
       "gen": "venna",
       "part": "venda",
       "plpart": "vendi,vendasid",
-      "ex": "Mihkel ja Jaan on vennad."
+      "ex": "Mihkel ja Jaan on vennad.",
+      "eki_type": "22i"
     },
     {
       "id": "n_ode",
@@ -357,7 +395,8 @@
       "gen": "õe",
       "part": "õde",
       "plpart": "õdesid",
-      "ex": "Nad on õde ja vend."
+      "ex": "Nad on õde ja vend.",
+      "eki_type": "18"
     },
     {
       "id": "n_sona",
@@ -366,7 +405,8 @@
       "gen": "sõna",
       "part": "sõna",
       "plpart": "sõnu,sõnasid",
-      "ex": "Mis see sõna tähendab?"
+      "ex": "Mis see sõna tähendab?",
+      "eki_type": "17u"
     },
     {
       "id": "n_lugu",
@@ -375,7 +415,8 @@
       "gen": "loo",
       "part": "lugu",
       "plpart": "lugusid",
-      "ex": "Pane see lugu kirja."
+      "ex": "Pane see lugu kirja.",
+      "eki_type": "18"
     },
     {
       "id": "n_jogi",
@@ -384,7 +425,8 @@
       "gen": "jõe",
       "part": "jõge",
       "plpart": "jõgesid",
-      "ex": "Jõgi voolab linnast läbi."
+      "ex": "Jõgi voolab linnast läbi.",
+      "eki_type": "21"
     },
     {
       "id": "n_meri",
@@ -393,7 +435,8 @@
       "gen": "mere",
       "part": "merd",
       "plpart": "meresid",
-      "ex": "Käisin meres ujumas."
+      "ex": "Käisin meres ujumas.",
+      "eki_type": "20"
     },
     {
       "id": "n_oo",
@@ -402,7 +445,8 @@
       "gen": "öö",
       "part": "ööd",
       "plpart": "öid,öösid",
-      "ex": "Isa suri ööl vastu laupäeva."
+      "ex": "Isa suri ööl vastu laupäeva.",
+      "eki_type": "26i"
     },
     {
       "id": "n_hommik",
@@ -411,7 +455,8 @@
       "gen": "hommiku",
       "part": "hommikut",
       "plpart": "hommikuid",
-      "ex": "Hommik on käes."
+      "ex": "Hommik on käes.",
+      "eki_type": "2"
     },
     {
       "id": "n_ohtu",
@@ -420,7 +465,8 @@
       "gen": "õhtu",
       "part": "õhtut",
       "plpart": "õhtuid",
-      "ex": "Õhtu on juba käes."
+      "ex": "Õhtu on juba käes.",
+      "eki_type": "1"
     },
     {
       "id": "n_vesi",
@@ -429,7 +475,8 @@
       "gen": "vee",
       "part": "vett",
       "plpart": "vesi",
-      "ex": "Jõin klaasi vett."
+      "ex": "Jõin klaasi vett.",
+      "eki_type": "15"
     },
     {
       "id": "n_sook",
@@ -438,7 +485,8 @@
       "gen": "söögi",
       "part": "sööki",
       "plpart": "sööke,söökisid",
-      "ex": "Söök on laual."
+      "ex": "Söök on laual.",
+      "eki_type": "22e"
     },
     {
       "id": "n_raha",
@@ -447,7 +495,8 @@
       "gen": "raha",
       "part": "raha",
       "plpart": "rahasid",
-      "ex": "Laena mulle veidi raha."
+      "ex": "Laena mulle veidi raha.",
+      "eki_type": "17"
     },
     {
       "id": "n_ilm",
@@ -456,7 +505,8 @@
       "gen": "ilma",
       "part": "ilma",
       "plpart": "ilmu,ilmasid",
-      "ex": "Ilm püsis kuiv."
+      "ex": "Ilm püsis kuiv.",
+      "eki_type": "22u"
     },
     {
       "id": "n_esimene",
@@ -466,7 +516,8 @@
       "part": "esimest",
       "plpart": "esimesi",
       "ex": "Poiss käib esimeses klassis.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "12"
     },
     {
       "id": "n_teine",
@@ -476,7 +527,8 @@
       "part": "teist",
       "plpart": "teisi",
       "ex": "Elan teisel korrusel.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "12"
     },
     {
       "id": "n_kolmas",
@@ -486,7 +538,8 @@
       "part": "kolmandat,kolmat",
       "plpart": "kolmandaid",
       "ex": "Kolmanda klassi poiss.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_neljas",
@@ -496,7 +549,8 @@
       "part": "neljandat,neljat",
       "plpart": "neljandaid",
       "ex": "Elan neljandal korrusel.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_viies",
@@ -506,7 +560,8 @@
       "part": "viiendat",
       "plpart": "viiendaid",
       "ex": "Õpin viiendas klassis.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_kuues",
@@ -516,7 +571,8 @@
       "part": "kuuendat",
       "plpart": "kuuendaid",
       "ex": "Juuni on aasta kuues kuu.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_seitsmes",
@@ -526,7 +582,8 @@
       "part": "seitsmendat",
       "plpart": "seitsmendaid",
       "ex": "Seitsmenda klassi lapsed.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_kaheksas",
@@ -536,7 +593,8 @@
       "part": "kaheksandat",
       "plpart": "kaheksandaid",
       "ex": "Kaheksandat kuud lapseootel naine.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_uheksas",
@@ -546,7 +604,8 @@
       "part": "üheksandat",
       "plpart": "üheksandaid",
       "ex": "Üheksanda klassi poisid.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_kumnes",
@@ -556,7 +615,8 @@
       "part": "kümnendat",
       "plpart": "kümnendaid",
       "ex": "Jaak käib kümnendas klassis.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "2"
     },
     {
       "id": "n_elutuba",
@@ -565,7 +625,8 @@
       "gen": "elutoa",
       "part": "elutuba",
       "plpart": "elutube,elutubasid",
-      "ex": "Korteris on suur elutuba."
+      "ex": "Korteris on suur elutuba.",
+      "eki_type": "18e"
     },
     {
       "id": "n_magamistuba",
@@ -574,7 +635,8 @@
       "gen": "magamistoa",
       "part": "magamistuba",
       "plpart": "magamistube,magamistubasid",
-      "ex": "Magamistoas on lai voodi."
+      "ex": "Magamistoas on lai voodi.",
+      "eki_type": "18e"
     },
     {
       "id": "n_lastetuba",
@@ -583,7 +645,8 @@
       "gen": "lastetoa",
       "part": "lastetuba",
       "plpart": "lastetube,lastetubasid",
-      "ex": "Lastetoas on kaks voodit."
+      "ex": "Lastetoas on kaks voodit.",
+      "eki_type": "18e"
     },
     {
       "id": "n_tootuba",
@@ -592,7 +655,8 @@
       "gen": "töötoa",
       "part": "töötuba",
       "plpart": "töötube,töötubasid",
-      "ex": "Poisid on garaaži töötoa teinud."
+      "ex": "Poisid on garaaži töötoa teinud.",
+      "eki_type": "18e"
     },
     {
       "id": "n_vannituba",
@@ -601,7 +665,8 @@
       "gen": "vannitoa",
       "part": "vannituba",
       "plpart": "vannitube,vannitubasid",
-      "ex": "Meil on aknaga vannituba."
+      "ex": "Meil on aknaga vannituba.",
+      "eki_type": "18e"
     },
     {
       "id": "n_kook",
@@ -610,7 +675,8 @@
       "gen": "köögi",
       "part": "kööki",
       "plpart": "kööke,köökisid",
-      "ex": "Ema tegi köögis süüa."
+      "ex": "Ema tegi köögis süüa.",
+      "eki_type": "22e"
     },
     {
       "id": "n_koridor",
@@ -619,7 +685,8 @@
       "gen": "koridori",
       "part": "koridori",
       "plpart": "koridore",
-      "ex": "Tema tuba asub koridori lõpus."
+      "ex": "Tema tuba asub koridori lõpus.",
+      "eki_type": "19"
     },
     {
       "id": "n_esik",
@@ -628,7 +695,8 @@
       "gen": "esiku",
       "part": "esikut",
       "plpart": "esikuid",
-      "ex": "Jätsin seljakoti esikusse."
+      "ex": "Jätsin seljakoti esikusse.",
+      "eki_type": "2"
     },
     {
       "id": "n_aed",
@@ -637,7 +705,8 @@
       "gen": "aia",
       "part": "aeda",
       "plpart": "aedu,aedasid",
-      "ex": "Aias kasvasid õunapuud."
+      "ex": "Aias kasvasid õunapuud.",
+      "eki_type": "22u"
     },
     {
       "id": "n_aken",
@@ -646,7 +715,8 @@
       "gen": "akna",
       "part": "akent",
       "plpart": "aknaid",
-      "ex": "Papagoi pääses lahtise akna kaudu välja."
+      "ex": "Papagoi pääses lahtise akna kaudu välja.",
+      "eki_type": "8"
     },
     {
       "id": "n_garaaz",
@@ -655,7 +725,8 @@
       "gen": "garaaži",
       "part": "garaaži",
       "plpart": "garaaže,garaažisid",
-      "ex": "Ajasin auto garaažist välja."
+      "ex": "Ajasin auto garaažist välja.",
+      "eki_type": "22e"
     },
     {
       "id": "n_jalgratas",
@@ -664,7 +735,8 @@
       "gen": "jalgratta",
       "part": "jalgratast",
       "plpart": "jalgrattaid",
-      "ex": "Käin tööl jalgrattaga."
+      "ex": "Käin tööl jalgrattaga.",
+      "eki_type": "7"
     },
     {
       "id": "n_katus",
@@ -673,7 +745,8 @@
       "gen": "katuse",
       "part": "katust",
       "plpart": "katuseid",
-      "ex": "Torm viis majalt katuse."
+      "ex": "Torm viis majalt katuse.",
+      "eki_type": "9"
     },
     {
       "id": "n_kelder",
@@ -682,7 +755,8 @@
       "gen": "keldri",
       "part": "keldrit",
       "plpart": "keldreid",
-      "ex": "Maja all on kelder."
+      "ex": "Maja all on kelder.",
+      "eki_type": "2e"
     },
     {
       "id": "n_lift",
@@ -691,7 +765,8 @@
       "gen": "lifti",
       "part": "lifti",
       "plpart": "lifte,liftisid",
-      "ex": "Lift ei tööta."
+      "ex": "Lift ei tööta.",
+      "eki_type": "22e"
     },
     {
       "id": "n_rodu",
@@ -700,7 +775,8 @@
       "gen": "rõdu",
       "part": "rõdu",
       "plpart": "rõdusid",
-      "ex": "Kasvatan rõdul lilli."
+      "ex": "Kasvatan rõdul lilli.",
+      "eki_type": "17"
     },
     {
       "id": "n_saun",
@@ -709,7 +785,8 @@
       "gen": "sauna",
       "part": "sauna",
       "plpart": "saunu,saunasid",
-      "ex": "Pärast sauna jõime teed."
+      "ex": "Pärast sauna jõime teed.",
+      "eki_type": "22u"
     },
     {
       "id": "n_terrass",
@@ -718,7 +795,8 @@
       "gen": "terrassi",
       "part": "terrassi",
       "plpart": "terrasse,terrassisid",
-      "ex": "Istusime kohviku terrassil."
+      "ex": "Istusime kohviku terrassil.",
+      "eki_type": "22e"
     },
     {
       "id": "n_trepp",
@@ -727,7 +805,8 @@
       "gen": "trepi",
       "part": "treppi",
       "plpart": "treppe,treppisid",
-      "ex": "See trepp viib keldrisse."
+      "ex": "See trepp viib keldrisse.",
+      "eki_type": "22e"
     },
     {
       "id": "n_surnuaed",
@@ -736,7 +815,8 @@
       "gen": "surnuaia",
       "part": "surnuaeda",
       "plpart": "surnuaedu,surnuaedasid",
-      "ex": "Nägin öösel surnuaias vaimu."
+      "ex": "Nägin öösel surnuaias vaimu.",
+      "eki_type": "22u"
     },
     {
       "id": "n_spordivaljak",
@@ -744,7 +824,8 @@
       "nom": "spordiväljak",
       "gen": "spordiväljaku",
       "part": "spordiväljakut",
-      "plpart": "spordiväljakuid"
+      "plpart": "spordiväljakuid",
+      "eki_type": "2"
     },
     {
       "id": "n_raudteejaam",
@@ -753,7 +834,8 @@
       "gen": "raudteejaama",
       "part": "raudteejaama",
       "plpart": "raudteejaamu,raudteejaamasid",
-      "ex": "Läksime Nõmme raudteejaama sõpra rongi peale saatma."
+      "ex": "Läksime Nõmme raudteejaama sõpra rongi peale saatma.",
+      "eki_type": "22u"
     },
     {
       "id": "n_manguvaljak",
@@ -762,7 +844,8 @@
       "gen": "mänguväljaku",
       "part": "mänguväljakut",
       "plpart": "mänguväljakuid",
-      "ex": "Pargis on mitu mänguväljakut."
+      "ex": "Pargis on mitu mänguväljakut.",
+      "eki_type": "2"
     },
     {
       "id": "n_lennujaam",
@@ -771,7 +854,8 @@
       "gen": "lennujaama",
       "part": "lennujaama",
       "plpart": "lennujaamu,lennujaamasid",
-      "ex": "Lennujaam asub linnast väljas."
+      "ex": "Lennujaam asub linnast väljas.",
+      "eki_type": "22u"
     },
     {
       "id": "n_kaubanduskeskus",
@@ -780,7 +864,8 @@
       "gen": "kaubanduskeskuse",
       "part": "kaubanduskeskust",
       "plpart": "kaubanduskeskusi",
-      "ex": "Väljakule kerkivad suur kaubanduskeskus, parkimismaja ning büroohoone."
+      "ex": "Väljakule kerkivad suur kaubanduskeskus, parkimismaja ning büroohoone.",
+      "eki_type": "11"
     },
     {
       "id": "n_bussipeatus",
@@ -789,7 +874,8 @@
       "gen": "bussipeatuse",
       "part": "bussipeatust",
       "plpart": "bussipeatusi",
-      "ex": "Ootasin bussipeatuses bussi."
+      "ex": "Ootasin bussipeatuses bussi.",
+      "eki_type": "11"
     },
     {
       "id": "n_bussijaam",
@@ -798,7 +884,8 @@
       "gen": "bussijaama",
       "part": "bussijaama",
       "plpart": "bussijaamu,bussijaamasid",
-      "ex": "Ostame piletid bussijaamast."
+      "ex": "Ostame piletid bussijaamast.",
+      "eki_type": "22u"
     },
     {
       "id": "n_bensiinijaam",
@@ -807,7 +894,8 @@
       "gen": "bensiinijaama",
       "part": "bensiinijaama",
       "plpart": "bensiinijaamu,bensiinijaamasid",
-      "ex": "Sõitsime lähimasse bensiinijaama."
+      "ex": "Sõitsime lähimasse bensiinijaama.",
+      "eki_type": "22u"
     },
     {
       "id": "n_autopesula",
@@ -816,7 +904,8 @@
       "gen": "autopesula",
       "part": "autopesulat",
       "plpart": "autopesulaid",
-      "ex": "Istusin tund aega autopesula järjekorras."
+      "ex": "Istusin tund aega autopesula järjekorras.",
+      "eki_type": "1"
     },
     {
       "id": "n_tuuleveski",
@@ -824,7 +913,8 @@
       "nom": "tuuleveski",
       "gen": "tuuleveski",
       "part": "tuuleveskit",
-      "plpart": "tuuleveskeid"
+      "plpart": "tuuleveskeid",
+      "eki_type": "1e"
     },
     {
       "id": "n_tuletorn",
@@ -832,7 +922,8 @@
       "nom": "tuletorn",
       "gen": "tuletorni",
       "part": "tuletorni",
-      "plpart": "tuletorne,tuletornisid"
+      "plpart": "tuletorne,tuletornisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_sild",
@@ -841,7 +932,8 @@
       "gen": "silla",
       "part": "silda",
       "plpart": "sildu,sildasid",
-      "ex": "Pirita jõe sild."
+      "ex": "Pirita jõe sild.",
+      "eki_type": "22u"
     },
     {
       "id": "n_saar",
@@ -850,7 +942,8 @@
       "gen": "saare",
       "part": "saart",
       "plpart": "saari",
-      "ex": "Saarele pääseb paadiga."
+      "ex": "Saarele pääseb paadiga.",
+      "eki_type": "13"
     },
     {
       "id": "n_pold",
@@ -859,7 +952,8 @@
       "gen": "põllu",
       "part": "põldu",
       "plpart": "põlde,põldusid",
-      "ex": "Põllul kasvavad kartulid."
+      "ex": "Põllul kasvavad kartulid.",
+      "eki_type": "22e"
     },
     {
       "id": "n_magi",
@@ -868,7 +962,8 @@
       "gen": "mäe",
       "part": "mäge",
       "plpart": "mägesid",
-      "ex": "Otepää ümbruse mäed."
+      "ex": "Otepää ümbruse mäed.",
+      "eki_type": "21"
     },
     {
       "id": "n_mets",
@@ -877,7 +972,8 @@
       "gen": "metsa",
       "part": "metsa",
       "plpart": "metsi,metsasid",
-      "ex": "Eksisin metsa ära."
+      "ex": "Eksisin metsa ära.",
+      "eki_type": "22i"
     },
     {
       "id": "n_matkarada",
@@ -886,7 +982,8 @@
       "gen": "matkaraja",
       "part": "matkarada",
       "plpart": "matkaradu,matkaradasid",
-      "ex": "Anija looduskaitseala matkarajad."
+      "ex": "Anija looduskaitseala matkarajad.",
+      "eki_type": "18u"
     },
     {
       "id": "n_jarv",
@@ -895,7 +992,8 @@
       "gen": "järve",
       "part": "järve",
       "plpart": "järvi,järvesid",
-      "ex": "Käisime järves ujumas."
+      "ex": "Käisime järves ujumas.",
+      "eki_type": "22i"
     },
     {
       "id": "n_vann",
@@ -904,7 +1002,8 @@
       "gen": "vanni",
       "part": "vanni",
       "plpart": "vanne,vannisid",
-      "ex": "Mulle meeldib vannis käia."
+      "ex": "Mulle meeldib vannis käia.",
+      "eki_type": "22e"
     },
     {
       "id": "n_vaip",
@@ -913,7 +1012,8 @@
       "gen": "vaiba",
       "part": "vaipa",
       "plpart": "vaipu,vaipasid",
-      "ex": "Paks vaip summutas sammud."
+      "ex": "Paks vaip summutas sammud.",
+      "eki_type": "22u"
     },
     {
       "id": "n_sampoon",
@@ -922,7 +1022,8 @@
       "gen": "šampooni",
       "part": "šampooni",
       "plpart": "šampoone,šampoonisid",
-      "ex": "Pesin pea šampooniga puhtaks."
+      "ex": "Pesin pea šampooniga puhtaks.",
+      "eki_type": "22e"
     },
     {
       "id": "n_prugikast",
@@ -931,7 +1032,8 @@
       "gen": "prügikasti",
       "part": "prügikasti",
       "plpart": "prügikaste,prügikastisid",
-      "ex": "Palun viska see tühi karp prügikasti!"
+      "ex": "Palun viska see tühi karp prügikasti!",
+      "eki_type": "22e"
     },
     {
       "id": "n_pesumasin",
@@ -940,7 +1042,8 @@
       "gen": "pesumasina",
       "part": "pesumasinat",
       "plpart": "pesumasinaid",
-      "ex": "Pane must pesu pesumasinasse."
+      "ex": "Pane must pesu pesumasinasse.",
+      "eki_type": "2"
     },
     {
       "id": "n_peegel",
@@ -949,7 +1052,8 @@
       "gen": "peegli",
       "part": "peeglit",
       "plpart": "peegleid",
-      "ex": "Suur peegel avardab vannituba."
+      "ex": "Suur peegel avardab vannituba.",
+      "eki_type": "2e"
     },
     {
       "id": "n_kateratik",
@@ -958,7 +1062,8 @@
       "gen": "käterätiku",
       "part": "käterätikut",
       "plpart": "käterätikuid",
-      "ex": "Pühkisin käed käterätikusse."
+      "ex": "Pühkisin käed käterätikusse.",
+      "eki_type": "2"
     },
     {
       "id": "n_kraanikauss",
@@ -967,7 +1072,8 @@
       "gen": "kraanikausi",
       "part": "kraanikaussi",
       "plpart": "kraanikausse,kraanikaussisid",
-      "ex": "Kraanikauss on umbes."
+      "ex": "Kraanikauss on umbes.",
+      "eki_type": "22e"
     },
     {
       "id": "n_kraan",
@@ -976,7 +1082,8 @@
       "gen": "kraani",
       "part": "kraani",
       "plpart": "kraane,kraanisid",
-      "ex": "Keerasin kraani kinni."
+      "ex": "Keerasin kraani kinni.",
+      "eki_type": "22e"
     },
     {
       "id": "n_foon",
@@ -985,7 +1092,8 @@
       "gen": "fööni",
       "part": "fööni",
       "plpart": "fööne,föönisid",
-      "ex": "Tüdruk kuivatas juuksed fööniga ära."
+      "ex": "Tüdruk kuivatas juuksed fööniga ära.",
+      "eki_type": "22e"
     },
     {
       "id": "n_duss",
@@ -994,7 +1102,8 @@
       "gen": "duši",
       "part": "dušši",
       "plpart": "dušše,duššisid",
-      "ex": "Ma käin igal hommikul duši all."
+      "ex": "Ma käin igal hommikul duši all.",
+      "eki_type": "22e"
     },
     {
       "id": "n_dusikabiin",
@@ -1002,7 +1111,8 @@
       "nom": "dušikabiin",
       "gen": "dušikabiini",
       "part": "dušikabiini",
-      "plpart": "dušikabiine,dušikabiinisid"
+      "plpart": "dušikabiine,dušikabiinisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_tugitool",
@@ -1011,7 +1121,8 @@
       "gen": "tugitooli",
       "part": "tugitooli",
       "plpart": "tugitoole,tugitoolisid",
-      "ex": "Naine sättis end mugavasti tugitooli istuma."
+      "ex": "Naine sättis end mugavasti tugitooli istuma.",
+      "eki_type": "22e"
     },
     {
       "id": "n_televiisor",
@@ -1020,7 +1131,8 @@
       "gen": "televiisori",
       "part": "televiisorit",
       "plpart": "televiisoreid",
-      "ex": "Pane televiisor kinni."
+      "ex": "Pane televiisor kinni.",
+      "eki_type": "2e"
     },
     {
       "id": "n_riiul",
@@ -1029,7 +1141,8 @@
       "gen": "riiuli",
       "part": "riiulit",
       "plpart": "riiuleid",
-      "ex": "Pane raamatud riiulile."
+      "ex": "Pane raamatud riiulile.",
+      "eki_type": "2e"
     },
     {
       "id": "n_lamp",
@@ -1038,7 +1151,8 @@
       "gen": "lambi",
       "part": "lampi",
       "plpart": "lampe,lampisid",
-      "ex": "Lamp põles läbi."
+      "ex": "Lamp põles läbi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_klaver",
@@ -1047,7 +1161,8 @@
       "gen": "klaveri",
       "part": "klaverit",
       "plpart": "klavereid",
-      "ex": "Tüdruk harjutas klaverit."
+      "ex": "Tüdruk harjutas klaverit.",
+      "eki_type": "2e"
     },
     {
       "id": "n_kell",
@@ -1056,7 +1171,8 @@
       "gen": "kella",
       "part": "kella",
       "plpart": "kelli,kellasid",
-      "ex": "Kell käib täpselt."
+      "ex": "Kell käib täpselt.",
+      "eki_type": "22i"
     },
     {
       "id": "n_kardin",
@@ -1065,7 +1181,8 @@
       "gen": "kardina",
       "part": "kardinat",
       "plpart": "kardinaid",
-      "ex": "Tõmba kardinad eest ära."
+      "ex": "Tõmba kardinad eest ära.",
+      "eki_type": "2"
     },
     {
       "id": "n_diivanilaud",
@@ -1073,7 +1190,8 @@
       "nom": "diivanilaud",
       "gen": "diivanilaua",
       "part": "diivanilauda",
-      "plpart": "diivanilaudu,diivanilaudasid"
+      "plpart": "diivanilaudu,diivanilaudasid",
+      "eki_type": "22u"
     },
     {
       "id": "n_diivan",
@@ -1082,7 +1200,8 @@
       "gen": "diivani",
       "part": "diivanit",
       "plpart": "diivaneid",
-      "ex": "Eva oli diivanil röötsakil."
+      "ex": "Eva oli diivanil röötsakil.",
+      "eki_type": "2e"
     },
     {
       "id": "n_arvuti",
@@ -1091,7 +1210,8 @@
       "gen": "arvuti",
       "part": "arvutit",
       "plpart": "arvuteid",
-      "ex": "Lülitan arvuti sisse."
+      "ex": "Lülitan arvuti sisse.",
+      "eki_type": "1e"
     },
     {
       "id": "n_akvaarium",
@@ -1100,7 +1220,8 @@
       "gen": "akvaariumi",
       "part": "akvaariumi",
       "plpart": "akvaariume",
-      "ex": "Ostsime koju akvaariumi."
+      "ex": "Ostsime koju akvaariumi.",
+      "eki_type": "19"
     },
     {
       "id": "n_kapp",
@@ -1109,7 +1230,8 @@
       "gen": "kapi",
       "part": "kappi",
       "plpart": "kappe,kappisid",
-      "ex": "Panin riided kappi."
+      "ex": "Panin riided kappi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_kirjutuslaud",
@@ -1118,7 +1240,8 @@
       "gen": "kirjutuslaua",
       "part": "kirjutuslauda",
       "plpart": "kirjutuslaudu,kirjutuslaudasid",
-      "ex": "Ta istub kirjutuslaua taga ja töötab."
+      "ex": "Ta istub kirjutuslaua taga ja töötab.",
+      "eki_type": "22u"
     },
     {
       "id": "n_nagi",
@@ -1127,7 +1250,8 @@
       "gen": "nagi",
       "part": "nagi",
       "plpart": "nagisid",
-      "ex": "Riputas mantli nagisse."
+      "ex": "Riputas mantli nagisse.",
+      "eki_type": "17"
     },
     {
       "id": "n_padi",
@@ -1136,7 +1260,8 @@
       "gen": "padja",
       "part": "patja",
       "plpart": "patju,patjasid",
-      "ex": "Panin pea padjale ja jäin magama."
+      "ex": "Panin pea padjale ja jäin magama.",
+      "eki_type": "24u"
     },
     {
       "id": "n_sahtel",
@@ -1145,7 +1270,8 @@
       "gen": "sahtli",
       "part": "sahtlit",
       "plpart": "sahtleid",
-      "ex": "Kummuti ülemine sahtel käis halvasti."
+      "ex": "Kummuti ülemine sahtel käis halvasti.",
+      "eki_type": "2e"
     },
     {
       "id": "n_tekk",
@@ -1154,7 +1280,8 @@
       "gen": "teki",
       "part": "tekki",
       "plpart": "tekke,tekkisid",
-      "ex": "Laps ajas teki maha."
+      "ex": "Laps ajas teki maha.",
+      "eki_type": "22e"
     },
     {
       "id": "n_tool",
@@ -1163,7 +1290,8 @@
       "gen": "tooli",
       "part": "tooli",
       "plpart": "toole,toolisid",
-      "ex": "Külaline istus toolile."
+      "ex": "Külaline istus toolile.",
+      "eki_type": "22e"
     },
     {
       "id": "n_voodi",
@@ -1172,7 +1300,8 @@
       "gen": "voodi",
       "part": "voodit",
       "plpart": "voodeid",
-      "ex": "Magamistoas on pehme ja lai voodi."
+      "ex": "Magamistoas on pehme ja lai voodi.",
+      "eki_type": "1e"
     },
     {
       "id": "n_ohupuhasti",
@@ -1181,7 +1310,8 @@
       "gen": "õhupuhasti",
       "part": "õhupuhastit",
       "plpart": "õhupuhasteid",
-      "ex": "Suitsunurgas on võimas õhupuhasti."
+      "ex": "Suitsunurgas on võimas õhupuhasti.",
+      "eki_type": "1e"
     },
     {
       "id": "n_veekeetja",
@@ -1190,7 +1320,8 @@
       "gen": "veekeetja",
       "part": "veekeetjat",
       "plpart": "veekeetjaid",
-      "ex": "Lülita veekeetja sisse."
+      "ex": "Lülita veekeetja sisse.",
+      "eki_type": "01"
     },
     {
       "id": "n_triikraud",
@@ -1199,7 +1330,8 @@
       "gen": "triikraua",
       "part": "triikrauda",
       "plpart": "triikraudu,triikraudasid",
-      "ex": "Kas lülitasid triikraua välja?"
+      "ex": "Kas lülitasid triikraua välja?",
+      "eki_type": "22u"
     },
     {
       "id": "n_tolmuimeja",
@@ -1208,7 +1340,8 @@
       "gen": "tolmuimeja",
       "part": "tolmuimejat",
       "plpart": "tolmuimejaid",
-      "ex": "Vaip käidi tolmuimejaga üle."
+      "ex": "Vaip käidi tolmuimejaga üle.",
+      "eki_type": "1"
     },
     {
       "id": "n_sugavkulmik",
@@ -1217,7 +1350,8 @@
       "gen": "sügavkülmiku",
       "part": "sügavkülmikut",
       "plpart": "sügavkülmikuid",
-      "ex": "Panin jäätise sügavkülmikusse."
+      "ex": "Panin jäätise sügavkülmikusse.",
+      "eki_type": "2"
     },
     {
       "id": "n_roster",
@@ -1226,7 +1360,8 @@
       "gen": "röstri",
       "part": "röstrit",
       "plpart": "röstreid",
-      "ex": "Pane saiad röstrisse."
+      "ex": "Pane saiad röstrisse.",
+      "eki_type": "02e"
     },
     {
       "id": "n_pliit",
@@ -1235,7 +1370,8 @@
       "gen": "pliidi",
       "part": "pliiti",
       "plpart": "pliite,pliitisid",
-      "ex": "Pliidil keeb supp."
+      "ex": "Pliidil keeb supp.",
+      "eki_type": "22e"
     },
     {
       "id": "n_noudepesumasin",
@@ -1244,7 +1380,8 @@
       "gen": "nõudepesumasina",
       "part": "nõudepesumasinat",
       "plpart": "nõudepesumasinaid",
-      "ex": "Panin mustad nõud nõudepesumasinasse."
+      "ex": "Panin mustad nõud nõudepesumasinasse.",
+      "eki_type": "02"
     },
     {
       "id": "n_mikrolaineahi",
@@ -1253,7 +1390,8 @@
       "gen": "mikrolaineahju",
       "part": "mikrolaineahju",
       "plpart": "mikrolaineahje,mikrolaineahjusid",
-      "ex": "Soojendasin supi mikrolaineahjus üles."
+      "ex": "Soojendasin supi mikrolaineahjus üles.",
+      "eki_type": "24e"
     },
     {
       "id": "n_kulmkapp",
@@ -1262,7 +1400,8 @@
       "gen": "külmkapi",
       "part": "külmkappi",
       "plpart": "külmkappe,külmkappisid",
-      "ex": "Pane piim külmkappi."
+      "ex": "Pane piim külmkappi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_ahi",
@@ -1271,7 +1410,8 @@
       "gen": "ahju",
       "part": "ahju",
       "plpart": "ahje,ahjusid",
-      "ex": "Tegin tule ahju."
+      "ex": "Tegin tule ahju.",
+      "eki_type": "24e"
     },
     {
       "id": "n_vaikne",
@@ -1281,7 +1421,8 @@
       "part": "vaikset",
       "plpart": "vaikseid",
       "ex": "Kostis vaikne krabin.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_uudishimulik",
@@ -1291,7 +1432,8 @@
       "part": "uudishimulikku",
       "plpart": "uudishimulikke,uudishimulikkusid",
       "ex": "Ta on uudishimulik laps.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_tookas",
@@ -1301,7 +1443,8 @@
       "part": "töökat",
       "plpart": "töökaid",
       "ex": "Töökad ja tublid lapsed.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_tugev",
@@ -1311,7 +1454,8 @@
       "part": "tugevat",
       "plpart": "tugevaid",
       "ex": "Kehalt tugev mees.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_tark",
@@ -1321,7 +1465,8 @@
       "part": "tarka",
       "plpart": "tarku,tarkasid",
       "ex": "Ta on klassi kõige targem õpilane.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "22u"
     },
     {
       "id": "n_roomus",
@@ -1331,7 +1476,8 @@
       "part": "rõõmsat",
       "plpart": "rõõmsaid",
       "ex": "Rõõmsa näoga lahke mees.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "02"
     },
     {
       "id": "n_rumal",
@@ -1341,7 +1487,8 @@
       "part": "rumalat",
       "plpart": "rumalaid",
       "ex": "Ära ole rumal!",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_laisk",
@@ -1351,7 +1498,8 @@
       "part": "laiska",
       "plpart": "laisku,laiskasid",
       "ex": "Kuumus teeb laisaks.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "22u"
     },
     {
       "id": "n_lahke",
@@ -1361,7 +1509,8 @@
       "part": "lahket",
       "plpart": "lahkeid",
       "ex": "Lahke käega sponsor.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "1"
     },
     {
       "id": "n_kurb",
@@ -1371,7 +1520,8 @@
       "part": "kurba",
       "plpart": "kurbi,kurbasid",
       "ex": "Olen natuke kurb.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "22i"
     },
     {
       "id": "n_jutukas",
@@ -1381,7 +1531,8 @@
       "part": "jutukat",
       "plpart": "jutukaid",
       "ex": "Ta ei ole eriti jutukas mees.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_julge",
@@ -1391,7 +1542,8 @@
       "part": "julget",
       "plpart": "julgeid",
       "ex": "Mine üksi, kui sa nii julge oled!",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "1"
     },
     {
       "id": "n_arg",
@@ -1401,7 +1553,8 @@
       "part": "arga",
       "plpart": "argu,argasid",
       "ex": "Meie koer on väga arg.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "22u"
     },
     {
       "id": "n_abivalmis",
@@ -1411,7 +1564,8 @@
       "part": "abivalmit",
       "plpart": "abivalmeid",
       "ex": "Lahke ja abivalmis teenindaja.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "(02e)"
     },
     {
       "id": "n_viisakas",
@@ -1421,7 +1575,8 @@
       "part": "viisakat",
       "plpart": "viisakaid",
       "ex": "Jahedalt viisakas olek.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_tavaline",
@@ -1431,7 +1586,8 @@
       "part": "tavalist",
       "plpart": "tavalisi",
       "ex": "Oli tavaline tööpäev.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "12"
     },
     {
       "id": "n_sobralik",
@@ -1441,7 +1597,8 @@
       "part": "sõbralikku",
       "plpart": "sõbralikke,sõbralikkusid",
       "ex": "Soe ja sõbralik meeleolu.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_sportlik",
@@ -1451,7 +1608,8 @@
       "part": "sportlikku",
       "plpart": "sportlikke,sportlikkusid",
       "ex": "Ta harrastab sportlikku eluviisi.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_rahutu",
@@ -1461,7 +1619,8 @@
       "part": "rahutut",
       "plpart": "rahutuid",
       "ex": "Stefan oli rahutu laps.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "1"
     },
     {
       "id": "n_rahulik",
@@ -1471,7 +1630,8 @@
       "part": "rahulikku",
       "plpart": "rahulikke,rahulikkusid",
       "ex": "Hea rahulik laps.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_pessimistlik",
@@ -1481,7 +1641,8 @@
       "part": "pessimistlikku",
       "plpart": "pessimistlikke,pessimistlikkusid",
       "ex": "Olime tuleviku suhtes üpris pessimistlikud.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_optimistlik",
@@ -1491,7 +1652,8 @@
       "part": "optimistlikku",
       "plpart": "optimistlikke,optimistlikkusid",
       "ex": "Olen tuleviku suhtes optimistlik.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_ebaviisakas",
@@ -1501,7 +1663,8 @@
       "part": "ebaviisakat",
       "plpart": "ebaviisakaid",
       "ex": "Nii on ebaviisakas küsida.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_ebatavaline",
@@ -1511,7 +1674,8 @@
       "part": "ebatavalist",
       "plpart": "ebatavalisi",
       "ex": "Mulle avanes ebatavaline vaatepilt.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "12"
     },
     {
       "id": "n_ebasobralik",
@@ -1521,7 +1685,8 @@
       "part": "ebasõbralikku",
       "plpart": "ebasõbralikke,ebasõbralikkusid",
       "ex": "Tõre ja ebasõbralik vastuvõtt.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_ebasportlik",
@@ -1531,7 +1696,8 @@
       "part": "ebasportlikku",
       "plpart": "ebasportlikke,ebasportlikkusid",
       "ex": "Vastased tegid ebasportliku vea.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "25"
     },
     {
       "id": "n_abikaasa",
@@ -1540,7 +1706,8 @@
       "gen": "abikaasa",
       "part": "abikaasat",
       "plpart": "abikaasasid",
-      "ex": "Vastuvõtule kutsuti koos abikaasaga."
+      "ex": "Vastuvõtule kutsuti koos abikaasaga.",
+      "eki_type": "16"
     },
     {
       "id": "n_elukaaslane",
@@ -1549,7 +1716,8 @@
       "gen": "elukaaslase",
       "part": "elukaaslast",
       "plpart": "elukaaslasi",
-      "ex": "Tal on uus elukaaslane."
+      "ex": "Tal on uus elukaaslane.",
+      "eki_type": "12"
     },
     {
       "id": "n_ema",
@@ -1558,7 +1726,8 @@
       "gen": "ema",
       "part": "ema",
       "plpart": "emasid",
-      "ex": "Kolme lapse ema."
+      "ex": "Kolme lapse ema.",
+      "eki_type": "17"
     },
     {
       "id": "n_isa",
@@ -1567,7 +1736,8 @@
       "gen": "isa",
       "part": "isa",
       "plpart": "isasid",
-      "ex": "Isa ja ema ei olnud kodus."
+      "ex": "Isa ja ema ei olnud kodus.",
+      "eki_type": "17"
     },
     {
       "id": "n_poeg",
@@ -1576,7 +1746,8 @@
       "gen": "poja",
       "part": "poega",
       "plpart": "poegi,poegasid",
-      "ex": "Neil on kaks poega ja tütar."
+      "ex": "Neil on kaks poega ja tütar.",
+      "eki_type": "22i"
     },
     {
       "id": "n_tutar",
@@ -1585,7 +1756,8 @@
       "gen": "tütre",
       "part": "tütart",
       "plpart": "tütreid",
-      "ex": "Perre sündisid kaksikud tütred."
+      "ex": "Perre sündisid kaksikud tütred.",
+      "eki_type": "8"
     },
     {
       "id": "n_vanaema",
@@ -1594,7 +1766,8 @@
       "gen": "vanaema",
       "part": "vanaema",
       "plpart": "vanaemasid",
-      "ex": "Ta on juba kolmekordne vanaema."
+      "ex": "Ta on juba kolmekordne vanaema.",
+      "eki_type": "17"
     },
     {
       "id": "n_vanaisa",
@@ -1603,7 +1776,8 @@
       "gen": "vanaisa",
       "part": "vanaisa",
       "plpart": "vanaisasid",
-      "ex": "Ta on oma lapselastele väga hea vanaisa."
+      "ex": "Ta on oma lapselastele väga hea vanaisa.",
+      "eki_type": "17"
     },
     {
       "id": "n_sugulane",
@@ -1612,7 +1786,8 @@
       "gen": "sugulase",
       "part": "sugulast",
       "plpart": "sugulasi",
-      "ex": "Vanemad surnud, sugulasi pole."
+      "ex": "Vanemad surnud, sugulasi pole.",
+      "eki_type": "12"
     },
     {
       "id": "n_ai",
@@ -1621,7 +1796,8 @@
       "gen": "äia",
       "part": "äia",
       "plpart": "äiu,äiasid",
-      "ex": "Äi suri ja ämm jäi üksi."
+      "ex": "Äi suri ja ämm jäi üksi.",
+      "eki_type": "22u"
     },
     {
       "id": "n_amm",
@@ -1630,7 +1806,8 @@
       "gen": "ämma",
       "part": "ämma",
       "plpart": "ämmi,ämmasid",
-      "ex": "Ta saab oma ämma ja äiaga hästi läbi."
+      "ex": "Ta saab oma ämma ja äiaga hästi läbi.",
+      "eki_type": "22i"
     },
     {
       "id": "n_sunnipaev",
@@ -1639,7 +1816,8 @@
       "gen": "sünnipäeva",
       "part": "sünnipäeva",
       "plpart": "sünnipäevi,sünnipäevasid",
-      "ex": "Mul on täna sünnipäev."
+      "ex": "Mul on täna sünnipäev.",
+      "eki_type": "22i"
     },
     {
       "id": "n_sobrapaev",
@@ -1648,7 +1826,8 @@
       "gen": "sõbrapäeva",
       "part": "sõbrapäeva",
       "plpart": "sõbrapäevi,sõbrapäevasid",
-      "ex": "Käisime sõbrapäeval sõbrannaga kinos."
+      "ex": "Käisime sõbrapäeval sõbrannaga kinos.",
+      "eki_type": "22i"
     },
     {
       "id": "n_jaanipaev",
@@ -1657,7 +1836,8 @@
       "gen": "jaanipäeva",
       "part": "jaanipäeva",
       "plpart": "jaanipäevi,jaanipäevasid",
-      "ex": "Jaanipäevaks sõitsime maale."
+      "ex": "Jaanipäevaks sõitsime maale.",
+      "eki_type": "22i"
     },
     {
       "id": "n_emadepaev",
@@ -1666,7 +1846,8 @@
       "gen": "emadepäeva",
       "part": "emadepäeva",
       "plpart": "emadepäevi,emadepäevasid",
-      "ex": "Emadepäeva tähistatakse mais."
+      "ex": "Emadepäeva tähistatakse mais.",
+      "eki_type": "22i"
     },
     {
       "id": "n_isadepaev",
@@ -1675,7 +1856,8 @@
       "gen": "isadepäeva",
       "part": "isadepäeva",
       "plpart": "isadepäevi,isadepäevasid",
-      "ex": "Ilusat isadepäeva kõigile isadele!"
+      "ex": "Ilusat isadepäeva kõigile isadele!",
+      "eki_type": "22i"
     },
     {
       "id": "n_uusaasta",
@@ -1684,7 +1866,8 @@
       "gen": "uusaasta",
       "part": "uusaastat",
       "plpart": "uusaastaid",
-      "ex": "Lapsuke sündis uusaasta hommikul."
+      "ex": "Lapsuke sündis uusaasta hommikul.",
+      "eki_type": "1"
     },
     {
       "id": "n_joul",
@@ -1694,7 +1877,8 @@
       "part": "jõulu",
       "plpart": "jõule,jõulusid",
       "ex": "Enne jõule pole lund oodata.",
-      "src": "jõulud"
+      "src": "jõulud",
+      "eki_type": "22e"
     },
     {
       "id": "n_pulm",
@@ -1704,7 +1888,8 @@
       "part": "pulma",
       "plpart": "pulmi,pulmasid",
       "ex": "Pulmadega kannatab oodata.",
-      "src": "pulmad"
+      "src": "pulmad",
+      "eki_type": "22i"
     },
     {
       "id": "n_lihavottepuha",
@@ -1714,7 +1899,8 @@
       "part": "lihavõttepüha",
       "plpart": "lihavõttepühi,lihavõttepühasid",
       "ex": "Tähistasime lihavõttepühasid munade värvimisega.",
-      "src": "lihavõttepühad"
+      "src": "lihavõttepühad",
+      "eki_type": "17i"
     },
     {
       "id": "n_uheteistkumnes",
@@ -1724,7 +1910,8 @@
       "part": "üheteistkümnendat",
       "plpart": "üheteistkümnendaid",
       "ex": "Ma käin üheteistkümnendas klassis.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_kaheteistkumnes",
@@ -1734,7 +1921,8 @@
       "part": "kaheteistkümnendat",
       "plpart": "kaheteistkümnendaid",
       "ex": "Meie suusataja jäi kaheteistkümnendaks.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_kolmeteistkumnes",
@@ -1744,7 +1932,8 @@
       "part": "kolmeteistkümnendat",
       "plpart": "kolmeteistkümnendaid",
       "ex": "Täna on kolmeteistkümnes november.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_neljateistkumnes",
@@ -1754,7 +1943,8 @@
       "part": "neljateistkümnendat",
       "plpart": "neljateistkümnendaid",
       "ex": "Üritus leiab aset neljateistkümnendat korda.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_kuueteistkumnes",
@@ -1764,7 +1954,8 @@
       "part": "kuueteistkümnendat",
       "plpart": "kuueteistkümnendaid",
       "ex": "Meie suusataja jäi kuueteistkümnendaks.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_kaheksateistkumnes",
@@ -1774,7 +1965,8 @@
       "part": "kaheksateistkümnendat",
       "plpart": "kaheksateistkümnendaid",
       "ex": "Minu sünnipäev on kaheksateistkümnendal aprillil.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_kahekumnes",
@@ -1784,7 +1976,8 @@
       "part": "kahekümnendat",
       "plpart": "kahekümnendaid",
       "ex": "Meie sportlane jäi kahekümnendaks.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_kolmekumnes",
@@ -1794,7 +1987,8 @@
       "part": "kolmekümnendat",
       "plpart": "kolmekümnendaid",
       "ex": "Üritus toimub kolmekümnendat korda.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "02"
     },
     {
       "id": "n_jaanuar",
@@ -1803,7 +1997,8 @@
       "gen": "jaanuari",
       "part": "jaanuari",
       "plpart": "jaanuare",
-      "ex": "Tema sünnipäev on 3. jaanuaril."
+      "ex": "Tema sünnipäev on 3. jaanuaril.",
+      "eki_type": "19"
     },
     {
       "id": "n_veebruar",
@@ -1812,7 +2007,8 @@
       "gen": "veebruari",
       "part": "veebruari",
       "plpart": "veebruare",
-      "ex": "Veebruar on tavaliselt aasta kõige külmem kuu."
+      "ex": "Veebruar on tavaliselt aasta kõige külmem kuu.",
+      "eki_type": "19"
     },
     {
       "id": "n_marts",
@@ -1821,7 +2017,8 @@
       "gen": "märtsi",
       "part": "märtsi",
       "plpart": "märtse,märtsisid",
-      "ex": "Märts on kevade esimene kuu."
+      "ex": "Märts on kevade esimene kuu.",
+      "eki_type": "22e"
     },
     {
       "id": "n_aprill",
@@ -1830,7 +2027,8 @@
       "gen": "aprilli",
       "part": "aprilli",
       "plpart": "aprille,aprillisid",
-      "ex": "Lähen aprilli lõpus reisile."
+      "ex": "Lähen aprilli lõpus reisile.",
+      "eki_type": "22e"
     },
     {
       "id": "n_mai",
@@ -1839,7 +2037,8 @@
       "gen": "mai",
       "part": "maid",
       "plpart": "maisid",
-      "ex": "Koosolek toimub 5. mail."
+      "ex": "Koosolek toimub 5. mail.",
+      "eki_type": "26"
     },
     {
       "id": "n_juuni",
@@ -1848,7 +2047,8 @@
       "gen": "juuni",
       "part": "juunit",
       "plpart": "juunisid",
-      "ex": "Jaanipäev on 24. juunil."
+      "ex": "Jaanipäev on 24. juunil.",
+      "eki_type": "16"
     },
     {
       "id": "n_juuli",
@@ -1857,7 +2057,8 @@
       "gen": "juuli",
       "part": "juulit",
       "plpart": "juulisid",
-      "ex": "Lähen juulis puhkusele."
+      "ex": "Lähen juulis puhkusele.",
+      "eki_type": "16"
     },
     {
       "id": "n_august",
@@ -1866,7 +2067,8 @@
       "gen": "augusti",
       "part": "augustit",
       "plpart": "augusteid",
-      "ex": "Tulen tööle tagasi augusti lõpus."
+      "ex": "Tulen tööle tagasi augusti lõpus.",
+      "eki_type": "02e"
     },
     {
       "id": "n_september",
@@ -1875,7 +2077,8 @@
       "gen": "septembri",
       "part": "septembrit",
       "plpart": "septembreid",
-      "ex": "Kool algab 1. septembril."
+      "ex": "Kool algab 1. septembril.",
+      "eki_type": "2e"
     },
     {
       "id": "n_oktoober",
@@ -1884,7 +2087,8 @@
       "gen": "oktoobri",
       "part": "oktoobrit",
       "plpart": "oktoobreid",
-      "ex": "Oktoober oli külm ja vihmane."
+      "ex": "Oktoober oli külm ja vihmane.",
+      "eki_type": "2e"
     },
     {
       "id": "n_november",
@@ -1893,7 +2097,8 @@
       "gen": "novembri",
       "part": "novembrit",
       "plpart": "novembreid",
-      "ex": "Tema sünnipäev on novembri lõpus."
+      "ex": "Tema sünnipäev on novembri lõpus.",
+      "eki_type": "2e"
     },
     {
       "id": "n_detsember",
@@ -1902,7 +2107,8 @@
       "gen": "detsembri",
       "part": "detsembrit",
       "plpart": "detsembreid",
-      "ex": "Detsembris on jõulud."
+      "ex": "Detsembris on jõulud.",
+      "eki_type": "2e"
     },
     {
       "id": "n_habe",
@@ -1911,7 +2117,8 @@
       "gen": "habeme",
       "part": "habet",
       "plpart": "habemeid",
-      "ex": "Vanaisal on hall habe."
+      "ex": "Vanaisal on hall habe.",
+      "eki_type": "04"
     },
     {
       "id": "n_vunts",
@@ -1920,7 +2127,8 @@
       "gen": "vuntsi",
       "part": "vuntsi",
       "plpart": "vuntse,vuntsisid",
-      "ex": "Vuntsi mul veel ei kasva."
+      "ex": "Vuntsi mul veel ei kasva.",
+      "eki_type": "22e"
     },
     {
       "id": "n_tukk",
@@ -1929,7 +2137,8 @@
       "gen": "tuka",
       "part": "tukka",
       "plpart": "tukki,tukkasid",
-      "ex": "Tüdrukul oli tukk silmile kukkunud."
+      "ex": "Tüdrukul oli tukk silmile kukkunud.",
+      "eki_type": "22i"
     },
     {
       "id": "n_pats",
@@ -1937,7 +2146,8 @@
       "nom": "pats",
       "gen": "patsi",
       "part": "patsi",
-      "plpart": "patse,patsisid"
+      "plpart": "patse,patsisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_hobusesaba",
@@ -1945,7 +2155,8 @@
       "nom": "hobusesaba",
       "gen": "hobusesaba",
       "part": "hobusesaba",
-      "plpart": "hobusesabu,hobusesabasid"
+      "plpart": "hobusesabu,hobusesabasid",
+      "eki_type": "17u"
     },
     {
       "id": "n_kiilakas",
@@ -1955,7 +2166,8 @@
       "part": "kiilakat",
       "plpart": "kiilakaid",
       "ex": "Ta leidis endale mingi kiilaka vanamehe.",
-      "pos": "adj"
+      "pos": "adj",
+      "eki_type": "2"
     },
     {
       "id": "n_sirge",
@@ -1965,7 +2177,8 @@
       "part": "sirget",
       "plpart": "sirgeid",
       "pos": "adj",
-      "ex": "Sirge servaga laud."
+      "ex": "Sirge servaga laud.",
+      "eki_type": "1"
     },
     {
       "id": "n_pikk",
@@ -1975,7 +2188,8 @@
       "part": "pikka",
       "plpart": "pikki,pikkasid",
       "pos": "adj",
-      "ex": "Katrin on pikka kasvu."
+      "ex": "Katrin on pikka kasvu.",
+      "eki_type": "22i"
     },
     {
       "id": "n_luhike",
@@ -1985,7 +2199,8 @@
       "part": "lühikest",
       "plpart": "lühikesi",
       "pos": "adj",
-      "ex": "Poiss on lühikest kasvu."
+      "ex": "Poiss on lühikest kasvu.",
+      "eki_type": "12"
     },
     {
       "id": "n_poolpikk",
@@ -1995,7 +2210,8 @@
       "part": "poolpikka",
       "plpart": "poolpikki,poolpikkasid",
       "pos": "adj",
-      "ex": "Ta kandis poolpikka kleiti."
+      "ex": "Ta kandis poolpikka kleiti.",
+      "eki_type": "22i"
     },
     {
       "id": "n_hall",
@@ -2005,7 +2221,8 @@
       "part": "halli",
       "plpart": "halle,hallisid",
       "pos": "adj",
-      "ex": "Taevas on hall ja vihma sajab."
+      "ex": "Taevas on hall ja vihma sajab.",
+      "eki_type": "22e"
     },
     {
       "id": "n_hele",
@@ -2016,7 +2233,8 @@
       "plpart": "heledaid",
       "pos": "adj",
       "ex": "Heledas ülikonnas mees.",
-      "eki_sense": 2
+      "eki_sense": 2,
+      "eki_type": "2"
     },
     {
       "id": "n_must",
@@ -2026,7 +2244,8 @@
       "part": "musta",
       "plpart": "musti,mustasid",
       "pos": "adj",
-      "ex": "Must kass jooksis üle tee."
+      "ex": "Must kass jooksis üle tee.",
+      "eki_type": "22i"
     },
     {
       "id": "n_punane",
@@ -2036,7 +2255,8 @@
       "part": "punast",
       "plpart": "punaseid",
       "pos": "adj",
-      "ex": "Tal on punased juuksed."
+      "ex": "Tal on punased juuksed.",
+      "eki_type": "10"
     },
     {
       "id": "n_paks",
@@ -2046,7 +2266,8 @@
       "part": "paksu",
       "plpart": "pakse,paksusid",
       "pos": "adj",
-      "ex": "Paks lumi on maas."
+      "ex": "Paks lumi on maas.",
+      "eki_type": "22e"
     },
     {
       "id": "n_sale",
@@ -2056,7 +2277,8 @@
       "part": "saledat",
       "plpart": "saledaid",
       "pos": "adj",
-      "ex": "Naine on pikk ja sale."
+      "ex": "Naine on pikk ja sale.",
+      "eki_type": "2"
     },
     {
       "id": "n_pruun",
@@ -2066,7 +2288,8 @@
       "part": "pruuni",
       "plpart": "pruune,pruunisid",
       "pos": "adj",
-      "ex": "Karul on pruun karv."
+      "ex": "Karul on pruun karv.",
+      "eki_type": "22e"
     },
     {
       "id": "n_roheline",
@@ -2076,7 +2299,8 @@
       "part": "rohelist",
       "plpart": "rohelisi",
       "pos": "adj",
-      "ex": "Valgusfoori roheline tuli."
+      "ex": "Valgusfoori roheline tuli.",
+      "eki_type": "12"
     },
     {
       "id": "n_sinine",
@@ -2086,7 +2310,8 @@
       "part": "sinist",
       "plpart": "siniseid",
       "pos": "adj",
-      "ex": "Meri oli täna sinine."
+      "ex": "Meri oli täna sinine.",
+      "eki_type": "10"
     },
     {
       "id": "n_kasv",
@@ -2095,7 +2320,8 @@
       "gen": "kasvu",
       "part": "kasvu",
       "plpart": "kasve,kasvusid",
-      "ex": "Silmaga nähtav kasv."
+      "ex": "Silmaga nähtav kasv.",
+      "eki_type": "22e"
     },
     {
       "id": "n_toidupood",
@@ -2104,7 +2330,8 @@
       "gen": "toidupoe",
       "part": "toidupoodi",
       "plpart": "toidupoode,toidupoodisid",
-      "ex": "Kus asub lähim toidupood?"
+      "ex": "Kus asub lähim toidupood?",
+      "eki_type": "22e"
     },
     {
       "id": "n_raamatupood",
@@ -2113,7 +2340,8 @@
       "gen": "raamatupoe",
       "part": "raamatupoodi",
       "plpart": "raamatupoode,raamatupoodisid",
-      "ex": "Raamatupoodidesse jõudsid müügile uued õpikud."
+      "ex": "Raamatupoodidesse jõudsid müügile uued õpikud.",
+      "eki_type": "22e"
     },
     {
       "id": "n_lillepood",
@@ -2121,7 +2349,8 @@
       "nom": "lillepood",
       "gen": "lillepoe",
       "part": "lillepoodi",
-      "plpart": "lillepoode,lillepoodisid"
+      "plpart": "lillepoode,lillepoodisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_kingapood",
@@ -2129,7 +2358,8 @@
       "nom": "kingapood",
       "gen": "kingapoe",
       "part": "kingapoodi",
-      "plpart": "kingapoode,kingapoodisid"
+      "plpart": "kingapoode,kingapoodisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_spordipood",
@@ -2138,7 +2368,8 @@
       "gen": "spordipoe",
       "part": "spordipoodi",
       "plpart": "spordipoode,spordipoodisid",
-      "ex": "Ostsin spordipoest hantlid."
+      "ex": "Ostsin spordipoest hantlid.",
+      "eki_type": "22e"
     },
     {
       "id": "n_mooblipood",
@@ -2146,7 +2377,8 @@
       "nom": "mööblipood",
       "gen": "mööblipoe",
       "part": "mööblipoodi",
-      "plpart": "mööblipoode,mööblipoodisid"
+      "plpart": "mööblipoode,mööblipoodisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_prillipood",
@@ -2154,7 +2386,8 @@
       "nom": "prillipood",
       "gen": "prillipoe",
       "part": "prillipoodi",
-      "plpart": "prillipoode,prillipoodisid"
+      "plpart": "prillipoode,prillipoodisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_lemmikloomapood",
@@ -2163,7 +2396,8 @@
       "gen": "lemmikloomapoe",
       "part": "lemmikloomapoodi",
       "plpart": "lemmikloomapoode,lemmikloomapoodisid",
-      "ex": "Noor pere avas lemmikloomapoe."
+      "ex": "Noor pere avas lemmikloomapoe.",
+      "eki_type": "22e"
     },
     {
       "id": "n_ehituspood",
@@ -2171,7 +2405,8 @@
       "nom": "ehituspood",
       "gen": "ehituspoe",
       "part": "ehituspoodi",
-      "plpart": "ehituspoode,ehituspoodisid"
+      "plpart": "ehituspoode,ehituspoodisid",
+      "eki_type": "22e"
     },
     {
       "id": "n_esmaspaev",
@@ -2180,7 +2415,8 @@
       "gen": "esmaspäeva",
       "part": "esmaspäeva",
       "plpart": "esmaspäevi,esmaspäevasid",
-      "ex": "Käin tööl esmaspäevast reedeni."
+      "ex": "Käin tööl esmaspäevast reedeni.",
+      "eki_type": "22i"
     },
     {
       "id": "n_teisipaev",
@@ -2189,7 +2425,8 @@
       "gen": "teisipäeva",
       "part": "teisipäeva",
       "plpart": "teisipäevi,teisipäevasid",
-      "ex": "Koosolek toimub teisipäeval."
+      "ex": "Koosolek toimub teisipäeval.",
+      "eki_type": "22i"
     },
     {
       "id": "n_kolmapaev",
@@ -2198,7 +2435,8 @@
       "gen": "kolmapäeva",
       "part": "kolmapäeva",
       "plpart": "kolmapäevi,kolmapäevasid",
-      "ex": "Kohtume kolmapäeval kell 12."
+      "ex": "Kohtume kolmapäeval kell 12.",
+      "eki_type": "22i"
     },
     {
       "id": "n_neljapaev",
@@ -2207,7 +2445,8 @@
       "gen": "neljapäeva",
       "part": "neljapäeva",
       "plpart": "neljapäevi,neljapäevasid",
-      "ex": "Töö valmib neljapäevaks."
+      "ex": "Töö valmib neljapäevaks.",
+      "eki_type": "22i"
     },
     {
       "id": "n_reede",
@@ -2216,7 +2455,8 @@
       "gen": "reede",
       "part": "reedet",
       "plpart": "reedeid",
-      "ex": "Kontsert toimub reedel."
+      "ex": "Kontsert toimub reedel.",
+      "eki_type": "1"
     },
     {
       "id": "n_laupaev",
@@ -2225,7 +2465,8 @@
       "gen": "laupäeva",
       "part": "laupäeva",
       "plpart": "laupäevi,laupäevasid",
-      "ex": "Sõidame laupäeval maale."
+      "ex": "Sõidame laupäeval maale.",
+      "eki_type": "22i"
     },
     {
       "id": "n_puhapaev",
@@ -2234,7 +2475,8 @@
       "gen": "pühapäeva",
       "part": "pühapäeva",
       "plpart": "pühapäevi,pühapäevasid",
-      "ex": "Pühapäeval saab kauem magada."
+      "ex": "Pühapäeval saab kauem magada.",
+      "eki_type": "22i"
     },
     {
       "id": "n_uks2",
@@ -2244,7 +2486,8 @@
       "part": "üht,ühte",
       "plpart": "ühtesid",
       "ex": "Kell on üks öösel.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "22"
     },
     {
       "id": "n_kaks",
@@ -2254,7 +2497,8 @@
       "part": "kaht,kahte",
       "plpart": "kahtesid",
       "ex": "Kaks pluss kaks.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "22"
     },
     {
       "id": "n_kolm",
@@ -2264,7 +2508,8 @@
       "part": "kolme",
       "plpart": "kolmi,kolmesid",
       "ex": "Kell saab kolm.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "22i"
     },
     {
       "id": "n_neli",
@@ -2274,7 +2519,8 @@
       "part": "nelja",
       "plpart": "nelju,neljasid",
       "ex": "Neli pluss neli.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "24u"
     },
     {
       "id": "n_viis",
@@ -2284,7 +2530,8 @@
       "part": "viit,viite",
       "plpart": "viisi",
       "ex": "Kaks korda viis.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "14i"
     },
     {
       "id": "n_kuus",
@@ -2294,7 +2541,8 @@
       "part": "kuut,kuute",
       "plpart": "kuusi",
       "ex": "Kell on kuus.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "14i"
     },
     {
       "id": "n_seitse",
@@ -2304,7 +2552,8 @@
       "part": "seitset",
       "plpart": "seitsmeid",
       "ex": "Ärkasin kell seitse.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "5"
     },
     {
       "id": "n_kaheksa",
@@ -2314,7 +2563,8 @@
       "part": "kaheksat",
       "plpart": "kaheksaid",
       "ex": "Kell on kaheksa.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "1"
     },
     {
       "id": "n_uheksa",
@@ -2324,7 +2574,8 @@
       "part": "üheksat",
       "plpart": "üheksaid",
       "ex": "Kell sai üheksa.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "1"
     },
     {
       "id": "n_kumme",
@@ -2334,7 +2585,8 @@
       "part": "kümmet",
       "plpart": "kümneid",
       "ex": "Kümme pluss üks.",
-      "pos": "num"
+      "pos": "num",
+      "eki_type": "5"
     },
     {
       "id": "n_lumi",
@@ -2343,7 +2595,8 @@
       "gen": "lume",
       "part": "lund",
       "plpart": "lumesid",
-      "ex": "Öösel sadas lund."
+      "ex": "Öösel sadas lund.",
+      "eki_type": "20"
     },
     {
       "id": "n_vihm",
@@ -2352,7 +2605,8 @@
       "gen": "vihma",
       "part": "vihma",
       "plpart": "vihmu,vihmasid",
-      "ex": "Vihm jäi järele."
+      "ex": "Vihm jäi järele.",
+      "eki_type": "22u"
     },
     {
       "id": "n_rahe",
@@ -2361,7 +2615,8 @@
       "gen": "rahe",
       "part": "rahet",
       "plpart": "rahesid",
-      "ex": "Sajab vihma ja rahet."
+      "ex": "Sajab vihma ja rahet.",
+      "eki_type": "16"
     },
     {
       "id": "n_lorts",
@@ -2370,7 +2625,8 @@
       "gen": "lörtsi",
       "part": "lörtsi",
       "plpart": "lörtse,lörtsisid",
-      "ex": "Hommikul sadas lörtsi."
+      "ex": "Hommikul sadas lörtsi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_tuul",
@@ -2379,7 +2635,8 @@
       "gen": "tuule",
       "part": "tuult",
       "plpart": "tuuli",
-      "ex": "Tuul pöördus läände."
+      "ex": "Tuul pöördus läände.",
+      "eki_type": "13"
     },
     {
       "id": "n_torm",
@@ -2388,7 +2645,8 @@
       "gen": "tormi",
       "part": "tormi",
       "plpart": "torme,tormisid",
-      "ex": "Torm murdis puu maha."
+      "ex": "Torm murdis puu maha.",
+      "eki_type": "22e"
     },
     {
       "id": "n_udu",
@@ -2397,7 +2655,8 @@
       "gen": "udu",
       "part": "udu",
       "plpart": "udusid",
-      "ex": "Eksisime tihedas udus ära."
+      "ex": "Eksisime tihedas udus ära.",
+      "eki_type": "17"
     },
     {
       "id": "n_aike",
@@ -2406,7 +2665,8 @@
       "gen": "äikese",
       "part": "äikest",
       "plpart": "äikesi",
-      "ex": "Ilmajaam ennustas äikest."
+      "ex": "Ilmajaam ennustas äikest.",
+      "eki_type": "12"
     },
     {
       "id": "n_valk",
@@ -2415,7 +2675,8 @@
       "gen": "välgu",
       "part": "välku",
       "plpart": "välke,välkusid",
-      "ex": "Välk lõi majja sisse."
+      "ex": "Välk lõi majja sisse.",
+      "eki_type": "22e"
     },
     {
       "id": "n_vikerkaar",
@@ -2424,7 +2685,8 @@
       "gen": "vikerkaare",
       "part": "vikerkaart",
       "plpart": "vikerkaari",
-      "ex": "Taevas kaardus vikerkaar."
+      "ex": "Taevas kaardus vikerkaar.",
+      "eki_type": "13"
     },
     {
       "id": "n_sula",
@@ -2433,7 +2695,8 @@
       "gen": "sula",
       "part": "sula",
       "plpart": "sulasid",
-      "ex": "Ilm läheb sulale."
+      "ex": "Ilm läheb sulale.",
+      "eki_type": "17"
     },
     {
       "id": "n_selge",
@@ -2444,7 +2707,8 @@
       "plpart": "selgeid",
       "pos": "adj",
       "ex": "Oli erakordselt selge taevas ja väga külm ilm.",
-      "eki_sense": 4
+      "eki_sense": 4,
+      "eki_type": "1"
     },
     {
       "id": "n_lokk",
@@ -2453,7 +2717,8 @@
       "gen": "loki",
       "part": "lokki",
       "plpart": "lokke,lokkisid",
-      "ex": "Tüdruk jooksis lokkide lehvides kodu poole."
+      "ex": "Tüdruk jooksis lokkide lehvides kodu poole.",
+      "eki_type": "22e"
     },
     {
       "id": "n_manguasi",
@@ -2462,7 +2727,8 @@
       "gen": "mänguasja",
       "part": "mänguasja",
       "plpart": "mänguasju,mänguasjasid",
-      "ex": "Liinal on palju mänguasju, aga eriti armastab ta nukke."
+      "ex": "Liinal on palju mänguasju, aga eriti armastab ta nukke.",
+      "eki_type": "24u"
     },
     {
       "id": "n_elektroonika",
@@ -2471,7 +2737,8 @@
       "gen": "elektroonika",
       "part": "elektroonikat",
       "plpart": "elektroonikaid",
-      "ex": "Jaan on lõpetanud tehnikaülikooli elektroonika eriala."
+      "ex": "Jaan on lõpetanud tehnikaülikooli elektroonika eriala.",
+      "eki_type": "1"
     },
     {
       "id": "n_taaskasutus",
@@ -2480,7 +2747,8 @@
       "gen": "taaskasutuse",
       "part": "taaskasutust",
       "plpart": "taaskasutusi",
-      "ex": "Tähtis on, et vanapaber taaskasutusse jõuaks."
+      "ex": "Tähtis on, et vanapaber taaskasutusse jõuaks.",
+      "eki_type": "11"
     },
     {
       "id": "n_sport",
@@ -2489,7 +2757,8 @@
       "gen": "spordi",
       "part": "sporti",
       "plpart": "sporte,sportisid",
-      "ex": "Suurt sporti ei tehta igavesti."
+      "ex": "Suurt sporti ei tehta igavesti.",
+      "eki_type": "22e"
     },
     {
       "id": "n_meik",
@@ -2498,7 +2767,8 @@
       "gen": "meigi",
       "part": "meiki",
       "plpart": "meike,meikisid",
-      "ex": "Tuleb hakata õhtuks meiki tegema."
+      "ex": "Tuleb hakata õhtuks meiki tegema.",
+      "eki_type": "22e"
     },
     {
       "id": "n_muusika",
@@ -2507,7 +2777,8 @@
       "gen": "muusika",
       "part": "muusikat",
       "plpart": "muusikaid",
-      "ex": "Muusikale pühendatud elu."
+      "ex": "Muusikale pühendatud elu.",
+      "eki_type": "01"
     },
     {
       "id": "n_juus",
@@ -2517,7 +2788,8 @@
       "part": "juust",
       "plpart": "juukseid",
       "ex": "Juustest punutud nöör.",
-      "eki_sense": 1
+      "eki_sense": 1,
+      "eki_type": "9"
     },
     {
       "id": "n_kohv",
@@ -2526,7 +2798,8 @@
       "gen": "kohvi",
       "part": "kohvi",
       "plpart": "kohve,kohvisid",
-      "ex": "Ostsin paki kohvi."
+      "ex": "Ostsin paki kohvi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_film",
@@ -2535,7 +2808,8 @@
       "gen": "filmi",
       "part": "filmi",
       "plpart": "filme,filmisid",
-      "ex": "Fellini filmide nädal."
+      "ex": "Fellini filmide nädal.",
+      "eki_type": "22e"
     },
     {
       "id": "n_nou",
@@ -2544,7 +2818,8 @@
       "gen": "nõu",
       "part": "nõu",
       "plpart": "nõusid",
-      "ex": "Kaasa pesi köögis nõusid."
+      "ex": "Kaasa pesi köögis nõusid.",
+      "eki_type": "26"
     },
     {
       "id": "n_hammas",
@@ -2553,7 +2828,8 @@
       "gen": "hamba",
       "part": "hammast",
       "plpart": "hambaid",
-      "ex": "Tüdrukul on valged hambad."
+      "ex": "Tüdrukul on valged hambad.",
+      "eki_type": "07"
     },
     {
       "id": "n_arvutimang",
@@ -2561,7 +2837,8 @@
       "nom": "arvutimäng",
       "gen": "arvutimängu",
       "part": "arvutimängu",
-      "plpart": "arvutimänge,arvutimängusid"
+      "plpart": "arvutimänge,arvutimängusid",
+      "eki_type": "22e"
     },
     {
       "id": "n_ulikool",
@@ -2570,7 +2847,8 @@
       "gen": "ülikooli",
       "part": "ülikooli",
       "plpart": "ülikoole,ülikoolisid",
-      "ex": "Ta jättis ülikooli pooleli."
+      "ex": "Ta jättis ülikooli pooleli.",
+      "eki_type": "22e"
     },
     {
       "id": "n_turg",
@@ -2579,7 +2857,8 @@
       "gen": "turu",
       "part": "turgu",
       "plpart": "turge,turgusid",
-      "ex": "Turul oli palju rahvast."
+      "ex": "Turul oli palju rahvast.",
+      "eki_type": "22e"
     },
     {
       "id": "n_trenn",
@@ -2588,7 +2867,8 @@
       "gen": "trenni",
       "part": "trenni",
       "plpart": "trenne,trennisid",
-      "ex": "Teeks õige trenni?"
+      "ex": "Teeks õige trenni?",
+      "eki_type": "22e"
     },
     {
       "id": "n_restoran",
@@ -2597,7 +2877,8 @@
       "gen": "restorani",
       "part": "restorani",
       "plpart": "restorane",
-      "ex": "Ettekandja tutvustas restorani menüüd."
+      "ex": "Ettekandja tutvustas restorani menüüd.",
+      "eki_type": "19"
     },
     {
       "id": "n_louna",
@@ -2607,7 +2888,8 @@
       "part": "lõunat",
       "plpart": "lõunaid",
       "ex": "Lähen koju lõunale.",
-      "eki_sense": 3
+      "eki_sense": 3,
+      "eki_type": "6"
     },
     {
       "id": "n_koosolek",
@@ -2616,7 +2898,8 @@
       "gen": "koosoleku",
       "part": "koosolekut",
       "plpart": "koosolekuid",
-      "ex": "Koosolek jäi ära."
+      "ex": "Koosolek jäi ära.",
+      "eki_type": "02"
     },
     {
       "id": "n_kino",
@@ -2625,7 +2908,8 @@
       "gen": "kino",
       "part": "kino",
       "plpart": "kinosid",
-      "ex": "Käisin nädalavahetusel kinos."
+      "ex": "Käisin nädalavahetusel kinos.",
+      "eki_type": "17"
     },
     {
       "id": "n_kursus",
@@ -2634,7 +2918,8 @@
       "gen": "kursuse",
       "part": "kursust",
       "plpart": "kursusi",
-      "ex": "Kursused kestavad neli kuud."
+      "ex": "Kursused kestavad neli kuud.",
+      "eki_type": "11"
     },
     {
       "id": "n_olu",
@@ -2643,7 +2928,8 @@
       "gen": "õlle",
       "part": "õlut",
       "plpart": "õllesid",
-      "ex": "Kange tume õlu."
+      "ex": "Kange tume õlu.",
+      "eki_type": "24"
     },
     {
       "id": "n_vein",
@@ -2652,7 +2938,8 @@
       "gen": "veini",
       "part": "veini",
       "plpart": "veine,veinisid",
-      "ex": "Eelistan vanu veine."
+      "ex": "Eelistan vanu veine.",
+      "eki_type": "22e"
     },
     {
       "id": "n_sokolaad",
@@ -2661,7 +2948,8 @@
       "gen": "šokolaadi",
       "part": "šokolaadi",
       "plpart": "šokolaade,šokolaadisid",
-      "ex": "Sõin tüki šokolaadi."
+      "ex": "Sõin tüki šokolaadi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_sampus",
@@ -2670,7 +2958,8 @@
       "gen": "šampuse",
       "part": "šampust",
       "plpart": "šampusi",
-      "ex": "Kõigil oli tuju hea ning šampust voolas ohtralt."
+      "ex": "Kõigil oli tuju hea ning šampust voolas ohtralt.",
+      "eki_type": "11"
     },
     {
       "id": "n_moos",
@@ -2679,7 +2968,8 @@
       "gen": "moosi",
       "part": "moosi",
       "plpart": "moose,moosisid",
-      "ex": "Sõime pannkooke moosiga."
+      "ex": "Sõime pannkooke moosiga.",
+      "eki_type": "22e"
     },
     {
       "id": "n_mesi",
@@ -2688,7 +2978,8 @@
       "gen": "mee",
       "part": "mett",
       "plpart": "mesi",
-      "ex": "Ta joob teed alati meega."
+      "ex": "Ta joob teed alati meega.",
+      "eki_type": "15"
     },
     {
       "id": "n_limonaad",
@@ -2697,7 +2988,8 @@
       "gen": "limonaadi",
       "part": "limonaadi",
       "plpart": "limonaade,limonaadisid",
-      "ex": "Lapsed joovad limonaadi."
+      "ex": "Lapsed joovad limonaadi.",
+      "eki_type": "22e"
     },
     {
       "id": "n_konjak",
@@ -2706,7 +2998,8 @@
       "gen": "konjaki",
       "part": "konjakit",
       "plpart": "konjakeid",
-      "ex": "Hea Prantsuse konjak."
+      "ex": "Hea Prantsuse konjak.",
+      "eki_type": "2e"
     },
     {
       "id": "n_jaatis",
@@ -2715,7 +3008,8 @@
       "gen": "jäätise",
       "part": "jäätist",
       "plpart": "jäätisi",
-      "ex": "Sõime kohvi kõrvale jäätist."
+      "ex": "Sõime kohvi kõrvale jäätist.",
+      "eki_type": "11"
     },
     {
       "id": "n_prugi",
@@ -2724,7 +3018,8 @@
       "gen": "prügi",
       "part": "prügi",
       "plpart": "prügisid",
-      "ex": "Vii prügi välja!"
+      "ex": "Vii prügi välja!",
+      "eki_type": "17"
     },
     {
       "id": "n_remont",
@@ -2733,7 +3028,8 @@
       "gen": "remondi",
       "part": "remonti",
       "plpart": "remonte,remontisid",
-      "ex": "Viisin auto remonti."
+      "ex": "Viisin auto remonti.",
+      "eki_type": "22e"
     },
     {
       "id": "n_pesu",
@@ -2743,7 +3039,8 @@
       "part": "pesu",
       "plpart": "pesusid",
       "ex": "Pane pesu kuivama.",
-      "eki_sense": 1
+      "eki_sense": 1,
+      "eki_type": "17"
     },
     {
       "id": "n_kass",
@@ -2752,7 +3049,8 @@
       "gen": "kassi",
       "part": "kassi",
       "plpart": "kasse,kassisid",
-      "ex": "Meie kassil on pojad."
+      "ex": "Meie kassil on pojad.",
+      "eki_type": "22e"
     },
     {
       "id": "n_asi",
@@ -2761,7 +3059,8 @@
       "gen": "asja",
       "part": "asja",
       "plpart": "asju,asjasid",
-      "ex": "Tal on taskud asju täis."
+      "ex": "Tal on taskud asju täis.",
+      "eki_type": "24u"
     },
     {
       "id": "n_maa",
@@ -2771,7 +3070,8 @@
       "part": "maad",
       "plpart": "maid,maasid",
       "ex": "Kas elad linnas või maal?",
-      "eki_sense": 3
+      "eki_sense": 3,
+      "eki_type": "26i"
     },
     {
       "id": "n_aadress",
@@ -2780,7 +3080,8 @@
       "gen": "aadressi",
       "part": "aadressi",
       "plpart": "aadresse,aadressisid",
-      "ex": "Mis su aadress on?"
+      "ex": "Mis su aadress on?",
+      "eki_type": "22e"
     },
     {
       "id": "n_korrus",
@@ -2789,7 +3090,8 @@
       "gen": "korruse",
       "part": "korrust",
       "plpart": "korruseid",
-      "ex": "Ma elan viiendal korrusel."
+      "ex": "Ma elan viiendal korrusel.",
+      "eki_type": "9"
     },
     {
       "id": "n_raamatukogu",
@@ -2798,7 +3100,8 @@
       "gen": "raamatukogu",
       "part": "raamatukogu",
       "plpart": "raamatukogusid",
-      "ex": "Võtsin raamatukogust õpiku."
+      "ex": "Võtsin raamatukogust õpiku.",
+      "eki_type": "17"
     },
     {
       "id": "n_jousaal",
@@ -2807,7 +3110,8 @@
       "gen": "jõusaali",
       "part": "jõusaali",
       "plpart": "jõusaale,jõusaalisid",
-      "ex": "Käin kaks korda nädalas jõusaalis."
+      "ex": "Käin kaks korda nädalas jõusaalis.",
+      "eki_type": "22e"
     },
     {
       "id": "n_kodukino",
@@ -2815,7 +3119,8 @@
       "nom": "kodukino",
       "gen": "kodukino",
       "part": "kodukino",
-      "plpart": "kodukinosid"
+      "plpart": "kodukinosid",
+      "eki_type": "17"
     },
     {
       "id": "n_ounapuu",
@@ -2824,7 +3129,8 @@
       "gen": "õunapuu",
       "part": "õunapuud",
       "plpart": "õunapuid,õunapuusid",
-      "ex": "Aias õitsevad õunapuud."
+      "ex": "Aias õitsevad õunapuud.",
+      "eki_type": "26i"
     },
     {
       "id": "n_pooning",
@@ -2833,7 +3139,8 @@
       "gen": "pööningu",
       "part": "pööningut",
       "plpart": "pööninguid",
-      "ex": "See trepp viib pööningule."
+      "ex": "See trepp viib pööningule.",
+      "eki_type": "2"
     },
     {
       "id": "n_park",
@@ -2842,7 +3149,8 @@
       "gen": "pargi",
       "part": "parki",
       "plpart": "parke,parkisid",
-      "ex": "Läksime parki jalutama."
+      "ex": "Läksime parki jalutama.",
+      "eki_type": "22e"
     },
     {
       "id": "n_sugis",
@@ -2851,7 +3159,8 @@
       "gen": "sügise",
       "part": "sügist",
       "plpart": "sügiseid",
-      "ex": "Sügis on käes."
+      "ex": "Sügis on käes.",
+      "eki_type": "9"
     },
     {
       "id": "n_ruutmeeter",
@@ -2860,7 +3169,8 @@
       "gen": "ruutmeetri",
       "part": "ruutmeetrit",
       "plpart": "ruutmeetreid",
-      "ex": "Korteri suurus on 54 ruutmeetrit."
+      "ex": "Korteri suurus on 54 ruutmeetrit.",
+      "eki_type": "2e"
     },
     {
       "id": "n_varv",
@@ -2869,7 +3179,8 @@
       "gen": "värvi",
       "part": "värvi",
       "plpart": "värve,värvisid",
-      "ex": "Mere sinine värv."
+      "ex": "Mere sinine värv.",
+      "eki_type": "22e"
     },
     {
       "id": "n_onnelik",
@@ -2879,7 +3190,8 @@
       "part": "õnnelikku",
       "plpart": "õnnelikke,õnnelikkusid",
       "pos": "adj",
-      "ex": "Film oli õnneliku lõpuga."
+      "ex": "Film oli õnneliku lõpuga.",
+      "eki_type": "25"
     },
     {
       "id": "n_suur",
@@ -2889,7 +3201,8 @@
       "part": "suurt",
       "plpart": "suuri",
       "pos": "adj",
-      "ex": "Suure ninaga mees."
+      "ex": "Suure ninaga mees.",
+      "eki_type": "13"
     },
     {
       "id": "n_vaike",
@@ -2899,7 +3212,8 @@
       "part": "väikest",
       "plpart": "väikesi",
       "pos": "adj",
-      "ex": "Väikest kasvu naine."
+      "ex": "Väikest kasvu naine.",
+      "eki_type": "12"
     },
     {
       "id": "n_uus",
@@ -2909,7 +3223,8 @@
       "part": "uut",
       "plpart": "uusi",
       "pos": "adj",
-      "ex": "Uue filmi esilinastus."
+      "ex": "Uue filmi esilinastus.",
+      "eki_type": "14"
     },
     {
       "id": "n_vana",
@@ -2919,7 +3234,8 @@
       "part": "vana",
       "plpart": "vanu,vanasid",
       "pos": "adj",
-      "ex": "Vanu inimesi tuleb aidata."
+      "ex": "Vanu inimesi tuleb aidata.",
+      "eki_type": "17u"
     },
     {
       "id": "n_puhas",
@@ -2929,7 +3245,8 @@
       "part": "puhast",
       "plpart": "puhtaid",
       "pos": "adj",
-      "ex": "Peske käed puhtaks."
+      "ex": "Peske käed puhtaks.",
+      "eki_type": "07"
     },
     {
       "id": "n_moodne",
@@ -2939,7 +3256,8 @@
       "part": "moodsat",
       "plpart": "moodsaid",
       "pos": "adj",
-      "ex": "Moodsa kunsti näitus."
+      "ex": "Moodsa kunsti näitus.",
+      "eki_type": "2"
     },
     {
       "id": "n_mugav",
@@ -2949,7 +3267,8 @@
       "part": "mugavat",
       "plpart": "mugavaid",
       "pos": "adj",
-      "ex": "Need kingad on väga mugavad."
+      "ex": "Need kingad on väga mugavad.",
+      "eki_type": "2"
     },
     {
       "id": "n_ilus",
@@ -2959,7 +3278,8 @@
       "part": "ilusat",
       "plpart": "ilusaid",
       "pos": "adj",
-      "ex": "Täna on ilus ilm."
+      "ex": "Täna on ilus ilm.",
+      "eki_type": "2"
     },
     {
       "id": "n_valge",
@@ -2969,7 +3289,8 @@
       "part": "valget",
       "plpart": "valgeid",
       "pos": "adj",
-      "ex": "Pruut kandis valget kleiti."
+      "ex": "Pruut kandis valget kleiti.",
+      "eki_type": "1"
     },
     {
       "id": "n_kakskummend",
@@ -2979,7 +3300,8 @@
       "part": "kahtekümmend,kahtkümmend,kahtekümmet,kahtkümmet",
       "plpart": "kahekümneid",
       "pos": "num",
-      "ex": "Buss nr 20."
+      "ex": "Buss nr 20.",
+      "eki_type": "5"
     },
     {
       "id": "n_kolmkummend",
@@ -2989,7 +3311,8 @@
       "part": "kolmekümmend,kolmekümmet",
       "plpart": "kolmekümneid",
       "pos": "num",
-      "ex": "Buss nr 30."
+      "ex": "Buss nr 30.",
+      "eki_type": "5"
     },
     {
       "id": "n_nelikummend",
@@ -2999,7 +3322,8 @@
       "part": "neljakümmend,neljakümmet",
       "plpart": "neljakümneid",
       "pos": "num",
-      "ex": "Buss nr 40."
+      "ex": "Buss nr 40.",
+      "eki_type": "5"
     },
     {
       "id": "n_viiskummend",
@@ -3009,7 +3333,8 @@
       "part": "viitkümmend,viitekümmend,viitkümmet,viitekümmet",
       "plpart": "viiekümneid",
       "pos": "num",
-      "ex": "Buss nr 50."
+      "ex": "Buss nr 50.",
+      "eki_type": "5"
     },
     {
       "id": "n_kuuskummend",
@@ -3019,7 +3344,8 @@
       "part": "kuutkümmend,kuutekümmend,kuutkümmet,kuutekümmet",
       "plpart": "kuuekümneid",
       "pos": "num",
-      "ex": "Buss nr 60."
+      "ex": "Buss nr 60.",
+      "eki_type": "5"
     },
     {
       "id": "n_seitsekummend",
@@ -3029,7 +3355,8 @@
       "part": "seitsetkümmend,seitsetkümmet",
       "plpart": "seitsmekümneid",
       "pos": "num",
-      "ex": "Vanaisa saab varsti seitsekümmend."
+      "ex": "Vanaisa saab varsti seitsekümmend.",
+      "eki_type": "5"
     },
     {
       "id": "n_kaheksakummend",
@@ -3039,7 +3366,8 @@
       "part": "kaheksatkümmend,kaheksatkümmet",
       "plpart": "kaheksakümneid",
       "pos": "num",
-      "ex": "Ta on üle kaheksakümne aasta vana."
+      "ex": "Ta on üle kaheksakümne aasta vana.",
+      "eki_type": "5"
     },
     {
       "id": "n_uheksakummend",
@@ -3049,7 +3377,8 @@
       "part": "üheksatkümmend,üheksatkümmet",
       "plpart": "üheksakümneid",
       "pos": "num",
-      "ex": "Ajakirja esimene number ilmus üheksakümmend aastat tagasi."
+      "ex": "Ajakirja esimene number ilmus üheksakümmend aastat tagasi.",
+      "eki_type": "5"
     },
     {
       "id": "n_sada",
@@ -3059,7 +3388,8 @@
       "part": "sada,sadat",
       "plpart": "sadu,sadasid",
       "pos": "num",
-      "ex": "Näitusel käis sadu inimesi."
+      "ex": "Näitusel käis sadu inimesi.",
+      "eki_type": "18u"
     },
     {
       "id": "n_tuhat",
@@ -3069,7 +3399,8 @@
       "part": "tuhandet,tuhat",
       "plpart": "tuhandeid",
       "pos": "num",
-      "ex": "Kaks tuhat kolmsada."
+      "ex": "Kaks tuhat kolmsada.",
+      "eki_type": "2"
     },
     {
       "id": "n_miljon",
@@ -3079,7 +3410,8 @@
       "part": "miljonit",
       "plpart": "miljoneid",
       "pos": "num",
-      "ex": "Hoone remont läheb maksma miljoneid eurosid."
+      "ex": "Hoone remont läheb maksma miljoneid eurosid.",
+      "eki_type": "2e"
     }
   ],
   "verbs": [
@@ -3092,7 +3424,8 @@
       "neg": "ole",
       "past": "oli",
       "nud": "olnud",
-      "ex": "Olla või mitte olla?"
+      "ex": "Olla või mitte olla?",
+      "eki_type": "36"
     },
     {
       "id": "v_minema",
@@ -3104,7 +3437,8 @@
       "past": "läks",
       "nud": "läinud",
       "rek": "kuhu,millega,mida tegema",
-      "ex": "Läki nüüd sööma!"
+      "ex": "Läki nüüd sööma!",
+      "eki_type": "36"
     },
     {
       "id": "v_tulema",
@@ -3116,7 +3450,8 @@
       "past": "tuli",
       "nud": "tulnud",
       "ex": "Ta tuli töölt.",
-      "rek": "kuhu,kust,millega,mida tegema,mida tegemast"
+      "rek": "kuhu,kust,millega,mida tegema,mida tegemast",
+      "eki_type": "36"
     },
     {
       "id": "v_tegema",
@@ -3127,7 +3462,8 @@
       "neg": "tee",
       "past": "tegi",
       "nud": "teinud",
-      "ex": "Raamatust tehti film."
+      "ex": "Raamatust tehti film.",
+      "eki_type": "28"
     },
     {
       "id": "v_nagema",
@@ -3139,7 +3475,8 @@
       "past": "nägi",
       "nud": "näinud",
       "rek": "keda/mida*",
-      "ex": "Nägin sind eile teatris."
+      "ex": "Nägin sind eile teatris.",
+      "eki_type": "28"
     },
     {
       "id": "v_lugema",
@@ -3151,7 +3488,8 @@
       "past": "luges",
       "nud": "lugenud",
       "rek": "mida,kust,kellele",
-      "ex": "Loen ühte põnevat raamatut."
+      "ex": "Loen ühte põnevat raamatut.",
+      "eki_type": "28"
     },
     {
       "id": "v_kirjutama",
@@ -3162,7 +3500,8 @@
       "neg": "kirjuta",
       "past": "kirjutas",
       "nud": "kirjutanud",
-      "ex": "Kirjuta tööle oma nimi peale."
+      "ex": "Kirjuta tööle oma nimi peale.",
+      "eki_type": "27"
     },
     {
       "id": "v_panema",
@@ -3174,7 +3513,8 @@
       "past": "pani",
       "nud": "pannud",
       "rek": "mida,kuhu",
-      "ex": "Pane raamat lauale."
+      "ex": "Pane raamat lauale.",
+      "eki_type": "36"
     },
     {
       "id": "v_sooma",
@@ -3185,7 +3525,8 @@
       "neg": "söö",
       "past": "sõi",
       "nud": "söönud",
-      "ex": "Söö kõht täis!"
+      "ex": "Söö kõht täis!",
+      "eki_type": "38i"
     },
     {
       "id": "v_jooma",
@@ -3196,7 +3537,8 @@
       "neg": "joo",
       "past": "jõi",
       "nud": "joonud",
-      "ex": "Jõin tassi kohvi."
+      "ex": "Jõin tassi kohvi.",
+      "eki_type": "38i"
     },
     {
       "id": "v_votma",
@@ -3208,7 +3550,8 @@
       "past": "võttis",
       "nud": "võtnud",
       "rek": "keda/mida",
-      "ex": "Võta kott ja lähme!"
+      "ex": "Võta kott ja lähme!",
+      "eki_type": "35"
     },
     {
       "id": "v_andma",
@@ -3219,7 +3562,8 @@
       "neg": "anna",
       "past": "andis",
       "nud": "andnud",
-      "ex": "Anna mulle käsi."
+      "ex": "Anna mulle käsi.",
+      "eki_type": "34"
     },
     {
       "id": "v_tahtma",
@@ -3231,7 +3575,8 @@
       "past": "tahtis",
       "nud": "tahtnud",
       "rek": "mida/keda*,mida teha,kuhu",
-      "ex": "Ma tahan koju."
+      "ex": "Ma tahan koju.",
+      "eki_type": "34"
     },
     {
       "id": "v_saama",
@@ -3243,7 +3588,8 @@
       "past": "sai",
       "nud": "saanud",
       "rek": "kellelt / kust",
-      "ex": "Ta sai loa lahkuda."
+      "ex": "Ta sai loa lahkuda.",
+      "eki_type": "37i"
     },
     {
       "id": "v_jaama",
@@ -3255,7 +3601,8 @@
       "past": "jäi",
       "nud": "jäänud",
       "rek": "kuhu,kelle juurde",
-      "ex": "Mure jäi hinge."
+      "ex": "Mure jäi hinge.",
+      "eki_type": "37i"
     },
     {
       "id": "v_kaima",
@@ -3268,7 +3615,8 @@
       "nud": "käinud",
       "ex": "Pean poes ära käima.",
       "eki_sense": 1,
-      "rek": "kus,millega,kelle juures,mida tegemas"
+      "rek": "kus,millega,kelle juures,mida tegemas",
+      "eki_type": "38"
     },
     {
       "id": "v_tootama",
@@ -3280,7 +3628,8 @@
       "past": "töötas",
       "nud": "töötanud",
       "rek": "kus,kellena",
-      "ex": "Ma töötan õpetajana."
+      "ex": "Ma töötan õpetajana.",
+      "eki_type": "27"
     },
     {
       "id": "v_raakima",
@@ -3292,7 +3641,8 @@
       "past": "rääkis",
       "nud": "rääkinud",
       "rek": "kellega,et",
-      "ex": "Ma pean sinuga rääkima."
+      "ex": "Ma pean sinuga rääkima.",
+      "eki_type": "28"
     },
     {
       "id": "v_utlema",
@@ -3304,7 +3654,8 @@
       "past": "ütles",
       "nud": "ütelnud",
       "rek": "kellele,kelle/mille kohta",
-      "ex": "Ütle oma nimi!"
+      "ex": "Ütle oma nimi!",
+      "eki_type": "30"
     },
     {
       "id": "v_teadma",
@@ -3316,7 +3667,8 @@
       "past": "teadis",
       "nud": "teadnud",
       "rek": "mida*,kellest/millest",
-      "ex": "Ma ei tea hümni sõnu."
+      "ex": "Ma ei tea hümni sõnu.",
+      "eki_type": "34"
     },
     {
       "id": "v_tundma",
@@ -3329,7 +3681,8 @@
       "nud": "tundnud",
       "rek": "keda*",
       "ex": "Tunnen teda lapsepõlvest saadik.",
-      "eki_sense": 6
+      "eki_sense": 6,
+      "eki_type": "34"
     },
     {
       "id": "v_pidama",
@@ -3341,7 +3694,8 @@
       "past": "pidi",
       "nud": "pidanud",
       "rek": "mida tegema",
-      "ex": "Ma pean minema."
+      "ex": "Ma pean minema.",
+      "eki_type": "28"
     },
     {
       "id": "v_hakkama",
@@ -3353,7 +3707,8 @@
       "past": "hakkas",
       "nud": "hakanud",
       "rek": "mida tegema",
-      "ex": "Hakkame siis tööle."
+      "ex": "Hakkame siis tööle.",
+      "eki_type": "29"
     },
     {
       "id": "v_oskama",
@@ -3365,7 +3720,8 @@
       "past": "oskas",
       "nud": "osanud",
       "rek": "mida*,mida teha",
-      "ex": "Mitut keelt sa oskad?"
+      "ex": "Mitut keelt sa oskad?",
+      "eki_type": "29"
     },
     {
       "id": "v_oppima",
@@ -3377,7 +3733,8 @@
       "past": "õppis",
       "nud": "õppinud",
       "rek": "mida*,mida tegema,kelleks",
-      "ex": "Ta õpib arstiks."
+      "ex": "Ta õpib arstiks.",
+      "eki_type": "28"
     },
     {
       "id": "v_ostma",
@@ -3389,7 +3746,8 @@
       "past": "ostis",
       "nud": "ostnud",
       "rek": "mille/mida,kust,kellelt / kelle käest,mille eest / millega",
-      "ex": "Tõnis ostis uue auto."
+      "ex": "Tõnis ostis uue auto.",
+      "eki_type": "34"
     },
     {
       "id": "v_muuma",
@@ -3401,7 +3759,8 @@
       "past": "müüs",
       "nud": "müünud",
       "rek": "kellele,mille eest / millega",
-      "ex": "See maja on müüa."
+      "ex": "See maja on müüa.",
+      "eki_type": "38"
     },
     {
       "id": "v_elama",
@@ -3413,7 +3772,8 @@
       "past": "elas",
       "nud": "elanud",
       "ex": "Hunt elab metsas.",
-      "eki_sense": 6
+      "eki_sense": 6,
+      "eki_type": "27"
     },
     {
       "id": "v_magama",
@@ -3424,7 +3784,8 @@
       "neg": "maga",
       "past": "magas",
       "nud": "maganud",
-      "ex": "Maga ennast kaineks!"
+      "ex": "Maga ennast kaineks!",
+      "eki_type": "27"
     },
     {
       "id": "v_ootama",
@@ -3436,7 +3797,8 @@
       "past": "ootas",
       "nud": "oodanud",
       "rek": "keda/mida*",
-      "ex": "Takso ootab maja ees."
+      "ex": "Takso ootab maja ees.",
+      "eki_type": "29"
     },
     {
       "id": "v_vaatama",
@@ -3448,7 +3810,8 @@
       "past": "vaatas",
       "nud": "vaadanud",
       "rek": "keda/mida*",
-      "ex": "Vaatasime albumist pilte."
+      "ex": "Vaatasime albumist pilte.",
+      "eki_type": "29"
     },
     {
       "id": "v_kuulama",
@@ -3460,7 +3823,8 @@
       "past": "kuulas",
       "nud": "kuulanud",
       "rek": "keda/mida*",
-      "ex": "Kuulake mind ka!"
+      "ex": "Kuulake mind ka!",
+      "eki_type": "29"
     },
     {
       "id": "v_kuulma",
@@ -3472,7 +3836,8 @@
       "past": "kuulis",
       "nud": "kuulnud",
       "rek": "keda/mida*",
-      "ex": "Kuulsime kellegi naeru."
+      "ex": "Kuulsime kellegi naeru.",
+      "eki_type": "33"
     },
     {
       "id": "v_motlema",
@@ -3484,7 +3849,8 @@
       "past": "mõtles",
       "nud": "mõtelnud",
       "ex": "Millest sa mõtled?",
-      "rek": "kellest/millest,kellele/millele,kelle/mille peale"
+      "rek": "kellest/millest,kellele/millele,kelle/mille peale",
+      "eki_type": "30"
     },
     {
       "id": "v_soitma",
@@ -3496,7 +3862,8 @@
       "past": "sõitis",
       "nud": "sõitnud",
       "rek": "kuhu,millega",
-      "ex": "Rong sõitis väga aeglaselt."
+      "ex": "Rong sõitis väga aeglaselt.",
+      "eki_type": "34"
     },
     {
       "id": "v_jooksma",
@@ -3507,7 +3874,8 @@
       "neg": "jookse",
       "past": "jooksis",
       "nud": "jooksnud",
-      "ex": "Jooksime bussi peale."
+      "ex": "Jooksime bussi peale.",
+      "eki_type": "32"
     },
     {
       "id": "v_pesema",
@@ -3518,7 +3886,8 @@
       "neg": "pese",
       "past": "pesi",
       "nud": "pesnud",
-      "ex": "Nõud jäid pesemata."
+      "ex": "Nõud jäid pesemata.",
+      "eki_type": "36"
     },
     {
       "id": "v_kusima",
@@ -3530,7 +3899,8 @@
       "past": "küsis",
       "nud": "küsinud",
       "rek": "kellelt,kelle käest,kelle/mille kohta,kust,kas",
-      "ex": "Küsisin lillede hinda."
+      "ex": "Küsisin lillede hinda.",
+      "eki_type": "27"
     },
     {
       "id": "v_vastama",
@@ -3542,7 +3912,8 @@
       "past": "vastas",
       "nud": "vastanud",
       "rek": "kellele/millele,millega",
-      "ex": "Palun vasta mulle ausalt!"
+      "ex": "Palun vasta mulle ausalt!",
+      "eki_type": "29"
     },
     {
       "id": "v_aitama",
@@ -3554,7 +3925,8 @@
       "past": "aitas",
       "nud": "aidanud",
       "rek": "keda/mida*,kellel + mida teha",
-      "ex": "Õpetaja aitab õpilast."
+      "ex": "Õpetaja aitab õpilast.",
+      "eki_type": "29"
     },
     {
       "id": "v_armastama",
@@ -3566,7 +3938,8 @@
       "past": "armastas",
       "nud": "armastanud",
       "rek": "keda/mida*",
-      "ex": "Henrik armastab Liinat."
+      "ex": "Henrik armastab Liinat.",
+      "eki_type": "27"
     },
     {
       "id": "v_lubama",
@@ -3578,7 +3951,8 @@
       "past": "lubas",
       "nud": "lubanud",
       "rek": "kellel + mida teha",
-      "ex": "Ema lubas lapsed õue."
+      "ex": "Ema lubas lapsed õue.",
+      "eki_type": "27"
     },
     {
       "id": "v_leidma",
@@ -3590,7 +3964,8 @@
       "past": "leidis",
       "nud": "leidnud",
       "rek": "kust",
-      "ex": "Ma ei leia oma rahakotti."
+      "ex": "Ma ei leia oma rahakotti.",
+      "eki_type": "34"
     },
     {
       "id": "v_alustama",
@@ -3602,7 +3977,8 @@
       "past": "alustas",
       "nud": "alustanud",
       "rek": "mida*,millega,millest",
-      "ex": "Homme alustan dieeti."
+      "ex": "Homme alustan dieeti.",
+      "eki_type": "27"
     },
     {
       "id": "v_lopetama",
@@ -3613,7 +3989,8 @@
       "neg": "lõpeta",
       "past": "lõpetas",
       "nud": "lõpetanud",
-      "ex": "Pean töö homseks lõpetama."
+      "ex": "Pean töö homseks lõpetama.",
+      "eki_type": "27"
     },
     {
       "id": "v_viima",
@@ -3625,7 +4002,8 @@
       "past": "viis",
       "nud": "viinud",
       "rek": "keda/mida,kuhu,kust + kuhu",
-      "ex": "Tuul viis mütsi peast."
+      "ex": "Tuul viis mütsi peast.",
+      "eki_type": "38"
     },
     {
       "id": "v_tooma",
@@ -3637,7 +4015,8 @@
       "past": "tõi",
       "nud": "toonud",
       "rek": "keda/mida,kust,kust + kuhu,kuhu + millega",
-      "ex": "Palun too poest leiba."
+      "ex": "Palun too poest leiba.",
+      "eki_type": "38i"
     },
     {
       "id": "v_laulma",
@@ -3649,7 +4028,8 @@
       "past": "laulis",
       "nud": "laulnud",
       "rek": "millest,kellele",
-      "ex": "Läki karaoket laulma."
+      "ex": "Läki karaoket laulma.",
+      "eki_type": "33"
     },
     {
       "id": "v_mangima",
@@ -3661,7 +4041,8 @@
       "past": "mängis",
       "nud": "mänginud",
       "rek": "mida*,millega",
-      "ex": "Mis mängu te mängite?"
+      "ex": "Mis mängu te mängite?",
+      "eki_type": "28"
     },
     {
       "id": "v_avama",
@@ -3672,7 +4053,8 @@
       "neg": "ava",
       "past": "avas",
       "nud": "avanud",
-      "ex": "Poiss avas ukse."
+      "ex": "Poiss avas ukse.",
+      "eki_type": "27"
     },
     {
       "id": "v_sulgema",
@@ -3683,7 +4065,8 @@
       "neg": "sule",
       "past": "sulges",
       "nud": "sulgenud",
-      "ex": "Sulgesin vaikselt ukse."
+      "ex": "Sulgesin vaikselt ukse.",
+      "eki_type": "28"
     },
     {
       "id": "v_istuma",
@@ -3695,7 +4078,8 @@
       "past": "istus",
       "nud": "istunud",
       "rek": "kus,kuhu",
-      "ex": "Istun tooli peal."
+      "ex": "Istun tooli peal.",
+      "eki_type": "28"
     },
     {
       "id": "v_seisma",
@@ -3706,7 +4090,8 @@
       "neg": "seisa",
       "past": "seisis",
       "nud": "seisnud",
-      "ex": "Hobune jäi oja ette seisma."
+      "ex": "Hobune jäi oja ette seisma.",
+      "eki_type": "32"
     },
     {
       "id": "v_pakkuma",
@@ -3718,7 +4103,8 @@
       "past": "pakkus",
       "nud": "pakkunud",
       "rek": "mida*",
-      "ex": "Pakkusin end appi."
+      "ex": "Pakkusin end appi.",
+      "eki_type": "28"
     },
     {
       "id": "v_helistama",
@@ -3730,7 +4116,8 @@
       "past": "helistas",
       "nud": "helistanud",
       "rek": "kellele,kuhu",
-      "ex": "Nii hilja ei sobi enam helistada."
+      "ex": "Nii hilja ei sobi enam helistada.",
+      "eki_type": "27"
     },
     {
       "id": "v_kammima",
@@ -3741,7 +4128,8 @@
       "neg": "kammi",
       "past": "kammis",
       "nud": "kamminud",
-      "ex": "Juuksed on kammitud."
+      "ex": "Juuksed on kammitud.",
+      "eki_type": "28"
     },
     {
       "id": "v_koristama",
@@ -3752,7 +4140,8 @@
       "neg": "korista",
       "past": "koristas",
       "nud": "koristanud",
-      "ex": "Koristasime asju kokku."
+      "ex": "Koristasime asju kokku.",
+      "eki_type": "27"
     },
     {
       "id": "v_arkama",
@@ -3764,7 +4153,8 @@
       "past": "ärkas",
       "nud": "ärganud",
       "rek": "mille peale",
-      "ex": "Ärkasin müra peale."
+      "ex": "Ärkasin müra peale.",
+      "eki_type": "29"
     },
     {
       "id": "v_voimlema",
@@ -3775,7 +4165,8 @@
       "neg": "võimle",
       "past": "võimles",
       "nud": "võimelnud",
-      "ex": "Võimlen igal hommikul pool tundi."
+      "ex": "Võimlen igal hommikul pool tundi.",
+      "eki_type": "30"
     },
     {
       "id": "v_suitsetama",
@@ -3786,7 +4177,8 @@
       "neg": "suitseta",
       "past": "suitsetas",
       "nud": "suitsetanud",
-      "ex": "Ta ei joo ega suitseta."
+      "ex": "Ta ei joo ega suitseta.",
+      "eki_type": "27"
     },
     {
       "id": "v_puhkama",
@@ -3798,7 +4190,8 @@
       "past": "puhkas",
       "nud": "puhanud",
       "rek": "kellest/millest",
-      "ex": "Näed puhanud välja."
+      "ex": "Näed puhanud välja.",
+      "eki_type": "29"
     },
     {
       "id": "v_joonistama",
@@ -3809,7 +4202,8 @@
       "neg": "joonista",
       "past": "joonistas",
       "nud": "joonistanud",
-      "ex": "Ta joonistas paberile hobuse."
+      "ex": "Ta joonistas paberile hobuse.",
+      "eki_type": "27"
     },
     {
       "id": "v_tuiskama",
@@ -3820,7 +4214,8 @@
       "neg": "tuiska",
       "past": "tuiskas",
       "nud": "tuisanud",
-      "ex": "Akna taga tuiskab lund."
+      "ex": "Akna taga tuiskab lund.",
+      "eki_type": "29"
     },
     {
       "id": "v_muristama",
@@ -3831,7 +4226,8 @@
       "neg": "mürista",
       "past": "müristas",
       "nud": "müristanud",
-      "ex": "Väljas müristas kõu."
+      "ex": "Väljas müristas kõu.",
+      "eki_type": "27"
     },
     {
       "id": "v_tousma",
@@ -3842,7 +4238,8 @@
       "neg": "tõuse",
       "past": "tõusis",
       "nud": "tõusnud",
-      "ex": "Tee tõuseb mäkke."
+      "ex": "Tee tõuseb mäkke.",
+      "eki_type": "32"
     },
     {
       "id": "v_parandama",
@@ -3854,7 +4251,8 @@
       "past": "parandas",
       "nud": "parandanud",
       "rek": "mida",
-      "ex": "Mehed parandavad katust."
+      "ex": "Mehed parandavad katust.",
+      "eki_type": "27"
     },
     {
       "id": "v_sorteerima",
@@ -3865,7 +4263,8 @@
       "neg": "sorteeri",
       "past": "sorteeris",
       "nud": "sorteerinud",
-      "ex": "Prügi sorteeritakse eri konteineritesse."
+      "ex": "Prügi sorteeritakse eri konteineritesse.",
+      "eki_type": "28"
     },
     {
       "id": "v_triikima",
@@ -3876,7 +4275,8 @@
       "neg": "triigi",
       "past": "triikis",
       "nud": "triikinud",
-      "ex": "Triikisin laudlina ära."
+      "ex": "Triikisin laudlina ära.",
+      "eki_type": "28"
     }
   ]
 }

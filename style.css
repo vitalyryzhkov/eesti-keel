@@ -96,7 +96,9 @@ h1 { font-size: 18px; margin: 0; letter-spacing: .02em; }
 .field input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
 .field.ok input { border-color: var(--ok); }
 .field.bad input { border-color: var(--bad); }
-.field .right { font-size: 15px; color: var(--ok); }
+/* правильный ответ бывает длинной строкой без пробелов (kuutkümmend,kuutekümmend,…)
+   — без переноса карточка на телефоне уезжала вбок */
+.field .right { font-size: 15px; color: var(--ok); overflow-wrap: anywhere; }
 .field .right s { color: var(--bad); text-decoration: line-through; margin-right: 8px; }
 
 .answer { font-size: 26px; font-weight: 600; }
@@ -205,6 +207,27 @@ dialog .row button.danger { color: var(--bad); }
   border-left: 2px solid var(--line);
   padding-left: 10px;
   margin-top: -4px;
+}
+
+/* «так же»: слова колоды с той же схемой форм */
+.kin {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.kin-lbl {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-right: 2px;
+}
+/* пара держится одним блоком и переносится целиком; длиннее строки
+   (üheteistkümnes → üheteistkümnenda, …) — переносится внутри, но не режется */
+.kin-w {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 /* --- добавление слова --- */
