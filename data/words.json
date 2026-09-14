@@ -2479,6 +2479,284 @@
       "part": "taaskasutust",
       "plpart": "taaskasutusi",
       "ex": "Tähtis on, et vanapaber taaskasutusse jõuaks."
+    },
+    {
+      "id": "n_sport",
+      "ru": "спорт",
+      "nom": "sport",
+      "gen": "spordi",
+      "part": "sporti",
+      "plpart": "sporte,sportisid",
+      "ex": "Suurt sporti ei tehta igavesti."
+    },
+    {
+      "id": "n_meik",
+      "ru": "макияж",
+      "nom": "meik",
+      "gen": "meigi",
+      "part": "meiki",
+      "plpart": "meike,meikisid",
+      "ex": "Tuleb hakata õhtuks meiki tegema."
+    },
+    {
+      "id": "n_muusika",
+      "ru": "музыка",
+      "nom": "muusika",
+      "gen": "muusika",
+      "part": "muusikat",
+      "plpart": "muusikaid",
+      "ex": "Muusikale pühendatud elu."
+    },
+    {
+      "id": "n_juus",
+      "ru": "волос",
+      "nom": "juus",
+      "gen": "juukse",
+      "part": "juust",
+      "plpart": "juukseid",
+      "ex": "Juus lehvis tuules."
+    },
+    {
+      "id": "n_kohv",
+      "ru": "кофе",
+      "nom": "kohv",
+      "gen": "kohvi",
+      "part": "kohvi",
+      "plpart": "kohve,kohvisid",
+      "ex": "Ostsin paki kohvi."
+    },
+    {
+      "id": "n_film",
+      "ru": "фильм",
+      "nom": "film",
+      "gen": "filmi",
+      "part": "filmi",
+      "plpart": "filme,filmisid",
+      "ex": "Film sai täis."
+    },
+    {
+      "id": "n_nou",
+      "ru": "посуда (предмет посуды)",
+      "nom": "nõu",
+      "gen": "nõu",
+      "part": "nõu",
+      "plpart": "nõusid",
+      "ex": "Kaasa pesi köögis nõusid."
+    },
+    {
+      "id": "n_hammas",
+      "ru": "зуб",
+      "nom": "hammas",
+      "gen": "hamba",
+      "part": "hammast",
+      "plpart": "hambaid",
+      "ex": "Sae hammas on murdunud."
+    },
+    {
+      "id": "n_arvutimang",
+      "ru": "компьютерная игра",
+      "nom": "arvutimäng",
+      "gen": "arvutimängu",
+      "part": "arvutimängu",
+      "plpart": "arvutimänge,arvutimängusid"
+    },
+    {
+      "id": "n_ulikool",
+      "ru": "университет",
+      "nom": "ülikool",
+      "gen": "ülikooli",
+      "part": "ülikooli",
+      "plpart": "ülikoole,ülikoolisid",
+      "ex": "Ta jättis ülikooli pooleli."
+    },
+    {
+      "id": "n_turg",
+      "ru": "рынок",
+      "nom": "turg",
+      "gen": "turu",
+      "part": "turgu",
+      "plpart": "turge,turgusid",
+      "ex": "Turul oli palju rahvast."
+    },
+    {
+      "id": "n_trenn",
+      "ru": "тренировка",
+      "nom": "trenn",
+      "gen": "trenni",
+      "part": "trenni",
+      "plpart": "trenne,trennisid",
+      "ex": "Teeks õige trenni?"
+    },
+    {
+      "id": "n_restoran",
+      "ru": "ресторан",
+      "nom": "restoran",
+      "gen": "restorani",
+      "part": "restorani",
+      "plpart": "restorane",
+      "ex": "Ettekandja tutvustas restorani menüüd."
+    },
+    {
+      "id": "n_louna",
+      "ru": "обед; юг",
+      "nom": "lõuna",
+      "gen": "lõuna",
+      "part": "lõunat",
+      "plpart": "lõunaid",
+      "ex": "Ta magas lõunani."
+    },
+    {
+      "id": "n_koosolek",
+      "ru": "собрание, совещание",
+      "nom": "koosolek",
+      "gen": "koosoleku",
+      "part": "koosolekut",
+      "plpart": "koosolekuid",
+      "ex": "Koosolek jäi ära."
+    },
+    {
+      "id": "n_kino",
+      "ru": "кинотеатр",
+      "nom": "kino",
+      "gen": "kino",
+      "part": "kino",
+      "plpart": "kinosid",
+      "ex": "Käisin nädalavahetusel kinos."
+    },
+    {
+      "id": "n_kursus",
+      "ru": "курс, курсы",
+      "nom": "kursus",
+      "gen": "kursuse",
+      "part": "kursust",
+      "plpart": "kursusi",
+      "ex": "Õpin viimasel kursusel."
+    },
+    {
+      "id": "n_olu",
+      "ru": "пиво",
+      "nom": "õlu",
+      "gen": "õlle",
+      "part": "õlut",
+      "plpart": "õllesid",
+      "ex": "Kange tume õlu."
+    },
+    {
+      "id": "n_vein",
+      "ru": "вино",
+      "nom": "vein",
+      "gen": "veini",
+      "part": "veini",
+      "plpart": "veine,veinisid",
+      "ex": "Eelistan vanu veine."
+    },
+    {
+      "id": "n_sokolaad",
+      "ru": "шоколад",
+      "nom": "šokolaad",
+      "gen": "šokolaadi",
+      "part": "šokolaadi",
+      "plpart": "šokolaade,šokolaadisid",
+      "ex": "Sõin tüki šokolaadi."
+    },
+    {
+      "id": "n_sampus",
+      "ru": "шампанское",
+      "nom": "šampus",
+      "gen": "šampuse",
+      "part": "šampust",
+      "plpart": "šampusi",
+      "ex": "Kõigil oli tuju hea ning šampust voolas ohtralt."
+    },
+    {
+      "id": "n_moos",
+      "ru": "варенье, джем",
+      "nom": "moos",
+      "gen": "moosi",
+      "part": "moosi",
+      "plpart": "moose,moosisid",
+      "ex": "Sõime pannkooke moosiga."
+    },
+    {
+      "id": "n_mesi",
+      "ru": "мёд",
+      "nom": "mesi",
+      "gen": "mee",
+      "part": "mett",
+      "plpart": "mesi",
+      "ex": "Ta joob teed alati meega."
+    },
+    {
+      "id": "n_limonaad",
+      "ru": "лимонад",
+      "nom": "limonaad",
+      "gen": "limonaadi",
+      "part": "limonaadi",
+      "plpart": "limonaade,limonaadisid",
+      "ex": "Lapsed joovad limonaadi."
+    },
+    {
+      "id": "n_konjak",
+      "ru": "коньяк",
+      "nom": "konjak",
+      "gen": "konjaki",
+      "part": "konjakit",
+      "plpart": "konjakeid",
+      "ex": "Hea Prantsuse konjak."
+    },
+    {
+      "id": "n_jaatis",
+      "ru": "мороженое",
+      "nom": "jäätis",
+      "gen": "jäätise",
+      "part": "jäätist",
+      "plpart": "jäätisi",
+      "ex": "Sõime kohvi kõrvale jäätist."
+    },
+    {
+      "id": "n_prugi",
+      "ru": "мусор",
+      "nom": "prügi",
+      "gen": "prügi",
+      "part": "prügi",
+      "plpart": "prügisid",
+      "ex": "Vii prügi välja!"
+    },
+    {
+      "id": "n_remont",
+      "ru": "ремонт",
+      "nom": "remont",
+      "gen": "remondi",
+      "part": "remonti",
+      "plpart": "remonte,remontisid",
+      "ex": "Viisin auto remonti."
+    },
+    {
+      "id": "n_pesu",
+      "ru": "стирка; бельё",
+      "nom": "pesu",
+      "gen": "pesu",
+      "part": "pesu",
+      "plpart": "pesusid",
+      "ex": "Auto käis pesus."
+    },
+    {
+      "id": "n_kass",
+      "ru": "кошка",
+      "nom": "kass",
+      "gen": "kassi",
+      "part": "kassi",
+      "plpart": "kasse,kassisid",
+      "ex": "Meie kassil on pojad."
+    },
+    {
+      "id": "n_asi",
+      "ru": "вещь",
+      "nom": "asi",
+      "gen": "asja",
+      "part": "asja",
+      "plpart": "asju,asjasid",
+      "ex": "Milles asi on?"
     }
   ],
   "verbs": [
@@ -3233,6 +3511,51 @@
       "past": "müristas",
       "nud": "müristanud",
       "ex": "Väljas müristas kõu."
+    },
+    {
+      "id": "v_tousma",
+      "ru": "вставать, подниматься",
+      "ma": "tõusma",
+      "da": "tõusta",
+      "b": "tõuseb",
+      "neg": "tõuse",
+      "past": "tõusis",
+      "nud": "tõusnud",
+      "ex": "Tal ei tõuse."
+    },
+    {
+      "id": "v_parandama",
+      "ru": "чинить, ремонтировать",
+      "ma": "parandama",
+      "da": "parandada",
+      "b": "parandab",
+      "neg": "paranda",
+      "past": "parandas",
+      "nud": "parandanud",
+      "rek": "mida",
+      "ex": "Mehed parandavad katust."
+    },
+    {
+      "id": "v_sorteerima",
+      "ru": "сортировать",
+      "ma": "sorteerima",
+      "da": "sorteerida",
+      "b": "sorteerib",
+      "neg": "sorteeri",
+      "past": "sorteeris",
+      "nud": "sorteerinud",
+      "ex": "Prügi sorteeritakse eri konteineritesse."
+    },
+    {
+      "id": "v_triikima",
+      "ru": "гладить (утюгом)",
+      "ma": "triikima",
+      "da": "triikida",
+      "b": "triigib",
+      "neg": "triigi",
+      "past": "triikis",
+      "nud": "triikinud",
+      "ex": "Triikisin laudlina ära."
     }
   ]
 }

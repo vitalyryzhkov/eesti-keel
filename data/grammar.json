@@ -866,6 +866,72 @@
       ]
     },
     {
+      "title": "Хитрости: как устроены формы",
+      "note": "Всё ниже сверено со словарём EKI. Три основные формы — ключ к слову: nimetav → omastav → osastav.",
+      "rows": [
+        { "et": "tuba → toa → toas, toast, toale, toaga", "ru": "комната → в комнате, из комнаты, к комнате, с комнатой", "hint": "почти все падежи ед. ч. строятся от omastav" },
+        { "et": "tuba → tuba · laud → lauda · sõber → sõpra", "ru": "а вот osastav из omastav не выводится", "hint": "его учим отдельно — ради этого и карточки" },
+        { "et": "tuppa · poodi · kinno · koju", "ru": "в комнату · в магазин · в кино · домой", "hint": "короткое «куда» тоже не из omastav — запоминать" },
+        { "et": "ema · isa · kala · maja · sõna → osastav такой же", "ru": "два слога, первый короткий", "hint": "без -t: näen ema, ostan kala" },
+        { "et": "auto → autot · aasta → aastat · pere → peret", "ru": "остальные на гласную берут -t" },
+        { "et": "küsimus → küsimuse → küsimust · vastus → vastuse → vastust", "ru": "существительные на -us", "hint": "но прилагательное ilus → ilusa → ilusat — другая модель" },
+        { "et": "õpetaja → õpetaja → õpetajat · müüja → müüjat", "ru": "деятели на -ja" },
+        { "et": "pank → panga · kapp → kapi · tuba → toa · laud → laua", "ru": "чередование: k→g, pp→p, а b/d могут пропасть", "hint": "сильная ступень в nimetav, слабая в omastav" },
+        { "et": "raamatupood → raamatupoe → raamatupoodi", "ru": "сложное слово склоняется по последней части", "hint": "raamatu- не меняется" }
+      ]
+    },
+    {
+      "title": "Чего в эстонском нет",
+      "note": "Три вещи, которые сильно облегчают жизнь после русского.",
+      "rows": [
+        { "et": "Ta on arst.", "ru": "Он врач. / Она врач.", "hint": "рода нет: ta — и он, и она" },
+        { "et": "Raamat on laual.", "ru": "Книга на столе.", "hint": "артиклей нет" },
+        { "et": "Homme ma lähen tööle.", "ru": "Завтра я пойду на работу.", "hint": "отдельного будущего нет — настоящее + «когда»" },
+        { "et": "Ma lähen sööma.", "ru": "Я иду есть.", "hint": "цель после minema — ma-инфинитив" }
+      ]
+    },
+    {
+      "title": "Где? Куда? — два ряда (гл. 12)",
+      "note": "Одни места идут через -s / -sse (внутри), другие — через -l / -le (на, у). Пары запоминать вместе.",
+      "rows": [
+        { "et": "kinos → kinno · poes → poodi", "ru": "в кино → в кино · в магазине → в магазин", "hint": "короткое «куда»" },
+        { "et": "ülikoolis → ülikooli · restoranis → restorani · trennis → trenni", "ru": "в университете · в ресторане · на тренировке" },
+        { "et": "tööl → tööle · turul → turule", "ru": "на работе → на работу · на рынке → на рынок", "hint": "ряд на -l / -le" },
+        { "et": "koosolekul → koosolekule · kursusel → kursusele · lõunal → lõunale", "ru": "на собрании · на курсах · на обеде" },
+        { "et": "Ma olen sõbral külas. → Ma lähen sõbrale külla.", "ru": "Я в гостях у друга. → Я иду в гости к другу." }
+      ]
+    },
+    {
+      "title": "По понедельникам: -ti (гл. 12)",
+      "note": "Регулярность — одно неизменяемое слово на -ti, предлог не нужен.",
+      "rows": [
+        { "et": "esmaspäeviti · teisipäeviti · kolmapäeviti · neljapäeviti", "ru": "по понедельникам · вторникам · средам · четвергам" },
+        { "et": "reedeti · laupäeviti · pühapäeviti", "ru": "по пятницам · субботам · воскресеньям" },
+        { "et": "Esmaspäeviti ma käin trennis.", "ru": "По понедельникам я хожу на тренировку." }
+      ]
+    },
+    {
+      "title": "Кому? (гл. 13)",
+      "note": "«Кому» — окончание -le. У местоимений короткие формы, в речи именно они.",
+      "rows": [
+        { "et": "mulle · sulle · talle", "ru": "мне · тебе · ему/ей", "hint": "полные: minule, sinule, temale" },
+        { "et": "meile · teile · neile", "ru": "нам · вам · им" },
+        { "et": "Annale · Jürile · Albertile", "ru": "Анне · Юри · Альберту", "hint": "к имени просто -le" },
+        { "et": "Helista mulle!", "ru": "Позвони мне!" }
+      ]
+    },
+    {
+      "title": "Надо: pean и vaja (гл. 14)",
+      "note": "«Я должен» — pean + ma-инфинитив. «Мне нужно» — mul on vaja + da-инфинитив.",
+      "rows": [
+        { "et": "Ma pean tuba koristama.", "ru": "Я должен убрать комнату." },
+        { "et": "Ma pean poes käima.", "ru": "Мне надо сходить в магазин." },
+        { "et": "Ma pean nõusid pesema.", "ru": "Я должен помыть посуду.", "hint": "nõusid — мн. osastav" },
+        { "et": "Mul on vaja minna.", "ru": "Мне нужно идти.", "hint": "после vaja — da-инфинитив" },
+        { "et": "Ma ostan mett ja jäätist.", "ru": "Я покупаю мёд и мороженое.", "hint": "неопределённое количество — osastav" }
+      ]
+    },
+    {
       "title": "Ходовые фразы",
       "note": "Готовые блоки, которые не надо разбирать по грамматике.",
       "rows": [
