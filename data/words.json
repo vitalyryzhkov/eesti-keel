@@ -2516,7 +2516,8 @@
       "gen": "juukse",
       "part": "juust",
       "plpart": "juukseid",
-      "ex": "Juus lehvis tuules."
+      "ex": "Juustest punutud nöör.",
+      "eki_sense": 1
     },
     {
       "id": "n_kohv",
@@ -2769,7 +2770,8 @@
       "gen": "maa",
       "part": "maad",
       "plpart": "maid,maasid",
-      "ex": "Eks rahvast ole ju maa peal igasugust."
+      "ex": "Kas elad linnas või maal?",
+      "eki_sense": 3
     },
     {
       "id": "n_aadress",
@@ -3410,7 +3412,8 @@
       "neg": "ela",
       "past": "elas",
       "nud": "elanud",
-      "ex": "Kotkas elab väga vanaks."
+      "ex": "Hunt elab metsas.",
+      "eki_sense": 6
     },
     {
       "id": "v_magama",
