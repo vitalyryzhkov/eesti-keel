@@ -932,6 +932,33 @@
       ]
     },
     {
+      "title": "Числительные: как собрать любое число",
+      "note": "Всё строится из нескольких кирпичей. Сверено со словарём EKI и учебником.",
+      "rows": [
+        { "et": "üksteist · kaksteist · kolmteist … üheksateist", "ru": "11 · 12 · 13 … 19", "hint": "число + -teist" },
+        { "et": "kakskümmend · kolmkümmend … üheksakümmend", "ru": "20 · 30 … 90", "hint": "число + -kümmend" },
+        { "et": "kakskümmend üks · kolmkümmend viis", "ru": "21 · 35", "hint": "десятки и единицы — отдельными словами" },
+        { "et": "sada · tuhat · miljon", "ru": "сто · тысяча · миллион" },
+        { "et": "1988 — tuhat üheksasada kaheksakümmend kaheksa", "ru": "год читается как обычное число", "hint": "üheksasada = девятьсот" },
+        { "et": "Pilet maksab kakskümmend üks eurot.", "ru": "Билет стоит двадцать один евро.", "hint": "после числа больше одного — osastav ед. ч." },
+        { "et": "Mis aastal sa sündisid? — Ma sündisin aastal … .", "ru": "В каком году ты родился? — Я родился в … году." },
+        { "et": "Mitu korrust majas on? — Majas on kaks korrust.", "ru": "Сколько этажей в доме? — Два этажа.", "hint": "mitu? — сколько? (штук)" }
+      ]
+    },
+    {
+      "title": "Мой дом («Minu unistuste maja»)",
+      "note": "Опорные конструкции из урока о доме мечты — хватит, чтобы описать своё жильё.",
+      "rows": [
+        { "et": "Ma elan peaaegu maal.", "ru": "Я живу почти в деревне.", "hint": "maa → maal, «где» на -l" },
+        { "et": "Mul on suur kodu. = Minu kodu on suur.", "ru": "У меня большой дом. = Мой дом большой." },
+        { "et": "Esimesel korrusel on köök, teisel korrusel on magamistuba.", "ru": "На первом этаже кухня, на втором — спальня." },
+        { "et": "Maja taga on aed.", "ru": "За домом сад.", "hint": "omastav + taga: maja taga" },
+        { "et": "Maja lähedal on park ja järv.", "ru": "Рядом с домом парк и озеро.", "hint": "omastav + lähedal" },
+        { "et": "Mis värvi su maja on? — Maja on valge, katus on pruun.", "ru": "Какого цвета твой дом? — Дом белый, крыша коричневая." },
+        { "et": "Maja on sada nelikümmend ruutmeetrit.", "ru": "Дом — сто сорок квадратных метров.", "hint": "после числа — osastav: ruutmeetrit" }
+      ]
+    },
+    {
       "title": "Ходовые фразы",
       "note": "Готовые блоки, которые не надо разбирать по грамматике.",
       "rows": [

@@ -2757,6 +2757,323 @@
       "part": "asja",
       "plpart": "asju,asjasid",
       "ex": "Milles asi on?"
+    },
+    {
+      "id": "n_maa",
+      "ru": "земля; деревня",
+      "nom": "maa",
+      "gen": "maa",
+      "part": "maad",
+      "plpart": "maid,maasid",
+      "ex": "Maa on märg."
+    },
+    {
+      "id": "n_aadress",
+      "ru": "адрес",
+      "nom": "aadress",
+      "gen": "aadressi",
+      "part": "aadressi",
+      "plpart": "aadresse,aadressisid",
+      "ex": "Mis su aadress on?"
+    },
+    {
+      "id": "n_korrus",
+      "ru": "этаж",
+      "nom": "korrus",
+      "gen": "korruse",
+      "part": "korrust",
+      "plpart": "korruseid",
+      "ex": "Ma elan viiendal korrusel."
+    },
+    {
+      "id": "n_raamatukogu",
+      "ru": "библиотека",
+      "nom": "raamatukogu",
+      "gen": "raamatukogu",
+      "part": "raamatukogu",
+      "plpart": "raamatukogusid",
+      "ex": "Võtsin raamatukogust õpiku."
+    },
+    {
+      "id": "n_jousaal",
+      "ru": "спортзал",
+      "nom": "jõusaal",
+      "gen": "jõusaali",
+      "part": "jõusaali",
+      "plpart": "jõusaale,jõusaalisid",
+      "ex": "Käin kaks korda nädalas jõusaalis."
+    },
+    {
+      "id": "n_kodukino",
+      "ru": "домашний кинотеатр",
+      "nom": "kodukino",
+      "gen": "kodukino",
+      "part": "kodukino",
+      "plpart": "kodukinosid"
+    },
+    {
+      "id": "n_ounapuu",
+      "ru": "яблоня",
+      "nom": "õunapuu",
+      "gen": "õunapuu",
+      "part": "õunapuud",
+      "plpart": "õunapuid,õunapuusid",
+      "ex": "Aias õitsevad õunapuud."
+    },
+    {
+      "id": "n_pooning",
+      "ru": "чердак",
+      "nom": "pööning",
+      "gen": "pööningu",
+      "part": "pööningut",
+      "plpart": "pööninguid",
+      "ex": "See trepp viib pööningule."
+    },
+    {
+      "id": "n_park",
+      "ru": "парк",
+      "nom": "park",
+      "gen": "pargi",
+      "part": "parki",
+      "plpart": "parke,parkisid",
+      "ex": "Läksime parki jalutama."
+    },
+    {
+      "id": "n_sugis",
+      "ru": "осень",
+      "nom": "sügis",
+      "gen": "sügise",
+      "part": "sügist",
+      "plpart": "sügiseid",
+      "ex": "Sügis on käes."
+    },
+    {
+      "id": "n_ruutmeeter",
+      "ru": "квадратный метр",
+      "nom": "ruutmeeter",
+      "gen": "ruutmeetri",
+      "part": "ruutmeetrit",
+      "plpart": "ruutmeetreid",
+      "ex": "Korteri suurus on 54 ruutmeetrit."
+    },
+    {
+      "id": "n_varv",
+      "ru": "цвет; краска",
+      "nom": "värv",
+      "gen": "värvi",
+      "part": "värvi",
+      "plpart": "värve,värvisid",
+      "ex": "Mere sinine värv."
+    },
+    {
+      "id": "n_onnelik",
+      "ru": "счастливый",
+      "nom": "õnnelik",
+      "gen": "õnneliku",
+      "part": "õnnelikku",
+      "plpart": "õnnelikke,õnnelikkusid",
+      "pos": "adj",
+      "ex": "Õnnelik võitja on .."
+    },
+    {
+      "id": "n_suur",
+      "ru": "большой",
+      "nom": "suur",
+      "gen": "suure",
+      "part": "suurt",
+      "plpart": "suuri",
+      "pos": "adj",
+      "ex": "Suure ninaga mees."
+    },
+    {
+      "id": "n_vaike",
+      "ru": "маленький",
+      "nom": "väike",
+      "gen": "väikese",
+      "part": "väikest",
+      "plpart": "väikesi",
+      "pos": "adj",
+      "ex": "See on väike mure."
+    },
+    {
+      "id": "n_uus",
+      "ru": "новый",
+      "nom": "uus",
+      "gen": "uue",
+      "part": "uut",
+      "plpart": "uusi",
+      "pos": "adj",
+      "ex": "Head uut aastat!"
+    },
+    {
+      "id": "n_vana",
+      "ru": "старый",
+      "nom": "vana",
+      "gen": "vana",
+      "part": "vana",
+      "plpart": "vanu,vanasid",
+      "pos": "adj",
+      "ex": "Sa vana siga!"
+    },
+    {
+      "id": "n_puhas",
+      "ru": "чистый",
+      "nom": "puhas",
+      "gen": "puhta",
+      "part": "puhast",
+      "plpart": "puhtaid",
+      "pos": "adj",
+      "ex": "Peske käed puhtaks."
+    },
+    {
+      "id": "n_moodne",
+      "ru": "современный",
+      "nom": "moodne",
+      "gen": "moodsa",
+      "part": "moodsat",
+      "plpart": "moodsaid",
+      "pos": "adj",
+      "ex": "Moodsa kunsti näitus."
+    },
+    {
+      "id": "n_mugav",
+      "ru": "удобный",
+      "nom": "mugav",
+      "gen": "mugava",
+      "part": "mugavat",
+      "plpart": "mugavaid",
+      "pos": "adj",
+      "ex": "Nii mugav on öelda, et .."
+    },
+    {
+      "id": "n_ilus",
+      "ru": "красивый",
+      "nom": "ilus",
+      "gen": "ilusa",
+      "part": "ilusat",
+      "plpart": "ilusaid",
+      "pos": "adj",
+      "ex": "Täna on ilus ilm."
+    },
+    {
+      "id": "n_valge",
+      "ru": "белый",
+      "nom": "valge",
+      "gen": "valge",
+      "part": "valget",
+      "plpart": "valgeid",
+      "pos": "adj",
+      "ex": "Suur valge väljas."
+    },
+    {
+      "id": "n_kakskummend",
+      "ru": "двадцать",
+      "nom": "kakskümmend",
+      "gen": "kahekümne",
+      "part": "kahtekümmend,kahtkümmend,kahtekümmet,kahtkümmet",
+      "plpart": "kahekümneid",
+      "pos": "num",
+      "ex": "Buss nr 20."
+    },
+    {
+      "id": "n_kolmkummend",
+      "ru": "тридцать",
+      "nom": "kolmkümmend",
+      "gen": "kolmekümne",
+      "part": "kolmekümmend,kolmekümmet",
+      "plpart": "kolmekümneid",
+      "pos": "num",
+      "ex": "Buss nr 30."
+    },
+    {
+      "id": "n_nelikummend",
+      "ru": "сорок",
+      "nom": "nelikümmend",
+      "gen": "neljakümne",
+      "part": "neljakümmend,neljakümmet",
+      "plpart": "neljakümneid",
+      "pos": "num",
+      "ex": "Buss nr 40."
+    },
+    {
+      "id": "n_viiskummend",
+      "ru": "пятьдесят",
+      "nom": "viiskümmend",
+      "gen": "viiekümne",
+      "part": "viitkümmend,viitekümmend,viitkümmet,viitekümmet",
+      "plpart": "viiekümneid",
+      "pos": "num",
+      "ex": "Buss nr 50."
+    },
+    {
+      "id": "n_kuuskummend",
+      "ru": "шестьдесят",
+      "nom": "kuuskümmend",
+      "gen": "kuuekümne",
+      "part": "kuutkümmend,kuutekümmend,kuutkümmet,kuutekümmet",
+      "plpart": "kuuekümneid",
+      "pos": "num",
+      "ex": "Buss nr 60."
+    },
+    {
+      "id": "n_seitsekummend",
+      "ru": "семьдесят",
+      "nom": "seitsekümmend",
+      "gen": "seitsmekümne",
+      "part": "seitsetkümmend,seitsetkümmet",
+      "plpart": "seitsmekümneid",
+      "pos": "num",
+      "ex": "Albumis on seitsekümmend fotot."
+    },
+    {
+      "id": "n_kaheksakummend",
+      "ru": "восемьдесят",
+      "nom": "kaheksakümmend",
+      "gen": "kaheksakümne",
+      "part": "kaheksatkümmend,kaheksatkümmet",
+      "plpart": "kaheksakümneid",
+      "pos": "num",
+      "ex": "Kaheksakümmend aastat tagasi."
+    },
+    {
+      "id": "n_uheksakummend",
+      "ru": "девяносто",
+      "nom": "üheksakümmend",
+      "gen": "üheksakümne",
+      "part": "üheksatkümmend,üheksatkümmet",
+      "plpart": "üheksakümneid",
+      "pos": "num",
+      "ex": "Ta on juba üle üheksakümne."
+    },
+    {
+      "id": "n_sada",
+      "ru": "сто",
+      "nom": "sada",
+      "gen": "saja",
+      "part": "sada,sadat",
+      "plpart": "sadu,sadasid",
+      "pos": "num",
+      "ex": "Näitusel käis sadu inimesi."
+    },
+    {
+      "id": "n_tuhat",
+      "ru": "тысяча",
+      "nom": "tuhat",
+      "gen": "tuhande",
+      "part": "tuhandet,tuhat",
+      "plpart": "tuhandeid",
+      "pos": "num",
+      "ex": "Oh sa tuline tuhat!"
+    },
+    {
+      "id": "n_miljon",
+      "ru": "миллион",
+      "nom": "miljon",
+      "gen": "miljoni",
+      "part": "miljonit",
+      "plpart": "miljoneid",
+      "pos": "num",
+      "ex": "Sõjas hukkusid miljonid."
     }
   ],
   "verbs": [
