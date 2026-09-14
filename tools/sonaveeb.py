@@ -104,6 +104,11 @@ def meaning_keys(text):
     с «быть возможным» по слову «быть» — в карточку ехал пример из чужой статьи.
     Смысл несёт последнее слово: «должным» → «долж», «возможным» → «возм».
     Скобки считаются отдельным вариантом: «ходить (бывать)».
+
+    Варианты, у которых последнее слово короче трёх букв, в сопоставлении НЕ
+    участвуют: «юг» в «обед; юг», «ус», «то» в «(кого-то)». Иначе двухбуквенные
+    хвосты вроде «то» совпадали бы с чем попало. Такие слова закрываются явным
+    номером значения eki_sense.
     """
     keys = set()
     for part in re.split(r"[,;()]", text or ""):
@@ -151,7 +156,9 @@ def ranked_meanings(result, ru_hint="", sense=None):
     закрываются явным номером значения eki_sense, а не эвристикой.
     """
     meanings = result.get("meanings") or []
-    # Явный номер значения из статьи EKI (поле eki_sense) важнее эвристики:
+    # Явный индекс значения из статьи EKI (поле eki_sense) важнее эвристики.
+    # Индекс С НУЛЯ, как в ответе API: 0 — первое значение статьи. На сайте
+    # Sõnaveeb значения нумеруются с единицы — при сверке с сайтом отнимать 1.
     # у tundma «знать» стоит первым переводом сразу в трёх значениях, и по
     # русским переводам «знать кого-то» от «знать предмет» не отличить
     if isinstance(sense, int) and 0 <= sense < len(meanings):
@@ -160,19 +167,17 @@ def ranked_meanings(result, ru_hint="", sense=None):
     if not mine:
         return []
     scored = []
-    for i, m in enumerate(result.get("meanings") or []):
+    for i, m in enumerate(meanings):
         by_lang = m.get("translations")
         if not isinstance(by_lang, dict):
             continue
         glosses = []
         for item in by_lang.get("rus") or []:
             glosses += [g for g in str(item.get("words") or "").split(",") if g.strip()]
-        for pos, gl in enumerate(glosses):
-            if mine & meaning_keys(gl):
-                scored.append((pos, i, m))
-                break
-    scored.sort(key=lambda t: t[1])            # только порядок статьи, без позиции
-    return [m for _, _, m in scored]
+        if any(mine & meaning_keys(gl) for gl in glosses):
+            scored.append((i, m))
+    scored.sort(key=lambda t: t[0])            # только порядок статьи
+    return [m for _, m in scored]
 
 
 def rection(result, ru_hint="", sense=None):
@@ -204,7 +209,7 @@ def example(result, head, limit=70, ru_hint="", sense=None):
     # тот же ранжированный список, что и для рекции; перевод не опознан — главное значение
     chosen = ranked_meanings(result, ru_hint, sense) or meanings[:1]
 
-    # Идём по значениям от лучшего совпадения к худшему и берём первое, где есть
+    # Идём по совпавшим значениям в порядке статьи и берём первое, где есть
     # годный пример, — внутри него самый короткий. Короткий пример из любого
     # значения подряд уже давал «Tal ei tõuse.» в карточке «вставать».
     for m in chosen:

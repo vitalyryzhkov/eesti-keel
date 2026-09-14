@@ -2603,7 +2603,8 @@
       "gen": "lõuna",
       "part": "lõunat",
       "plpart": "lõunaid",
-      "ex": "Ta magas lõunani."
+      "ex": "Lähen koju lõunale.",
+      "eki_sense": 3
     },
     {
       "id": "n_koosolek",
@@ -3260,7 +3261,9 @@
       "neg": "käi",
       "past": "käis",
       "nud": "käinud",
-      "ex": "Armastan jala käia."
+      "ex": "Pean poes ära käima.",
+      "eki_sense": 1,
+      "rek": "kus,millega,kelle juures,mida tegemas"
     },
     {
       "id": "v_tootama",
