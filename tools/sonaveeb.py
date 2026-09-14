@@ -97,6 +97,22 @@ def pick(data, want_class):
     return results[0] if results else None
 
 
+def meaning_keys(text):
+    """Ключи для сопоставления переводов: ПОСЛЕДНЕЕ слово каждого варианта, 4 буквы.
+
+    Раньше сравнивалось начало строки, и «быть должным» (pidama) совпадало
+    с «быть возможным» по слову «быть» — в карточку ехал пример из чужой статьи.
+    Смысл несёт последнее слово: «должным» → «долж», «возможным» → «возм».
+    Скобки считаются отдельным вариантом: «ходить (бывать)».
+    """
+    keys = set()
+    for part in re.split(r"[,;()]", text or ""):
+        words = re.findall(r"[а-яёa-zõäöüšž]+", part.lower())
+        if words and len(words[-1]) >= 3:
+            keys.add(words[-1][:4])
+    return keys
+
+
 def pick_best(data, want_class, ru_hint=""):
     """Из омонимов выбираем тот, чьё значение совпадает с нашим переводом.
 
@@ -108,10 +124,9 @@ def pick_best(data, want_class, ru_hint=""):
         return None
     results = data["searchResult"]
     if len(results) > 1 and ru_hint:
-        mine = [x.strip().lower() for x in re.split(r"[,;]", ru_hint) if x.strip()]
+        mine = meaning_keys(ru_hint)
         for r in results:
-            theirs = ru_glosses(r)
-            if any(m[:4] and any(m[:4] == t[:4] for t in theirs) for m in mine):
+            if mine & meaning_keys(", ".join(ru_glosses(r))):
                 return r
     return pick(data, want_class)
 
@@ -147,14 +162,13 @@ def example(result, head, limit=70, ru_hint=""):
 
     chosen = []
     if ru_hint:
-        mine = [x.strip().lower() for x in re.split(r"[,;()]", ru_hint) if x.strip()]
+        mine = meaning_keys(ru_hint)
         for m in meanings:
             by_lang = m.get("translations")
             theirs = []
             if isinstance(by_lang, dict):
-                for item in by_lang.get("rus") or []:
-                    theirs += [p.strip().lower() for p in str(item.get("words") or "").split(",")]
-            if any(a[:4] and any(a[:4] == t[:4] for t in theirs if t) for a in mine):
+                theirs = [str(item.get("words") or "") for item in by_lang.get("rus") or []]
+            if mine & meaning_keys(", ".join(theirs)):
                 chosen.append(m)
     if not chosen:
         chosen = meanings[:1]
@@ -298,8 +312,11 @@ def fix():
                 w[field] = api[code]
                 changed += 1
         r = rection(res)
-        if r and w.get("rek") != r:
-            w["rek"] = r
+        if w.get("rek", "") != r:                 # в том числе убираем чужую
+            if r:
+                w["rek"] = r
+            else:
+                w.pop("rek", None)
             changed += 1
         ex = example(res, w["ma"], ru_hint=w.get("ru", ""))
         # при пересчёте убираем и пример из чужого значения, а не только добавляем новый
@@ -470,10 +487,8 @@ def ru_check():
             if not theirs:
                 no_data.append(head)
                 continue
-            mine = [x.strip().lower() for x in re.split(r"[,;]", w.get("ru", "")) if x.strip()]
-            # сравниваем по началу слова: «убираться» и «убирать» — это согласие,
-            # а вот полное расхождение основ стоит посмотреть глазами
-            hit = any(m[:4] and any(m[:4] == t[:4] for t in theirs) for m in mine)
+            # те же ключи, что при выборе статьи и примера — иначе команды расходятся
+            hit = bool(meaning_keys(w.get("ru", "")) & meaning_keys(", ".join(theirs)))
             if not hit:
                 suspicious.append((head, w.get("ru", ""), ", ".join(theirs[:5])))
 

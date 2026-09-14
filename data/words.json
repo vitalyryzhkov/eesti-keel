@@ -2603,7 +2603,7 @@
       "gen": "lõuna",
       "part": "lõunat",
       "plpart": "lõunaid",
-      "ex": "Maja aknad on lõuna poole."
+      "ex": "Ta magas lõunani."
     },
     {
       "id": "n_koosolek",
@@ -3331,10 +3331,10 @@
       "da": "pidada",
       "b": "peab",
       "neg": "pea",
-      "past": "pidas",
+      "past": "pidi",
       "nud": "pidanud",
-      "rek": "keda*",
-      "ex": "Augustis pidas kuiva vaid viis ööpäeva."
+      "rek": "mida tegema",
+      "ex": "Ma pean minema."
     },
     {
       "id": "v_hakkama",
