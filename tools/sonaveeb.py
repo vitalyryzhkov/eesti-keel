@@ -425,7 +425,9 @@ def ru_check():
             data = fetch(w.get("src") or head)
             if failed_request(data):
                 continue
-            res = pick(data, kind)
+            # тот же выбор статьи, что в add/fix/check: иначе при омонимах сверяем
+            # перевод с чужим значением (kiilakas «лысый» против «удар»)
+            res = pick_best(data, kind, w.get("ru", ""))
             if not res:
                 continue
             theirs = ru_glosses(res)
