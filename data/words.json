@@ -2015,7 +2015,8 @@
       "part": "heledat",
       "plpart": "heledaid",
       "pos": "adj",
-      "ex": "Hele täht põhjataevas."
+      "ex": "Heledas ülikonnas mees.",
+      "eki_sense": 2
     },
     {
       "id": "n_must",
@@ -2442,7 +2443,8 @@
       "part": "selget",
       "plpart": "selgeid",
       "pos": "adj",
-      "ex": "Ilus selge käekiri."
+      "ex": "Oli erakordselt selge taevas ja väga külm ilm.",
+      "eki_sense": 4
     },
     {
       "id": "n_lokk",
@@ -2739,7 +2741,8 @@
       "gen": "pesu",
       "part": "pesu",
       "plpart": "pesusid",
-      "ex": "Auto käis pesus."
+      "ex": "Pane pesu kuivama.",
+      "eki_sense": 1
     },
     {
       "id": "n_kass",
