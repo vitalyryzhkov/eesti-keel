@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v34';
+const VERSION = 'v35';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -563,6 +563,7 @@ const NOUN_MAP = [['nom', 'SgN'], ['gen', 'SgG'], ['part', 'SgP'], ['plpart', 'P
 const VERB_MAP = [['ma', 'Sup'], ['da', 'Inf'], ['b', 'IndPrSg3'], ['neg', 'IndPrPs_']];
 
 let pending = null;   // разобранная словарная статья, ждёт подтверждения
+let mtNote = '';      // пометка «перевод машинный» — переживает перерисовку окна
 
 function userWords() {
   if (!state.words) state.words = { nouns: [], verbs: [] };
@@ -599,29 +600,105 @@ function formsFromApi(res) {
   return out;
 }
 
-function parseEntry(data, word) {
+// Выбор значения, примера и рекции — ТА ЖЕ логика, что meaning_keys /
+// ranked_meanings / example / rection в tools/sonaveeb.py. Раньше здесь
+// брался самый короткий пример из любого значения и первая рекция статьи —
+// ровно тот способ, который дал «tõusma — вставать» фразу из чужого значения
+// и «magama — спать» рекцию «kellega». Слово, заведённое в приложении, должно
+// получать пример так же, как слова колоды.
+
+// ключ варианта перевода — последнее слово, 4 буквы; короче трёх букв не участвует
+function meaningKeys(text) {
+  const keys = new Set();
+  for (const part of String(text || '').split(/[,;()]/)) {
+    const words = part.toLowerCase().match(/[а-яёa-zõäöüšž]+/g);
+    if (words && words[words.length - 1].length >= 3) keys.add(words[words.length - 1].slice(0, 4));
+  }
+  return keys;
+}
+
+// значения, совпавшие с переводом, — в порядке самой статьи
+function rankedMeanings(res, ru) {
+  const mine = meaningKeys(ru);
+  if (!mine.size) return [];
+  return (res.meanings || []).filter((m) => {
+    const tr = m.translations;
+    if (!tr || typeof tr !== 'object' || Array.isArray(tr)) return false;
+    const gl = [];
+    for (const it of tr.rus || []) {
+      for (const g of String((it && it.words) || '').split(',')) if (g.trim()) gl.push(g);
+    }
+    return gl.some((g) => [...meaningKeys(g)].some((k) => mine.has(k)));
+  });
+}
+
+// рекция — строго из первого совпавшего значения, без заимствования у соседних
+function pickRection(res, ru) {
+  const ranked = rankedMeanings(res, ru);
+  const target = ranked[0] || (res.meanings || [])[0];
+  return (target && target.rection) || '';
+}
+
+// пример — из первого совпавшего значения, где есть годный: от 3 слов и до 70 знаков
+function pickExample(res, ru) {
+  const ranked = rankedMeanings(res, ru);
+  const order = ranked.length ? ranked : (res.meanings || []).slice(0, 1);
+  for (const m of order) {
+    let best = '';
+    for (const e of m.examples || []) {
+      const t = (e || '').trim();
+      if (!t || t.length > 70 || t.split(/\s+/).length < 3) continue;
+      if (!best || t.length < best.length) best = t;
+    }
+    if (best) return best;
+  }
+  return '';
+}
+
+// Статья среди омонимов — как pick_best в tools/sonaveeb.py: первая, где есть
+// значение с нашим переводом. У kiilakas две статьи, «лысый» и «затрещина»:
+// без этого карточка «лысый» получала пример про затрещину, у hall «иней» —
+// «небо серое». Перевода нет или он ни с чем не совпал — глагол, иначе первая.
+function pickArticle(results, ru) {
+  const mine = meaningKeys(ru);
+  if (results.length > 1 && mine.size) {
+    const hit = results.find((r) => [...meaningKeys(glosses(r, 'rus', Infinity))].some((k) => mine.has(k)));
+    if (hit) return hit;
+  }
+  return results.find((r) => (r.wordClasses || []).some((c) => c && c.toLowerCase() === 'verb'))
+    || results[0];
+}
+
+// Часть речи — как pos_of в tools/sonaveeb.py: решает ПЕРВАЯ пометка статьи.
+// Раньше хватало пометки adj в любом значении, и существительное lörts
+// «плевок» подписывалось как omadussõna
+function posOf(res) {
+  for (const m of res.meanings || []) {
+    for (const p of m.partOfSpeech || []) {
+      const code = ((p && p.code) || '').toLowerCase();
+      if (code.startsWith('adj')) return 'adj';
+      if (code.startsWith('num')) return 'num';
+      if (code === 's' || code === 'n' || code === 'noun') return 'n';
+    }
+  }
+  return 'n';
+}
+
+// ru — перевод, под который собираем карточку. При поиске его ещё нет: берём
+// первый словарный, тот, что подставится в поле; при правке поля и при
+// сохранении статья, пример и рекция пересчитываются (refreshEntry, saveWord)
+function parseEntry(data, word, ru) {
   const results = (data && data.searchResult) || [];
   if (!results.length) return { error: 'absent' };
 
-  const res = results.find((r) => (r.wordClasses || []).some((c) => c && c.toLowerCase() === 'verb'))
-    || results[0];
+  const res = pickArticle(results, ru);
   const classes = (res.wordClasses || []).filter(Boolean).map((c) => c.toLowerCase());
   const api = formsFromApi(res);
-  const meanings = res.meanings || [];
 
-  let rek = '';
-  let ex = '';
-  let pos = 'n';
-  for (const m of meanings) {
-    if (!rek && m.rection) rek = m.rection;
-    for (const p of m.partOfSpeech || []) {
-      if ((p.code || '').toLowerCase().startsWith('adj')) pos = 'adj';
-    }
-    for (const e of m.examples || []) {
-      const t = (e || '').trim();
-      if (t.split(/\s+/).length >= 3 && t.length <= 70 && (!ex || t.length < ex.length)) ex = t;
-    }
-  }
+  const pos = posOf(res);
+  const hint = ru || (glosses(res, 'rus').split(',')[0] || '').trim();
+  const ex = pickExample(res, hint);
+  const rek = pickRection(res, hint);
 
   const isVerb = classes.includes('verb');
   const map = isVerb ? VERB_MAP : NOUN_MAP;
@@ -629,18 +706,18 @@ function parseEntry(data, word) {
   for (const [field, code] of map) entry[field] = api[code] || '';
   if (ex) entry.ex = ex;
   if (isVerb && rek) entry.rek = rek;
-  if (!isVerb && pos === 'adj') entry.pos = 'adj';
+  if (!isVerb && pos !== 'n') entry.pos = pos;
 
   const required = isVerb ? ['ma', 'da', 'b'] : ['nom', 'gen', 'part'];
   // наречия, частицы, союзы (ka, väga) в словаре есть, но форм у них нет —
   // это не «слова не существует», и советовать «проверь начальную форму» тут вредно
   if (required.some((f) => !entry[f])) return { error: 'nodecl', ru: glosses(res, 'rus'), en: glosses(res, 'eng') };
 
-  return { entry, isVerb, ru: glosses(res, 'rus'), en: glosses(res, 'eng') };
+  return { entry, isVerb, data, word, ru: glosses(res, 'rus'), en: glosses(res, 'eng') };
 }
 
 // EKI держит переводы внутри значений, словарём по языкам: {"rus": [{words: "книга"}], ...}
-function glosses(res, lang) {
+function glosses(res, lang, limit = 5) {
   const out = [];
   for (const m of res.meanings || []) {
     const byLang = m.translations;
@@ -653,7 +730,7 @@ function glosses(res, lang) {
       }
     }
   }
-  return out.slice(0, 5).join(', ');
+  return out.slice(0, limit).join(', ');
 }
 
 // Neurotõlge переводит предложения хорошо, а редкие отдельные слова путает
@@ -684,8 +761,11 @@ async function lookup() {
   const box = document.getElementById('add-result');
   const save = document.getElementById('btn-add-save');
   pending = null;
+  mtNote = '';
   save.disabled = true;
   document.getElementById('add-ru-wrap').hidden = true;
+  // перевод от прошлого слова не должен уехать в карточку нового
+  document.getElementById('add-ru').value = '';
 
   if (!raw) return;
   box.textContent = 'Перевожу…';
@@ -736,8 +816,7 @@ async function lookup() {
 }
 
 // показ словарной статьи: формы, перевод, пример, возможность завести карточку
-function showEntry(parsed, box, save) {
-  pending = parsed;
+function drawEntry(parsed, box, save) {
   const e = parsed.entry;
   const line = parsed.isVerb
     ? [e.ma, e.da, e.b, e.neg && 'ei ' + e.neg].filter(Boolean).join(' · ')
@@ -748,31 +827,59 @@ function showEntry(parsed, box, save) {
     '<div class="found" lang="et">' + esc(line) + '</div>' +
     (parsed.ru ? '<div class="translation">' + esc(parsed.ru) + '</div>' : '') +
     (e.rek ? '<div class="sub">рекция: ' + esc(e.rek) + '</div>' : '') +
-    (e.ex ? '<div class="sub" lang="et">' + esc(e.ex) + '</div>' : '');
+    (e.ex ? '<div class="sub" lang="et">' + esc(e.ex) + '</div>' : '') +
+    (mtNote ? '<div class="sub mt">' + esc(mtNote) + '</div>' : '');
 
-  if (alreadyHave(e, parsed.isVerb)) {
-    box.innerHTML += '<div class="sub">Это слово уже в колоде.</div>';
+  parsed.dup = alreadyHave(e, parsed.isVerb);
+  if (parsed.dup) box.innerHTML += '<div class="sub">Это слово уже в колоде.</div>';
+  save.disabled = parsed.dup;
+}
+
+function showEntry(parsed, box, save) {
+  pending = parsed;
+  const e = parsed.entry;
+  const wrap = document.getElementById('add-ru-wrap');
+  const ruInput = document.getElementById('add-ru');
+  // подставленный перевод сам по себе выбирает статью, поэтому окно сразу
+  // пересобираем под него: иначе показан один омоним, а сохранится другой
+  if (parsed.ru) ruInput.value = parsed.ru.split(',')[0].trim();
+  refreshEntry();
+  if (!pending || pending.dup) {
     pending = null;
     return;
   }
+  wrap.hidden = false;
+  if (parsed.ru) return;
 
-  document.getElementById('add-ru-wrap').hidden = false;
-  const ruInput = document.getElementById('add-ru');
-  save.disabled = false;
-
-  if (parsed.ru) {
-    ruInput.value = parsed.ru.split(',')[0].trim();
-    return;
-  }
   // русского в словаре нет — подставим машинный и честно это пометим
   translate(parsed.isVerb ? e.ma : e.nom, 'est', 'rus').then((ru) => {
-    if (!ru || pending !== parsed) return;
-    const line2 = document.createElement('div');
-    line2.className = 'sub mt';
-    line2.textContent = 'машинный перевод: ' + ru + ' — проверь его';
-    box.appendChild(line2);
+    if (!ru || !pending || pending.data !== parsed.data) return;
+    mtNote = 'машинный перевод: ' + ru + ' — проверь его';
     if (!ruInput.value) ruInput.value = ru;
+    refreshEntry();
   });
+}
+
+// перевод в поле поменялся — пересобираем карточку под него, чтобы в окне было
+// видно ровно то, что сохранится: статью-омоним, пример, рекцию
+function refreshEntry() {
+  if (!pending) return;
+  const ru = document.getElementById('add-ru').value.trim();
+  const box = document.getElementById('add-result');
+  const save = document.getElementById('btn-add-save');
+  const next = parseEntry(pending.data, pending.word, ru);
+  if (next.error) {
+    // перевод указал на омоним без форм (у minema «уехать» — это наречие):
+    // собрать под него нечего, а молча сохранить карточку прошлого перевода нельзя
+    pending = { data: pending.data, word: pending.word, error: next.error };
+    box.className = 'add-result bad';
+    box.textContent = 'С переводом «' + ru + '» это слово не склоняется и не спрягается ' +
+      '(наречие, частица) — карточку на формы не собрать. Поправь перевод.';
+    save.disabled = true;
+    return;
+  }
+  pending = next;
+  drawEntry(next, box, save);
 }
 
 function saveWord() {
@@ -786,6 +893,10 @@ function saveWord() {
     ruInput.focus();
     return;
   }
+  // статью, пример и рекцию — по окончательному переводу: от него зависит,
+  // какой омоним и какое значение имелись в виду
+  refreshEntry();
+  if (!pending || pending.error || pending.dup) return;
   pending.entry.ru = ru;
   const u = userWords();
   (pending.isVerb ? u.verbs : u.nouns).push(pending.entry);
@@ -803,6 +914,7 @@ function saveWord() {
   document.getElementById('add-ru-wrap').hidden = true;
   document.getElementById('btn-add-save').disabled = true;
   pending = null;
+  mtNote = '';
   document.getElementById('add-word').focus();
 }
 
@@ -822,6 +934,10 @@ on('btn-add', () => {
 });
 on('btn-lookup', lookup);
 on('btn-add-save', saveWord);
+{
+  const ruField = document.getElementById('add-ru');
+  if (ruField) ruField.addEventListener('input', refreshEntry);
+}
 on('btn-add-cancel', () => document.getElementById('adder').close());
 
 const addWord = document.getElementById('add-word');
