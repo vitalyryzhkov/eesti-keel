@@ -2,10 +2,10 @@
   "meta": {
     "level": "A2",
     "note": "Формы сверены с EKI (api.sonapi.ee) — руками не правим, прогоняй tools/sonaveeb.py. Переводы наши. Через запятую — равноправные варианты, тренажёр примет любой.",
-    "updated": "2026-09-14",
+    "updated": "2026-09-22",
     "source": "формы — EKI через api.sonapi.ee; переводы вручную",
-    "verified": "2026-09-14: 1736 форм сверено с EKI, расхождений нет",
-    "content": "база A2 + главы 3–14 «Eesti keele sõnavihik A2» + текст «Minu unistuste maja»"
+    "verified": "2026-09-22: 1948 форм сверено с EKI, расхождений нет",
+    "content": "база A2 + главы 3–14 «Eesti keele sõnavihik A2» + текст «Minu unistuste maja» + учебник, стр. 21–40 (аренда, комнаты и вещи, характер)"
   },
   "nouns": [
     {
@@ -3412,6 +3412,423 @@
       "pos": "num",
       "ex": "Hoone remont läheb maksma miljoneid eurosid.",
       "eki_type": "2e"
+    },
+    {
+      "id": "n_uur",
+      "ru": "аренда, квартплата",
+      "nom": "üür",
+      "gen": "üüri",
+      "part": "üüri",
+      "plpart": "üüre,üürisid",
+      "eki_type": "22e",
+      "ex": "Üür jälle tõusis."
+    },
+    {
+      "id": "n_korter",
+      "ru": "квартира",
+      "nom": "korter",
+      "gen": "korteri",
+      "part": "korterit",
+      "plpart": "kortereid",
+      "eki_type": "2e",
+      "ex": "Kümne korteriga maja."
+    },
+    {
+      "id": "n_asukoht",
+      "ru": "местоположение",
+      "nom": "asukoht",
+      "gen": "asukoha",
+      "part": "asukohta",
+      "plpart": "asukohti,asukohtasid",
+      "eki_type": "22i",
+      "ex": "Hea asukohaga hotell."
+    },
+    {
+      "id": "n_uldpind",
+      "ru": "общая площадь",
+      "nom": "üldpind",
+      "gen": "üldpinna",
+      "part": "üldpinda",
+      "plpart": "üldpindu,üldpindasid",
+      "eki_type": "22u",
+      "ex": "Uues supermarketis on üldpinda 2400 ruutmeetrit."
+    },
+    {
+      "id": "n_kauplus",
+      "ru": "магазин",
+      "nom": "kauplus",
+      "gen": "kaupluse",
+      "part": "kauplust",
+      "plpart": "kauplusi",
+      "eki_type": "11",
+      "ex": "Kaupluses on müügil uued tooted."
+    },
+    {
+      "id": "n_lasteaed",
+      "ru": "детский сад",
+      "nom": "lasteaed",
+      "gen": "lasteaia",
+      "part": "lasteaeda",
+      "plpart": "lasteaedu,lasteaedasid",
+      "eki_type": "22u",
+      "ex": "Viisin lapsed lasteaeda."
+    },
+    {
+      "id": "n_moobel",
+      "ru": "мебель",
+      "nom": "mööbel",
+      "gen": "mööbli",
+      "part": "mööblit",
+      "plpart": "mööbleid",
+      "eki_type": "2e",
+      "ex": "Ostsime koju uue mööbli."
+    },
+    {
+      "id": "n_trepikoda",
+      "ru": "подъезд",
+      "nom": "trepikoda",
+      "gen": "trepikoja",
+      "part": "trepikoda",
+      "plpart": "trepikodasid",
+      "eki_type": "18",
+      "ex": "Nelja trepikojaga maja."
+    },
+    {
+      "id": "n_parkla",
+      "ru": "парковка",
+      "nom": "parkla",
+      "gen": "parkla",
+      "part": "parklat",
+      "plpart": "parklaid",
+      "eki_type": "1",
+      "ex": "Jätsin auto parklasse ja läksin poodi."
+    },
+    {
+      "id": "n_kiosk",
+      "ru": "киоск",
+      "nom": "kiosk",
+      "gen": "kioski",
+      "part": "kioskit",
+      "plpart": "kioskeid",
+      "eki_type": "2e",
+      "ex": "Ostsin kioskist tänase ajalehe."
+    },
+    {
+      "id": "n_kohvimasin",
+      "ru": "кофемашина",
+      "nom": "kohvimasin",
+      "gen": "kohvimasina",
+      "part": "kohvimasinat",
+      "plpart": "kohvimasinaid",
+      "eki_type": "2",
+      "ex": "Panin kohvimasina tööle."
+    },
+    {
+      "id": "n_kohvitass",
+      "ru": "кофейная чашка",
+      "nom": "kohvitass",
+      "gen": "kohvitassi",
+      "part": "kohvitassi",
+      "plpart": "kohvitasse,kohvitassisid",
+      "eki_type": "22e",
+      "ex": "Sekretär ostis uued kohvitassid."
+    },
+    {
+      "id": "n_ohupall",
+      "ru": "воздушный шар",
+      "nom": "õhupall",
+      "gen": "õhupalli",
+      "part": "õhupalli",
+      "plpart": "õhupalle,õhupallisid",
+      "eki_type": "22e",
+      "ex": "Paraadil lasti õhupalle õhku."
+    },
+    {
+      "id": "n_liblikas",
+      "ru": "бабочка",
+      "nom": "liblikas",
+      "gen": "liblika",
+      "part": "liblikat",
+      "plpart": "liblikaid",
+      "eki_type": "2",
+      "ex": "Suvel lendab aias palju liblikaid."
+    },
+    {
+      "id": "n_telefon",
+      "ru": "телефон",
+      "nom": "telefon",
+      "gen": "telefoni",
+      "part": "telefoni",
+      "plpart": "telefone,telefonisid",
+      "eki_type": "19",
+      "ex": "Emal on telefon välja lülitatud."
+    },
+    {
+      "id": "n_naaber",
+      "ru": "сосед",
+      "nom": "naaber",
+      "gen": "naabri",
+      "part": "naabrit",
+      "plpart": "naabreid",
+      "eki_type": "2e",
+      "ex": "Oleme Mariaga naabrid."
+    },
+    {
+      "id": "n_foto",
+      "ru": "фото, фотография",
+      "nom": "foto",
+      "gen": "foto",
+      "part": "fotot",
+      "plpart": "fotosid",
+      "eki_type": "16",
+      "ex": "Fotol on Mari tütrega."
+    },
+    {
+      "id": "n_iseloom",
+      "ru": "характер",
+      "nom": "iseloom",
+      "gen": "iseloomu",
+      "part": "iseloomu",
+      "plpart": "iseloome,iseloomusid",
+      "eki_type": "22e",
+      "ex": "Ühegi inimese halb iseloom pole ravitav."
+    },
+    {
+      "id": "n_tahtkuju",
+      "ru": "знак зодиака",
+      "nom": "tähtkuju",
+      "gen": "tähtkuju",
+      "part": "tähtkuju",
+      "plpart": "tähtkujusid",
+      "eki_type": "17",
+      "ex": "Mis tähtkujust sa oled? – Kaalud."
+    },
+    {
+      "id": "n_nurk",
+      "ru": "угол",
+      "nom": "nurk",
+      "gen": "nurga",
+      "part": "nurka",
+      "plpart": "nurki,nurkasid",
+      "eki_type": "22i",
+      "ex": "Kass kadus maja nurga taha.",
+      "eki_sense": 4
+    },
+    {
+      "id": "n_sein",
+      "ru": "стена",
+      "nom": "sein",
+      "gen": "seina",
+      "part": "seina",
+      "plpart": "seinu,seinasid",
+      "eki_type": "23u",
+      "ex": "Värvisime seinad kollaseks."
+    },
+    {
+      "id": "n_porand",
+      "ru": "пол",
+      "nom": "põrand",
+      "gen": "põranda",
+      "part": "põrandat",
+      "plpart": "põrandaid",
+      "eki_type": "2",
+      "ex": "Koristaja peseb põrandat."
+    },
+    {
+      "id": "n_lagi",
+      "ru": "потолок",
+      "nom": "lagi",
+      "gen": "lae",
+      "part": "lage",
+      "plpart": "lagesid",
+      "eki_type": "21",
+      "ex": "Selles korteris on kõrged laed."
+    },
+    {
+      "id": "n_kesklinn",
+      "ru": "центр города",
+      "nom": "kesklinn",
+      "gen": "kesklinna",
+      "part": "kesklinna",
+      "plpart": "kesklinnu,kesklinnasid",
+      "eki_type": "22u",
+      "ex": "Kesklinnas on tööpäeva õhtul ummikud."
+    },
+    {
+      "id": "n_vanalinn",
+      "ru": "старый город",
+      "nom": "vanalinn",
+      "gen": "vanalinna",
+      "part": "vanalinna",
+      "plpart": "vanalinnu,vanalinnasid",
+      "eki_type": "22u",
+      "ex": "Jalutasime mööda vanalinna kitsaid tänavaid."
+    },
+    {
+      "id": "n_aarelinn",
+      "ru": "окраина",
+      "nom": "äärelinn",
+      "gen": "äärelinna",
+      "part": "äärelinna",
+      "plpart": "äärelinnu,äärelinnasid",
+      "eki_type": "22u",
+      "ex": "Pidu peeti äärelinna eramajas."
+    },
+    {
+      "id": "n_puuvili",
+      "ru": "фрукт",
+      "nom": "puuvili",
+      "gen": "puuvilja",
+      "part": "puuvilja",
+      "plpart": "puuvilju,puuviljasid",
+      "eki_type": "24u",
+      "ex": "Puuviljades ja juurviljades on palju vitamiine."
+    },
+    {
+      "id": "n_voileib",
+      "ru": "бутерброд",
+      "nom": "võileib",
+      "gen": "võileiva",
+      "part": "võileiba",
+      "plpart": "võileibu,võileibasid",
+      "eki_type": "22u",
+      "ex": "Pakuti võileibu ja kohvi."
+    },
+    {
+      "id": "n_jalgpall",
+      "ru": "футбол",
+      "nom": "jalgpall",
+      "gen": "jalgpalli",
+      "part": "jalgpalli",
+      "plpart": "jalgpalle,jalgpallisid",
+      "eki_type": "22e",
+      "ex": "Mängin kaks korda nädalas jalgpalli."
+    },
+    {
+      "id": "n_uudis",
+      "ru": "новость",
+      "nom": "uudis",
+      "gen": "uudise",
+      "part": "uudist",
+      "plpart": "uudiseid",
+      "eki_type": "9",
+      "ex": "Mis tööl uudist on?"
+    },
+    {
+      "id": "n_ajaleht",
+      "ru": "газета",
+      "nom": "ajaleht",
+      "gen": "ajalehe",
+      "part": "ajalehte",
+      "plpart": "ajalehti,ajalehtesid",
+      "eki_type": "22i",
+      "ex": "Online-uudised Eesti ajalehtedes."
+    },
+    {
+      "id": "n_kuulutus",
+      "ru": "объявление",
+      "nom": "kuulutus",
+      "gen": "kuulutuse",
+      "part": "kuulutust",
+      "plpart": "kuulutusi",
+      "eki_type": "11",
+      "ex": "Leidsin kuulutuse kaudu töökoha."
+    },
+    {
+      "id": "n_pill",
+      "ru": "музыкальный инструмент",
+      "nom": "pill",
+      "gen": "pilli",
+      "part": "pilli",
+      "plpart": "pille,pillisid",
+      "eki_type": "22e",
+      "ex": "Kas sa mängid mõnda pilli ka?"
+    },
+    {
+      "id": "n_lauamang",
+      "ru": "настольная игра",
+      "nom": "lauamäng",
+      "gen": "lauamängu",
+      "part": "lauamängu",
+      "plpart": "lauamänge,lauamängusid",
+      "eki_type": "22e",
+      "ex": "Male ja kabe on lauamängud."
+    },
+    {
+      "id": "n_intelligentne",
+      "ru": "интеллигентный",
+      "nom": "intelligentne",
+      "gen": "intelligentse",
+      "part": "intelligentset",
+      "plpart": "intelligentseid",
+      "eki_type": "2",
+      "pos": "adj"
+    },
+    {
+      "id": "n_emotsionaalne",
+      "ru": "эмоциональный",
+      "nom": "emotsionaalne",
+      "gen": "emotsionaalse",
+      "part": "emotsionaalset",
+      "plpart": "emotsionaalseid",
+      "eki_type": "2",
+      "pos": "adj",
+      "ex": "Ta on väga emotsionaalne naine."
+    },
+    {
+      "id": "n_karismaatiline",
+      "ru": "харизматичный",
+      "nom": "karismaatiline",
+      "gen": "karismaatilise",
+      "part": "karismaatilist",
+      "plpart": "karismaatilisi",
+      "eki_type": "12",
+      "pos": "adj",
+      "ex": "Kunstniku jõuline ja karismaatiline isiksus."
+    },
+    {
+      "id": "n_temperamentne",
+      "ru": "темпераментный",
+      "nom": "temperamentne",
+      "gen": "temperamentse",
+      "part": "temperamentset",
+      "plpart": "temperamentseid",
+      "eki_type": "2",
+      "pos": "adj",
+      "ex": "Lõunamaiselt temperamentne firmajuht."
+    },
+    {
+      "id": "n_konservatiivne",
+      "ru": "консервативный",
+      "nom": "konservatiivne",
+      "gen": "konservatiivse",
+      "part": "konservatiivset",
+      "plpart": "konservatiivseid",
+      "eki_type": "2",
+      "pos": "adj",
+      "ex": "Kujundus on reserveeritud, värvivalik konservatiivne."
+    },
+    {
+      "id": "n_ambitsioonikas",
+      "ru": "амбициозный",
+      "nom": "ambitsioonikas",
+      "gen": "ambitsioonika",
+      "part": "ambitsioonikat",
+      "plpart": "ambitsioonikaid",
+      "eki_type": "2",
+      "pos": "adj",
+      "ex": "Uurijatel on ambitsioonikas plaan kaardistada kõik rabapistrikud."
+    },
+    {
+      "id": "n_toeline",
+      "ru": "настоящий",
+      "nom": "tõeline",
+      "gen": "tõelise",
+      "part": "tõelist",
+      "plpart": "tõelisi",
+      "eki_type": "12",
+      "pos": "adj",
+      "ex": "Kes tema tõelised vanemad on?"
     }
   ],
   "verbs": [
@@ -4277,6 +4694,107 @@
       "nud": "triikinud",
       "ex": "Triikisin laudlina ära.",
       "eki_type": "28"
+    },
+    {
+      "id": "v_meeldima",
+      "ru": "нравиться",
+      "ma": "meeldima",
+      "da": "meeldida",
+      "b": "meeldib",
+      "neg": "meeldi",
+      "past": "meeldis",
+      "nud": "meeldinud",
+      "eki_type": "27",
+      "rek": "kellele,mida teha",
+      "ex": "Talle meeldib tantsida."
+    },
+    {
+      "id": "v_asuma",
+      "ru": "находиться",
+      "ma": "asuma",
+      "da": "asuda",
+      "b": "asub",
+      "neg": "asu",
+      "past": "asus",
+      "nud": "asunud",
+      "eki_type": "27",
+      "rek": "kus",
+      "ex": "Kus see asub?"
+    },
+    {
+      "id": "v_sobima",
+      "ru": "подходить",
+      "ma": "sobima",
+      "da": "sobida",
+      "b": "sobib",
+      "neg": "sobi",
+      "past": "sobis",
+      "nud": "sobinud",
+      "eki_type": "27",
+      "rek": "kelleks/milleks,kellele/millele",
+      "ex": "Ta ei sobi arstiks."
+    },
+    {
+      "id": "v_jalutama",
+      "ru": "гулять",
+      "ma": "jalutama",
+      "da": "jalutada",
+      "b": "jalutab",
+      "neg": "jaluta",
+      "past": "jalutas",
+      "nud": "jalutanud",
+      "eki_type": "27",
+      "rek": "kellega",
+      "ex": "Jalutame mere äärde."
+    },
+    {
+      "id": "v_tantsima",
+      "ru": "танцевать",
+      "ma": "tantsima",
+      "da": "tantsida",
+      "b": "tantsib",
+      "neg": "tantsi",
+      "past": "tantsis",
+      "nud": "tantsinud",
+      "eki_type": "28",
+      "ex": "Robert tantsib Mariaga."
+    },
+    {
+      "id": "v_reisima",
+      "ru": "путешествовать",
+      "ma": "reisima",
+      "da": "reisida",
+      "b": "reisib",
+      "neg": "reisi",
+      "past": "reisis",
+      "nud": "reisinud",
+      "eki_type": "28",
+      "ex": "Kuhu te edasi reisite?"
+    },
+    {
+      "id": "v_ujuma",
+      "ru": "плавать",
+      "ma": "ujuma",
+      "da": "ujuda",
+      "b": "ujub",
+      "neg": "uju",
+      "past": "ujus",
+      "nud": "ujunud",
+      "eki_type": "27",
+      "ex": "Ma ei oska ujuda."
+    },
+    {
+      "id": "v_voima",
+      "ru": "мочь",
+      "ma": "võima",
+      "da": "võida",
+      "b": "võib",
+      "neg": "või",
+      "past": "võis",
+      "nud": "võinud",
+      "eki_type": "37",
+      "rek": "mida teha",
+      "ex": "Täna võib sadama hakata."
     }
   ]
 }

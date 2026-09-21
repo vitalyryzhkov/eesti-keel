@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION = 'v36';
+const VERSION = 'v37';
 const STORE = 'eesti-a2-state';
 
 const el = {
@@ -111,9 +111,35 @@ function kinGroups() {
   return byId;
 }
 
+// варианты перевода по отдельности: «картина, фото» → ['картина', 'фото']
+function ruParts(w) {
+  return String(w.ru || '').split(/[;,]/).map((v) => norm(v)).filter(Boolean);
+}
+
 function buildCards() {
   const out = [];
   const kin = kinGroups();
+  // «магазин» — это и pood, и kauplus. Карточка ru → et принимает любое слово
+  // колоды с таким же переводом: иначе верный ответ идёт в ошибки и портит
+  // интервал повторения. Сравниваем по отдельным вариантам перевода, а не по
+  // строке целиком: у pilt «картина, фото», у foto «фото, фотография» — общее
+  // «фото» делает их синонимами
+  const byRu = new Map();
+  for (const w of DATA.nouns.concat(DATA.verbs)) {
+    for (const v of ruParts(w)) {
+      if (!byRu.has(v)) byRu.set(v, []);
+      byRu.get(v).push(w.nom || w.ma);
+    }
+  }
+  // показываем слово самой карточки (рядом с ним стоят ЕГО формы), а принимаем
+  // и синоним: accept — то, что сверяется, answer — то, что видно
+  const accepts = (w, head) => {
+    const out = [head];
+    for (const v of ruParts(w)) {
+      for (const h of byRu.get(v) || []) if (!out.includes(h)) out.push(h);
+    }
+    return out.join(', ');
+  };
   for (const n of DATA.nouns) {
     const fields = [
       { key: 'gen', label: 'omastav (кого/чего)', answer: n.gen },
@@ -127,7 +153,7 @@ function buildCards() {
     });
     out.push({
       id: n.id + ':prod', kind: 'prod', deck: 'vocab',
-      tag: 'слово · ru → et', prompt: n.ru, ru: '', answer: n.nom,
+      tag: 'слово · ru → et', prompt: n.ru, ru: '', answer: n.nom, accept: accepts(n, n.nom),
       extra: n.gen + ' · ' + n.part, ex: n.ex,
     });
     out.push({
@@ -151,7 +177,7 @@ function buildCards() {
     });
     out.push({
       id: v.id + ':prod', kind: 'prod', deck: 'vocab',
-      tag: 'слово · ru → et', prompt: v.ru, answer: v.ma,
+      tag: 'слово · ru → et', prompt: v.ru, answer: v.ma, accept: accepts(v, v.ma),
       extra: v.da + ' · ' + v.b, ex: v.ex,
     });
     out.push({
@@ -329,7 +355,7 @@ function renderProd(c) {
   document.getElementById('check').onclick = () => {
     const node = el.card.querySelector('.field');
     const inp = node.querySelector('input');
-    const ok = matches(inp.value, c.answer);
+    const ok = matches(inp.value, c.accept || c.answer);
     node.classList.add(ok ? 'ok' : 'bad');
     inp.disabled = true;
     const p = document.createElement('div');
@@ -1108,7 +1134,13 @@ function generatedItems(n) {
   const items = [];
   const nouns = DATA.nouns.filter((w) => w.gen && w.part);
   const verbs = DATA.verbs.filter((w) => w.neg && w.b);
-  const allNoms = DATA.nouns.map((w) => w.nom);
+  // слово-синоним не должно попасть в неверные варианты: с переводом «магазин»
+  // и pood, и kauplus верны, а помечен верным был бы только один. Хватает
+  // одного общего варианта перевода: pilt «картина, фото» и foto «фото, …»
+  const otherNoms = (w) => {
+    const mine = new Set(ruParts(w));
+    return DATA.nouns.filter((x) => !ruParts(x).some((v) => mine.has(v))).map((x) => x.nom);
+  };
 
   const makers = [
     // какая это форма — ровно та путаница, которую проверяет экзамен
@@ -1145,7 +1177,7 @@ function generatedItems(n) {
     () => {
       const w = pickRandom(nouns);
       if (!w) return null;
-      const wrong = distractors(w.nom, allNoms, 3);
+      const wrong = distractors(w.nom, otherNoms(w), 3);
       if (wrong.length < 3) return null;
       return { q: w.ru, ru: '', correct: w.nom, options: [w.nom].concat(wrong),
                why: w.ru + ' — ' + w.nom + '.' };

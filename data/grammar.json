@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "Шпаргалка A2. Дописывай секции по мере учёбы — файл читается приложением как есть.",
-    "updated": "2026-09-07"
+    "updated": "2026-09-22"
   },
   "sections": [
     {
@@ -1165,6 +1165,201 @@
         {
           "et": "Palun korrake.",
           "ru": "Повторите, пожалуйста."
+        }
+      ]
+    },
+    {
+      "title": "Квартира и объявление (гл. 4)",
+      "note": "Слова объявления: üür — аренда, üldpind — общая площадь, asukoht — местоположение, korrus — этаж, mööbel — мебель, kuulutus — объявление. Примеры из словаря EKI.",
+      "rows": [
+        {
+          "et": "Korteri üür on 400 eurot kuus.",
+          "ru": "Аренда квартиры — 400 евро в месяц."
+        },
+        {
+          "et": "Korter nr 27 asub neljandal korrusel.",
+          "ru": "Квартира № 27 находится на четвёртом этаже.",
+          "hint": "asub — находится"
+        },
+        {
+          "et": "Üürisin kahetoalise korteri kolmandal korrusel.",
+          "ru": "Я снял двухкомнатную квартиру на третьем этаже."
+        },
+        {
+          "et": "Majas on kümme korterit.",
+          "ru": "В доме десять квартир."
+        },
+        {
+          "et": "Kus see asub?",
+          "ru": "Где это находится?"
+        },
+        {
+          "et": "Leidsin kuulutuse kaudu töökoha.",
+          "ru": "Я нашёл работу по объявлению."
+        }
+      ]
+    },
+    {
+      "title": "Что где стоит: послелоги (гл. 5)",
+      "note": "У послелогов из этого раздела слово стоит перед ними и в omastav: laua peal = «стола на». Но так не у всех служебных слов: в словаре EKI у mööda рекция mida, у tagasi — mis, mida, и форма другая — см. две последние строки. Падеж надёжнее смотреть в словаре, чем выводить по смыслу.",
+      "rows": [
+        {
+          "et": "Maja all on kelder.",
+          "ru": "Под домом подвал.",
+          "hint": "maja → maja + all"
+        },
+        {
+          "et": "Raamat on kapi peal.",
+          "ru": "Книга на шкафу.",
+          "hint": "kapp → kapi + peal"
+        },
+        {
+          "et": "Kiriku kõrval on väike surnuaed.",
+          "ru": "Рядом с церковью маленькое кладбище.",
+          "hint": "kirik → kiriku + kõrval"
+        },
+        {
+          "et": "Ta istub kirjutuslaua taga ja töötab.",
+          "ru": "Он сидит за письменным столом и работает.",
+          "hint": "kirjutuslaud → kirjutuslaua + taga"
+        },
+        {
+          "et": "Akende ees olid paksud kardinad.",
+          "ru": "Перед окнами были плотные шторы.",
+          "hint": "здесь мн. ч.: aknad → akende + ees"
+        },
+        {
+          "et": "Lamp ripub laua kohal.",
+          "ru": "Лампа висит над столом.",
+          "hint": "laud → laua + kohal"
+        },
+        {
+          "et": "Laps istub ema ja isa vahel.",
+          "ru": "Ребёнок сидит между мамой и папой.",
+          "hint": "два слова в omastav + vahel"
+        },
+        {
+          "et": "Õpetaja seisis akna juures.",
+          "ru": "Учитель стоял у окна.",
+          "hint": "aken → akna + juures"
+        },
+        {
+          "et": "Kaua aega tagasi.",
+          "ru": "Давным-давно.",
+          "hint": "здесь osastav: aeg → aega, а не omastav aja"
+        },
+        {
+          "et": "Jalutasime mööda vanalinna kitsaid tänavaid.",
+          "ru": "Мы гуляли по узким улицам старого города.",
+          "hint": "mööda стоит перед словом, а tänavaid — мн. osastav"
+        }
+      ]
+    },
+    {
+      "title": "Самый: kõige + сравнительная форма (гл. 6)",
+      "note": "«Самый» чаще всего — kõige перед сравнительной формой. Но у части слов есть ещё и короткая форма превосходной степени (parim, suurim, lähim) — она встречается в примерах карточек. Каждая отдельная форма ниже (sõbralikum, targem, parim, suurim, lähim) есть в словаре EKI своей статьёй.",
+      "rows": [
+        {
+          "et": "sõbralik → sõbralikum → kõige sõbralikum",
+          "ru": "дружелюбный → дружелюбнее → самый дружелюбный"
+        },
+        {
+          "et": "tark → targem · suur → suurem",
+          "ru": "умный → умнее · большой → больше",
+          "hint": "сравнительную форму лучше смотреть в словаре: у tark это targem, а не «targam»"
+        },
+        {
+          "et": "Ave on klassi kõige ilusam tüdruk.",
+          "ru": "Аве — самая красивая девочка в классе."
+        },
+        {
+          "et": "Kõige parem lahendus.",
+          "ru": "Самое лучшее решение.",
+          "hint": "parem — отдельное слово, «лучше»"
+        },
+        {
+          "et": "Elan kõige tavalisemat elu.",
+          "ru": "Живу самой обычной жизнью.",
+          "hint": "kõige не меняется, меняется вторая часть: tavalisemat"
+        },
+        {
+          "et": "parim · suurim · lähim",
+          "ru": "лучший · самый большой · ближайший",
+          "hint": "короткая форма: её не собрать из kõige, такие слова смотрим в словаре"
+        },
+        {
+          "et": "Ta on meie klassi parim sportlane.",
+          "ru": "Он лучший спортсмен в нашем классе."
+        },
+        {
+          "et": "Kus asub lähim kauplus?",
+          "ru": "Где находится ближайший магазин?"
+        }
+      ]
+    },
+    {
+      "title": "Кем работать: -na (гл. 6)",
+      "note": "«Работает кем» — форма на -na, она строится от omastav (в словаре EKI это форма SgEs). А вот «учиться на кого», «годиться кем» — уже -ks, это видно по рекции в карточках.",
+      "rows": [
+        {
+          "et": "arst → arsti → arstina",
+          "ru": "врач → врача → врачом"
+        },
+        {
+          "et": "õpetaja → õpetaja → õpetajana",
+          "ru": "учитель → учителя → учителем"
+        },
+        {
+          "et": "kokk → koka → kokana",
+          "ru": "повар → повара → поваром",
+          "hint": "основа меняется: kk → k"
+        },
+        {
+          "et": "Ta töötab restoranis kokana.",
+          "ru": "Он работает поваром в ресторане."
+        },
+        {
+          "et": "Ta töötab Sõle gümnaasiumis eesti keele õpetajana.",
+          "ru": "Он работает учителем эстонского в гимназии «Sõle»."
+        },
+        {
+          "et": "Ta õpib arstiks.",
+          "ru": "Он учится на врача.",
+          "hint": "здесь -ks, а не -na"
+        },
+        {
+          "et": "Ta ei sobi arstiks.",
+          "ru": "Он не годится во врачи.",
+          "hint": "рекция sobima: kelleks"
+        }
+      ]
+    },
+    {
+      "title": "Нравится: meeldib (гл. 6)",
+      "note": "Тот, КОМУ нравится, стоит на -le (mulle, sulle, talle). То, ЧТО нравится, — подлежащее, поэтому глагол согласуется с ним. Рекция из словаря EKI: meeldima kellele, mida teha — она же стоит в карточке глагола.",
+      "rows": [
+        {
+          "et": "Talle meeldib tantsida.",
+          "ru": "Ему нравится танцевать.",
+          "hint": "после meeldib — da-инфинитив"
+        },
+        {
+          "et": "See tüdruk meeldib mulle väga.",
+          "ru": "Эта девушка мне очень нравится."
+        },
+        {
+          "et": "Kas sulle meeldis see film?",
+          "ru": "Тебе понравился этот фильм?",
+          "hint": "прошедшее: meeldis"
+        },
+        {
+          "et": "Poisile meeldib tähelepanu keskmes olla.",
+          "ru": "Мальчику нравится быть в центре внимания.",
+          "hint": "тот, кому нравится, тоже на -le: poiss → poisile"
+        },
+        {
+          "et": "Ühele meeldib ema, teisele tütar.",
+          "ru": "Одному нравится мама, другому — дочь."
         }
       ]
     }
