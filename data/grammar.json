@@ -1303,15 +1303,15 @@
       "rows": [
         {
           "et": "arst → arsti → arstina",
-          "ru": "врач → врача → врачом"
+          "ru": "врач → врача → врачом (работает кем)"
         },
         {
           "et": "õpetaja → õpetaja → õpetajana",
-          "ru": "учитель → учителя → учителем"
+          "ru": "учитель → учителя → учителем (работает кем)"
         },
         {
           "et": "kokk → koka → kokana",
-          "ru": "повар → повара → поваром",
+          "ru": "повар → повара → поваром (работает кем)",
           "hint": "основа меняется: kk → k"
         },
         {
@@ -1360,6 +1360,88 @@
         {
           "et": "Ühele meeldib ema, teisele tütar.",
           "ru": "Одному нравится мама, другому — дочь."
+        }
+      ]
+    },
+    {
+      "title": "Превратительный падеж: -ks (saav kääne)",
+      "note": "Форма существительного или прилагательного на -ks. В словаре EKI она называется «ainsuse saav» и строится от omastav: arst → arsti → arstiks (сверено по всем 373 существительным колоды, исключений нет). Отвечает на kelleks? / milleks? — кем? чем? во что? для чего? к какому времени? У глаголов -ks — совсем другое, условное наклонение: «Teeks õige trenni?» — «сделать бы тренировку». Примеры ниже из словарных статей EKI.",
+      "rows": [
+        {
+          "et": "arst → arsti → arstiks · kokk → koka → kokaks",
+          "ru": "врач → врача → врачом (стать, выучиться) · повар → повара → поваром",
+          "hint": "-ks добавляется к omastav — так же, как -na"
+        },
+        {
+          "et": "Ta õpib arstiks.",
+          "ru": "Он учится на врача.",
+          "hint": "кем стать — -ks; а «работает кем» — -na: töötab arstina"
+        },
+        {
+          "et": "Sel teel küll rikkaks ei saa.",
+          "ru": "Этим путём богатым не станешь.",
+          "hint": "стать кем — saama + -ks"
+        },
+        {
+          "et": "Ilm muutus pilviseks.",
+          "ru": "Погода стала облачной.",
+          "hint": "стать каким — muutuma + -ks"
+        },
+        {
+          "et": "Terve pere jäi haigeks.",
+          "ru": "Вся семья заболела.",
+          "hint": "перейти в состояние — jääma + -ks"
+        },
+        {
+          "et": "Uudis tegi mind väga kurvaks.",
+          "ru": "Новость меня очень огорчила.",
+          "hint": "сделать каким — tegema + -ks"
+        },
+        {
+          "et": "Lastetoa seinad värviti oranžiks.",
+          "ru": "Стены детской покрасили в оранжевый."
+        },
+        {
+          "et": "Pane muusika vaiksemaks.",
+          "ru": "Сделай музыку потише.",
+          "hint": "-ks и от сравнительной формы: vaiksem → vaiksemaks"
+        },
+        {
+          "et": "Jõuan artikli õhtuks valmis.",
+          "ru": "К вечеру я закончу статью.",
+          "hint": "mis ajaks? — к какому времени"
+        },
+        {
+          "et": "Sain järgmiseks nädalaks juuksurisse aja.",
+          "ru": "Я записался к парикмахеру на следующую неделю.",
+          "hint": "на какой срок; определение тоже на -ks: järgmiseks nädalaks"
+        },
+        {
+          "et": "Panen ukse alati ööseks lukku.",
+          "ru": "На ночь я всегда запираю дверь."
+        },
+        {
+          "et": "Meil ei jätku talveks puid.",
+          "ru": "Нам не хватит дров на зиму.",
+          "hint": "puid здесь — дрова; в карточке puu — дерево"
+        },
+        {
+          "et": "Jaanipäevaks sõitsime maale.",
+          "ru": "На Янов день мы поехали за город.",
+          "hint": "к празднику — тоже -ks"
+        },
+        {
+          "et": "Mida sulle sünnipäevaks kingiti?",
+          "ru": "Что тебе подарили на день рождения?"
+        },
+        {
+          "et": "Vesi on ujumiseks liiga külm.",
+          "ru": "Вода слишком холодная, чтобы плавать.",
+          "hint": "milleks? — для чего: ujumine «плавание» → ujumiseks"
+        },
+        {
+          "et": "Meie sportlane tuli ujumises kolmandaks.",
+          "ru": "Наш спортсмен занял третье место в плавании."
         }
       ]
     }
