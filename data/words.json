@@ -2,10 +2,10 @@
   "meta": {
     "level": "A2",
     "note": "Формы сверены с EKI (api.sonapi.ee) — руками не правим, прогоняй tools/sonaveeb.py. Переводы наши. Через запятую — равноправные варианты, тренажёр примет любой.",
-    "updated": "2026-09-22",
+    "updated": "2026-10-10",
     "source": "формы — EKI через api.sonapi.ee; переводы вручную",
-    "verified": "2026-09-22: 1948 форм сверено с EKI, расхождений нет",
-    "content": "база A2 + главы 3–14 «Eesti keele sõnavihik A2» + текст «Minu unistuste maja» + учебник, стр. 21–40 (аренда, комнаты и вещи, характер)"
+    "verified": "2026-10-10: 2178 форм сверено с EKI, расхождений нет",
+    "content": "база A2 + главы 3–14 «Eesti keele sõnavihik A2» + текст «Minu unistuste maja» + учебник, стр. 21–80 (аренда, комнаты, характер, семья, праздники и даты, внешность, магазины и часы работы, погода, мой день)"
   },
   "nouns": [
     {
@@ -3829,6 +3829,390 @@
       "eki_type": "12",
       "pos": "adj",
       "ex": "Kes tema tõelised vanemad on?"
+    },
+    {
+      "id": "n_tadi",
+      "ru": "тётя",
+      "nom": "tädi",
+      "gen": "tädi",
+      "part": "tädi",
+      "plpart": "tädisid",
+      "eki_type": "17",
+      "ex": "Tädi Anne oli lastele ema eest."
+    },
+    {
+      "id": "n_onu",
+      "ru": "дядя",
+      "nom": "onu",
+      "gen": "onu",
+      "part": "onu",
+      "plpart": "onusid",
+      "eki_type": "17",
+      "ex": "Minu onu Otto pidas iga tähtpäeva meeles."
+    },
+    {
+      "id": "n_tuttav",
+      "ru": "знакомый",
+      "nom": "tuttav",
+      "gen": "tuttava",
+      "part": "tuttavat",
+      "plpart": "tuttavaid",
+      "eki_type": "2",
+      "pos": "adj",
+      "ex": "See nimi on mulle tuttav."
+    },
+    {
+      "id": "n_sobranna",
+      "ru": "подруга",
+      "nom": "sõbranna",
+      "gen": "sõbranna",
+      "part": "sõbrannat",
+      "plpart": "sõbrannasid",
+      "eki_type": "16",
+      "ex": "Kaisa on minu parim sõbranna."
+    },
+    {
+      "id": "n_lapselaps",
+      "ru": "внук, внучка",
+      "nom": "lapselaps",
+      "gen": "lapselapse",
+      "part": "lapselast",
+      "plpart": "lapselapsi",
+      "eki_type": "14",
+      "ex": "Mida lapselapsed nõudsid, seda vanaema ka vaaritas."
+    },
+    {
+      "id": "n_vanem",
+      "ru": "родитель",
+      "nom": "vanem",
+      "gen": "vanema",
+      "part": "vanemat",
+      "plpart": "vanemaid",
+      "eki_type": "2",
+      "ex": "Päevikusse oli tarvis vanema allkirja."
+    },
+    {
+      "id": "n_hamster",
+      "ru": "хомяк",
+      "nom": "hamster",
+      "gen": "hamstri",
+      "part": "hamstrit",
+      "plpart": "hamstreid",
+      "eki_type": "02e",
+      "ex": "Hamster elab puuris."
+    },
+    {
+      "id": "n_papagoi",
+      "ru": "попугай",
+      "nom": "papagoi",
+      "gen": "papagoi",
+      "part": "papagoid",
+      "plpart": "papagoisid",
+      "eki_type": "26",
+      "ex": "Papagoid on targad linnud."
+    },
+    {
+      "id": "n_kilpkonn",
+      "ru": "черепаха",
+      "nom": "kilpkonn",
+      "gen": "kilpkonna",
+      "part": "kilpkonna",
+      "plpart": "kilpkonni,kilpkonnasid",
+      "eki_type": "22i",
+      "ex": "Kilpkonn muneb oma munad liivale."
+    },
+    {
+      "id": "n_iseseisvuspaev",
+      "ru": "день независимости",
+      "nom": "iseseisvuspäev",
+      "gen": "iseseisvuspäeva",
+      "part": "iseseisvuspäeva",
+      "plpart": "iseseisvuspäevi,iseseisvuspäevasid",
+      "eki_type": "22i",
+      "ex": "Eesti Vabariigi iseseisvuspäev on 24. veebruaril."
+    },
+    {
+      "id": "n_kaubamaja",
+      "ru": "универмаг",
+      "nom": "kaubamaja",
+      "gen": "kaubamaja",
+      "part": "kaubamaja",
+      "plpart": "kaubamaju,kaubamajasid",
+      "eki_type": "17u",
+      "ex": "Ostsin kaubamajast uue ülikonna."
+    },
+    {
+      "id": "n_klient",
+      "ru": "клиент",
+      "nom": "klient",
+      "gen": "kliendi",
+      "part": "klienti",
+      "plpart": "kliente,klientisid",
+      "eki_type": "22e",
+      "ex": "Rahulolev klient on iga firma unistus."
+    },
+    {
+      "id": "n_teenindaja",
+      "ru": "работник сферы обслуживания",
+      "nom": "teenindaja",
+      "gen": "teenindaja",
+      "part": "teenindajat",
+      "plpart": "teenindajaid",
+      "eki_type": "1"
+    },
+    {
+      "id": "n_kliendikaart",
+      "ru": "карта клиента",
+      "nom": "kliendikaart",
+      "gen": "kliendikaardi",
+      "part": "kliendikaarti",
+      "plpart": "kliendikaarte,kliendikaartisid",
+      "eki_type": "22e",
+      "ex": "Kaubamaja kliendikaardi omanikele on teatud kaubad soodsama hinnaga."
+    },
+    {
+      "id": "n_ankeet",
+      "ru": "анкета",
+      "nom": "ankeet",
+      "gen": "ankeedi",
+      "part": "ankeeti",
+      "plpart": "ankeete,ankeetisid",
+      "eki_type": "22e",
+      "ex": "Küsitluses osalejad täitsid anonüümse ankeedi."
+    },
+    {
+      "id": "n_eesnimi",
+      "ru": "имя (в отличие от фамилии)",
+      "nom": "eesnimi",
+      "gen": "eesnime",
+      "part": "eesnime",
+      "plpart": "eesnimesid",
+      "eki_type": "20",
+      "ex": "Õpetaja Metsa eesnimi on Anna."
+    },
+    {
+      "id": "n_perekonnanimi",
+      "ru": "фамилия",
+      "nom": "perekonnanimi",
+      "gen": "perekonnanime",
+      "part": "perekonnanime",
+      "plpart": "perekonnanimesid",
+      "eki_type": "20",
+      "ex": "Tema nimi on Erik Tamm; Tamm on perekonnanimi."
+    },
+    {
+      "id": "n_sugu",
+      "ru": "пол (мужской/женский)",
+      "nom": "sugu",
+      "gen": "soo",
+      "part": "sugu",
+      "plpart": "sugusid",
+      "eki_type": "18",
+      "ex": "Ankeeti tuleb märkida ka vanus ja sugu."
+    },
+    {
+      "id": "n_vanus",
+      "ru": "возраст",
+      "nom": "vanus",
+      "gen": "vanuse",
+      "part": "vanust",
+      "plpart": "vanuseid",
+      "eki_type": "9",
+      "ex": "Isa suri kõrges vanuses."
+    },
+    {
+      "id": "n_amet",
+      "ru": "профессия",
+      "nom": "amet",
+      "gen": "ameti",
+      "part": "ametit",
+      "plpart": "ameteid",
+      "eki_type": "2e",
+      "ex": "Ema on ametilt õpetaja."
+    },
+    {
+      "id": "n_rahvus",
+      "ru": "национальность",
+      "nom": "rahvus",
+      "gen": "rahvuse",
+      "part": "rahvust",
+      "plpart": "rahvusi",
+      "eki_type": "11",
+      "ex": "Ta on rahvuselt eestlane."
+    },
+    {
+      "id": "n_isikukood",
+      "ru": "личный код",
+      "nom": "isikukood",
+      "gen": "isikukoodi",
+      "part": "isikukoodi",
+      "plpart": "isikukoode,isikukoodisid",
+      "eki_type": "22e",
+      "ex": "Kirjutage avaldusele oma nimi, elukoht ja isikukood."
+    },
+    {
+      "id": "n_allkiri",
+      "ru": "подпись",
+      "nom": "allkiri",
+      "gen": "allkirja",
+      "part": "allkirja",
+      "plpart": "allkirju,allkirjasid",
+      "eki_type": "24u",
+      "ex": "Võltsitud allkirjaga dokument."
+    },
+    {
+      "id": "n_perekonnaseis",
+      "ru": "семейное положение",
+      "nom": "perekonnaseis",
+      "gen": "perekonnaseisu",
+      "part": "perekonnaseisu",
+      "plpart": "perekonnaseise,perekonnaseisusid",
+      "eki_type": "22e",
+      "ex": "Ankeeti tuli märkida vanus ja perekonnaseis."
+    },
+    {
+      "id": "n_telefoninumber",
+      "ru": "номер телефона",
+      "nom": "telefoninumber",
+      "gen": "telefoninumbri",
+      "part": "telefoninumbrit",
+      "plpart": "telefoninumbreid",
+      "eki_type": "2e",
+      "ex": "Kirjuta mu aadress ja telefoninumber üles."
+    },
+    {
+      "id": "n_kuupaev",
+      "ru": "дата",
+      "nom": "kuupäev",
+      "gen": "kuupäeva",
+      "part": "kuupäeva",
+      "plpart": "kuupäevi,kuupäevasid",
+      "eki_type": "22i",
+      "ex": "Mis kuupäev täna on? – 6. juuli."
+    },
+    {
+      "id": "n_taevas",
+      "ru": "небо",
+      "nom": "taevas",
+      "gen": "taeva",
+      "part": "taevast",
+      "plpart": "taevaid",
+      "eki_type": "7",
+      "ex": "Taevas on pilves."
+    },
+    {
+      "id": "n_paike",
+      "ru": "солнце",
+      "nom": "päike",
+      "gen": "päikese",
+      "part": "päikest",
+      "plpart": "päikesi",
+      "eki_type": "12",
+      "ex": "Päike hakkas loojuma."
+    },
+    {
+      "id": "n_kraad",
+      "ru": "градус",
+      "nom": "kraad",
+      "gen": "kraadi",
+      "part": "kraadi",
+      "plpart": "kraade,kraadisid",
+      "eki_type": "22e",
+      "ex": "Väljas on 22 kraadi sooja."
+    },
+    {
+      "id": "n_ilmateade",
+      "ru": "прогноз погоды",
+      "nom": "ilmateade",
+      "gen": "ilmateate",
+      "part": "ilmateadet",
+      "plpart": "ilmateateid",
+      "eki_type": "6",
+      "ex": "Ilmateade ennustab vihma ja lund."
+    },
+    {
+      "id": "n_pilv",
+      "ru": "облако, туча",
+      "nom": "pilv",
+      "gen": "pilve",
+      "part": "pilve",
+      "plpart": "pilvi,pilvesid",
+      "eki_type": "22i",
+      "ex": "Päike kadus pilve taha."
+    },
+    {
+      "id": "n_noor",
+      "ru": "молодой",
+      "nom": "noor",
+      "gen": "noore",
+      "part": "noort",
+      "plpart": "noori",
+      "eki_type": "13",
+      "pos": "adj",
+      "ex": "Täisjõus noor mees."
+    },
+    {
+      "id": "n_inetu",
+      "ru": "некрасивый",
+      "nom": "inetu",
+      "gen": "inetu",
+      "part": "inetut",
+      "plpart": "inetuid",
+      "eki_type": "1",
+      "pos": "adj",
+      "ex": "Tal on inetu käekiri."
+    },
+    {
+      "id": "n_tume",
+      "ru": "тёмный",
+      "nom": "tume",
+      "gen": "tumeda",
+      "part": "tumedat",
+      "plpart": "tumedaid",
+      "eki_type": "2",
+      "pos": "adj",
+      "ex": "Tume ja ähvardav pilv."
+    },
+    {
+      "id": "n_prillid",
+      "ru": "очки (в речи мн. ч.: prillid)",
+      "nom": "prill",
+      "gen": "prilli",
+      "part": "prilli",
+      "plpart": "prille,prillisid",
+      "eki_type": "22e",
+      "ex": "Vanaemal on prillid ees.",
+      "src": "prillid"
+    },
+    {
+      "id": "n_parastlouna",
+      "ru": "вторая половина дня",
+      "nom": "pärastlõuna",
+      "gen": "pärastlõuna",
+      "part": "pärastlõunat",
+      "plpart": "pärastlõunaid",
+      "eki_type": "6",
+      "ex": "Kohtume reede pärastlõunal."
+    },
+    {
+      "id": "n_nadalavahetus",
+      "ru": "выходные",
+      "nom": "nädalavahetus",
+      "gen": "nädalavahetuse",
+      "part": "nädalavahetust",
+      "plpart": "nädalavahetusi",
+      "eki_type": "11",
+      "ex": "Käisime nädalavahetusel maal."
+    },
+    {
+      "id": "n_tund",
+      "ru": "час, урок",
+      "nom": "tund",
+      "gen": "tunni",
+      "part": "tundi",
+      "plpart": "tunde,tundisid",
+      "eki_type": "22e",
+      "ex": "Sõit kestis kaks tundi."
     }
   ],
   "verbs": [
@@ -4795,6 +5179,172 @@
       "eki_type": "37",
       "rek": "mida teha",
       "ex": "Täna võib sadama hakata."
+    },
+    {
+      "id": "v_sadama",
+      "ru": "идти (об осадках)",
+      "ma": "sadama",
+      "da": "sadada",
+      "b": "sajab",
+      "neg": "saja",
+      "past": "sadas",
+      "nud": "sadanud",
+      "eki_type": "28",
+      "ex": "Sadas terve öö."
+    },
+    {
+      "id": "v_puhuma",
+      "ru": "дуть",
+      "ma": "puhuma",
+      "da": "puhuda",
+      "b": "puhub",
+      "neg": "puhu",
+      "past": "puhus",
+      "nud": "puhunud",
+      "eki_type": "27",
+      "ex": "Tuul puhus udu laiali."
+    },
+    {
+      "id": "v_paistma",
+      "ru": "светить, виднеться",
+      "ma": "paistma",
+      "da": "paista",
+      "b": "paistab",
+      "neg": "paista",
+      "past": "paistis",
+      "nud": "paistnud",
+      "eki_type": "34",
+      "ex": "Valgus paistab otse silma."
+    },
+    {
+      "id": "v_soovima",
+      "ru": "желать",
+      "ma": "soovima",
+      "da": "soovida",
+      "b": "soovib",
+      "neg": "soovi",
+      "past": "soovis",
+      "nud": "soovinud",
+      "eki_type": "28",
+      "rek": "mida*,mida teha",
+      "ex": "Võib-olla soovite viskit?"
+    },
+    {
+      "id": "v_saatma",
+      "ru": "отправлять",
+      "ma": "saatma",
+      "da": "saata",
+      "b": "saadab",
+      "neg": "saada",
+      "past": "saatis",
+      "nud": "saatnud",
+      "eki_type": "34",
+      "rek": "mida tegema",
+      "ex": "Saatke mulle takso."
+    },
+    {
+      "id": "v_kinkima",
+      "ru": "дарить",
+      "ma": "kinkima",
+      "da": "kinkida",
+      "b": "kingib",
+      "neg": "kingi",
+      "past": "kinkis",
+      "nud": "kinkinud",
+      "eki_type": "28",
+      "rek": "kellele,mida",
+      "ex": "Sõber kinkis mulle käevõru."
+    },
+    {
+      "id": "v_maksma",
+      "ru": "стоить, платить",
+      "ma": "maksma",
+      "da": "maksta",
+      "b": "maksab",
+      "neg": "maksa",
+      "past": "maksis",
+      "nud": "maksnud",
+      "eki_type": "32",
+      "rek": "kellele,mille eest",
+      "ex": "Poes maksan enamasti kaardiga."
+    },
+    {
+      "id": "v_kehtima",
+      "ru": "действовать (быть в силе)",
+      "ma": "kehtima",
+      "da": "kehtida",
+      "b": "kehtib",
+      "neg": "kehti",
+      "past": "kehtis",
+      "nud": "kehtinud",
+      "eki_type": "27",
+      "rek": "mis ajast,kelle/mille kohta",
+      "ex": "Eestis kehtib euro."
+    },
+    {
+      "id": "v_abielluma",
+      "ru": "жениться, выходить замуж",
+      "ma": "abielluma",
+      "da": "abielluda",
+      "b": "abiellub",
+      "neg": "abiellu",
+      "past": "abiellus",
+      "nud": "abiellunud",
+      "eki_type": "27",
+      "rek": "kellega",
+      "ex": "Ema abiellus vanas eas teist korda."
+    },
+    {
+      "id": "v_maletama",
+      "ru": "помнить",
+      "ma": "mäletama",
+      "da": "mäletada",
+      "b": "mäletab",
+      "neg": "mäleta",
+      "past": "mäletas",
+      "nud": "mäletanud",
+      "eki_type": "27",
+      "rek": "keda/mida*",
+      "ex": "Ma ei mäleta oma vanaisa."
+    },
+    {
+      "id": "v_taitma",
+      "ru": "заполнять",
+      "ma": "täitma",
+      "da": "täita",
+      "b": "täidab",
+      "neg": "täida",
+      "past": "täitis",
+      "nud": "täitnud",
+      "eki_type": "34",
+      "rek": "millega",
+      "ex": "Ta täitis klaasid."
+    },
+    {
+      "id": "v_valima",
+      "ru": "выбирать",
+      "ma": "valima",
+      "da": "valida",
+      "b": "valib",
+      "neg": "vali",
+      "past": "valis",
+      "nud": "valinud",
+      "eki_type": "27",
+      "rek": "kas,mille vahel,millest / mille hulgast",
+      "ex": "Kumb teeots valida?"
+    },
+    {
+      "id": "v_loppema",
+      "ru": "заканчиваться",
+      "ma": "lõppema",
+      "da": "lõppeda",
+      "b": "lõpeb",
+      "neg": "lõpe",
+      "past": "lõppes",
+      "nud": "lõppenud",
+      "eki_type": "28",
+      "rek": "millega",
+      "ex": "Vihm lõppes järsku."
     }
   ]
 }

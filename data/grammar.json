@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "Шпаргалка A2. Дописывай секции по мере учёбы — файл читается приложением как есть.",
-    "updated": "2026-09-22"
+    "updated": "2026-10-10"
   },
   "sections": [
     {
@@ -861,6 +861,24 @@
         {
           "et": "Missugune ilm täna on?",
           "ru": "Какая сегодня погода?"
+        },
+        {
+          "et": "Väljas on 22 kraadi sooja.",
+          "ru": "На улице 22 градуса тепла."
+        },
+        {
+          "et": "Ilmateade ennustab vihma ja lund.",
+          "ru": "Прогноз погоды обещает дождь и снег.",
+          "hint": "ennustama — предсказывать"
+        },
+        {
+          "et": "Tumedad pilved lähenevad, hakkab vihma sadama.",
+          "ru": "Приближаются тёмные тучи, начнётся дождь.",
+          "hint": "pilv — и облако, и туча"
+        },
+        {
+          "et": "Päike tõuseb idast ja loojub läände.",
+          "ru": "Солнце встаёт с востока и садится на запад."
         }
       ]
     },
@@ -1442,6 +1460,116 @@
         {
           "et": "Meie sportlane tuli ujumises kolmandaks.",
           "ru": "Наш спортсмен занял третье место в плавании."
+        }
+      ]
+    },
+    {
+      "title": "Семья: три формы (гл. 7)",
+      "note": "Третья форма (osastav) у семейных слов разная, и правила, по которому её вывести, нет: ema → ema, tädi → tädi, vend → venda, tütar → tütart, laps → last. Поэтому её учим с карточки, а не угадываем. Все формы и примеры сверены со словарём EKI.",
+      "rows": [
+        {
+          "et": "õde → õe → õde · vend → venna → venda",
+          "ru": "сестра · брат",
+          "hint": "у õde третья форма совпала с первой, у vend — нет"
+        },
+        {
+          "et": "poeg → poja → poega · tütar → tütre → tütart",
+          "ru": "сын · дочь"
+        },
+        {
+          "et": "laps → lapse → last · mees → mehe → meest · naine → naise → naist",
+          "ru": "ребёнок · мужчина, муж · женщина, жена"
+        },
+        {
+          "et": "ema → ema → ema · isa → isa → isa · tädi → tädi → tädi",
+          "ru": "мама · папа · тётя",
+          "hint": "здесь все три формы одинаковые"
+        },
+        {
+          "et": "Mul on üks vend ja üks õde.",
+          "ru": "У меня один брат и одна сестра."
+        },
+        {
+          "et": "Mul on kaks venda ja üks õde.",
+          "ru": "У меня два брата и одна сестра.",
+          "hint": "рядом с kaks стоит venda — третья форма"
+        },
+        {
+          "et": "Neil on kaks last, poeg ja tütar.",
+          "ru": "У них двое детей, сын и дочь."
+        },
+        {
+          "et": "Onu ja tädi sõidavad meile jõuludeks külla.",
+          "ru": "Дядя и тётя приедут к нам в гости на Рождество."
+        },
+        {
+          "et": "Sõitsin Saaremaale tädile külla.",
+          "ru": "Я поехал в гости к тёте на Сааремаа."
+        },
+        {
+          "et": "Päevikusse oli tarvis vanema allkirja.",
+          "ru": "В дневник нужна была подпись родителя.",
+          "hint": "vanem здесь — родитель"
+        }
+      ]
+    },
+    {
+      "title": "Анкета и карта клиента (гл. 10)",
+      "note": "Поля анкеты, которые просят заполнить в магазине или в учреждении, и слова, которые слышишь на кассе: скидка, бесплатно, оплата картой. Примеры — из словарных статей EKI.",
+      "rows": [
+        {
+          "et": "eesnimi · perekonnanimi",
+          "ru": "имя · фамилия"
+        },
+        {
+          "et": "sugu · vanus · rahvus",
+          "ru": "пол · возраст · национальность"
+        },
+        {
+          "et": "amet · perekonnaseis · isikukood · allkiri",
+          "ru": "профессия · семейное положение · личный код · подпись"
+        },
+        {
+          "et": "Ankeeti tuleb märkida ka vanus ja sugu.",
+          "ru": "В анкете нужно указать также возраст и пол."
+        },
+        {
+          "et": "Ankeeti tuli märkida vanus ja perekonnaseis.",
+          "ru": "В анкете нужно было указать возраст и семейное положение."
+        },
+        {
+          "et": "Tema nimi on Erik Tamm; Tamm on perekonnanimi.",
+          "ru": "Его зовут Эрик Тамм; Тамм — фамилия."
+        },
+        {
+          "et": "Ema on ametilt õpetaja.",
+          "ru": "Мама по профессии учитель.",
+          "hint": "ametilt — по профессии"
+        },
+        {
+          "et": "Ta on rahvuselt eestlane.",
+          "ru": "Он по национальности эстонец.",
+          "hint": "rahvuselt — по национальности"
+        },
+        {
+          "et": "Kaubamaja kliendikaardi omanikele on teatud kaubad soodsama hinnaga.",
+          "ru": "Владельцам клиентской карты универмага некоторые товары — по более выгодной цене.",
+          "hint": "kliendikaart — карта клиента"
+        },
+        {
+          "et": "Püsikliendi soodustus kehtib veebruari lõpuni.",
+          "ru": "Скидка постоянного клиента действует до конца февраля.",
+          "hint": "kehtima — действовать, быть в силе"
+        },
+        {
+          "et": "Mul on kontserdile kaks tasuta piletit.",
+          "ru": "У меня два бесплатных билета на концерт.",
+          "hint": "tasuta — бесплатно"
+        },
+        {
+          "et": "Poes maksan enamasti kaardiga.",
+          "ru": "В магазине я чаще всего плачу картой.",
+          "hint": "maksma — и «платить», и «стоить»"
         }
       ]
     }
